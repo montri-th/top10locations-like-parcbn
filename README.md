@@ -12,11 +12,18 @@ The ranking identifies corridors for parcel search and field validation. It does
 
 The analysis uses:
 
-- `Location = Traffic × Behavior`
-- Traffic = Residents + Visitors + Commuters
-- Behavior = concept fit + repeat routine + competitive white space + access/execution
+- `Location PMF = Traffic × Behavior`
+- `Traffic = 0.45 Residents + 0.25 Visitors + 0.30 Commuters`
+- `Behavior = Tenant Mix Fit^0.60 × PARC Experience Fit^0.40`
+- `Development Readiness = (Competitive White Space + Access/Execution) / 2`
 
-Measured mobility, traffic direction, parcel access, customer origin and candidate-site operating evidence are still required.
+Behavior matches PARC Bangna's tenant and centre-experience offering by daypart
+against Residents, Visitors and Commuters evidence from 67 representative Locale Insights.
+The offering baseline is drawn from the Project Brief; it is not an actual tenant roster
+or operating schedule.
+
+Measured mobility, traffic direction, parcel access, customer origin, an actual
+tenant-by-tenant/daypart registry and candidate-site operating evidence are still required.
 
 ## Files
 
