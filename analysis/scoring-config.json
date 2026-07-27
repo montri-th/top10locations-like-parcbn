@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "model_id": "parc-bangna-comparable-catchment-baseline-v1.6",
+  "analysis_basis": {
+    "locale_release_id": "venue-locale-insight-v2.3.1",
+    "catchment_rule_id": "fixed-area-26.3154km2-medoid-v1",
+    "catchment_type": "fixed_area",
+    "same_rule_for_all": true,
+    "overlap_policy": "deduplicated",
+    "area_tolerance_pct": 0.01
+  },
+  "normalization": "fixed_range",
+  "constant_indicator_score": 0.5,
+  "score_scale": 100,
+  "rounding_decimals": 2,
+  "missing_policy": "error",
+  "dimensions": [
+    {
+      "dimension_id": "baseline_opportunity",
+      "role": "primary_score",
+      "weight": 1.0,
+      "indicators": [
+        {
+          "indicator_id": "release_1_5_opportunity_score",
+          "weight": 1.0,
+          "direction": "higher_is_better",
+          "value_semantics": "score",
+          "normalization_min": 0,
+          "normalization_max": 100
+        }
+      ]
+    },
+    {
+      "dimension_id": "competitive_room",
+      "role": "readiness_diagnostic",
+      "weight": 0,
+      "indicators": [
+        {
+          "indicator_id": "competitive_room_score",
+          "weight": 1.0,
+          "direction": "higher_is_better",
+          "value_semantics": "score",
+          "normalization_min": 0,
+          "normalization_max": 100
+        }
+      ]
+    },
+    {
+      "dimension_id": "evidence_readiness",
+      "role": "readiness_diagnostic",
+      "weight": 0,
+      "indicators": [
+        {
+          "indicator_id": "evidence_readiness_score",
+          "weight": 1.0,
+          "direction": "higher_is_better",
+          "value_semantics": "score",
+          "normalization_min": 0,
+          "normalization_max": 100
+        }
+      ]
+    },
+    {
+      "dimension_id": "development_readiness",
+      "role": "readiness_diagnostic",
+      "weight": 0,
+      "indicators": [
+        {
+          "indicator_id": "land_pressure_percentile",
+          "weight": 1.0,
+          "direction": "lower_is_better",
+          "value_semantics": "score",
+          "normalization_min": 0,
+          "normalization_max": 100
+        }
+      ]
+    }
+  ]
+}

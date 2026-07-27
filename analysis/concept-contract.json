@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "parc-bangna-transferable-concept-2026-07-28",
+  "status": "screen_ready",
+  "reference_project": {
+    "project_id": "parc-bangna",
+    "name": "PARC Bangna",
+    "project_pack_version": "Project brief - PARC Bangna (1)",
+    "as_of_date": "2026-07-28"
+  },
+  "target_scope": {
+    "geography": "Bangkok Metropolitan Area",
+    "candidate_unit": "standardized 26.3154 km2 analytical catchment around each candidate center",
+    "screening_purpose": "prioritize locations for a routine-led neighborhood lifestyle center concept",
+    "locale_insight_release": "venue-locale-insight-v2.3.1",
+    "catchment_rule_id": "fixed-area-26.3154km2-medoid-v1"
+  },
+  "sources": [
+    {
+      "source_id": "parc-bangna-brief",
+      "scope": "reference_project",
+      "property_id": "parc-bangna",
+      "evidence_class": "approved_strategy",
+      "title": "Project brief - PARC Bangna (1)",
+      "confidentiality": "internal",
+      "allowed_uses": [
+        "concept_extraction",
+        "dimension_design",
+        "narrative_context"
+      ]
+    },
+    {
+      "source_id": "release-1-5-analysis",
+      "scope": "general",
+      "property_id": null,
+      "evidence_class": "derived_analysis",
+      "title": "P\u0041RC Bangna Bangkok Top 10 Release 1.5 Analysis and UX/UI",
+      "confidentiality": "internal",
+      "allowed_uses": [
+        "dimension_design",
+        "calibration",
+        "narrative_context"
+      ]
+    },
+    {
+      "source_id": "venue-locale-audit",
+      "scope": "general",
+      "property_id": null,
+      "evidence_class": "derived_analysis",
+      "title": "Venue Locale Fundamental Data Audit v0.1",
+      "confidentiality": "internal",
+      "allowed_uses": [
+        "dimension_design",
+        "narrative_context"
+      ]
+    },
+    {
+      "source_id": "j-lifestyle-design-system",
+      "scope": "general",
+      "property_id": null,
+      "evidence_class": "approved_strategy",
+      "title": "J Lifestyle Center Design System v0.3",
+      "confidentiality": "internal",
+      "allowed_uses": [
+        "narrative_context"
+      ]
+    },
+    {
+      "source_id": "competitor-primary-sources",
+      "scope": "general",
+      "property_id": null,
+      "evidence_class": "external_observation",
+      "title": "Current operator, owner and official venue sources checked 2026-07-28",
+      "confidentiality": "public",
+      "allowed_uses": [
+        "dimension_design",
+        "narrative_context"
+      ]
+    }
+  ],
+  "transferable_principles": [
+    {
+      "principle_id": "routine-led-neighborhood-center",
+      "statement": "The concept should earn repeat visits through ordinary weekly routines, not depend on occasional destination traffic.",
+      "transfer_limit": "This does not transfer observed visit frequency or demand from PARC Bangna to any candidate.",
+      "source_ids": [
+        "parc-bangna-brief"
+      ],
+      "evidence_status": "supported",
+      "screening_implications": [
+        "Reward resident, worker and family routines that can repeat across dayparts.",
+        "Treat destination traffic as additive rather than sufficient."
+      ]
+    },
+    {
+      "principle_id": "food-as-entry-not-whole-concept",
+      "statement": "Food can be the first reason to enter, but the place must create credible next stops across the tenant journey.",
+      "transfer_limit": "No specific restaurant, tenant or revenue mix is assumed to transfer.",
+      "source_ids": [
+        "parc-bangna-brief"
+      ],
+      "evidence_status": "supported",
+      "screening_implications": [
+        "Assess whether a catchment can support food plus services, wellness, family and everyday retail.",
+        "Penalize strategies that rely on a single anchor without a repeatable cross-tenant loop."
+      ]
+    },
+    {
+      "principle_id": "calm-connected-place",
+      "statement": "A calm, legible and connected environment is a core strategic gap against broad or hectic shopping destinations.",
+      "transfer_limit": "Landscape style and architecture must respond to each parcel and cannot be copied literally.",
+      "source_ids": [
+        "parc-bangna-brief",
+        "j-lifestyle-design-system"
+      ],
+      "evidence_status": "supported",
+      "screening_implications": [
+        "Prefer locations where an everyday refuge is differentiated from existing competitors.",
+        "Test safe access, shade, dwell time and continuity between tenants at parcel stage."
+      ]
+    },
+    {
+      "principle_id": "competition-as-pressure-and-gap",
+      "statement": "Existing shopping centers reduce room when they already serve the same routines, but can reveal an opportunity when their offer is destination-led, fragmented or weak in calm repeat use.",
+      "transfer_limit": "Competitor weakness is a strategic hypothesis until verified by field observation and customer research.",
+      "source_ids": [
+        "competitor-primary-sources",
+        "venue-locale-audit"
+      ],
+      "evidence_status": "supported",
+      "screening_implications": [
+        "Separate competitor impact from strategic whitespace.",
+        "Do not equate a high venue count with strong direct competition.",
+        "Do not infer GLA or current tenant count from low-quality proxy fields."
+      ]
+    }
+  ],
+  "site_specific_facts": [
+    {
+      "fact_id": "parc-bangna-tenant-roster",
+      "statement": "Any named PARC Bangna tenant roster and current operating mix belong to the reference project only.",
+      "property_id": "parc-bangna",
+      "transferable": false,
+      "source_ids": [
+        "parc-bangna-brief"
+      ]
+    },
+    {
+      "fact_id": "parc-bangna-site-access",
+      "statement": "Parcel access, visibility, parking and nearby traffic conditions in the reference brief are not evidence for a new site.",
+      "property_id": "parc-bangna",
+      "transferable": false,
+      "source_ids": [
+        "parc-bangna-brief"
+      ]
+    },
+    {
+      "fact_id": "parc-bangna-performance",
+      "statement": "Any operating or commercial performance of PARC Bangna is not included in this screening evidence.",
+      "property_id": "parc-bangna",
+      "transferable": false,
+      "source_ids": [
+        "parc-bangna-brief"
+      ]
+    }
+  ],
+  "screening_dimensions": [
+    {
+      "dimension_id": "baseline_opportunity",
+      "role": "primary_score",
+      "default_weight": 1,
+      "indicators": [
+        {
+          "indicator_id": "release_1_5_opportunity_score",
+          "label": "Release 1.5 catchment and concept-fit score",
+          "interpretation": "Higher scores indicate a stronger same-rule catchment and concept-fit baseline before competition.",
+          "direction": "higher_is_better"
+        }
+      ]
+    },
+    {
+      "dimension_id": "competitive_room",
+      "role": "readiness_diagnostic",
+      "default_weight": 0,
+      "indicators": [
+        {
+          "indicator_id": "competitive_room_score",
+          "label": "Competitive room after pressure and strategic-gap review",
+          "interpretation": "Higher scores indicate more room to win after considering competitor impact, overlap and concept whitespace; this diagnostic changes the action tier but is not mixed into the baseline rank until route and barrier evidence is complete.",
+          "direction": "higher_is_better"
+        }
+      ]
+    },
+    {
+      "dimension_id": "evidence_readiness",
+      "role": "readiness_diagnostic",
+      "default_weight": 0,
+      "indicators": [
+        {
+          "indicator_id": "evidence_readiness_score",
+          "label": "Evidence readiness",
+          "interpretation": "Higher scores mean competitor status, location and impact basis are better supported; this does not improve opportunity rank.",
+          "direction": "higher_is_better"
+        }
+      ]
+    }
+  ],
+  "disqualifiers": [
+    "No feasible parcel with safe multi-direction access and service circulation.",
+    "A direct competitor controls the same routine with materially stronger access, parking and tenant economics.",
+    "The business case requires transferring unverified PARC Bangna performance or proxy GLA values."
+  ],
+  "hypotheses": [
+    {
+      "hypothesis_id": "calm-refuge-whitespace",
+      "statement": "A calm garden-like everyday refuge can differentiate the concept even inside a competitor-dense market.",
+      "validation_plan": "Observe competitor journeys and interview residents across weekday and weekend dayparts before parcel commitment.",
+      "claim_restriction": "Do not claim unmet demand or competitor weakness until fieldwork confirms it.",
+      "source_ids": [
+        "parc-bangna-brief",
+        "competitor-primary-sources"
+      ]
+    },
+    {
+      "hypothesis_id": "small-direct-competitor-can-be-out-positioned",
+      "statement": "A medium local center may be addressable when its proposition is narrower and the new parcel can support a more connected tenant journey.",
+      "validation_plan": "Compare access, dwell, tenant adjacency, repeat use and customer switching at each direct competitor.",
+      "claim_restriction": "Do not treat smaller scale alone as proof that the competitor is weak.",
+      "source_ids": [
+        "competitor-primary-sources"
+      ]
+    }
+  ],
+  "must_validate": [
+    "Current competitor operating status and customer proposition.",
+    "Parcel-level access, frontage, parking, servicing and development economics.",
+    "Repeat routines and cross-tenant journeys in at least four dayparts.",
+    "Whether the apparent strategic gap is important enough to change customer behavior."
+  ],
+  "prohibited_transfers": [
+    "Do not transfer tenants, commercial performance, traffic or parking assumptions from PARC Bangna.",
+    "Do not use other project briefs as operating evidence for these candidates.",
+    "Do not label POI hulls or buffers as source, legal or parcel boundaries.",
+    "Do not use low-confidence proxy GLA or tenant-count fields as verified competitor size."
+  ]
+}

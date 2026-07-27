@@ -1,0 +1,732 @@
+{
+  "report": {
+    "id": "parc-bangna-top10-release-1-6",
+    "title": "PARC Bangna Bangkok Top 10 — Release 1.6 competition diagnostic",
+    "as_of": "2026-07-28",
+    "audience": "J Lifestyle Center decision team",
+    "decision": "Preserve the Release 1.5 comparable-catchment ranking as the canonical baseline and use verified competition pressure to set action tiers and the next validation wave."
+  },
+  "score": {
+    "min": 0,
+    "max": 100,
+    "higher_is_better": true,
+    "status": "Canonical score is the published Release 1.5 baseline; competition is diagnostic, not a replacement rank."
+  },
+  "candidates": [
+    {
+      "id": "wongwian-yai-east",
+      "name": "วงเวียนใหญ่–ตะวันออก",
+      "rank": 1,
+      "score": 52.71,
+      "status": "competition-action-tier-D",
+      "evidence_ids": [
+        "release-15-baseline",
+        "release-16-canonical-screening",
+        "release-16-competitor-registry",
+        "release-16-competition-overlay"
+      ],
+      "competition_diagnostic": {
+        "status": "diagnostic_not_rank_replacement",
+        "verified_operating_competitor_count": 7,
+        "competitor_supply_pressure": 100.0,
+        "competitive_pressure_band": "high",
+        "strategic_gap_potential": 25.0,
+        "strategic_gap_status": "hypothesis",
+        "competitive_room_score": 7.5,
+        "evidence_readiness_score": 85.0,
+        "action_tier": "D",
+        "action_label_th": "แข่งขันสูง—เดินหน้าต่อเมื่อมีสิทธิ์ไซต์หรือจุดต่างเหนือกว่า",
+        "decision_rule": "competitive_room < 20",
+        "competitor_ids": [
+          "comp_bkk_platform_wongwian_yai",
+          "comp_bkk_iconsiam",
+          "comp_bkk_ics_lifestyle_complex",
+          "comp_bkk_sena_fest",
+          "comp_bkk_the_mall_lifestore_tha_phra",
+          "comp_bkk_riverside_plaza_bangkok",
+          "comp_bkk_the_old_siam_plaza"
+        ],
+        "mapped_competitor_ids": [
+          "comp_bkk_platform_wongwian_yai",
+          "comp_bkk_iconsiam",
+          "comp_bkk_ics_lifestyle_complex",
+          "comp_bkk_sena_fest",
+          "comp_bkk_the_mall_lifestore_tha_phra",
+          "comp_bkk_riverside_plaza_bangkok",
+          "comp_bkk_the_old_siam_plaza"
+        ]
+      },
+      "illustrative_competition_scenario": {
+        "status": "noncanonical_sensitivity_scenario",
+        "baseline_weight": 0.8,
+        "competitive_room_weight": 0.2,
+        "rank": 5,
+        "score": 43.67,
+        "prohibition": "Do not present this scenario rank as the Release 1.6 canonical rank or an investment recommendation."
+      }
+    },
+    {
+      "id": "charoen-rat",
+      "name": "เจริญราษฎร์",
+      "rank": 2,
+      "score": 52.61,
+      "status": "competition-action-tier-C",
+      "evidence_ids": [
+        "release-15-baseline",
+        "release-16-canonical-screening",
+        "release-16-competitor-registry",
+        "release-16-competition-overlay"
+      ],
+      "competition_diagnostic": {
+        "status": "diagnostic_not_rank_replacement",
+        "verified_operating_competitor_count": 4,
+        "competitor_supply_pressure": 84.17,
+        "competitive_pressure_band": "high",
+        "strategic_gap_potential": 35.0,
+        "strategic_gap_status": "hypothesis",
+        "competitive_room_score": 21.58,
+        "evidence_readiness_score": 85.0,
+        "action_tier": "C",
+        "action_label_th": "พิจารณาเฉพาะกลยุทธ์ที่ต่างจากคู่แข่งชัด",
+        "decision_rule": "20 <= competitive_room < 45",
+        "competitor_ids": [
+          "comp_bkk_sena_fest",
+          "comp_bkk_kingsquare_community_mall",
+          "comp_bkk_terminal21_rama3",
+          "comp_bkk_central_rama3"
+        ],
+        "mapped_competitor_ids": [
+          "comp_bkk_sena_fest",
+          "comp_bkk_kingsquare_community_mall",
+          "comp_bkk_terminal21_rama3",
+          "comp_bkk_central_rama3"
+        ]
+      },
+      "illustrative_competition_scenario": {
+        "status": "noncanonical_sensitivity_scenario",
+        "baseline_weight": 0.8,
+        "competitive_room_weight": 0.2,
+        "rank": 4,
+        "score": 46.4,
+        "prohibition": "Do not present this scenario rank as the Release 1.6 canonical rank or an investment recommendation."
+      }
+    },
+    {
+      "id": "samre",
+      "name": "สำเหร่",
+      "rank": 3,
+      "score": 52.31,
+      "status": "competition-action-tier-D",
+      "evidence_ids": [
+        "release-15-baseline",
+        "release-16-canonical-screening",
+        "release-16-competitor-registry",
+        "release-16-competition-overlay"
+      ],
+      "competition_diagnostic": {
+        "status": "diagnostic_not_rank_replacement",
+        "verified_operating_competitor_count": 5,
+        "competitor_supply_pressure": 100.0,
+        "competitive_pressure_band": "high",
+        "strategic_gap_potential": 20.0,
+        "strategic_gap_status": "hypothesis",
+        "competitive_room_score": 6.0,
+        "evidence_readiness_score": 65.0,
+        "action_tier": "D",
+        "action_label_th": "แข่งขันสูง—เดินหน้าต่อเมื่อมีสิทธิ์ไซต์หรือจุดต่างเหนือกว่า",
+        "decision_rule": "competitive_room < 20",
+        "competitor_ids": [
+          "comp_bkk_platform_wongwian_yai",
+          "comp_bkk_sena_fest",
+          "comp_bkk_the_mall_lifestore_tha_phra",
+          "comp_bkk_terminal21_rama3",
+          "comp_bkk_riverside_plaza_bangkok"
+        ],
+        "mapped_competitor_ids": [
+          "comp_bkk_platform_wongwian_yai",
+          "comp_bkk_sena_fest",
+          "comp_bkk_the_mall_lifestore_tha_phra",
+          "comp_bkk_terminal21_rama3",
+          "comp_bkk_riverside_plaza_bangkok"
+        ]
+      },
+      "illustrative_competition_scenario": {
+        "status": "noncanonical_sensitivity_scenario",
+        "baseline_weight": 0.8,
+        "competitive_room_weight": 0.2,
+        "rank": 8,
+        "score": 43.05,
+        "prohibition": "Do not present this scenario rank as the Release 1.6 canonical rank or an investment recommendation."
+      }
+    },
+    {
+      "id": "ban-khaek",
+      "name": "แยกบ้านแขก",
+      "rank": 4,
+      "score": 51.46,
+      "status": "competition-action-tier-D",
+      "evidence_ids": [
+        "release-15-baseline",
+        "release-16-canonical-screening",
+        "release-16-competitor-registry",
+        "release-16-competition-overlay"
+      ],
+      "competition_diagnostic": {
+        "status": "diagnostic_not_rank_replacement",
+        "verified_operating_competitor_count": 7,
+        "competitor_supply_pressure": 100.0,
+        "competitive_pressure_band": "high",
+        "strategic_gap_potential": 35.0,
+        "strategic_gap_status": "hypothesis",
+        "competitive_room_score": 10.5,
+        "evidence_readiness_score": 65.0,
+        "action_tier": "D",
+        "action_label_th": "แข่งขันสูง—เดินหน้าต่อเมื่อมีสิทธิ์ไซต์หรือจุดต่างเหนือกว่า",
+        "decision_rule": "competitive_room < 20",
+        "competitor_ids": [
+          "comp_bkk_platform_wongwian_yai",
+          "comp_bkk_iconsiam",
+          "comp_bkk_ics_lifestyle_complex",
+          "comp_bkk_sena_fest",
+          "comp_bkk_the_mall_lifestore_tha_phra",
+          "comp_bkk_the_old_siam_plaza",
+          "comp_bkk_tha_maharaj"
+        ],
+        "mapped_competitor_ids": [
+          "comp_bkk_platform_wongwian_yai",
+          "comp_bkk_iconsiam",
+          "comp_bkk_ics_lifestyle_complex",
+          "comp_bkk_sena_fest",
+          "comp_bkk_the_mall_lifestore_tha_phra",
+          "comp_bkk_the_old_siam_plaza",
+          "comp_bkk_tha_maharaj"
+        ]
+      },
+      "illustrative_competition_scenario": {
+        "status": "noncanonical_sensitivity_scenario",
+        "baseline_weight": 0.8,
+        "competitive_room_weight": 0.2,
+        "rank": 7,
+        "score": 43.27,
+        "prohibition": "Do not present this scenario rank as the Release 1.6 canonical rank or an investment recommendation."
+      }
+    },
+    {
+      "id": "talat-phlu-south",
+      "name": "ตลาดพลู–ใต้",
+      "rank": 5,
+      "score": 48.44,
+      "status": "competition-action-tier-C",
+      "evidence_ids": [
+        "release-15-baseline",
+        "release-16-canonical-screening",
+        "release-16-competitor-registry",
+        "release-16-competition-overlay"
+      ],
+      "competition_diagnostic": {
+        "status": "diagnostic_not_rank_replacement",
+        "verified_operating_competitor_count": 3,
+        "competitor_supply_pressure": 80.21,
+        "competitive_pressure_band": "high",
+        "strategic_gap_potential": 35.0,
+        "strategic_gap_status": "hypothesis",
+        "competitive_room_score": 24.35,
+        "evidence_readiness_score": 85.0,
+        "action_tier": "C",
+        "action_label_th": "พิจารณาเฉพาะกลยุทธ์ที่ต่างจากคู่แข่งชัด",
+        "decision_rule": "20 <= competitive_room < 45",
+        "competitor_ids": [
+          "comp_bkk_platform_wongwian_yai",
+          "comp_bkk_the_mall_lifestore_tha_phra",
+          "comp_bkk_riverside_plaza_bangkok"
+        ],
+        "mapped_competitor_ids": [
+          "comp_bkk_platform_wongwian_yai",
+          "comp_bkk_the_mall_lifestore_tha_phra",
+          "comp_bkk_riverside_plaza_bangkok"
+        ]
+      },
+      "illustrative_competition_scenario": {
+        "status": "noncanonical_sensitivity_scenario",
+        "baseline_weight": 0.8,
+        "competitive_room_weight": 0.2,
+        "rank": 6,
+        "score": 43.62,
+        "prohibition": "Do not present this scenario rank as the Release 1.6 canonical rank or an investment recommendation."
+      }
+    },
+    {
+      "id": "bang-pakok",
+      "name": "บางปะกอก",
+      "rank": 6,
+      "score": 47.02,
+      "status": "competition-action-tier-A",
+      "evidence_ids": [
+        "release-15-baseline",
+        "release-16-canonical-screening",
+        "release-16-competitor-registry",
+        "release-16-competition-overlay"
+      ],
+      "competition_diagnostic": {
+        "status": "diagnostic_not_rank_replacement",
+        "verified_operating_competitor_count": 2,
+        "competitor_supply_pressure": 52.08,
+        "competitive_pressure_band": "medium",
+        "strategic_gap_potential": 45.0,
+        "strategic_gap_status": "hypothesis",
+        "competitive_room_score": 47.04,
+        "evidence_readiness_score": 85.0,
+        "action_tier": "A",
+        "action_label_th": "เดินหน้าตรวจทำเลเชิงรุก",
+        "decision_rule": "competitive_room >= 45 and evidence_readiness >= 80",
+        "competitor_ids": [
+          "comp_bkk_terminal21_rama3",
+          "comp_bkk_riverside_plaza_bangkok"
+        ],
+        "mapped_competitor_ids": [
+          "comp_bkk_terminal21_rama3",
+          "comp_bkk_riverside_plaza_bangkok"
+        ]
+      },
+      "illustrative_competition_scenario": {
+        "status": "noncanonical_sensitivity_scenario",
+        "baseline_weight": 0.8,
+        "competitive_room_weight": 0.2,
+        "rank": 3,
+        "score": 47.02,
+        "prohibition": "Do not present this scenario rank as the Release 1.6 canonical rank or an investment recommendation."
+      }
+    },
+    {
+      "id": "wang-lang",
+      "name": "วังหลัง",
+      "rank": 7,
+      "score": 45.74,
+      "status": "competition-action-tier-B",
+      "evidence_ids": [
+        "release-15-baseline",
+        "release-16-canonical-screening",
+        "release-16-competitor-registry",
+        "release-16-competition-overlay"
+      ],
+      "competition_diagnostic": {
+        "status": "diagnostic_not_rank_replacement",
+        "verified_operating_competitor_count": 3,
+        "competitor_supply_pressure": 40.73,
+        "competitive_pressure_band": "low",
+        "strategic_gap_potential": 45.0,
+        "strategic_gap_status": "hypothesis",
+        "competitive_room_score": 54.99,
+        "evidence_readiness_score": 65.0,
+        "action_tier": "B",
+        "action_label_th": "มีช่องว่าง แต่ต้องยืนยันภาคสนามก่อน",
+        "decision_rule": "competitive_room >= 45 and evidence_readiness < 80",
+        "competitor_ids": [
+          "comp_bkk_the_old_siam_plaza",
+          "comp_bkk_tha_maharaj",
+          "comp_bkk_central_pinklao"
+        ],
+        "mapped_competitor_ids": [
+          "comp_bkk_the_old_siam_plaza",
+          "comp_bkk_tha_maharaj",
+          "comp_bkk_central_pinklao"
+        ]
+      },
+      "illustrative_competition_scenario": {
+        "status": "noncanonical_sensitivity_scenario",
+        "baseline_weight": 0.8,
+        "competitive_room_weight": 0.2,
+        "rank": 2,
+        "score": 47.59,
+        "prohibition": "Do not present this scenario rank as the Release 1.6 canonical rank or an investment recommendation."
+      }
+    },
+    {
+      "id": "ratchathewi",
+      "name": "ราชเทวี",
+      "rank": 8,
+      "score": 44.14,
+      "status": "competition-action-tier-D",
+      "evidence_ids": [
+        "release-15-baseline",
+        "release-16-canonical-screening",
+        "release-16-competitor-registry",
+        "release-16-competition-overlay"
+      ],
+      "competition_diagnostic": {
+        "status": "diagnostic_not_rank_replacement",
+        "verified_operating_competitor_count": 6,
+        "competitor_supply_pressure": 100.0,
+        "competitive_pressure_band": "high",
+        "strategic_gap_potential": 55.0,
+        "strategic_gap_status": "hypothesis",
+        "competitive_room_score": 16.5,
+        "evidence_readiness_score": 70.0,
+        "action_tier": "D",
+        "action_label_th": "แข่งขันสูง—เดินหน้าต่อเมื่อมีสิทธิ์ไซต์หรือจุดต่างเหนือกว่า",
+        "decision_rule": "competitive_room < 20",
+        "competitor_ids": [
+          "comp_bkk_siam_discovery",
+          "comp_bkk_siam_center",
+          "comp_bkk_siam_paragon",
+          "comp_bkk_platinum_fashion_mall",
+          "comp_bkk_centralworld",
+          "comp_bkk_mbk_center"
+        ],
+        "mapped_competitor_ids": [
+          "comp_bkk_siam_discovery",
+          "comp_bkk_siam_center",
+          "comp_bkk_siam_paragon",
+          "comp_bkk_platinum_fashion_mall",
+          "comp_bkk_centralworld",
+          "comp_bkk_mbk_center"
+        ]
+      },
+      "illustrative_competition_scenario": {
+        "status": "noncanonical_sensitivity_scenario",
+        "baseline_weight": 0.8,
+        "competitive_room_weight": 0.2,
+        "rank": 9,
+        "score": 38.61,
+        "prohibition": "Do not present this scenario rank as the Release 1.6 canonical rank or an investment recommendation."
+      }
+    },
+    {
+      "id": "pracha-uthit",
+      "name": "ประชาอุทิศ",
+      "rank": 9,
+      "score": 43.78,
+      "status": "competition-action-tier-B",
+      "evidence_ids": [
+        "release-15-baseline",
+        "release-16-canonical-screening",
+        "release-16-competitor-registry",
+        "release-16-competition-overlay"
+      ],
+      "competition_diagnostic": {
+        "status": "diagnostic_not_rank_replacement",
+        "verified_operating_competitor_count": 1,
+        "competitor_supply_pressure": 20.83,
+        "competitive_pressure_band": "low",
+        "strategic_gap_potential": 45.0,
+        "strategic_gap_status": "hypothesis",
+        "competitive_room_score": 68.92,
+        "evidence_readiness_score": 65.0,
+        "action_tier": "B",
+        "action_label_th": "มีช่องว่าง แต่ต้องยืนยันภาคสนามก่อน",
+        "decision_rule": "competitive_room >= 45 and evidence_readiness < 80",
+        "competitor_ids": [
+          "comp_bkk_market_place_pracha_uthit"
+        ],
+        "mapped_competitor_ids": []
+      },
+      "illustrative_competition_scenario": {
+        "status": "noncanonical_sensitivity_scenario",
+        "baseline_weight": 0.8,
+        "competitive_room_weight": 0.2,
+        "rank": 1,
+        "score": 48.81,
+        "prohibition": "Do not present this scenario rank as the Release 1.6 canonical rank or an investment recommendation."
+      }
+    },
+    {
+      "id": "din-daeng",
+      "name": "ดินแดง",
+      "rank": 10,
+      "score": 43.57,
+      "status": "competition-action-tier-D",
+      "evidence_ids": [
+        "release-15-baseline",
+        "release-16-canonical-screening",
+        "release-16-competitor-registry",
+        "release-16-competition-overlay"
+      ],
+      "competition_diagnostic": {
+        "status": "diagnostic_not_rank_replacement",
+        "verified_operating_competitor_count": 9,
+        "competitor_supply_pressure": 100.0,
+        "competitive_pressure_band": "high",
+        "strategic_gap_potential": 45.0,
+        "strategic_gap_status": "hypothesis",
+        "competitive_room_score": 13.5,
+        "evidence_readiness_score": 70.0,
+        "action_tier": "D",
+        "action_label_th": "แข่งขันสูง—เดินหน้าต่อเมื่อมีสิทธิ์ไซต์หรือจุดต่างเหนือกว่า",
+        "decision_rule": "competitive_room < 20",
+        "competitor_ids": [
+          "comp_bkk_siam_discovery",
+          "comp_bkk_siam_center",
+          "comp_bkk_siam_paragon",
+          "comp_bkk_platinum_fashion_mall",
+          "comp_bkk_centralworld",
+          "comp_bkk_fortune_town",
+          "comp_bkk_central_rama9",
+          "comp_bkk_esplanade_ratchada",
+          "comp_bkk_the_street_ratchada"
+        ],
+        "mapped_competitor_ids": [
+          "comp_bkk_siam_discovery",
+          "comp_bkk_siam_center",
+          "comp_bkk_siam_paragon",
+          "comp_bkk_platinum_fashion_mall",
+          "comp_bkk_centralworld",
+          "comp_bkk_fortune_town",
+          "comp_bkk_central_rama9",
+          "comp_bkk_the_street_ratchada"
+        ]
+      },
+      "illustrative_competition_scenario": {
+        "status": "noncanonical_sensitivity_scenario",
+        "baseline_weight": 0.8,
+        "competitive_room_weight": 0.2,
+        "rank": 10,
+        "score": 37.56,
+        "prohibition": "Do not present this scenario rank as the Release 1.6 canonical rank or an investment recommendation."
+      }
+    }
+  ],
+  "recommendation": {
+    "candidate_id": "bang-pakok",
+    "summary": "Retain Wongwian Yai East as the canonical baseline leader, but use Bang Pakok as the first competition-aware field-validation case because it has the strongest balance of competitive room and evidence readiness in this overlay.",
+    "confidence": "medium for field-validation priority; low for investment advancement until parcel, network, and completeness checks are complete",
+    "evidence_ids": [
+      "release-15-baseline",
+      "release-16-canonical-screening",
+      "release-16-competitor-registry",
+      "release-16-competition-overlay"
+    ]
+  },
+  "cta": {
+    "label": "อนุมัติ competitive field validation",
+    "action": "Validate Bang Pakok with a complete operating-venue census and network catchment; verify the apparent room at Wang Lang and Pracha Uthit; keep the canonical leaders behind a competition-first gate.",
+    "owner": "ทีมพัฒนาทำเล J Lifestyle Center",
+    "timing": "ก่อน final parcel shortlist รอบถัดไป"
+  },
+  "map": {
+    "status": "included",
+    "manifest": "analysis/map-manifest.json",
+    "candidate_ids": [
+      "wongwian-yai-east",
+      "charoen-rat",
+      "samre",
+      "ban-khaek",
+      "talat-phlu-south",
+      "bang-pakok",
+      "wang-lang",
+      "ratchathewi",
+      "pracha-uthit",
+      "din-daeng"
+    ],
+    "fallback": "The ranked comparison and a competitor table repeat every mapped candidate and competitor. Market Place Pracha Uthit and Esplanade Ratchada remain in the diagnostic/table but are not plotted until their host centroids are verified."
+  },
+  "caveats": [
+    {
+      "id": "baseline-not-final-investment-rank",
+      "severity": "decision-changing",
+      "visibility": "inline",
+      "text": "The canonical order preserves Release 1.5 because the competitor registry is a minimum verified set, not a completeness-certified census. Competition changes the action tier, not the canonical rank, in this release.",
+      "candidate_ids": [
+        "wongwian-yai-east",
+        "charoen-rat",
+        "samre",
+        "ban-khaek",
+        "talat-phlu-south",
+        "bang-pakok",
+        "wang-lang",
+        "ratchathewi",
+        "pracha-uthit",
+        "din-daeng"
+      ],
+      "evidence_ids": [
+        "release-16-canonical-screening",
+        "release-16-competitor-registry"
+      ]
+    },
+    {
+      "id": "scenario-is-not-canonical",
+      "severity": "decision-changing",
+      "visibility": "inline",
+      "text": "The 80/20 competition scenario is a sensitivity test only. Its rank must not replace the canonical ranking or be presented as an investment recommendation.",
+      "candidate_ids": [
+        "wongwian-yai-east",
+        "charoen-rat",
+        "samre",
+        "ban-khaek",
+        "talat-phlu-south",
+        "bang-pakok",
+        "wang-lang",
+        "ratchathewi",
+        "pracha-uthit",
+        "din-daeng"
+      ],
+      "evidence_ids": [
+        "release-16-scenario"
+      ]
+    },
+    {
+      "id": "medoid-and-fixed-circle-limit",
+      "severity": "decision-changing",
+      "visibility": "inline",
+      "text": "Candidate centers are restaurant-sample medoids, not parcels. The 2.89421 km fixed circle ignores bridges, ferries, congestion, pedestrian barriers, and actual site access.",
+      "candidate_ids": [
+        "wongwian-yai-east",
+        "charoen-rat",
+        "samre",
+        "ban-khaek",
+        "talat-phlu-south",
+        "bang-pakok",
+        "wang-lang",
+        "ratchathewi",
+        "pracha-uthit",
+        "din-daeng"
+      ],
+      "evidence_ids": [
+        "release-15-baseline",
+        "release-16-canonical-screening"
+      ]
+    },
+    {
+      "id": "samre-center-coincides-with-incumbent",
+      "severity": "decision-changing",
+      "visibility": "inline",
+      "text": "The Samre analytical center is about 0.034 km from Riverside Plaza. Confirm a real parcel and recenter the analysis before treating Samre as an independent development opportunity.",
+      "candidate_ids": [
+        "samre"
+      ],
+      "evidence_ids": [
+        "release-16-competitor-registry",
+        "release-16-competition-overlay"
+      ]
+    },
+    {
+      "id": "strategic-gaps-are-hypotheses",
+      "severity": "material",
+      "visibility": "evidence",
+      "text": "Strategic gaps describe testable positioning hypotheses. No credible evidence currently supports claims that an incumbent has weak traffic, occupancy, service, tenant mix, or commercial performance.",
+      "candidate_ids": [
+        "wongwian-yai-east",
+        "charoen-rat",
+        "samre",
+        "ban-khaek",
+        "talat-phlu-south",
+        "bang-pakok",
+        "wang-lang",
+        "ratchathewi",
+        "pracha-uthit",
+        "din-daeng"
+      ],
+      "evidence_ids": [
+        "release-16-competitor-registry",
+        "release-16-competition-overlay"
+      ]
+    },
+    {
+      "id": "two-host-centroids-withheld",
+      "severity": "material",
+      "visibility": "evidence",
+      "text": "Market Place Pracha Uthit and Esplanade Ratchada are included in the diagnostic and fallback tables but withheld from the map because their available coordinates are tenant proxy points rather than verified host centroids.",
+      "candidate_ids": [
+        "pracha-uthit",
+        "din-daeng"
+      ],
+      "evidence_ids": [
+        "release-16-competitor-registry",
+        "map-contract-v1"
+      ]
+    },
+    {
+      "id": "roads-rail-stations-omitted",
+      "severity": "context",
+      "visibility": "evidence",
+      "text": "Release 1.6 shows no road, rail, or station layer because no current feature-level lineage and operating-status snapshot was validated for those map features.",
+      "candidate_ids": [
+        "wongwian-yai-east",
+        "charoen-rat",
+        "samre",
+        "ban-khaek",
+        "talat-phlu-south",
+        "bang-pakok",
+        "wang-lang",
+        "ratchathewi",
+        "pracha-uthit",
+        "din-daeng"
+      ],
+      "evidence_ids": [
+        "map-contract-v1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "release-15-baseline",
+      "label": "Published PARC Bangna Bangkok Top 10 Release 1.5 baseline, 27 July 2026"
+    },
+    {
+      "id": "release-16-canonical-screening",
+      "label": "Canonical Release 1.6 comparable-catchment output; Release 1.5 rank and score preserved"
+    },
+    {
+      "id": "release-16-competitor-registry",
+      "label": "Preliminary minimum verified operating-shopping-center registry, evidence cutoff 28 July 2026"
+    },
+    {
+      "id": "release-16-competition-overlay",
+      "label": "Competition pressure, strategic-gap hypothesis, evidence readiness, and action-tier diagnostic"
+    },
+    {
+      "id": "release-16-scenario",
+      "label": "Illustrative non-canonical 80% baseline / 20% competitive-room sensitivity scenario"
+    },
+    {
+      "id": "map-contract-v1",
+      "label": "Evidence-grounded location-map contract v1.0"
+    }
+  ],
+  "html_hooks": {
+    "report_root": [
+      "data-location-report",
+      "data-report-id"
+    ],
+    "candidate": [
+      "data-candidate-id",
+      "data-candidate-name",
+      "data-rank",
+      "data-score"
+    ],
+    "recommendation": [
+      "data-recommendation-candidate"
+    ],
+    "primary_cta": [
+      "data-primary-cta",
+      "data-owner",
+      "data-timing"
+    ],
+    "evidence_toggle": [
+      "data-evidence-toggle",
+      "data-evidence-candidate-id"
+    ],
+    "map": [
+      "data-location-map",
+      "data-map-manifest",
+      "data-map-candidate-id"
+    ],
+    "map_fallback": [
+      "data-map-fallback"
+    ],
+    "competitor_marker": [
+      "data-competitor-id",
+      "data-map-candidate-id",
+      "data-impact-class",
+      "data-size-basis"
+    ],
+    "caveat": [
+      "data-caveat-id",
+      "data-caveat-severity",
+      "data-caveat-visibility"
+    ],
+    "source": [
+      "data-source-id"
+    ],
+    "canonical_score_serialization": "Use canonical JSON number text in data-score."
+  }
+}

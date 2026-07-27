@@ -1,0 +1,2913 @@
+{
+  "contract_version": "1.0",
+  "report_id": "parc-bangna-top10-release-1-6",
+  "scope": {
+    "mode": "comparison",
+    "site_ids": [
+      "wongwian-yai-east",
+      "charoen-rat",
+      "samre",
+      "ban-khaek",
+      "talat-phlu-south",
+      "bang-pakok",
+      "wang-lang",
+      "ratchathewi",
+      "pracha-uthit",
+      "din-daeng"
+    ]
+  },
+  "candidate_ids": [
+    "wongwian-yai-east",
+    "charoen-rat",
+    "samre",
+    "ban-khaek",
+    "talat-phlu-south",
+    "bang-pakok",
+    "wang-lang",
+    "ratchathewi",
+    "pracha-uthit",
+    "din-daeng"
+  ],
+  "screening_linkage": {
+    "status": "linked",
+    "model_id": "parc-bangna-comparable-catchment-baseline-v1.6",
+    "catchment_rule_id": "fixed-area-26.3154km2-medoid-v1",
+    "locale_release_id": "venue-locale-insight-v2.3.1",
+    "analysis_units": [
+      {
+        "candidate_id": "wongwian-yai-east",
+        "geometry_id": "wongwian-yai-east-analysis-unit",
+        "display_mode": "shown",
+        "disclosure": "The visible circle is the exact standardized analytical unit used by the canonical baseline; it is labelled as analytical and must not be read as a parcel or proven catchment."
+      },
+      {
+        "candidate_id": "charoen-rat",
+        "geometry_id": "charoen-rat-analysis-unit",
+        "display_mode": "shown",
+        "disclosure": "The visible circle is the exact standardized analytical unit used by the canonical baseline; it is labelled as analytical and must not be read as a parcel or proven catchment."
+      },
+      {
+        "candidate_id": "samre",
+        "geometry_id": "samre-analysis-unit",
+        "display_mode": "shown",
+        "disclosure": "The visible circle is the exact standardized analytical unit used by the canonical baseline; it is labelled as analytical and must not be read as a parcel or proven catchment."
+      },
+      {
+        "candidate_id": "ban-khaek",
+        "geometry_id": "ban-khaek-analysis-unit",
+        "display_mode": "shown",
+        "disclosure": "The visible circle is the exact standardized analytical unit used by the canonical baseline; it is labelled as analytical and must not be read as a parcel or proven catchment."
+      },
+      {
+        "candidate_id": "talat-phlu-south",
+        "geometry_id": "talat-phlu-south-analysis-unit",
+        "display_mode": "shown",
+        "disclosure": "The visible circle is the exact standardized analytical unit used by the canonical baseline; it is labelled as analytical and must not be read as a parcel or proven catchment."
+      },
+      {
+        "candidate_id": "bang-pakok",
+        "geometry_id": "bang-pakok-analysis-unit",
+        "display_mode": "shown",
+        "disclosure": "The visible circle is the exact standardized analytical unit used by the canonical baseline; it is labelled as analytical and must not be read as a parcel or proven catchment."
+      },
+      {
+        "candidate_id": "wang-lang",
+        "geometry_id": "wang-lang-analysis-unit",
+        "display_mode": "shown",
+        "disclosure": "The visible circle is the exact standardized analytical unit used by the canonical baseline; it is labelled as analytical and must not be read as a parcel or proven catchment."
+      },
+      {
+        "candidate_id": "ratchathewi",
+        "geometry_id": "ratchathewi-analysis-unit",
+        "display_mode": "shown",
+        "disclosure": "The visible circle is the exact standardized analytical unit used by the canonical baseline; it is labelled as analytical and must not be read as a parcel or proven catchment."
+      },
+      {
+        "candidate_id": "pracha-uthit",
+        "geometry_id": "pracha-uthit-analysis-unit",
+        "display_mode": "shown",
+        "disclosure": "The visible circle is the exact standardized analytical unit used by the canonical baseline; it is labelled as analytical and must not be read as a parcel or proven catchment."
+      },
+      {
+        "candidate_id": "din-daeng",
+        "geometry_id": "din-daeng-analysis-unit",
+        "display_mode": "shown",
+        "disclosure": "The visible circle is the exact standardized analytical unit used by the canonical baseline; it is labelled as analytical and must not be read as a parcel or proven catchment."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "release-15-baseline",
+      "site_id": "shared",
+      "kind": "published_report",
+      "release": "1.5",
+      "snapshot_date": "2026-07-27",
+      "locator": "https://github.com/montri-th/top10locations-like-parcbn/blob/563146f6b8f57d25652cea9f60acb6ee9239a054/index.html"
+    },
+    {
+      "id": "release-16-canonical-screening",
+      "site_id": "shared",
+      "kind": "screening_model",
+      "release": "parc-bangna-comparable-catchment-baseline-v1.6",
+      "snapshot_date": "2026-07-28",
+      "locator": "analysis/screening-results.json"
+    },
+    {
+      "id": "release-16-competitor-registry",
+      "site_id": "shared",
+      "kind": "competitor_registry",
+      "release": "0.1.0-preliminary",
+      "snapshot_date": "2026-07-28",
+      "locator": "analysis/competitor-registry.public.json"
+    },
+    {
+      "id": "release-16-competition-overlay",
+      "site_id": "shared",
+      "kind": "analytical_diagnostic",
+      "release": "parc-bangna-competitive-overlay-v1.6",
+      "snapshot_date": "2026-07-28",
+      "locator": "analysis/competitor-score-breakdown.json"
+    }
+  ],
+  "geometries": [
+    {
+      "id": "wongwian-yai-east-center",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "center_point",
+      "source_id": "release-15-baseline",
+      "source_feature_id": "wongwian-yai-east-release-15-medoid",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Release 1.5 restaurant-sample medoid; this is an analytical reference point, not a parcel or committed development site.",
+      "coordinates_wgs84": [
+        100.4954,
+        13.7254
+      ],
+      "rank_release_1_5": 1
+    },
+    {
+      "id": "wongwian-yai-east-analysis-unit",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "standardized_catchment",
+      "source_id": "release-16-canonical-screening",
+      "source_feature_id": "fixed-area-26.3154km2-medoid-v1",
+      "derivation": "buffer",
+      "derived_from": [
+        "wongwian-yai-east-center"
+      ],
+      "disclosure": "Fixed-area analytical circle (26.3154 km²; radius 2.89421 km) centered on the Release 1.5 medoid. It is used only for like-for-like comparison and is not a parcel, legal boundary, source polygon, or proven trade area.",
+      "shape": {
+        "type": "circle",
+        "radius_km": 2.89421,
+        "area_km2": 26.3154,
+        "center_geometry_id": "wongwian-yai-east-center"
+      }
+    },
+    {
+      "id": "wongwian-yai-east-poi-platform_wongwian_yai",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_platform_wongwian_yai",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.4947674,
+        13.7271083
+      ],
+      "canonical_name": "Platform Wongwian Yai",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 0.202,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Direct shopping-center overlap at 0.202 km from Wongwian Yai East and 0.794 km from Ban Khaek; no current authoritative GLA or occupied-tenant count was found.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-wongwian-yai-east-comp_bkk_platform_wongwian_yai",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "wongwian-yai-east-poi-iconsiam",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_iconsiam",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5107399,
+        13.7266738
+      ],
+      "canonical_name": "ICONSIAM",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 1.663,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "operator_metric",
+        "metric_name": "retail_complex_area",
+        "value": 525000,
+        "unit": "sqm",
+        "metric_as_of": null,
+        "definition": "Combined area of two retail complexes stated in the same historical operator project announcement; not represented as current leasable area.",
+        "visual_scale_note": "Marker size is binned for legibility; it is not a proportional area diagram."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-wongwian-yai-east-comp_bkk_iconsiam",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "wongwian-yai-east-poi-ics_lifestyle_complex",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_ics_lifestyle_complex",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5084353,
+        13.7262214
+      ],
+      "canonical_name": "ICS Lifestyle Complex",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 1.411,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Part of the ICONSIAM destination cluster and within 1.411 km of Wongwian Yai East and 2.000 km of Ban Khaek; count the cluster once in pressure scoring.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-wongwian-yai-east-comp_bkk_ics_lifestyle_complex",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "wongwian-yai-east-poi-sena_fest",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_sena_fest",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5078712,
+        13.7192823
+      ],
+      "canonical_name": "SENA Fest",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 1.509,
+      "impact": {
+        "class": "medium",
+        "fact_status": "analytical_classification",
+        "confidence": "medium_high"
+      },
+      "marker_sizing": {
+        "basis": "operator_metric",
+        "metric_name": "commercial_space",
+        "value": 9811,
+        "unit": "sqm",
+        "metric_as_of": null,
+        "definition": "Commercial space stated on the operator's undated project about page.",
+        "visual_scale_note": "Marker size is binned for legibility; it is not a proportional area diagram."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-wongwian-yai-east-comp_bkk_sena_fest",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "wongwian-yai-east-poi-the_mall_lifestore_tha_phra",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_the_mall_lifestore_tha_phra",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.4801172,
+        13.7136096
+      ],
+      "canonical_name": "The Mall Lifestore Tha Phra",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.108,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Full-format center only 0.508 km from Talat Phlu South and 1.490 km from Samre; current authoritative size was not found in this pass.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-wongwian-yai-east-comp_bkk_the_mall_lifestore_tha_phra",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "wongwian-yai-east-poi-riverside_plaza_bangkok",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_riverside_plaza_bangkok",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.4909755,
+        13.7052211
+      ],
+      "canonical_name": "Riverside Plaza Bangkok",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.294,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "The venue point is only 0.034 km from the Release 1.5 Samre analytical center, indicating direct overlap or a candidate-center artifact.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-wongwian-yai-east-comp_bkk_riverside_plaza_bangkok",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "wongwian-yai-east-poi-the_old_siam_plaza",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_the_old_siam_plaza",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.500214,
+        13.745874
+      ],
+      "canonical_name": "The Old Siam Plaza",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.335,
+      "impact": {
+        "class": "medium",
+        "fact_status": "analytical_classification",
+        "confidence": "medium_high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "medium",
+        "fact_status": "analytical_classification",
+        "basis_text": "Operating specialty-oriented shopping center inside Wongwian Yai East, Ban Khaek, and Wang Lang fixed-radius catchments; network access may differ because of river crossings.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-wongwian-yai-east-comp_bkk_the_old_siam_plaza",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "charoen-rat-center",
+      "site_id": "charoen-rat",
+      "vocabulary": "center_point",
+      "source_id": "release-15-baseline",
+      "source_feature_id": "charoen-rat-release-15-medoid",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Release 1.5 restaurant-sample medoid; this is an analytical reference point, not a parcel or committed development site.",
+      "coordinates_wgs84": [
+        100.5168,
+        13.6963
+      ],
+      "rank_release_1_5": 2
+    },
+    {
+      "id": "charoen-rat-analysis-unit",
+      "site_id": "charoen-rat",
+      "vocabulary": "standardized_catchment",
+      "source_id": "release-16-canonical-screening",
+      "source_feature_id": "fixed-area-26.3154km2-medoid-v1",
+      "derivation": "buffer",
+      "derived_from": [
+        "charoen-rat-center"
+      ],
+      "disclosure": "Fixed-area analytical circle (26.3154 km²; radius 2.89421 km) centered on the Release 1.5 medoid. It is used only for like-for-like comparison and is not a parcel, legal boundary, source polygon, or proven trade area.",
+      "shape": {
+        "type": "circle",
+        "radius_km": 2.89421,
+        "area_km2": 26.3154,
+        "center_geometry_id": "charoen-rat-center"
+      }
+    },
+    {
+      "id": "charoen-rat-poi-sena_fest",
+      "site_id": "charoen-rat",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_sena_fest",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5078712,
+        13.7192823
+      ],
+      "canonical_name": "SENA Fest",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.731,
+      "impact": {
+        "class": "medium",
+        "fact_status": "analytical_classification",
+        "confidence": "medium_high"
+      },
+      "marker_sizing": {
+        "basis": "operator_metric",
+        "metric_name": "commercial_space",
+        "value": 9811,
+        "unit": "sqm",
+        "metric_as_of": null,
+        "definition": "Commercial space stated on the operator's undated project about page.",
+        "visual_scale_note": "Marker size is binned for legibility; it is not a proportional area diagram."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-charoen-rat-comp_bkk_sena_fest",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "charoen-rat-poi-kingsquare_community_mall",
+      "site_id": "charoen-rat",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_kingsquare_community_mall",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.527267,
+        13.691932
+      ],
+      "canonical_name": "KINGSQUARE Community Mall",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 1.231,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Direct community-mall and family/routine format overlap at 1.231 km from Charoen Rat.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-charoen-rat-comp_bkk_kingsquare_community_mall",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "charoen-rat-poi-terminal21_rama3",
+      "site_id": "charoen-rat",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_terminal21_rama3",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5053561,
+        13.6889163
+      ],
+      "canonical_name": "Terminal21 Rama 3",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 1.484,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Large multi-category shopping-center offer at 0.845 km from Bang Pakok, 1.484 km from Charoen Rat, and 2.403 km from Samre.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-charoen-rat-comp_bkk_terminal21_rama3",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "charoen-rat-poi-central_rama3",
+      "site_id": "charoen-rat",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_central_rama3",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5377797,
+        13.6977371
+      ],
+      "canonical_name": "Central Rama 3",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.272,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "operator_metric",
+        "metric_name": "leasable_area",
+        "value": 48328,
+        "unit": "sqm",
+        "metric_as_of": "2024-12-31",
+        "definition": "Leasable area in Central Pattana's retail-properties asset table.",
+        "visual_scale_note": "Marker size is binned for legibility; it is not a proportional area diagram."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-charoen-rat-comp_bkk_central_rama3",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "samre-center",
+      "site_id": "samre",
+      "vocabulary": "center_point",
+      "source_id": "release-15-baseline",
+      "source_feature_id": "samre-release-15-medoid",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Release 1.5 restaurant-sample medoid; this is an analytical reference point, not a parcel or committed development site.",
+      "coordinates_wgs84": [
+        100.4911,
+        13.7055
+      ],
+      "rank_release_1_5": 3
+    },
+    {
+      "id": "samre-analysis-unit",
+      "site_id": "samre",
+      "vocabulary": "standardized_catchment",
+      "source_id": "release-16-canonical-screening",
+      "source_feature_id": "fixed-area-26.3154km2-medoid-v1",
+      "derivation": "buffer",
+      "derived_from": [
+        "samre-center"
+      ],
+      "disclosure": "Fixed-area analytical circle (26.3154 km²; radius 2.89421 km) centered on the Release 1.5 medoid. It is used only for like-for-like comparison and is not a parcel, legal boundary, source polygon, or proven trade area.",
+      "shape": {
+        "type": "circle",
+        "radius_km": 2.89421,
+        "area_km2": 26.3154,
+        "center_geometry_id": "samre-center"
+      }
+    },
+    {
+      "id": "samre-poi-platform_wongwian_yai",
+      "site_id": "samre",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_platform_wongwian_yai",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.4947674,
+        13.7271083
+      ],
+      "canonical_name": "Platform Wongwian Yai",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.435,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Direct shopping-center overlap at 0.202 km from Wongwian Yai East and 0.794 km from Ban Khaek; no current authoritative GLA or occupied-tenant count was found.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-samre-comp_bkk_platform_wongwian_yai",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "samre-poi-sena_fest",
+      "site_id": "samre",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_sena_fest",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5078712,
+        13.7192823
+      ],
+      "canonical_name": "SENA Fest",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.373,
+      "impact": {
+        "class": "medium",
+        "fact_status": "analytical_classification",
+        "confidence": "medium_high"
+      },
+      "marker_sizing": {
+        "basis": "operator_metric",
+        "metric_name": "commercial_space",
+        "value": 9811,
+        "unit": "sqm",
+        "metric_as_of": null,
+        "definition": "Commercial space stated on the operator's undated project about page.",
+        "visual_scale_note": "Marker size is binned for legibility; it is not a proportional area diagram."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-samre-comp_bkk_sena_fest",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "samre-poi-the_mall_lifestore_tha_phra",
+      "site_id": "samre",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_the_mall_lifestore_tha_phra",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.4801172,
+        13.7136096
+      ],
+      "canonical_name": "The Mall Lifestore Tha Phra",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 1.49,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Full-format center only 0.508 km from Talat Phlu South and 1.490 km from Samre; current authoritative size was not found in this pass.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-samre-comp_bkk_the_mall_lifestore_tha_phra",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "samre-poi-terminal21_rama3",
+      "site_id": "samre",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_terminal21_rama3",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5053561,
+        13.6889163
+      ],
+      "canonical_name": "Terminal21 Rama 3",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.403,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Large multi-category shopping-center offer at 0.845 km from Bang Pakok, 1.484 km from Charoen Rat, and 2.403 km from Samre.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-samre-comp_bkk_terminal21_rama3",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "samre-poi-riverside_plaza_bangkok",
+      "site_id": "samre",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_riverside_plaza_bangkok",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.4909755,
+        13.7052211
+      ],
+      "canonical_name": "Riverside Plaza Bangkok",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 0.034,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "The venue point is only 0.034 km from the Release 1.5 Samre analytical center, indicating direct overlap or a candidate-center artifact.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-samre-comp_bkk_riverside_plaza_bangkok",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "ban-khaek-center",
+      "site_id": "ban-khaek",
+      "vocabulary": "center_point",
+      "source_id": "release-15-baseline",
+      "source_feature_id": "ban-khaek-release-15-medoid",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Release 1.5 restaurant-sample medoid; this is an analytical reference point, not a parcel or committed development site.",
+      "coordinates_wgs84": [
+        100.4915,
+        13.7335
+      ],
+      "rank_release_1_5": 4
+    },
+    {
+      "id": "ban-khaek-analysis-unit",
+      "site_id": "ban-khaek",
+      "vocabulary": "standardized_catchment",
+      "source_id": "release-16-canonical-screening",
+      "source_feature_id": "fixed-area-26.3154km2-medoid-v1",
+      "derivation": "buffer",
+      "derived_from": [
+        "ban-khaek-center"
+      ],
+      "disclosure": "Fixed-area analytical circle (26.3154 km²; radius 2.89421 km) centered on the Release 1.5 medoid. It is used only for like-for-like comparison and is not a parcel, legal boundary, source polygon, or proven trade area.",
+      "shape": {
+        "type": "circle",
+        "radius_km": 2.89421,
+        "area_km2": 26.3154,
+        "center_geometry_id": "ban-khaek-center"
+      }
+    },
+    {
+      "id": "ban-khaek-poi-platform_wongwian_yai",
+      "site_id": "ban-khaek",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_platform_wongwian_yai",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.4947674,
+        13.7271083
+      ],
+      "canonical_name": "Platform Wongwian Yai",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 0.794,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Direct shopping-center overlap at 0.202 km from Wongwian Yai East and 0.794 km from Ban Khaek; no current authoritative GLA or occupied-tenant count was found.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-ban-khaek-comp_bkk_platform_wongwian_yai",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "ban-khaek-poi-iconsiam",
+      "site_id": "ban-khaek",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_iconsiam",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5107399,
+        13.7266738
+      ],
+      "canonical_name": "ICONSIAM",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.213,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "operator_metric",
+        "metric_name": "retail_complex_area",
+        "value": 525000,
+        "unit": "sqm",
+        "metric_as_of": null,
+        "definition": "Combined area of two retail complexes stated in the same historical operator project announcement; not represented as current leasable area.",
+        "visual_scale_note": "Marker size is binned for legibility; it is not a proportional area diagram."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-ban-khaek-comp_bkk_iconsiam",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "ban-khaek-poi-ics_lifestyle_complex",
+      "site_id": "ban-khaek",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_ics_lifestyle_complex",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5084353,
+        13.7262214
+      ],
+      "canonical_name": "ICS Lifestyle Complex",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Part of the ICONSIAM destination cluster and within 1.411 km of Wongwian Yai East and 2.000 km of Ban Khaek; count the cluster once in pressure scoring.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-ban-khaek-comp_bkk_ics_lifestyle_complex",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "ban-khaek-poi-sena_fest",
+      "site_id": "ban-khaek",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_sena_fest",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5078712,
+        13.7192823
+      ],
+      "canonical_name": "SENA Fest",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.372,
+      "impact": {
+        "class": "medium",
+        "fact_status": "analytical_classification",
+        "confidence": "medium_high"
+      },
+      "marker_sizing": {
+        "basis": "operator_metric",
+        "metric_name": "commercial_space",
+        "value": 9811,
+        "unit": "sqm",
+        "metric_as_of": null,
+        "definition": "Commercial space stated on the operator's undated project about page.",
+        "visual_scale_note": "Marker size is binned for legibility; it is not a proportional area diagram."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-ban-khaek-comp_bkk_sena_fest",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "ban-khaek-poi-the_mall_lifestore_tha_phra",
+      "site_id": "ban-khaek",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_the_mall_lifestore_tha_phra",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.4801172,
+        13.7136096
+      ],
+      "canonical_name": "The Mall Lifestore Tha Phra",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.531,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Full-format center only 0.508 km from Talat Phlu South and 1.490 km from Samre; current authoritative size was not found in this pass.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-ban-khaek-comp_bkk_the_mall_lifestore_tha_phra",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "ban-khaek-poi-the_old_siam_plaza",
+      "site_id": "ban-khaek",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_the_old_siam_plaza",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.500214,
+        13.745874
+      ],
+      "canonical_name": "The Old Siam Plaza",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 1.667,
+      "impact": {
+        "class": "medium",
+        "fact_status": "analytical_classification",
+        "confidence": "medium_high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "medium",
+        "fact_status": "analytical_classification",
+        "basis_text": "Operating specialty-oriented shopping center inside Wongwian Yai East, Ban Khaek, and Wang Lang fixed-radius catchments; network access may differ because of river crossings.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-ban-khaek-comp_bkk_the_old_siam_plaza",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "ban-khaek-poi-tha_maharaj",
+      "site_id": "ban-khaek",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_tha_maharaj",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.488722,
+        13.754733
+      ],
+      "canonical_name": "Tha Maharaj",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.38,
+      "impact": {
+        "class": "medium",
+        "fact_status": "analytical_classification",
+        "confidence": "medium"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "medium",
+        "fact_status": "analytical_classification",
+        "basis_text": "Only 0.251 km straight-line from Wang Lang but on the opposite riverbank; straight-line distance is not accessibility-equivalent.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-ban-khaek-comp_bkk_tha_maharaj",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "talat-phlu-south-center",
+      "site_id": "talat-phlu-south",
+      "vocabulary": "center_point",
+      "source_id": "release-15-baseline",
+      "source_feature_id": "talat-phlu-south-release-15-medoid",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Release 1.5 restaurant-sample medoid; this is an analytical reference point, not a parcel or committed development site.",
+      "coordinates_wgs84": [
+        100.4775,
+        13.7174
+      ],
+      "rank_release_1_5": 5
+    },
+    {
+      "id": "talat-phlu-south-analysis-unit",
+      "site_id": "talat-phlu-south",
+      "vocabulary": "standardized_catchment",
+      "source_id": "release-16-canonical-screening",
+      "source_feature_id": "fixed-area-26.3154km2-medoid-v1",
+      "derivation": "buffer",
+      "derived_from": [
+        "talat-phlu-south-center"
+      ],
+      "disclosure": "Fixed-area analytical circle (26.3154 km²; radius 2.89421 km) centered on the Release 1.5 medoid. It is used only for like-for-like comparison and is not a parcel, legal boundary, source polygon, or proven trade area.",
+      "shape": {
+        "type": "circle",
+        "radius_km": 2.89421,
+        "area_km2": 26.3154,
+        "center_geometry_id": "talat-phlu-south-center"
+      }
+    },
+    {
+      "id": "talat-phlu-south-poi-platform_wongwian_yai",
+      "site_id": "talat-phlu-south",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_platform_wongwian_yai",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.4947674,
+        13.7271083
+      ],
+      "canonical_name": "Platform Wongwian Yai",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.155,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Direct shopping-center overlap at 0.202 km from Wongwian Yai East and 0.794 km from Ban Khaek; no current authoritative GLA or occupied-tenant count was found.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-talat-phlu-south-comp_bkk_platform_wongwian_yai",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "talat-phlu-south-poi-the_mall_lifestore_tha_phra",
+      "site_id": "talat-phlu-south",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_the_mall_lifestore_tha_phra",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.4801172,
+        13.7136096
+      ],
+      "canonical_name": "The Mall Lifestore Tha Phra",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 0.508,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Full-format center only 0.508 km from Talat Phlu South and 1.490 km from Samre; current authoritative size was not found in this pass.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-talat-phlu-south-comp_bkk_the_mall_lifestore_tha_phra",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "talat-phlu-south-poi-riverside_plaza_bangkok",
+      "site_id": "talat-phlu-south",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_riverside_plaza_bangkok",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.4909755,
+        13.7052211
+      ],
+      "canonical_name": "Riverside Plaza Bangkok",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 1.988,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "The venue point is only 0.034 km from the Release 1.5 Samre analytical center, indicating direct overlap or a candidate-center artifact.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-talat-phlu-south-comp_bkk_riverside_plaza_bangkok",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "bang-pakok-center",
+      "site_id": "bang-pakok",
+      "vocabulary": "center_point",
+      "source_id": "release-15-baseline",
+      "source_feature_id": "bang-pakok-release-15-medoid",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Release 1.5 restaurant-sample medoid; this is an analytical reference point, not a parcel or committed development site.",
+      "coordinates_wgs84": [
+        100.5019,
+        13.6821
+      ],
+      "rank_release_1_5": 6
+    },
+    {
+      "id": "bang-pakok-analysis-unit",
+      "site_id": "bang-pakok",
+      "vocabulary": "standardized_catchment",
+      "source_id": "release-16-canonical-screening",
+      "source_feature_id": "fixed-area-26.3154km2-medoid-v1",
+      "derivation": "buffer",
+      "derived_from": [
+        "bang-pakok-center"
+      ],
+      "disclosure": "Fixed-area analytical circle (26.3154 km²; radius 2.89421 km) centered on the Release 1.5 medoid. It is used only for like-for-like comparison and is not a parcel, legal boundary, source polygon, or proven trade area.",
+      "shape": {
+        "type": "circle",
+        "radius_km": 2.89421,
+        "area_km2": 26.3154,
+        "center_geometry_id": "bang-pakok-center"
+      }
+    },
+    {
+      "id": "bang-pakok-poi-terminal21_rama3",
+      "site_id": "bang-pakok",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_terminal21_rama3",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5053561,
+        13.6889163
+      ],
+      "canonical_name": "Terminal21 Rama 3",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 0.845,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Large multi-category shopping-center offer at 0.845 km from Bang Pakok, 1.484 km from Charoen Rat, and 2.403 km from Samre.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-bang-pakok-comp_bkk_terminal21_rama3",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "bang-pakok-poi-riverside_plaza_bangkok",
+      "site_id": "bang-pakok",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_riverside_plaza_bangkok",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.4909755,
+        13.7052211
+      ],
+      "canonical_name": "Riverside Plaza Bangkok",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.829,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "The venue point is only 0.034 km from the Release 1.5 Samre analytical center, indicating direct overlap or a candidate-center artifact.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-bang-pakok-comp_bkk_riverside_plaza_bangkok",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "wang-lang-center",
+      "site_id": "wang-lang",
+      "vocabulary": "center_point",
+      "source_id": "release-15-baseline",
+      "source_feature_id": "wang-lang-release-15-medoid",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Release 1.5 restaurant-sample medoid; this is an analytical reference point, not a parcel or committed development site.",
+      "coordinates_wgs84": [
+        100.4864,
+        13.7548
+      ],
+      "rank_release_1_5": 7
+    },
+    {
+      "id": "wang-lang-analysis-unit",
+      "site_id": "wang-lang",
+      "vocabulary": "standardized_catchment",
+      "source_id": "release-16-canonical-screening",
+      "source_feature_id": "fixed-area-26.3154km2-medoid-v1",
+      "derivation": "buffer",
+      "derived_from": [
+        "wang-lang-center"
+      ],
+      "disclosure": "Fixed-area analytical circle (26.3154 km²; radius 2.89421 km) centered on the Release 1.5 medoid. It is used only for like-for-like comparison and is not a parcel, legal boundary, source polygon, or proven trade area.",
+      "shape": {
+        "type": "circle",
+        "radius_km": 2.89421,
+        "area_km2": 26.3154,
+        "center_geometry_id": "wang-lang-center"
+      }
+    },
+    {
+      "id": "wang-lang-poi-the_old_siam_plaza",
+      "site_id": "wang-lang",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_the_old_siam_plaza",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.500214,
+        13.745874
+      ],
+      "canonical_name": "The Old Siam Plaza",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 1.792,
+      "impact": {
+        "class": "medium",
+        "fact_status": "analytical_classification",
+        "confidence": "medium_high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "medium",
+        "fact_status": "analytical_classification",
+        "basis_text": "Operating specialty-oriented shopping center inside Wongwian Yai East, Ban Khaek, and Wang Lang fixed-radius catchments; network access may differ because of river crossings.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-wang-lang-comp_bkk_the_old_siam_plaza",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "wang-lang-poi-tha_maharaj",
+      "site_id": "wang-lang",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_tha_maharaj",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.488722,
+        13.754733
+      ],
+      "canonical_name": "Tha Maharaj",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 0.251,
+      "impact": {
+        "class": "medium",
+        "fact_status": "analytical_classification",
+        "confidence": "medium"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "medium",
+        "fact_status": "analytical_classification",
+        "basis_text": "Only 0.251 km straight-line from Wang Lang but on the opposite riverbank; straight-line distance is not accessibility-equivalent.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-wang-lang-comp_bkk_tha_maharaj",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "wang-lang-poi-central_pinklao",
+      "site_id": "wang-lang",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_central_pinklao",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.4757519,
+        13.7773229
+      ],
+      "canonical_name": "Central Pinklao",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.756,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "operator_metric",
+        "metric_name": "leasable_area",
+        "value": 64917,
+        "unit": "sqm",
+        "metric_as_of": "2024-12-31",
+        "definition": "Leasable area in Central Pattana's retail-properties asset table.",
+        "visual_scale_note": "Marker size is binned for legibility; it is not a proportional area diagram."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-wang-lang-comp_bkk_central_pinklao",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "ratchathewi-center",
+      "site_id": "ratchathewi",
+      "vocabulary": "center_point",
+      "source_id": "release-15-baseline",
+      "source_feature_id": "ratchathewi-release-15-medoid",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Release 1.5 restaurant-sample medoid; this is an analytical reference point, not a parcel or committed development site.",
+      "coordinates_wgs84": [
+        100.5325,
+        13.7531
+      ],
+      "rank_release_1_5": 8
+    },
+    {
+      "id": "ratchathewi-analysis-unit",
+      "site_id": "ratchathewi",
+      "vocabulary": "standardized_catchment",
+      "source_id": "release-16-canonical-screening",
+      "source_feature_id": "fixed-area-26.3154km2-medoid-v1",
+      "derivation": "buffer",
+      "derived_from": [
+        "ratchathewi-center"
+      ],
+      "disclosure": "Fixed-area analytical circle (26.3154 km²; radius 2.89421 km) centered on the Release 1.5 medoid. It is used only for like-for-like comparison and is not a parcel, legal boundary, source polygon, or proven trade area.",
+      "shape": {
+        "type": "circle",
+        "radius_km": 2.89421,
+        "area_km2": 26.3154,
+        "center_geometry_id": "ratchathewi-center"
+      }
+    },
+    {
+      "id": "ratchathewi-poi-siam_discovery",
+      "site_id": "ratchathewi",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_siam_discovery",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5315099,
+        13.7466557
+      ],
+      "canonical_name": "Siam Discovery",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 0.725,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Major central retail destination 0.725 km from Ratchathewi and 2.727 km from Din Daeng; cluster-deduplicate with Siam Center and Siam Paragon.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-ratchathewi-comp_bkk_siam_discovery",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "ratchathewi-poi-siam_center",
+      "site_id": "ratchathewi",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_siam_center",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5328368,
+        13.7462718
+      ],
+      "canonical_name": "Siam Center",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 0.76,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Major central retail destination 0.760 km from Ratchathewi and 2.625 km from Din Daeng; cluster-deduplicate with Siam Discovery and Siam Paragon.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-ratchathewi-comp_bkk_siam_center",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "ratchathewi-poi-siam_paragon",
+      "site_id": "ratchathewi",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_siam_paragon",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5347125,
+        13.7465615
+      ],
+      "canonical_name": "Siam Paragon",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 0.765,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "operator_metric",
+        "metric_name": "brand_count_minimum",
+        "value": 300,
+        "unit": "brands",
+        "metric_as_of": "2026-07-28",
+        "definition": "Official directory advertises more than 300 brands.",
+        "visual_scale_note": "Marker size is binned for legibility; it is not a proportional area diagram."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-ratchathewi-comp_bkk_siam_paragon",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "ratchathewi-poi-platinum_fashion_mall",
+      "site_id": "ratchathewi",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_platinum_fashion_mall",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5400622,
+        13.7498991
+      ],
+      "canonical_name": "Platinum Fashion Mall",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 0.891,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Dense specialized fashion offer 0.891 km from Ratchathewi and 1.750 km from Din Daeng; mission overlap is specialized rather than fully generalist.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-ratchathewi-comp_bkk_platinum_fashion_mall",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "ratchathewi-poi-centralworld",
+      "site_id": "ratchathewi",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_centralworld",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5388752,
+        13.7470012
+      ],
+      "canonical_name": "centralWorld",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 0.966,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "operator_metric",
+        "metric_name": "leasable_area",
+        "value": 180386,
+        "unit": "sqm",
+        "metric_as_of": "2024-12-31",
+        "definition": "Leasable area in Central Pattana's retail-properties asset table.",
+        "visual_scale_note": "Marker size is binned for legibility; it is not a proportional area diagram."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-ratchathewi-comp_bkk_centralworld",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "ratchathewi-poi-mbk_center",
+      "site_id": "ratchathewi",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_mbk_center",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5298414,
+        13.744611
+      ],
+      "canonical_name": "MBK Center",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 0.987,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Large multi-category and tourism-oriented center 0.987 km from Ratchathewi; current authoritative GLA was not captured.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-ratchathewi-comp_bkk_mbk_center",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "pracha-uthit-center",
+      "site_id": "pracha-uthit",
+      "vocabulary": "center_point",
+      "source_id": "release-15-baseline",
+      "source_feature_id": "pracha-uthit-release-15-medoid",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Release 1.5 restaurant-sample medoid; this is an analytical reference point, not a parcel or committed development site.",
+      "coordinates_wgs84": [
+        100.5029,
+        13.6625
+      ],
+      "rank_release_1_5": 9
+    },
+    {
+      "id": "pracha-uthit-analysis-unit",
+      "site_id": "pracha-uthit",
+      "vocabulary": "standardized_catchment",
+      "source_id": "release-16-canonical-screening",
+      "source_feature_id": "fixed-area-26.3154km2-medoid-v1",
+      "derivation": "buffer",
+      "derived_from": [
+        "pracha-uthit-center"
+      ],
+      "disclosure": "Fixed-area analytical circle (26.3154 km²; radius 2.89421 km) centered on the Release 1.5 medoid. It is used only for like-for-like comparison and is not a parcel, legal boundary, source polygon, or proven trade area.",
+      "shape": {
+        "type": "circle",
+        "radius_km": 2.89421,
+        "area_km2": 26.3154,
+        "center_geometry_id": "pracha-uthit-center"
+      }
+    },
+    {
+      "id": "din-daeng-center",
+      "site_id": "din-daeng",
+      "vocabulary": "center_point",
+      "source_id": "release-15-baseline",
+      "source_feature_id": "din-daeng-release-15-medoid",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Release 1.5 restaurant-sample medoid; this is an analytical reference point, not a parcel or committed development site.",
+      "coordinates_wgs84": [
+        100.5535,
+        13.7587
+      ],
+      "rank_release_1_5": 10
+    },
+    {
+      "id": "din-daeng-analysis-unit",
+      "site_id": "din-daeng",
+      "vocabulary": "standardized_catchment",
+      "source_id": "release-16-canonical-screening",
+      "source_feature_id": "fixed-area-26.3154km2-medoid-v1",
+      "derivation": "buffer",
+      "derived_from": [
+        "din-daeng-center"
+      ],
+      "disclosure": "Fixed-area analytical circle (26.3154 km²; radius 2.89421 km) centered on the Release 1.5 medoid. It is used only for like-for-like comparison and is not a parcel, legal boundary, source polygon, or proven trade area.",
+      "shape": {
+        "type": "circle",
+        "radius_km": 2.89421,
+        "area_km2": 26.3154,
+        "center_geometry_id": "din-daeng-center"
+      }
+    },
+    {
+      "id": "din-daeng-poi-siam_discovery",
+      "site_id": "din-daeng",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_siam_discovery",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5315099,
+        13.7466557
+      ],
+      "canonical_name": "Siam Discovery",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.727,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Major central retail destination 0.725 km from Ratchathewi and 2.727 km from Din Daeng; cluster-deduplicate with Siam Center and Siam Paragon.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-din-daeng-comp_bkk_siam_discovery",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "din-daeng-poi-siam_center",
+      "site_id": "din-daeng",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_siam_center",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5328368,
+        13.7462718
+      ],
+      "canonical_name": "Siam Center",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.625,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Major central retail destination 0.760 km from Ratchathewi and 2.625 km from Din Daeng; cluster-deduplicate with Siam Discovery and Siam Paragon.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-din-daeng-comp_bkk_siam_center",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "din-daeng-poi-siam_paragon",
+      "site_id": "din-daeng",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_siam_paragon",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5347125,
+        13.7465615
+      ],
+      "canonical_name": "Siam Paragon",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.437,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "operator_metric",
+        "metric_name": "brand_count_minimum",
+        "value": 300,
+        "unit": "brands",
+        "metric_as_of": "2026-07-28",
+        "definition": "Official directory advertises more than 300 brands.",
+        "visual_scale_note": "Marker size is binned for legibility; it is not a proportional area diagram."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-din-daeng-comp_bkk_siam_paragon",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "din-daeng-poi-platinum_fashion_mall",
+      "site_id": "din-daeng",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_platinum_fashion_mall",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5400622,
+        13.7498991
+      ],
+      "canonical_name": "Platinum Fashion Mall",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 1.75,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Dense specialized fashion offer 0.891 km from Ratchathewi and 1.750 km from Din Daeng; mission overlap is specialized rather than fully generalist.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-din-daeng-comp_bkk_platinum_fashion_mall",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "din-daeng-poi-centralworld",
+      "site_id": "din-daeng",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_centralworld",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5388752,
+        13.7470012
+      ],
+      "canonical_name": "centralWorld",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.046,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "operator_metric",
+        "metric_name": "leasable_area",
+        "value": 180386,
+        "unit": "sqm",
+        "metric_as_of": "2024-12-31",
+        "definition": "Leasable area in Central Pattana's retail-properties asset table.",
+        "visual_scale_note": "Marker size is binned for legibility; it is not a proportional area diagram."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-din-daeng-comp_bkk_centralworld",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "din-daeng-poi-fortune_town",
+      "site_id": "din-daeng",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_fortune_town",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5652256,
+        13.7592479
+      ],
+      "canonical_name": "Fortune Town",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 1.268,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Strong specialized IT and service offer 1.268 km from Din Daeng; no current authoritative GLA was captured.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-din-daeng-comp_bkk_fortune_town",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "din-daeng-poi-central_rama9",
+      "site_id": "din-daeng",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_central_rama9",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.566177,
+        13.758595
+      ],
+      "canonical_name": "Central Rama 9",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 1.369,
+      "impact": {
+        "class": "high",
+        "fact_status": "analytical_classification",
+        "confidence": "high"
+      },
+      "marker_sizing": {
+        "basis": "operator_metric",
+        "metric_name": "leasable_area",
+        "value": 58826,
+        "unit": "sqm",
+        "metric_as_of": "2024-12-31",
+        "definition": "Leasable area in Central Pattana's retail-properties asset table.",
+        "visual_scale_note": "Marker size is binned for legibility; it is not a proportional area diagram."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-din-daeng-comp_bkk_central_rama9",
+        "minimum_target_px": 44
+      }
+    },
+    {
+      "id": "din-daeng-poi-the_street_ratchada",
+      "site_id": "din-daeng",
+      "vocabulary": "poi_sample",
+      "source_id": "release-16-competitor-registry",
+      "source_feature_id": "comp_bkk_the_street_ratchada",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Operating shopping-center competitor point used as evidence. Coordinates are venue-registry points, not surveyed parcel centroids.",
+      "coordinates_wgs84": [
+        100.5723288,
+        13.7706008
+      ],
+      "canonical_name": "The Street Ratchada",
+      "operating_status": "operating",
+      "operating_as_of": "2026-07-28",
+      "coordinate_basis": "host_venue_record",
+      "coordinate_confidence": "high",
+      "distance_to_candidate_km": 2.426,
+      "impact": {
+        "class": "medium_high",
+        "fact_status": "analytical_classification",
+        "confidence": "medium_high"
+      },
+      "marker_sizing": {
+        "basis": "disclosed_impact_class",
+        "impact_class": "medium_high",
+        "fact_status": "analytical_classification",
+        "basis_text": "Active Ratchada shopping and dining center 2.426 km from Din Daeng, with material daypart overlap but no authoritative current GLA captured.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric.",
+        "visual_scale_note": "No suitable current GLA or tenant-count metric was found; marker size uses the disclosed analytical impact class."
+      },
+      "interaction": {
+        "trigger": "svg_link",
+        "opens_details_id": "competitor-din-daeng-comp_bkk_the_street_ratchada",
+        "minimum_target_px": 44
+      }
+    }
+  ],
+  "osm_snapshot": null,
+  "maps": [
+    {
+      "id": "top10-overview",
+      "role": "overview",
+      "site_ids": [
+        "wongwian-yai-east",
+        "charoen-rat",
+        "samre",
+        "ban-khaek",
+        "talat-phlu-south",
+        "bang-pakok",
+        "wang-lang",
+        "ratchathewi",
+        "pracha-uthit",
+        "din-daeng"
+      ],
+      "layers": [
+        {
+          "id": "candidate-centers",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "wongwian-yai-east-center",
+            "charoen-rat-center",
+            "samre-center",
+            "ban-khaek-center",
+            "talat-phlu-south-center",
+            "bang-pakok-center",
+            "wang-lang-center",
+            "ratchathewi-center",
+            "pracha-uthit-center",
+            "din-daeng-center"
+          ],
+          "visible": true,
+          "marker": "numbered_candidate_marker",
+          "legend_label": "10 ทำเลตามอันดับ baseline",
+          "direct_labels": true
+        }
+      ],
+      "accessibility": {
+        "summary": "ภาพรวมจุดอ้างอิงของ 10 ทำเลตามอันดับ canonical baseline Release 1.5",
+        "data_table_id": "top10-comparison-table"
+      }
+    },
+    {
+      "id": "wongwian-yai-east-detail",
+      "role": "detail",
+      "site_ids": [
+        "wongwian-yai-east"
+      ],
+      "layers": [
+        {
+          "id": "wongwian-yai-east-analytical-catchment",
+          "kind": "standardized_catchment",
+          "geometry_ids": [
+            "wongwian-yai-east-analysis-unit"
+          ],
+          "visible": true,
+          "legend_label": "กรอบวิเคราะห์ 26.3154 ตร.กม. (ไม่ใช่แนวเขตแปลง)",
+          "visual_treatment": "quiet_dashed_circle"
+        },
+        {
+          "id": "wongwian-yai-east-candidate-center",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "wongwian-yai-east-center"
+          ],
+          "visible": true,
+          "marker": "numbered_candidate_marker",
+          "legend_label": "จุดอ้างอิงทำเล",
+          "direct_labels": true
+        },
+        {
+          "id": "wongwian-yai-east-verified-competitors",
+          "kind": "poi_sample",
+          "geometry_ids": [
+            "wongwian-yai-east-poi-platform_wongwian_yai",
+            "wongwian-yai-east-poi-iconsiam",
+            "wongwian-yai-east-poi-ics_lifestyle_complex",
+            "wongwian-yai-east-poi-sena_fest",
+            "wongwian-yai-east-poi-the_mall_lifestore_tha_phra",
+            "wongwian-yai-east-poi-riverside_plaza_bangkok",
+            "wongwian-yai-east-poi-the_old_siam_plaza"
+          ],
+          "visible": true,
+          "marker": "impact_scaled_competitor_marker",
+          "legend_label": "คู่แข่งที่ยืนยันสถานะเปิดให้บริการและมีพิกัดพอสำหรับแสดง",
+          "direct_labels": false,
+          "interaction": "link_opens_linked_details",
+          "minimum_touch_target_px": 44,
+          "size_basis_priority": [
+            "operator_metric",
+            "disclosed_impact_class"
+          ]
+        }
+      ],
+      "omitted_context": {
+        "roads": "omitted_unverified",
+        "rail": "omitted_unverified",
+        "stations": "omitted_unverified",
+        "landmarks": "omitted_not_required",
+        "disclosure": "ไม่แสดงถนน รถไฟ หรือสถานี เพราะ Release 1.6 ไม่มี feature lineage และสถานะปฏิบัติการที่ผ่านการยืนยันสำหรับชั้นเหล่านั้น"
+      },
+      "accessibility": {
+        "summary": "แผนที่ วงเวียนใหญ่–ตะวันออก แสดงจุดอ้างอิง กรอบวิเคราะห์ และคู่แข่งที่มีพิกัดพร้อมใช้; รายการทั้งหมดซ้ำในตาราง",
+        "data_table_id": "wongwian-yai-east-competitor-table"
+      }
+    },
+    {
+      "id": "charoen-rat-detail",
+      "role": "detail",
+      "site_ids": [
+        "charoen-rat"
+      ],
+      "layers": [
+        {
+          "id": "charoen-rat-analytical-catchment",
+          "kind": "standardized_catchment",
+          "geometry_ids": [
+            "charoen-rat-analysis-unit"
+          ],
+          "visible": true,
+          "legend_label": "กรอบวิเคราะห์ 26.3154 ตร.กม. (ไม่ใช่แนวเขตแปลง)",
+          "visual_treatment": "quiet_dashed_circle"
+        },
+        {
+          "id": "charoen-rat-candidate-center",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "charoen-rat-center"
+          ],
+          "visible": true,
+          "marker": "numbered_candidate_marker",
+          "legend_label": "จุดอ้างอิงทำเล",
+          "direct_labels": true
+        },
+        {
+          "id": "charoen-rat-verified-competitors",
+          "kind": "poi_sample",
+          "geometry_ids": [
+            "charoen-rat-poi-sena_fest",
+            "charoen-rat-poi-kingsquare_community_mall",
+            "charoen-rat-poi-terminal21_rama3",
+            "charoen-rat-poi-central_rama3"
+          ],
+          "visible": true,
+          "marker": "impact_scaled_competitor_marker",
+          "legend_label": "คู่แข่งที่ยืนยันสถานะเปิดให้บริการและมีพิกัดพอสำหรับแสดง",
+          "direct_labels": false,
+          "interaction": "link_opens_linked_details",
+          "minimum_touch_target_px": 44,
+          "size_basis_priority": [
+            "operator_metric",
+            "disclosed_impact_class"
+          ]
+        }
+      ],
+      "omitted_context": {
+        "roads": "omitted_unverified",
+        "rail": "omitted_unverified",
+        "stations": "omitted_unverified",
+        "landmarks": "omitted_not_required",
+        "disclosure": "ไม่แสดงถนน รถไฟ หรือสถานี เพราะ Release 1.6 ไม่มี feature lineage และสถานะปฏิบัติการที่ผ่านการยืนยันสำหรับชั้นเหล่านั้น"
+      },
+      "accessibility": {
+        "summary": "แผนที่ เจริญราษฎร์ แสดงจุดอ้างอิง กรอบวิเคราะห์ และคู่แข่งที่มีพิกัดพร้อมใช้; รายการทั้งหมดซ้ำในตาราง",
+        "data_table_id": "charoen-rat-competitor-table"
+      }
+    },
+    {
+      "id": "samre-detail",
+      "role": "detail",
+      "site_ids": [
+        "samre"
+      ],
+      "layers": [
+        {
+          "id": "samre-analytical-catchment",
+          "kind": "standardized_catchment",
+          "geometry_ids": [
+            "samre-analysis-unit"
+          ],
+          "visible": true,
+          "legend_label": "กรอบวิเคราะห์ 26.3154 ตร.กม. (ไม่ใช่แนวเขตแปลง)",
+          "visual_treatment": "quiet_dashed_circle"
+        },
+        {
+          "id": "samre-candidate-center",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "samre-center"
+          ],
+          "visible": true,
+          "marker": "numbered_candidate_marker",
+          "legend_label": "จุดอ้างอิงทำเล",
+          "direct_labels": true
+        },
+        {
+          "id": "samre-verified-competitors",
+          "kind": "poi_sample",
+          "geometry_ids": [
+            "samre-poi-platform_wongwian_yai",
+            "samre-poi-sena_fest",
+            "samre-poi-the_mall_lifestore_tha_phra",
+            "samre-poi-terminal21_rama3",
+            "samre-poi-riverside_plaza_bangkok"
+          ],
+          "visible": true,
+          "marker": "impact_scaled_competitor_marker",
+          "legend_label": "คู่แข่งที่ยืนยันสถานะเปิดให้บริการและมีพิกัดพอสำหรับแสดง",
+          "direct_labels": false,
+          "interaction": "link_opens_linked_details",
+          "minimum_touch_target_px": 44,
+          "size_basis_priority": [
+            "operator_metric",
+            "disclosed_impact_class"
+          ]
+        }
+      ],
+      "omitted_context": {
+        "roads": "omitted_unverified",
+        "rail": "omitted_unverified",
+        "stations": "omitted_unverified",
+        "landmarks": "omitted_not_required",
+        "disclosure": "ไม่แสดงถนน รถไฟ หรือสถานี เพราะ Release 1.6 ไม่มี feature lineage และสถานะปฏิบัติการที่ผ่านการยืนยันสำหรับชั้นเหล่านั้น"
+      },
+      "accessibility": {
+        "summary": "แผนที่ สำเหร่ แสดงจุดอ้างอิง กรอบวิเคราะห์ และคู่แข่งที่มีพิกัดพร้อมใช้; รายการทั้งหมดซ้ำในตาราง",
+        "data_table_id": "samre-competitor-table"
+      }
+    },
+    {
+      "id": "ban-khaek-detail",
+      "role": "detail",
+      "site_ids": [
+        "ban-khaek"
+      ],
+      "layers": [
+        {
+          "id": "ban-khaek-analytical-catchment",
+          "kind": "standardized_catchment",
+          "geometry_ids": [
+            "ban-khaek-analysis-unit"
+          ],
+          "visible": true,
+          "legend_label": "กรอบวิเคราะห์ 26.3154 ตร.กม. (ไม่ใช่แนวเขตแปลง)",
+          "visual_treatment": "quiet_dashed_circle"
+        },
+        {
+          "id": "ban-khaek-candidate-center",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "ban-khaek-center"
+          ],
+          "visible": true,
+          "marker": "numbered_candidate_marker",
+          "legend_label": "จุดอ้างอิงทำเล",
+          "direct_labels": true
+        },
+        {
+          "id": "ban-khaek-verified-competitors",
+          "kind": "poi_sample",
+          "geometry_ids": [
+            "ban-khaek-poi-platform_wongwian_yai",
+            "ban-khaek-poi-iconsiam",
+            "ban-khaek-poi-ics_lifestyle_complex",
+            "ban-khaek-poi-sena_fest",
+            "ban-khaek-poi-the_mall_lifestore_tha_phra",
+            "ban-khaek-poi-the_old_siam_plaza",
+            "ban-khaek-poi-tha_maharaj"
+          ],
+          "visible": true,
+          "marker": "impact_scaled_competitor_marker",
+          "legend_label": "คู่แข่งที่ยืนยันสถานะเปิดให้บริการและมีพิกัดพอสำหรับแสดง",
+          "direct_labels": false,
+          "interaction": "link_opens_linked_details",
+          "minimum_touch_target_px": 44,
+          "size_basis_priority": [
+            "operator_metric",
+            "disclosed_impact_class"
+          ]
+        }
+      ],
+      "omitted_context": {
+        "roads": "omitted_unverified",
+        "rail": "omitted_unverified",
+        "stations": "omitted_unverified",
+        "landmarks": "omitted_not_required",
+        "disclosure": "ไม่แสดงถนน รถไฟ หรือสถานี เพราะ Release 1.6 ไม่มี feature lineage และสถานะปฏิบัติการที่ผ่านการยืนยันสำหรับชั้นเหล่านั้น"
+      },
+      "accessibility": {
+        "summary": "แผนที่ แยกบ้านแขก แสดงจุดอ้างอิง กรอบวิเคราะห์ และคู่แข่งที่มีพิกัดพร้อมใช้; รายการทั้งหมดซ้ำในตาราง",
+        "data_table_id": "ban-khaek-competitor-table"
+      }
+    },
+    {
+      "id": "talat-phlu-south-detail",
+      "role": "detail",
+      "site_ids": [
+        "talat-phlu-south"
+      ],
+      "layers": [
+        {
+          "id": "talat-phlu-south-analytical-catchment",
+          "kind": "standardized_catchment",
+          "geometry_ids": [
+            "talat-phlu-south-analysis-unit"
+          ],
+          "visible": true,
+          "legend_label": "กรอบวิเคราะห์ 26.3154 ตร.กม. (ไม่ใช่แนวเขตแปลง)",
+          "visual_treatment": "quiet_dashed_circle"
+        },
+        {
+          "id": "talat-phlu-south-candidate-center",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "talat-phlu-south-center"
+          ],
+          "visible": true,
+          "marker": "numbered_candidate_marker",
+          "legend_label": "จุดอ้างอิงทำเล",
+          "direct_labels": true
+        },
+        {
+          "id": "talat-phlu-south-verified-competitors",
+          "kind": "poi_sample",
+          "geometry_ids": [
+            "talat-phlu-south-poi-platform_wongwian_yai",
+            "talat-phlu-south-poi-the_mall_lifestore_tha_phra",
+            "talat-phlu-south-poi-riverside_plaza_bangkok"
+          ],
+          "visible": true,
+          "marker": "impact_scaled_competitor_marker",
+          "legend_label": "คู่แข่งที่ยืนยันสถานะเปิดให้บริการและมีพิกัดพอสำหรับแสดง",
+          "direct_labels": false,
+          "interaction": "link_opens_linked_details",
+          "minimum_touch_target_px": 44,
+          "size_basis_priority": [
+            "operator_metric",
+            "disclosed_impact_class"
+          ]
+        }
+      ],
+      "omitted_context": {
+        "roads": "omitted_unverified",
+        "rail": "omitted_unverified",
+        "stations": "omitted_unverified",
+        "landmarks": "omitted_not_required",
+        "disclosure": "ไม่แสดงถนน รถไฟ หรือสถานี เพราะ Release 1.6 ไม่มี feature lineage และสถานะปฏิบัติการที่ผ่านการยืนยันสำหรับชั้นเหล่านั้น"
+      },
+      "accessibility": {
+        "summary": "แผนที่ ตลาดพลู–ใต้ แสดงจุดอ้างอิง กรอบวิเคราะห์ และคู่แข่งที่มีพิกัดพร้อมใช้; รายการทั้งหมดซ้ำในตาราง",
+        "data_table_id": "talat-phlu-south-competitor-table"
+      }
+    },
+    {
+      "id": "bang-pakok-detail",
+      "role": "detail",
+      "site_ids": [
+        "bang-pakok"
+      ],
+      "layers": [
+        {
+          "id": "bang-pakok-analytical-catchment",
+          "kind": "standardized_catchment",
+          "geometry_ids": [
+            "bang-pakok-analysis-unit"
+          ],
+          "visible": true,
+          "legend_label": "กรอบวิเคราะห์ 26.3154 ตร.กม. (ไม่ใช่แนวเขตแปลง)",
+          "visual_treatment": "quiet_dashed_circle"
+        },
+        {
+          "id": "bang-pakok-candidate-center",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "bang-pakok-center"
+          ],
+          "visible": true,
+          "marker": "numbered_candidate_marker",
+          "legend_label": "จุดอ้างอิงทำเล",
+          "direct_labels": true
+        },
+        {
+          "id": "bang-pakok-verified-competitors",
+          "kind": "poi_sample",
+          "geometry_ids": [
+            "bang-pakok-poi-terminal21_rama3",
+            "bang-pakok-poi-riverside_plaza_bangkok"
+          ],
+          "visible": true,
+          "marker": "impact_scaled_competitor_marker",
+          "legend_label": "คู่แข่งที่ยืนยันสถานะเปิดให้บริการและมีพิกัดพอสำหรับแสดง",
+          "direct_labels": false,
+          "interaction": "link_opens_linked_details",
+          "minimum_touch_target_px": 44,
+          "size_basis_priority": [
+            "operator_metric",
+            "disclosed_impact_class"
+          ]
+        }
+      ],
+      "omitted_context": {
+        "roads": "omitted_unverified",
+        "rail": "omitted_unverified",
+        "stations": "omitted_unverified",
+        "landmarks": "omitted_not_required",
+        "disclosure": "ไม่แสดงถนน รถไฟ หรือสถานี เพราะ Release 1.6 ไม่มี feature lineage และสถานะปฏิบัติการที่ผ่านการยืนยันสำหรับชั้นเหล่านั้น"
+      },
+      "accessibility": {
+        "summary": "แผนที่ บางปะกอก แสดงจุดอ้างอิง กรอบวิเคราะห์ และคู่แข่งที่มีพิกัดพร้อมใช้; รายการทั้งหมดซ้ำในตาราง",
+        "data_table_id": "bang-pakok-competitor-table"
+      }
+    },
+    {
+      "id": "wang-lang-detail",
+      "role": "detail",
+      "site_ids": [
+        "wang-lang"
+      ],
+      "layers": [
+        {
+          "id": "wang-lang-analytical-catchment",
+          "kind": "standardized_catchment",
+          "geometry_ids": [
+            "wang-lang-analysis-unit"
+          ],
+          "visible": true,
+          "legend_label": "กรอบวิเคราะห์ 26.3154 ตร.กม. (ไม่ใช่แนวเขตแปลง)",
+          "visual_treatment": "quiet_dashed_circle"
+        },
+        {
+          "id": "wang-lang-candidate-center",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "wang-lang-center"
+          ],
+          "visible": true,
+          "marker": "numbered_candidate_marker",
+          "legend_label": "จุดอ้างอิงทำเล",
+          "direct_labels": true
+        },
+        {
+          "id": "wang-lang-verified-competitors",
+          "kind": "poi_sample",
+          "geometry_ids": [
+            "wang-lang-poi-the_old_siam_plaza",
+            "wang-lang-poi-tha_maharaj",
+            "wang-lang-poi-central_pinklao"
+          ],
+          "visible": true,
+          "marker": "impact_scaled_competitor_marker",
+          "legend_label": "คู่แข่งที่ยืนยันสถานะเปิดให้บริการและมีพิกัดพอสำหรับแสดง",
+          "direct_labels": false,
+          "interaction": "link_opens_linked_details",
+          "minimum_touch_target_px": 44,
+          "size_basis_priority": [
+            "operator_metric",
+            "disclosed_impact_class"
+          ]
+        }
+      ],
+      "omitted_context": {
+        "roads": "omitted_unverified",
+        "rail": "omitted_unverified",
+        "stations": "omitted_unverified",
+        "landmarks": "omitted_not_required",
+        "disclosure": "ไม่แสดงถนน รถไฟ หรือสถานี เพราะ Release 1.6 ไม่มี feature lineage และสถานะปฏิบัติการที่ผ่านการยืนยันสำหรับชั้นเหล่านั้น"
+      },
+      "accessibility": {
+        "summary": "แผนที่ วังหลัง แสดงจุดอ้างอิง กรอบวิเคราะห์ และคู่แข่งที่มีพิกัดพร้อมใช้; รายการทั้งหมดซ้ำในตาราง",
+        "data_table_id": "wang-lang-competitor-table"
+      }
+    },
+    {
+      "id": "ratchathewi-detail",
+      "role": "detail",
+      "site_ids": [
+        "ratchathewi"
+      ],
+      "layers": [
+        {
+          "id": "ratchathewi-analytical-catchment",
+          "kind": "standardized_catchment",
+          "geometry_ids": [
+            "ratchathewi-analysis-unit"
+          ],
+          "visible": true,
+          "legend_label": "กรอบวิเคราะห์ 26.3154 ตร.กม. (ไม่ใช่แนวเขตแปลง)",
+          "visual_treatment": "quiet_dashed_circle"
+        },
+        {
+          "id": "ratchathewi-candidate-center",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "ratchathewi-center"
+          ],
+          "visible": true,
+          "marker": "numbered_candidate_marker",
+          "legend_label": "จุดอ้างอิงทำเล",
+          "direct_labels": true
+        },
+        {
+          "id": "ratchathewi-verified-competitors",
+          "kind": "poi_sample",
+          "geometry_ids": [
+            "ratchathewi-poi-siam_discovery",
+            "ratchathewi-poi-siam_center",
+            "ratchathewi-poi-siam_paragon",
+            "ratchathewi-poi-platinum_fashion_mall",
+            "ratchathewi-poi-centralworld",
+            "ratchathewi-poi-mbk_center"
+          ],
+          "visible": true,
+          "marker": "impact_scaled_competitor_marker",
+          "legend_label": "คู่แข่งที่ยืนยันสถานะเปิดให้บริการและมีพิกัดพอสำหรับแสดง",
+          "direct_labels": false,
+          "interaction": "link_opens_linked_details",
+          "minimum_touch_target_px": 44,
+          "size_basis_priority": [
+            "operator_metric",
+            "disclosed_impact_class"
+          ]
+        }
+      ],
+      "omitted_context": {
+        "roads": "omitted_unverified",
+        "rail": "omitted_unverified",
+        "stations": "omitted_unverified",
+        "landmarks": "omitted_not_required",
+        "disclosure": "ไม่แสดงถนน รถไฟ หรือสถานี เพราะ Release 1.6 ไม่มี feature lineage และสถานะปฏิบัติการที่ผ่านการยืนยันสำหรับชั้นเหล่านั้น"
+      },
+      "accessibility": {
+        "summary": "แผนที่ ราชเทวี แสดงจุดอ้างอิง กรอบวิเคราะห์ และคู่แข่งที่มีพิกัดพร้อมใช้; รายการทั้งหมดซ้ำในตาราง",
+        "data_table_id": "ratchathewi-competitor-table"
+      }
+    },
+    {
+      "id": "pracha-uthit-detail",
+      "role": "detail",
+      "site_ids": [
+        "pracha-uthit"
+      ],
+      "layers": [
+        {
+          "id": "pracha-uthit-analytical-catchment",
+          "kind": "standardized_catchment",
+          "geometry_ids": [
+            "pracha-uthit-analysis-unit"
+          ],
+          "visible": true,
+          "legend_label": "กรอบวิเคราะห์ 26.3154 ตร.กม. (ไม่ใช่แนวเขตแปลง)",
+          "visual_treatment": "quiet_dashed_circle"
+        },
+        {
+          "id": "pracha-uthit-candidate-center",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "pracha-uthit-center"
+          ],
+          "visible": true,
+          "marker": "numbered_candidate_marker",
+          "legend_label": "จุดอ้างอิงทำเล",
+          "direct_labels": true
+        }
+      ],
+      "omitted_context": {
+        "roads": "omitted_unverified",
+        "rail": "omitted_unverified",
+        "stations": "omitted_unverified",
+        "landmarks": "omitted_not_required",
+        "disclosure": "ไม่แสดงถนน รถไฟ หรือสถานี เพราะ Release 1.6 ไม่มี feature lineage และสถานะปฏิบัติการที่ผ่านการยืนยันสำหรับชั้นเหล่านั้น; จุดคู่แข่งที่พิกัด host centroid ยังไม่ยืนยันถูกถอนไว้จาก map แต่ยังอยู่ในตารางและ diagnostic"
+      },
+      "accessibility": {
+        "summary": "แผนที่ ประชาอุทิศ แสดงจุดอ้างอิง กรอบวิเคราะห์ และคู่แข่งที่มีพิกัดพร้อมใช้; รายการทั้งหมดซ้ำในตาราง",
+        "data_table_id": "pracha-uthit-competitor-table"
+      }
+    },
+    {
+      "id": "din-daeng-detail",
+      "role": "detail",
+      "site_ids": [
+        "din-daeng"
+      ],
+      "layers": [
+        {
+          "id": "din-daeng-analytical-catchment",
+          "kind": "standardized_catchment",
+          "geometry_ids": [
+            "din-daeng-analysis-unit"
+          ],
+          "visible": true,
+          "legend_label": "กรอบวิเคราะห์ 26.3154 ตร.กม. (ไม่ใช่แนวเขตแปลง)",
+          "visual_treatment": "quiet_dashed_circle"
+        },
+        {
+          "id": "din-daeng-candidate-center",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "din-daeng-center"
+          ],
+          "visible": true,
+          "marker": "numbered_candidate_marker",
+          "legend_label": "จุดอ้างอิงทำเล",
+          "direct_labels": true
+        },
+        {
+          "id": "din-daeng-verified-competitors",
+          "kind": "poi_sample",
+          "geometry_ids": [
+            "din-daeng-poi-siam_discovery",
+            "din-daeng-poi-siam_center",
+            "din-daeng-poi-siam_paragon",
+            "din-daeng-poi-platinum_fashion_mall",
+            "din-daeng-poi-centralworld",
+            "din-daeng-poi-fortune_town",
+            "din-daeng-poi-central_rama9",
+            "din-daeng-poi-the_street_ratchada"
+          ],
+          "visible": true,
+          "marker": "impact_scaled_competitor_marker",
+          "legend_label": "คู่แข่งที่ยืนยันสถานะเปิดให้บริการและมีพิกัดพอสำหรับแสดง",
+          "direct_labels": false,
+          "interaction": "link_opens_linked_details",
+          "minimum_touch_target_px": 44,
+          "size_basis_priority": [
+            "operator_metric",
+            "disclosed_impact_class"
+          ]
+        }
+      ],
+      "omitted_context": {
+        "roads": "omitted_unverified",
+        "rail": "omitted_unverified",
+        "stations": "omitted_unverified",
+        "landmarks": "omitted_not_required",
+        "disclosure": "ไม่แสดงถนน รถไฟ หรือสถานี เพราะ Release 1.6 ไม่มี feature lineage และสถานะปฏิบัติการที่ผ่านการยืนยันสำหรับชั้นเหล่านั้น; จุดคู่แข่งที่พิกัด host centroid ยังไม่ยืนยันถูกถอนไว้จาก map แต่ยังอยู่ในตารางและ diagnostic"
+      },
+      "accessibility": {
+        "summary": "แผนที่ ดินแดง แสดงจุดอ้างอิง กรอบวิเคราะห์ และคู่แข่งที่มีพิกัดพร้อมใช้; รายการทั้งหมดซ้ำในตาราง",
+        "data_table_id": "din-daeng-competitor-table"
+      }
+    }
+  ],
+  "withheld_features": [
+    {
+      "candidate_id": "pracha-uthit",
+      "competitor_id": "comp_bkk_market_place_pracha_uthit",
+      "canonical_name": "Market Place Pracha Uthit",
+      "render_status": "withheld_pending_host_centroid",
+      "reason": "Host centroid is unresolved; the available coordinate is an in-mall tenant proxy point.",
+      "included_in_competition_diagnostic": true,
+      "included_in_fallback_table": true,
+      "fallback_table_id": "pracha-uthit-competitor-table"
+    },
+    {
+      "candidate_id": "din-daeng",
+      "competitor_id": "comp_bkk_esplanade_ratchada",
+      "canonical_name": "Esplanade Ratchada",
+      "render_status": "withheld_pending_host_centroid",
+      "reason": "Host centroid is unresolved; the available coordinate is a tenant-branch proxy point.",
+      "included_in_competition_diagnostic": true,
+      "included_in_fallback_table": true,
+      "fallback_table_id": "din-daeng-competitor-table"
+    }
+  ],
+  "render_contract": {
+    "map_root": {
+      "attributes": {
+        "data-location-map": "",
+        "data-map-manifest": "analysis/map-manifest.json"
+      }
+    },
+    "candidate_map": {
+      "attribute": "data-map-candidate-id",
+      "value_source": "candidate_id"
+    },
+    "competitor_marker": {
+      "required_attributes": [
+        "data-competitor-id",
+        "data-map-candidate-id",
+        "data-impact-class",
+        "data-size-basis"
+      ],
+      "semantics": "SVG link with an accessible name; click, tap, or Enter opens a linked competitor detail block. Escape closes that block and returns focus. Target is at least 44 px."
+    },
+    "competitor_details": {
+      "required_attributes": [
+        "data-competitor-details",
+        "data-competitor-id",
+        "data-evidence-status"
+      ]
+    },
+    "fallback_table": {
+      "required_attribute": "data-map-fallback",
+      "row_attribute": "data-competitor-id"
+    }
+  },
+  "qa": {
+    "status": "pre_publish_pass",
+    "evidence": "qa/rendered-qa-results.json",
+    "checked_at": "2026-07-27T20:39:36.514Z",
+    "orphan_dot_count": 0,
+    "keyboard_access": true,
+    "visible_focus": true,
+    "screen_reader_summary": true,
+    "data_table_fallback": true,
+    "color_independent_encoding": true,
+    "reduced_motion": true,
+    "overflow_free": true,
+    "zoom_200_checked": true,
+    "light_dark_checked": true,
+    "responsive_widths": [
+      320,
+      375,
+      768,
+      1024,
+      1440
+    ],
+    "min_label_px": 11,
+    "min_touch_target_px": 44,
+    "text_contrast_ratio": 4.5,
+    "non_text_contrast_ratio": 3,
+    "note": "Rendered pre-publish QA passed; post-publish production QA remains required."
+  }
+}

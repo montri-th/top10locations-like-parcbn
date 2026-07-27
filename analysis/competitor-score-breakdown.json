@@ -1,0 +1,1368 @@
+{
+  "schema_version": "1.0",
+  "model_id": "parc-bangna-competitive-overlay-v1.6",
+  "as_of": "2026-07-28",
+  "status": "preliminary_minimum_verified_supply",
+  "registry_scope": "Minimum verified operating shopping-center supply; this is preliminary and not a completeness-certified census.",
+  "catchment_radius_km": 2.89421,
+  "impact_weight": {
+    "high": 5.0,
+    "medium_high": 4.0,
+    "medium": 3.0
+  },
+  "proximity_bands": [
+    {
+      "max_distance_km": 1.0,
+      "weight": 1.0
+    },
+    {
+      "max_distance_km": 2.0,
+      "weight": 0.75
+    },
+    {
+      "max_distance_km": 2.89421,
+      "weight": 0.5
+    }
+  ],
+  "type_overlap_defaults": {
+    "community_mall": 1.0,
+    "open_air_shopping_center": 0.9,
+    "department_store_led_shopping_center": 0.8,
+    "shopping_center": 0.8,
+    "destination_shopping_center": 0.55,
+    "specialty_shopping_center": 0.55
+  },
+  "overlap_overrides": {
+    "comp_bkk_platform_wongwian_yai": 0.9,
+    "comp_bkk_kingsquare_community_mall": 1.0,
+    "comp_bkk_riverside_plaza_bangkok": 0.9,
+    "comp_bkk_the_old_siam_plaza": 0.55,
+    "comp_bkk_tha_maharaj": 0.55,
+    "comp_bkk_market_place_pracha_uthit": 1.0,
+    "comp_bkk_the_street_ratchada": 0.9
+  },
+  "cluster_rule": "maximum member load plus 25% of each additional member load",
+  "pressure_formula": "min(100, deduplicated_pressure_load / 12 × 100)",
+  "competitive_room_formula": "0.70 × (100 − pressure) + 0.30 × strategic_gap_potential",
+  "candidates": [
+    {
+      "candidate_id": "wongwian-yai-east",
+      "registry_candidate_id": "cand_01_wongwian_yai_east",
+      "name": "วงเวียนใหญ่–ตะวันออก",
+      "verified_competitor_count": 7,
+      "competitor_ids": [
+        "comp_bkk_platform_wongwian_yai",
+        "comp_bkk_iconsiam",
+        "comp_bkk_ics_lifestyle_complex",
+        "comp_bkk_sena_fest",
+        "comp_bkk_the_mall_lifestore_tha_phra",
+        "comp_bkk_riverside_plaza_bangkok",
+        "comp_bkk_the_old_siam_plaza"
+      ],
+      "member_loads": [
+        {
+          "competitor_id": "comp_bkk_platform_wongwian_yai",
+          "name": "Platform Wongwian Yai",
+          "parent_cluster_id": null,
+          "distance_km": 0.202,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.9,
+          "proximity_weight": 1.0,
+          "member_pressure_load": 4.5
+        },
+        {
+          "competitor_id": "comp_bkk_iconsiam",
+          "name": "ICONSIAM",
+          "parent_cluster_id": "cluster_bkk_iconsiam_ics",
+          "distance_km": 1.663,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 2.0625
+        },
+        {
+          "competitor_id": "comp_bkk_ics_lifestyle_complex",
+          "name": "ICS Lifestyle Complex",
+          "parent_cluster_id": "cluster_bkk_iconsiam_ics",
+          "distance_km": 1.411,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 3.0
+        },
+        {
+          "competitor_id": "comp_bkk_sena_fest",
+          "name": "SENA Fest",
+          "parent_cluster_id": null,
+          "distance_km": 1.509,
+          "impact_class": "medium",
+          "impact_weight": 3.0,
+          "routine_overlap_factor": 0.9,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 2.025
+        },
+        {
+          "competitor_id": "comp_bkk_the_mall_lifestore_tha_phra",
+          "name": "The Mall Lifestore Tha Phra",
+          "parent_cluster_id": null,
+          "distance_km": 2.108,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 2.0
+        },
+        {
+          "competitor_id": "comp_bkk_riverside_plaza_bangkok",
+          "name": "Riverside Plaza Bangkok",
+          "parent_cluster_id": null,
+          "distance_km": 2.294,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.9,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 2.25
+        },
+        {
+          "competitor_id": "comp_bkk_the_old_siam_plaza",
+          "name": "The Old Siam Plaza",
+          "parent_cluster_id": null,
+          "distance_km": 2.335,
+          "impact_class": "medium",
+          "impact_weight": 3.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 0.825
+        }
+      ],
+      "cluster_loads": [
+        {
+          "cluster_id": "cluster_bkk_iconsiam_ics",
+          "member_competitor_ids": [
+            "comp_bkk_iconsiam",
+            "comp_bkk_ics_lifestyle_complex"
+          ],
+          "cluster_pressure_load": 3.5156,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_platform_wongwian_yai",
+          "member_competitor_ids": [
+            "comp_bkk_platform_wongwian_yai"
+          ],
+          "cluster_pressure_load": 4.5,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_riverside_plaza_bangkok",
+          "member_competitor_ids": [
+            "comp_bkk_riverside_plaza_bangkok"
+          ],
+          "cluster_pressure_load": 2.25,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_sena_fest",
+          "member_competitor_ids": [
+            "comp_bkk_sena_fest"
+          ],
+          "cluster_pressure_load": 2.025,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_the_mall_lifestore_tha_phra",
+          "member_competitor_ids": [
+            "comp_bkk_the_mall_lifestore_tha_phra"
+          ],
+          "cluster_pressure_load": 2.0,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_the_old_siam_plaza",
+          "member_competitor_ids": [
+            "comp_bkk_the_old_siam_plaza"
+          ],
+          "cluster_pressure_load": 0.825,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        }
+      ],
+      "raw_pressure_load": 15.1156,
+      "pressure_saturation_load": 12.0,
+      "competitor_supply_pressure": 100.0,
+      "supply_headroom": 0.0,
+      "strategic_gap_potential": 25.0,
+      "strategic_gap_status": "hypothesis",
+      "strategic_gap_adjustments": [
+        {
+          "reason": "direct_routine_competitor_within_2km",
+          "delta": -20
+        },
+        {
+          "reason": "competitor_within_300m",
+          "delta": -10
+        }
+      ],
+      "competitive_room_formula": "0.70 × supply_headroom + 0.30 × strategic_gap_potential",
+      "competitive_room_score": 7.5,
+      "competitive_pressure_band": "high",
+      "evidence_readiness_score": 85.0,
+      "evidence_readiness_adjustments": [
+        {
+          "reason": "preliminary_minimum_verified_registry",
+          "delta": -15
+        }
+      ],
+      "recommended_action": {
+        "tier": "D",
+        "label_th": "แข่งขันสูง—เดินหน้าต่อเมื่อมีสิทธิ์ไซต์หรือจุดต่างเหนือกว่า",
+        "decision_rule": "competitive_room < 20"
+      }
+    },
+    {
+      "candidate_id": "charoen-rat",
+      "registry_candidate_id": "cand_02_charoen_rat",
+      "name": "เจริญราษฎร์",
+      "verified_competitor_count": 4,
+      "competitor_ids": [
+        "comp_bkk_sena_fest",
+        "comp_bkk_kingsquare_community_mall",
+        "comp_bkk_terminal21_rama3",
+        "comp_bkk_central_rama3"
+      ],
+      "member_loads": [
+        {
+          "competitor_id": "comp_bkk_sena_fest",
+          "name": "SENA Fest",
+          "parent_cluster_id": null,
+          "distance_km": 2.731,
+          "impact_class": "medium",
+          "impact_weight": 3.0,
+          "routine_overlap_factor": 0.9,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 1.35
+        },
+        {
+          "competitor_id": "comp_bkk_kingsquare_community_mall",
+          "name": "KINGSQUARE Community Mall",
+          "parent_cluster_id": null,
+          "distance_km": 1.231,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 1.0,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 3.75
+        },
+        {
+          "competitor_id": "comp_bkk_terminal21_rama3",
+          "name": "Terminal21 Rama 3",
+          "parent_cluster_id": null,
+          "distance_km": 1.484,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 3.0
+        },
+        {
+          "competitor_id": "comp_bkk_central_rama3",
+          "name": "Central Rama 3",
+          "parent_cluster_id": null,
+          "distance_km": 2.272,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 2.0
+        }
+      ],
+      "cluster_loads": [
+        {
+          "cluster_id": "comp_bkk_central_rama3",
+          "member_competitor_ids": [
+            "comp_bkk_central_rama3"
+          ],
+          "cluster_pressure_load": 2.0,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_kingsquare_community_mall",
+          "member_competitor_ids": [
+            "comp_bkk_kingsquare_community_mall"
+          ],
+          "cluster_pressure_load": 3.75,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_sena_fest",
+          "member_competitor_ids": [
+            "comp_bkk_sena_fest"
+          ],
+          "cluster_pressure_load": 1.35,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_terminal21_rama3",
+          "member_competitor_ids": [
+            "comp_bkk_terminal21_rama3"
+          ],
+          "cluster_pressure_load": 3.0,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        }
+      ],
+      "raw_pressure_load": 10.1,
+      "pressure_saturation_load": 12.0,
+      "competitor_supply_pressure": 84.17,
+      "supply_headroom": 15.83,
+      "strategic_gap_potential": 35.0,
+      "strategic_gap_status": "hypothesis",
+      "strategic_gap_adjustments": [
+        {
+          "reason": "direct_routine_competitor_within_2km",
+          "delta": -20
+        }
+      ],
+      "competitive_room_formula": "0.70 × supply_headroom + 0.30 × strategic_gap_potential",
+      "competitive_room_score": 21.58,
+      "competitive_pressure_band": "high",
+      "evidence_readiness_score": 85.0,
+      "evidence_readiness_adjustments": [
+        {
+          "reason": "preliminary_minimum_verified_registry",
+          "delta": -15
+        }
+      ],
+      "recommended_action": {
+        "tier": "C",
+        "label_th": "พิจารณาเฉพาะกลยุทธ์ที่ต่างจากคู่แข่งชัด",
+        "decision_rule": "20 <= competitive_room < 45"
+      }
+    },
+    {
+      "candidate_id": "samre",
+      "registry_candidate_id": "cand_03_samre",
+      "name": "สำเหร่",
+      "verified_competitor_count": 5,
+      "competitor_ids": [
+        "comp_bkk_platform_wongwian_yai",
+        "comp_bkk_sena_fest",
+        "comp_bkk_the_mall_lifestore_tha_phra",
+        "comp_bkk_terminal21_rama3",
+        "comp_bkk_riverside_plaza_bangkok"
+      ],
+      "member_loads": [
+        {
+          "competitor_id": "comp_bkk_platform_wongwian_yai",
+          "name": "Platform Wongwian Yai",
+          "parent_cluster_id": null,
+          "distance_km": 2.435,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.9,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 2.25
+        },
+        {
+          "competitor_id": "comp_bkk_sena_fest",
+          "name": "SENA Fest",
+          "parent_cluster_id": null,
+          "distance_km": 2.373,
+          "impact_class": "medium",
+          "impact_weight": 3.0,
+          "routine_overlap_factor": 0.9,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 1.35
+        },
+        {
+          "competitor_id": "comp_bkk_the_mall_lifestore_tha_phra",
+          "name": "The Mall Lifestore Tha Phra",
+          "parent_cluster_id": null,
+          "distance_km": 1.49,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 3.0
+        },
+        {
+          "competitor_id": "comp_bkk_terminal21_rama3",
+          "name": "Terminal21 Rama 3",
+          "parent_cluster_id": null,
+          "distance_km": 2.403,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 2.0
+        },
+        {
+          "competitor_id": "comp_bkk_riverside_plaza_bangkok",
+          "name": "Riverside Plaza Bangkok",
+          "parent_cluster_id": null,
+          "distance_km": 0.034,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.9,
+          "proximity_weight": 1.0,
+          "member_pressure_load": 4.5
+        }
+      ],
+      "cluster_loads": [
+        {
+          "cluster_id": "comp_bkk_platform_wongwian_yai",
+          "member_competitor_ids": [
+            "comp_bkk_platform_wongwian_yai"
+          ],
+          "cluster_pressure_load": 2.25,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_riverside_plaza_bangkok",
+          "member_competitor_ids": [
+            "comp_bkk_riverside_plaza_bangkok"
+          ],
+          "cluster_pressure_load": 4.5,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_sena_fest",
+          "member_competitor_ids": [
+            "comp_bkk_sena_fest"
+          ],
+          "cluster_pressure_load": 1.35,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_terminal21_rama3",
+          "member_competitor_ids": [
+            "comp_bkk_terminal21_rama3"
+          ],
+          "cluster_pressure_load": 2.0,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_the_mall_lifestore_tha_phra",
+          "member_competitor_ids": [
+            "comp_bkk_the_mall_lifestore_tha_phra"
+          ],
+          "cluster_pressure_load": 3.0,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        }
+      ],
+      "raw_pressure_load": 13.1,
+      "pressure_saturation_load": 12.0,
+      "competitor_supply_pressure": 100.0,
+      "supply_headroom": 0.0,
+      "strategic_gap_potential": 20.0,
+      "strategic_gap_status": "hypothesis",
+      "strategic_gap_adjustments": [
+        {
+          "reason": "direct_routine_competitor_within_2km",
+          "delta": -20
+        },
+        {
+          "reason": "competitor_within_300m",
+          "delta": -10
+        },
+        {
+          "reason": "candidate_center_nearly_coincides_with_riverside_plaza",
+          "delta": -10
+        }
+      ],
+      "competitive_room_formula": "0.70 × supply_headroom + 0.30 × strategic_gap_potential",
+      "competitive_room_score": 6.0,
+      "competitive_pressure_band": "high",
+      "evidence_readiness_score": 65.0,
+      "evidence_readiness_adjustments": [
+        {
+          "reason": "preliminary_minimum_verified_registry",
+          "delta": -15
+        },
+        {
+          "reason": "candidate_center_artifact",
+          "delta": -20
+        }
+      ],
+      "recommended_action": {
+        "tier": "D",
+        "label_th": "แข่งขันสูง—เดินหน้าต่อเมื่อมีสิทธิ์ไซต์หรือจุดต่างเหนือกว่า",
+        "decision_rule": "competitive_room < 20"
+      }
+    },
+    {
+      "candidate_id": "ban-khaek",
+      "registry_candidate_id": "cand_04_ban_khaek",
+      "name": "แยกบ้านแขก",
+      "verified_competitor_count": 7,
+      "competitor_ids": [
+        "comp_bkk_platform_wongwian_yai",
+        "comp_bkk_iconsiam",
+        "comp_bkk_ics_lifestyle_complex",
+        "comp_bkk_sena_fest",
+        "comp_bkk_the_mall_lifestore_tha_phra",
+        "comp_bkk_the_old_siam_plaza",
+        "comp_bkk_tha_maharaj"
+      ],
+      "member_loads": [
+        {
+          "competitor_id": "comp_bkk_platform_wongwian_yai",
+          "name": "Platform Wongwian Yai",
+          "parent_cluster_id": null,
+          "distance_km": 0.794,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.9,
+          "proximity_weight": 1.0,
+          "member_pressure_load": 4.5
+        },
+        {
+          "competitor_id": "comp_bkk_iconsiam",
+          "name": "ICONSIAM",
+          "parent_cluster_id": "cluster_bkk_iconsiam_ics",
+          "distance_km": 2.213,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 1.375
+        },
+        {
+          "competitor_id": "comp_bkk_ics_lifestyle_complex",
+          "name": "ICS Lifestyle Complex",
+          "parent_cluster_id": "cluster_bkk_iconsiam_ics",
+          "distance_km": 2.0,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 3.0
+        },
+        {
+          "competitor_id": "comp_bkk_sena_fest",
+          "name": "SENA Fest",
+          "parent_cluster_id": null,
+          "distance_km": 2.372,
+          "impact_class": "medium",
+          "impact_weight": 3.0,
+          "routine_overlap_factor": 0.9,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 1.35
+        },
+        {
+          "competitor_id": "comp_bkk_the_mall_lifestore_tha_phra",
+          "name": "The Mall Lifestore Tha Phra",
+          "parent_cluster_id": null,
+          "distance_km": 2.531,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 2.0
+        },
+        {
+          "competitor_id": "comp_bkk_the_old_siam_plaza",
+          "name": "The Old Siam Plaza",
+          "parent_cluster_id": null,
+          "distance_km": 1.667,
+          "impact_class": "medium",
+          "impact_weight": 3.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 1.2375
+        },
+        {
+          "competitor_id": "comp_bkk_tha_maharaj",
+          "name": "Tha Maharaj",
+          "parent_cluster_id": null,
+          "distance_km": 2.38,
+          "impact_class": "medium",
+          "impact_weight": 3.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 0.825
+        }
+      ],
+      "cluster_loads": [
+        {
+          "cluster_id": "cluster_bkk_iconsiam_ics",
+          "member_competitor_ids": [
+            "comp_bkk_iconsiam",
+            "comp_bkk_ics_lifestyle_complex"
+          ],
+          "cluster_pressure_load": 3.3438,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_platform_wongwian_yai",
+          "member_competitor_ids": [
+            "comp_bkk_platform_wongwian_yai"
+          ],
+          "cluster_pressure_load": 4.5,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_sena_fest",
+          "member_competitor_ids": [
+            "comp_bkk_sena_fest"
+          ],
+          "cluster_pressure_load": 1.35,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_tha_maharaj",
+          "member_competitor_ids": [
+            "comp_bkk_tha_maharaj"
+          ],
+          "cluster_pressure_load": 0.825,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_the_mall_lifestore_tha_phra",
+          "member_competitor_ids": [
+            "comp_bkk_the_mall_lifestore_tha_phra"
+          ],
+          "cluster_pressure_load": 2.0,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_the_old_siam_plaza",
+          "member_competitor_ids": [
+            "comp_bkk_the_old_siam_plaza"
+          ],
+          "cluster_pressure_load": 1.2375,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        }
+      ],
+      "raw_pressure_load": 13.2562,
+      "pressure_saturation_load": 12.0,
+      "competitor_supply_pressure": 100.0,
+      "supply_headroom": 0.0,
+      "strategic_gap_potential": 35.0,
+      "strategic_gap_status": "hypothesis",
+      "strategic_gap_adjustments": [
+        {
+          "reason": "direct_routine_competitor_within_2km",
+          "delta": -20
+        }
+      ],
+      "competitive_room_formula": "0.70 × supply_headroom + 0.30 × strategic_gap_potential",
+      "competitive_room_score": 10.5,
+      "competitive_pressure_band": "high",
+      "evidence_readiness_score": 65.0,
+      "evidence_readiness_adjustments": [
+        {
+          "reason": "preliminary_minimum_verified_registry",
+          "delta": -15
+        },
+        {
+          "reason": "river_and_bridge_network_not_modelled",
+          "delta": -20
+        }
+      ],
+      "recommended_action": {
+        "tier": "D",
+        "label_th": "แข่งขันสูง—เดินหน้าต่อเมื่อมีสิทธิ์ไซต์หรือจุดต่างเหนือกว่า",
+        "decision_rule": "competitive_room < 20"
+      }
+    },
+    {
+      "candidate_id": "talat-phlu-south",
+      "registry_candidate_id": "cand_05_talat_phlu_south",
+      "name": "ตลาดพลู–ใต้",
+      "verified_competitor_count": 3,
+      "competitor_ids": [
+        "comp_bkk_platform_wongwian_yai",
+        "comp_bkk_the_mall_lifestore_tha_phra",
+        "comp_bkk_riverside_plaza_bangkok"
+      ],
+      "member_loads": [
+        {
+          "competitor_id": "comp_bkk_platform_wongwian_yai",
+          "name": "Platform Wongwian Yai",
+          "parent_cluster_id": null,
+          "distance_km": 2.155,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.9,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 2.25
+        },
+        {
+          "competitor_id": "comp_bkk_the_mall_lifestore_tha_phra",
+          "name": "The Mall Lifestore Tha Phra",
+          "parent_cluster_id": null,
+          "distance_km": 0.508,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 1.0,
+          "member_pressure_load": 4.0
+        },
+        {
+          "competitor_id": "comp_bkk_riverside_plaza_bangkok",
+          "name": "Riverside Plaza Bangkok",
+          "parent_cluster_id": null,
+          "distance_km": 1.988,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.9,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 3.375
+        }
+      ],
+      "cluster_loads": [
+        {
+          "cluster_id": "comp_bkk_platform_wongwian_yai",
+          "member_competitor_ids": [
+            "comp_bkk_platform_wongwian_yai"
+          ],
+          "cluster_pressure_load": 2.25,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_riverside_plaza_bangkok",
+          "member_competitor_ids": [
+            "comp_bkk_riverside_plaza_bangkok"
+          ],
+          "cluster_pressure_load": 3.375,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_the_mall_lifestore_tha_phra",
+          "member_competitor_ids": [
+            "comp_bkk_the_mall_lifestore_tha_phra"
+          ],
+          "cluster_pressure_load": 4.0,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        }
+      ],
+      "raw_pressure_load": 9.625,
+      "pressure_saturation_load": 12.0,
+      "competitor_supply_pressure": 80.21,
+      "supply_headroom": 19.79,
+      "strategic_gap_potential": 35.0,
+      "strategic_gap_status": "hypothesis",
+      "strategic_gap_adjustments": [
+        {
+          "reason": "direct_routine_competitor_within_2km",
+          "delta": -20
+        }
+      ],
+      "competitive_room_formula": "0.70 × supply_headroom + 0.30 × strategic_gap_potential",
+      "competitive_room_score": 24.35,
+      "competitive_pressure_band": "high",
+      "evidence_readiness_score": 85.0,
+      "evidence_readiness_adjustments": [
+        {
+          "reason": "preliminary_minimum_verified_registry",
+          "delta": -15
+        }
+      ],
+      "recommended_action": {
+        "tier": "C",
+        "label_th": "พิจารณาเฉพาะกลยุทธ์ที่ต่างจากคู่แข่งชัด",
+        "decision_rule": "20 <= competitive_room < 45"
+      }
+    },
+    {
+      "candidate_id": "bang-pakok",
+      "registry_candidate_id": "cand_06_bang_pakok",
+      "name": "บางปะกอก",
+      "verified_competitor_count": 2,
+      "competitor_ids": [
+        "comp_bkk_terminal21_rama3",
+        "comp_bkk_riverside_plaza_bangkok"
+      ],
+      "member_loads": [
+        {
+          "competitor_id": "comp_bkk_terminal21_rama3",
+          "name": "Terminal21 Rama 3",
+          "parent_cluster_id": null,
+          "distance_km": 0.845,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 1.0,
+          "member_pressure_load": 4.0
+        },
+        {
+          "competitor_id": "comp_bkk_riverside_plaza_bangkok",
+          "name": "Riverside Plaza Bangkok",
+          "parent_cluster_id": null,
+          "distance_km": 2.829,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.9,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 2.25
+        }
+      ],
+      "cluster_loads": [
+        {
+          "cluster_id": "comp_bkk_riverside_plaza_bangkok",
+          "member_competitor_ids": [
+            "comp_bkk_riverside_plaza_bangkok"
+          ],
+          "cluster_pressure_load": 2.25,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_terminal21_rama3",
+          "member_competitor_ids": [
+            "comp_bkk_terminal21_rama3"
+          ],
+          "cluster_pressure_load": 4.0,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        }
+      ],
+      "raw_pressure_load": 6.25,
+      "pressure_saturation_load": 12.0,
+      "competitor_supply_pressure": 52.08,
+      "supply_headroom": 47.92,
+      "strategic_gap_potential": 45.0,
+      "strategic_gap_status": "hypothesis",
+      "strategic_gap_adjustments": [
+        {
+          "reason": "direct_routine_competitor_in_outer_catchment",
+          "delta": -10
+        }
+      ],
+      "competitive_room_formula": "0.70 × supply_headroom + 0.30 × strategic_gap_potential",
+      "competitive_room_score": 47.04,
+      "competitive_pressure_band": "medium",
+      "evidence_readiness_score": 85.0,
+      "evidence_readiness_adjustments": [
+        {
+          "reason": "preliminary_minimum_verified_registry",
+          "delta": -15
+        }
+      ],
+      "recommended_action": {
+        "tier": "A",
+        "label_th": "เดินหน้าตรวจทำเลเชิงรุก",
+        "decision_rule": "competitive_room >= 45 and evidence_readiness >= 80"
+      }
+    },
+    {
+      "candidate_id": "wang-lang",
+      "registry_candidate_id": "cand_07_wang_lang",
+      "name": "วังหลัง",
+      "verified_competitor_count": 3,
+      "competitor_ids": [
+        "comp_bkk_the_old_siam_plaza",
+        "comp_bkk_tha_maharaj",
+        "comp_bkk_central_pinklao"
+      ],
+      "member_loads": [
+        {
+          "competitor_id": "comp_bkk_the_old_siam_plaza",
+          "name": "The Old Siam Plaza",
+          "parent_cluster_id": null,
+          "distance_km": 1.792,
+          "impact_class": "medium",
+          "impact_weight": 3.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 1.2375
+        },
+        {
+          "competitor_id": "comp_bkk_tha_maharaj",
+          "name": "Tha Maharaj",
+          "parent_cluster_id": null,
+          "distance_km": 0.251,
+          "impact_class": "medium",
+          "impact_weight": 3.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 1.0,
+          "member_pressure_load": 1.65
+        },
+        {
+          "competitor_id": "comp_bkk_central_pinklao",
+          "name": "Central Pinklao",
+          "parent_cluster_id": null,
+          "distance_km": 2.756,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 2.0
+        }
+      ],
+      "cluster_loads": [
+        {
+          "cluster_id": "comp_bkk_central_pinklao",
+          "member_competitor_ids": [
+            "comp_bkk_central_pinklao"
+          ],
+          "cluster_pressure_load": 2.0,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_tha_maharaj",
+          "member_competitor_ids": [
+            "comp_bkk_tha_maharaj"
+          ],
+          "cluster_pressure_load": 1.65,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_the_old_siam_plaza",
+          "member_competitor_ids": [
+            "comp_bkk_the_old_siam_plaza"
+          ],
+          "cluster_pressure_load": 1.2375,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        }
+      ],
+      "raw_pressure_load": 4.8875,
+      "pressure_saturation_load": 12.0,
+      "competitor_supply_pressure": 40.73,
+      "supply_headroom": 59.27,
+      "strategic_gap_potential": 45.0,
+      "strategic_gap_status": "hypothesis",
+      "strategic_gap_adjustments": [
+        {
+          "reason": "competitor_within_300m",
+          "delta": -10
+        }
+      ],
+      "competitive_room_formula": "0.70 × supply_headroom + 0.30 × strategic_gap_potential",
+      "competitive_room_score": 54.99,
+      "competitive_pressure_band": "low",
+      "evidence_readiness_score": 65.0,
+      "evidence_readiness_adjustments": [
+        {
+          "reason": "preliminary_minimum_verified_registry",
+          "delta": -15
+        },
+        {
+          "reason": "river_ferry_and_bridge_network_not_modelled",
+          "delta": -20
+        }
+      ],
+      "recommended_action": {
+        "tier": "B",
+        "label_th": "มีช่องว่าง แต่ต้องยืนยันภาคสนามก่อน",
+        "decision_rule": "competitive_room >= 45 and evidence_readiness < 80"
+      }
+    },
+    {
+      "candidate_id": "ratchathewi",
+      "registry_candidate_id": "cand_08_ratchathewi",
+      "name": "ราชเทวี",
+      "verified_competitor_count": 6,
+      "competitor_ids": [
+        "comp_bkk_siam_discovery",
+        "comp_bkk_siam_center",
+        "comp_bkk_siam_paragon",
+        "comp_bkk_platinum_fashion_mall",
+        "comp_bkk_centralworld",
+        "comp_bkk_mbk_center"
+      ],
+      "member_loads": [
+        {
+          "competitor_id": "comp_bkk_siam_discovery",
+          "name": "Siam Discovery",
+          "parent_cluster_id": "cluster_bkk_siam_piwat_siam",
+          "distance_km": 0.725,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 1.0,
+          "member_pressure_load": 4.0
+        },
+        {
+          "competitor_id": "comp_bkk_siam_center",
+          "name": "Siam Center",
+          "parent_cluster_id": "cluster_bkk_siam_piwat_siam",
+          "distance_km": 0.76,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 1.0,
+          "member_pressure_load": 4.0
+        },
+        {
+          "competitor_id": "comp_bkk_siam_paragon",
+          "name": "Siam Paragon",
+          "parent_cluster_id": "cluster_bkk_siam_piwat_siam",
+          "distance_km": 0.765,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 1.0,
+          "member_pressure_load": 2.75
+        },
+        {
+          "competitor_id": "comp_bkk_platinum_fashion_mall",
+          "name": "Platinum Fashion Mall",
+          "parent_cluster_id": null,
+          "distance_km": 0.891,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 1.0,
+          "member_pressure_load": 2.75
+        },
+        {
+          "competitor_id": "comp_bkk_centralworld",
+          "name": "centralWorld",
+          "parent_cluster_id": null,
+          "distance_km": 0.966,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 1.0,
+          "member_pressure_load": 2.75
+        },
+        {
+          "competitor_id": "comp_bkk_mbk_center",
+          "name": "MBK Center",
+          "parent_cluster_id": null,
+          "distance_km": 0.987,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 1.0,
+          "member_pressure_load": 4.0
+        }
+      ],
+      "cluster_loads": [
+        {
+          "cluster_id": "cluster_bkk_siam_piwat_siam",
+          "member_competitor_ids": [
+            "comp_bkk_siam_discovery",
+            "comp_bkk_siam_center",
+            "comp_bkk_siam_paragon"
+          ],
+          "cluster_pressure_load": 5.6875,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_centralworld",
+          "member_competitor_ids": [
+            "comp_bkk_centralworld"
+          ],
+          "cluster_pressure_load": 2.75,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_mbk_center",
+          "member_competitor_ids": [
+            "comp_bkk_mbk_center"
+          ],
+          "cluster_pressure_load": 4.0,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_platinum_fashion_mall",
+          "member_competitor_ids": [
+            "comp_bkk_platinum_fashion_mall"
+          ],
+          "cluster_pressure_load": 2.75,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        }
+      ],
+      "raw_pressure_load": 15.1875,
+      "pressure_saturation_load": 12.0,
+      "competitor_supply_pressure": 100.0,
+      "supply_headroom": 0.0,
+      "strategic_gap_potential": 55.0,
+      "strategic_gap_status": "hypothesis",
+      "strategic_gap_adjustments": [],
+      "competitive_room_formula": "0.70 × supply_headroom + 0.30 × strategic_gap_potential",
+      "competitive_room_score": 16.5,
+      "competitive_pressure_band": "high",
+      "evidence_readiness_score": 70.0,
+      "evidence_readiness_adjustments": [
+        {
+          "reason": "preliminary_minimum_verified_registry",
+          "delta": -15
+        },
+        {
+          "reason": "dense_cluster_is_minimum_verified_set",
+          "delta": -15
+        }
+      ],
+      "recommended_action": {
+        "tier": "D",
+        "label_th": "แข่งขันสูง—เดินหน้าต่อเมื่อมีสิทธิ์ไซต์หรือจุดต่างเหนือกว่า",
+        "decision_rule": "competitive_room < 20"
+      }
+    },
+    {
+      "candidate_id": "pracha-uthit",
+      "registry_candidate_id": "cand_09_pracha_uthit",
+      "name": "ประชาอุทิศ",
+      "verified_competitor_count": 1,
+      "competitor_ids": [
+        "comp_bkk_market_place_pracha_uthit"
+      ],
+      "member_loads": [
+        {
+          "competitor_id": "comp_bkk_market_place_pracha_uthit",
+          "name": "Market Place Pracha Uthit",
+          "parent_cluster_id": null,
+          "distance_km": 2.556,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 1.0,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 2.5
+        }
+      ],
+      "cluster_loads": [
+        {
+          "cluster_id": "comp_bkk_market_place_pracha_uthit",
+          "member_competitor_ids": [
+            "comp_bkk_market_place_pracha_uthit"
+          ],
+          "cluster_pressure_load": 2.5,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        }
+      ],
+      "raw_pressure_load": 2.5,
+      "pressure_saturation_load": 12.0,
+      "competitor_supply_pressure": 20.83,
+      "supply_headroom": 79.17,
+      "strategic_gap_potential": 45.0,
+      "strategic_gap_status": "hypothesis",
+      "strategic_gap_adjustments": [
+        {
+          "reason": "direct_routine_competitor_in_outer_catchment",
+          "delta": -10
+        }
+      ],
+      "competitive_room_formula": "0.70 × supply_headroom + 0.30 × strategic_gap_potential",
+      "competitive_room_score": 68.92,
+      "competitive_pressure_band": "low",
+      "evidence_readiness_score": 65.0,
+      "evidence_readiness_adjustments": [
+        {
+          "reason": "preliminary_minimum_verified_registry",
+          "delta": -15
+        },
+        {
+          "reason": "host_centroid_uses_tenant_in_mall_proxy",
+          "delta": -20
+        }
+      ],
+      "recommended_action": {
+        "tier": "B",
+        "label_th": "มีช่องว่าง แต่ต้องยืนยันภาคสนามก่อน",
+        "decision_rule": "competitive_room >= 45 and evidence_readiness < 80"
+      }
+    },
+    {
+      "candidate_id": "din-daeng",
+      "registry_candidate_id": "cand_10_din_daeng",
+      "name": "ดินแดง",
+      "verified_competitor_count": 9,
+      "competitor_ids": [
+        "comp_bkk_siam_discovery",
+        "comp_bkk_siam_center",
+        "comp_bkk_siam_paragon",
+        "comp_bkk_platinum_fashion_mall",
+        "comp_bkk_centralworld",
+        "comp_bkk_fortune_town",
+        "comp_bkk_central_rama9",
+        "comp_bkk_esplanade_ratchada",
+        "comp_bkk_the_street_ratchada"
+      ],
+      "member_loads": [
+        {
+          "competitor_id": "comp_bkk_siam_discovery",
+          "name": "Siam Discovery",
+          "parent_cluster_id": "cluster_bkk_siam_piwat_siam",
+          "distance_km": 2.727,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 2.0
+        },
+        {
+          "competitor_id": "comp_bkk_siam_center",
+          "name": "Siam Center",
+          "parent_cluster_id": "cluster_bkk_siam_piwat_siam",
+          "distance_km": 2.625,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 2.0
+        },
+        {
+          "competitor_id": "comp_bkk_siam_paragon",
+          "name": "Siam Paragon",
+          "parent_cluster_id": "cluster_bkk_siam_piwat_siam",
+          "distance_km": 2.437,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 1.375
+        },
+        {
+          "competitor_id": "comp_bkk_platinum_fashion_mall",
+          "name": "Platinum Fashion Mall",
+          "parent_cluster_id": null,
+          "distance_km": 1.75,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 2.0625
+        },
+        {
+          "competitor_id": "comp_bkk_centralworld",
+          "name": "centralWorld",
+          "parent_cluster_id": null,
+          "distance_km": 2.046,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 1.375
+        },
+        {
+          "competitor_id": "comp_bkk_fortune_town",
+          "name": "Fortune Town",
+          "parent_cluster_id": null,
+          "distance_km": 1.268,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.55,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 2.0625
+        },
+        {
+          "competitor_id": "comp_bkk_central_rama9",
+          "name": "Central Rama 9",
+          "parent_cluster_id": null,
+          "distance_km": 1.369,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 3.0
+        },
+        {
+          "competitor_id": "comp_bkk_esplanade_ratchada",
+          "name": "Esplanade Ratchada",
+          "parent_cluster_id": null,
+          "distance_km": 1.867,
+          "impact_class": "high",
+          "impact_weight": 5.0,
+          "routine_overlap_factor": 0.8,
+          "proximity_weight": 0.75,
+          "member_pressure_load": 3.0
+        },
+        {
+          "competitor_id": "comp_bkk_the_street_ratchada",
+          "name": "The Street Ratchada",
+          "parent_cluster_id": null,
+          "distance_km": 2.426,
+          "impact_class": "medium_high",
+          "impact_weight": 4.0,
+          "routine_overlap_factor": 0.9,
+          "proximity_weight": 0.5,
+          "member_pressure_load": 1.8
+        }
+      ],
+      "cluster_loads": [
+        {
+          "cluster_id": "cluster_bkk_siam_piwat_siam",
+          "member_competitor_ids": [
+            "comp_bkk_siam_discovery",
+            "comp_bkk_siam_center",
+            "comp_bkk_siam_paragon"
+          ],
+          "cluster_pressure_load": 2.8438,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_central_rama9",
+          "member_competitor_ids": [
+            "comp_bkk_central_rama9"
+          ],
+          "cluster_pressure_load": 3.0,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_centralworld",
+          "member_competitor_ids": [
+            "comp_bkk_centralworld"
+          ],
+          "cluster_pressure_load": 1.375,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_esplanade_ratchada",
+          "member_competitor_ids": [
+            "comp_bkk_esplanade_ratchada"
+          ],
+          "cluster_pressure_load": 3.0,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_fortune_town",
+          "member_competitor_ids": [
+            "comp_bkk_fortune_town"
+          ],
+          "cluster_pressure_load": 2.0625,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_platinum_fashion_mall",
+          "member_competitor_ids": [
+            "comp_bkk_platinum_fashion_mall"
+          ],
+          "cluster_pressure_load": 2.0625,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        },
+        {
+          "cluster_id": "comp_bkk_the_street_ratchada",
+          "member_competitor_ids": [
+            "comp_bkk_the_street_ratchada"
+          ],
+          "cluster_pressure_load": 1.8,
+          "deduplication_rule": "maximum member load plus 25% of each additional member load"
+        }
+      ],
+      "raw_pressure_load": 16.1438,
+      "pressure_saturation_load": 12.0,
+      "competitor_supply_pressure": 100.0,
+      "supply_headroom": 0.0,
+      "strategic_gap_potential": 45.0,
+      "strategic_gap_status": "hypothesis",
+      "strategic_gap_adjustments": [
+        {
+          "reason": "direct_routine_competitor_in_outer_catchment",
+          "delta": -10
+        }
+      ],
+      "competitive_room_formula": "0.70 × supply_headroom + 0.30 × strategic_gap_potential",
+      "competitive_room_score": 13.5,
+      "competitive_pressure_band": "high",
+      "evidence_readiness_score": 70.0,
+      "evidence_readiness_adjustments": [
+        {
+          "reason": "preliminary_minimum_verified_registry",
+          "delta": -15
+        },
+        {
+          "reason": "dense_cluster_is_minimum_verified_set",
+          "delta": -15
+        }
+      ],
+      "recommended_action": {
+        "tier": "D",
+        "label_th": "แข่งขันสูง—เดินหน้าต่อเมื่อมีสิทธิ์ไซต์หรือจุดต่างเหนือกว่า",
+        "decision_rule": "competitive_room < 20"
+      }
+    }
+  ]
+}

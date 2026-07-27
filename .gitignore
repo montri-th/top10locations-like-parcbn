@@ -1,0 +1,9 @@
+# Workspace-only registry with connector identifiers.
+analysis/competitor-registry.json
+
+# Local QA output.
+qa/local-server.log
+
+# Local Python bytecode.
+__pycache__/
+*.py[cod]

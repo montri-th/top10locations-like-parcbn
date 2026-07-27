@@ -1,0 +1,2535 @@
+{
+  "schema_name": "parc_bangna_competitive_supply_registry",
+  "schema_version": "0.1.0-preliminary",
+  "generated_on": "2026-07-28",
+  "evidence_cutoff": "2026-07-28",
+  "fact_inference_policy": {
+    "sourced_facts": "Venue identity, operating status, coordinates, operator metrics, and source URLs are stored as evidence fields.",
+    "analytical_classifications": "Impact classes are analytical classifications with an explicit basis and are not operator-reported performance facts.",
+    "hypotheses": "Strategic gaps are stored only in strategic_gap_hypotheses with fact_status=hypothesis.",
+    "prohibited_inference": "Do not claim vacancy, weak tenant mix, low traffic, poor service, low occupancy, or underperformance without dedicated evidence."
+  },
+  "release_context": {
+    "source_release": "Release 1.5",
+    "source_page": "https://montri-th.github.io/top10locations-like-parcbn/",
+    "catchment_rule": "fixed_radius_circle",
+    "catchment_radius_km": 2.89421,
+    "catchment_area_sq_km": 26.3154,
+    "candidate_coordinate_source": "Release 1.5 production HTML",
+    "registry_scope": "Minimum verified operating shopping-center supply; this is preliminary and not a completeness-certified census."
+  },
+  "venue_coordinate_registry": {
+    "title": "Venue Locale Fundamental shopping-center registry",
+    "usage_rule": "Used for entity resolution and coordinates only. Registry GLA and tenant_count proxy fields are not used for impact or marker sizing.",
+    "data_quality_reason": "Only 329 GLA rows were observed/external and 96.5% of GLA confidence was low/none/blank; 99.6% of tenant_count was a nearby-POI/default proxy."
+  },
+  "competitor_definition": {
+    "included": "Operating shopping centers, lifestyle centers, department-store-led centers, and community malls with current operating evidence.",
+    "excluded": "Markets, individual supermarkets, convenience stores, standalone retailers, planned or unverified projects, duplicate tenant-in-mall records, and non-general retail formats outside the declared scope."
+  },
+  "candidates": [
+    {
+      "candidate_id": "cand_01_wongwian_yai_east",
+      "rank_release_1_5": 1,
+      "name_th": "วงเวียนใหญ่–ตะวันออก",
+      "name_en": "Wongwian Yai East",
+      "lat": 13.7254,
+      "lon": 100.4954
+    },
+    {
+      "candidate_id": "cand_02_charoen_rat",
+      "rank_release_1_5": 2,
+      "name_th": "เจริญราษฎร์",
+      "name_en": "Charoen Rat",
+      "lat": 13.6963,
+      "lon": 100.5168
+    },
+    {
+      "candidate_id": "cand_03_samre",
+      "rank_release_1_5": 3,
+      "name_th": "สำเหร่",
+      "name_en": "Samre",
+      "lat": 13.7055,
+      "lon": 100.4911
+    },
+    {
+      "candidate_id": "cand_04_ban_khaek",
+      "rank_release_1_5": 4,
+      "name_th": "แยกบ้านแขก",
+      "name_en": "Ban Khaek",
+      "lat": 13.7335,
+      "lon": 100.4915
+    },
+    {
+      "candidate_id": "cand_05_talat_phlu_south",
+      "rank_release_1_5": 5,
+      "name_th": "ตลาดพลู–ใต้",
+      "name_en": "Talat Phlu South",
+      "lat": 13.7174,
+      "lon": 100.4775
+    },
+    {
+      "candidate_id": "cand_06_bang_pakok",
+      "rank_release_1_5": 6,
+      "name_th": "บางปะกอก",
+      "name_en": "Bang Pakok",
+      "lat": 13.6821,
+      "lon": 100.5019
+    },
+    {
+      "candidate_id": "cand_07_wang_lang",
+      "rank_release_1_5": 7,
+      "name_th": "วังหลัง",
+      "name_en": "Wang Lang",
+      "lat": 13.7548,
+      "lon": 100.4864
+    },
+    {
+      "candidate_id": "cand_08_ratchathewi",
+      "rank_release_1_5": 8,
+      "name_th": "ราชเทวี",
+      "name_en": "Ratchathewi",
+      "lat": 13.7531,
+      "lon": 100.5325
+    },
+    {
+      "candidate_id": "cand_09_pracha_uthit",
+      "rank_release_1_5": 9,
+      "name_th": "ประชาอุทิศ",
+      "name_en": "Pracha Uthit",
+      "lat": 13.6625,
+      "lon": 100.5029
+    },
+    {
+      "candidate_id": "cand_10_din_daeng",
+      "rank_release_1_5": 10,
+      "name_th": "ดินแดง",
+      "name_en": "Din Daeng",
+      "lat": 13.7587,
+      "lon": 100.5535
+    }
+  ],
+  "parent_clusters": [
+    {
+      "parent_cluster_id": "cluster_bkk_iconsiam_ics",
+      "canonical_name": "ICONSIAM–ICS cluster",
+      "member_competitor_ids": [
+        "comp_bkk_iconsiam",
+        "comp_bkk_ics_lifestyle_complex"
+      ],
+      "scoring_rule": "Preserve individual POIs for mapping and evidence, but prevent naïve double counting in competitive-pressure scoring."
+    },
+    {
+      "parent_cluster_id": "cluster_bkk_siam_piwat_siam",
+      "canonical_name": "Siam Piwat Siam cluster",
+      "member_competitor_ids": [
+        "comp_bkk_siam_discovery",
+        "comp_bkk_siam_center",
+        "comp_bkk_siam_paragon"
+      ],
+      "scoring_rule": "Preserve individual POIs for mapping and evidence, but apply an explicit cluster-deduplication policy before scoring."
+    }
+  ],
+  "competitors": [
+    {
+      "competitor_id": "comp_bkk_platform_wongwian_yai",
+      "canonical_name": "Platform Wongwian Yai",
+      "aliases": [
+        "แพลตฟอร์ม วงเวียนใหญ่",
+        "Platform Wong Wian Yai"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Current official social activity plus a Bangkok Metropolitan Administration event page identifying the venue.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7271083,
+        "lon": 100.4947674,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Direct shopping-center overlap at 0.202 km from Wongwian Yai East and 0.794 km from Ban Khaek; no current authoritative GLA or occupied-tenant count was found.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://www.facebook.com/platform.wongwianyai/?locale=th_TH",
+          "publisher": "Platform Wongwian Yai",
+          "source_kind": "official_social",
+          "supports": [
+            "operating_status",
+            "current_activity"
+          ]
+        },
+        {
+          "url": "https://webportal.bangkok.go.th/VPH/page/main/7144/Activities/0/info/52517",
+          "publisher": "Bangkok Metropolitan Administration",
+          "source_kind": "government_event_page",
+          "supports": [
+            "venue_identity",
+            "operating_evidence"
+          ]
+        },
+        {
+          "url": "https://mgronline.com/business/detail/9590000124052",
+          "publisher": "MGR Online",
+          "source_kind": "historical_external_report",
+          "supports": [
+            "historical_project_context_only"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 0.202,
+        "cand_02_charoen_rat": 4.171,
+        "cand_03_samre": 2.435,
+        "cand_04_ban_khaek": 0.794,
+        "cand_05_talat_phlu_south": 2.155,
+        "cand_06_bang_pakok": 5.064,
+        "cand_07_wang_lang": 3.209,
+        "cand_08_ratchathewi": 4.996,
+        "cand_09_pracha_uthit": 7.238,
+        "cand_10_din_daeng": 7.251
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_01_wongwian_yai_east",
+        "cand_03_samre",
+        "cand_04_ban_khaek",
+        "cand_05_talat_phlu_south"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_iconsiam",
+      "canonical_name": "ICONSIAM",
+      "aliases": [
+        "ไอคอนสยาม",
+        "Icon Siam"
+      ],
+      "parent_cluster_id": "cluster_bkk_iconsiam_ics",
+      "venue_type": "destination_shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Official current directory, getting-here information, and 2026 activity on the operator website.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7266738,
+        "lon": 100.5107399,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Destination-scale center within 1.663 km of Wongwian Yai East and 2.213 km of Ban Khaek. It must be cluster-deduplicated with ICS.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [
+        {
+          "metric_name": "development_gfa",
+          "value": 750000,
+          "unit": "sqm",
+          "definition": "Gross floor area of the full mixed-use ICONSIAM development stated in a historical operator project announcement; not retail GLA.",
+          "metric_as_of": null,
+          "metric_date_status": "The historical operator page does not expose a reliable publication date.",
+          "metric_type": "historical_operator_project_metric",
+          "source_url": "https://www.siampiwat.com/en/news-detail.php?id=6"
+        },
+        {
+          "metric_name": "retail_complex_area",
+          "value": 525000,
+          "unit": "sqm",
+          "definition": "Combined area of two retail complexes stated in the same historical operator project announcement; not represented as current leasable area.",
+          "metric_as_of": null,
+          "metric_date_status": "The historical operator page does not expose a reliable publication date.",
+          "metric_type": "historical_operator_project_metric",
+          "source_url": "https://www.siampiwat.com/en/news-detail.php?id=6"
+        }
+      ],
+      "source_urls": [
+        {
+          "url": "https://www.iconsiam.com/en/getting-here",
+          "publisher": "ICONSIAM",
+          "source_kind": "official_venue_page",
+          "supports": [
+            "operating_status",
+            "address",
+            "opening_hours"
+          ]
+        },
+        {
+          "url": "https://www.iconsiam.com/en/directory",
+          "publisher": "ICONSIAM",
+          "source_kind": "official_directory",
+          "supports": [
+            "operating_status",
+            "tenant_mix"
+          ]
+        },
+        {
+          "url": "https://www.siampiwat.com/en/news-detail.php?id=6",
+          "publisher": "Siam Piwat",
+          "source_kind": "historical_operator_project_announcement",
+          "supports": [
+            "project_gfa",
+            "retail_complex_area",
+            "historical_shop_count"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 1.663,
+        "cand_02_charoen_rat": 3.44,
+        "cand_03_samre": 3.169,
+        "cand_04_ban_khaek": 2.213,
+        "cand_05_talat_phlu_south": 3.736,
+        "cand_06_bang_pakok": 5.048,
+        "cand_07_wang_lang": 4.086,
+        "cand_08_ratchathewi": 3.763,
+        "cand_09_pracha_uthit": 7.186,
+        "cand_10_din_daeng": 5.832
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_01_wongwian_yai_east",
+        "cand_04_ban_khaek"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_ics_lifestyle_complex",
+      "canonical_name": "ICS Lifestyle Complex",
+      "aliases": [
+        "ICS",
+        "ไอซีเอส"
+      ],
+      "parent_cluster_id": "cluster_bkk_iconsiam_ics",
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Current official venue website and directory activity.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7262214,
+        "lon": 100.5084353,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Part of the ICONSIAM destination cluster and within 1.411 km of Wongwian Yai East and 2.000 km of Ban Khaek; count the cluster once in pressure scoring.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://ics.iconsiam.com/",
+          "publisher": "ICS Lifestyle Complex",
+          "source_kind": "official_venue_site",
+          "supports": [
+            "operating_status",
+            "current_directory",
+            "current_promotions"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 1.411,
+        "cand_02_charoen_rat": 3.448,
+        "cand_03_samre": 2.969,
+        "cand_04_ban_khaek": 2,
+        "cand_05_talat_phlu_south": 3.483,
+        "cand_06_bang_pakok": 4.957,
+        "cand_07_wang_lang": 3.97,
+        "cand_08_ratchathewi": 3.961,
+        "cand_09_pracha_uthit": 7.111,
+        "cand_10_din_daeng": 6.061
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_01_wongwian_yai_east",
+        "cand_04_ban_khaek"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_sena_fest",
+      "canonical_name": "SENA Fest",
+      "aliases": [
+        "เสนาเฟสท์",
+        "Sena Fest Lifestyle Mall"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "open_air_shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Official about page, directory, and published opening hours.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7192823,
+        "lon": 100.5078712,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "medium",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "medium_high",
+        "basis": "Lifestyle/community format with partial concept overlap; inside four Release 1.5 catchments but not supported by a current occupied-tenant count.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [
+        {
+          "metric_name": "construction_area",
+          "value": 24921,
+          "unit": "sqm",
+          "definition": "Construction area stated on the operator's undated project about page.",
+          "metric_as_of": null,
+          "metric_date_status": "Undated operator page checked on 2026-07-28.",
+          "metric_type": "operator_reported_project_metric",
+          "source_url": "https://www.senafest.com/en/about"
+        },
+        {
+          "metric_name": "commercial_space",
+          "value": 9811,
+          "unit": "sqm",
+          "definition": "Commercial space stated on the operator's undated project about page.",
+          "metric_as_of": null,
+          "metric_date_status": "Undated operator page checked on 2026-07-28.",
+          "metric_type": "operator_reported_project_metric",
+          "source_url": "https://www.senafest.com/en/about"
+        },
+        {
+          "metric_name": "project_shop_capacity",
+          "value": 120,
+          "unit": "shops",
+          "definition": "Number of shops stated in the project description; not a current occupied-tenant count.",
+          "metric_as_of": null,
+          "metric_date_status": "Undated operator page checked on 2026-07-28.",
+          "metric_type": "operator_reported_project_metric",
+          "source_url": "https://www.senafest.com/en/about"
+        },
+        {
+          "metric_name": "parking_capacity",
+          "value": 300,
+          "unit": "cars",
+          "definition": "Parking capacity stated in the project description.",
+          "metric_as_of": null,
+          "metric_date_status": "Undated operator page checked on 2026-07-28.",
+          "metric_type": "operator_reported_project_metric",
+          "source_url": "https://www.senafest.com/en/about"
+        }
+      ],
+      "source_urls": [
+        {
+          "url": "https://www.senafest.com/en/about",
+          "publisher": "SENA Fest / SENA Development",
+          "source_kind": "official_about_page",
+          "supports": [
+            "venue_type",
+            "operating_hours",
+            "project_metrics",
+            "project_concept"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 1.509,
+        "cand_02_charoen_rat": 2.731,
+        "cand_03_samre": 2.373,
+        "cand_04_ban_khaek": 2.372,
+        "cand_05_talat_phlu_south": 3.287,
+        "cand_06_bang_pakok": 4.185,
+        "cand_07_wang_lang": 4.58,
+        "cand_08_ratchathewi": 4.606,
+        "cand_09_pracha_uthit": 6.337,
+        "cand_10_din_daeng": 6.596
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_01_wongwian_yai_east",
+        "cand_02_charoen_rat",
+        "cand_03_samre",
+        "cand_04_ban_khaek"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_the_mall_lifestore_tha_phra",
+      "canonical_name": "The Mall Lifestore Tha Phra",
+      "aliases": [
+        "เดอะมอลล์ไลฟ์สโตร์ ท่าพระ",
+        "The Mall Tha Phra"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "department_store_led_shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Current official branch page, directory, opening hours, and July 2026 promotion.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7136096,
+        "lon": 100.4801172,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Full-format center only 0.508 km from Talat Phlu South and 1.490 km from Samre; current authoritative size was not found in this pass.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://themalllifestore.com/branch/thapra",
+          "publisher": "The Mall Lifestore",
+          "source_kind": "official_branch_page",
+          "supports": [
+            "operating_status",
+            "opening_hours",
+            "current_promotion"
+          ]
+        },
+        {
+          "url": "https://themalllifestore.com/directory",
+          "publisher": "The Mall Lifestore",
+          "source_kind": "official_directory",
+          "supports": [
+            "tenant_mix"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 2.108,
+        "cand_02_charoen_rat": 4.406,
+        "cand_03_samre": 1.49,
+        "cand_04_ban_khaek": 2.531,
+        "cand_05_talat_phlu_south": 0.508,
+        "cand_06_bang_pakok": 4.221,
+        "cand_07_wang_lang": 4.63,
+        "cand_08_ratchathewi": 7.162,
+        "cand_09_pracha_uthit": 6.193,
+        "cand_10_din_daeng": 9.379
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_01_wongwian_yai_east",
+        "cand_03_samre",
+        "cand_04_ban_khaek",
+        "cand_05_talat_phlu_south"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_kingsquare_community_mall",
+      "canonical_name": "KINGSQUARE Community Mall",
+      "aliases": [
+        "คิงสแควร์ คอมมูนิตี้ มอลล์",
+        "King Square Community Mall"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "community_mall",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Official directory and hours, July 2026 official social activity, and an authoritative 2025 opening report.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.691932,
+        "lon": 100.527267,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Direct community-mall and family/routine format overlap at 1.231 km from Charoen Rat.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://kingsquaremall.com/",
+          "publisher": "KINGSQUARE Community Mall",
+          "source_kind": "official_venue_site",
+          "supports": [
+            "operating_status",
+            "opening_hours",
+            "directory",
+            "address"
+          ]
+        },
+        {
+          "url": "https://www.facebook.com/p/KINGSQUARE-Community-Mall-61576323179780/",
+          "publisher": "KINGSQUARE Community Mall",
+          "source_kind": "official_social",
+          "supports": [
+            "current_activity"
+          ]
+        },
+        {
+          "url": "https://www.bangkokpost.com/business/general/3094336/mall-opens-doors-at-kingsquare-project",
+          "publisher": "Bangkok Post",
+          "source_kind": "external_current_report",
+          "supports": [
+            "opening_status",
+            "opening_timing"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 5.07,
+        "cand_02_charoen_rat": 1.231,
+        "cand_03_samre": 4.188,
+        "cand_04_ban_khaek": 6.024,
+        "cand_05_talat_phlu_south": 6.077,
+        "cand_06_bang_pakok": 2.951,
+        "cand_07_wang_lang": 8.268,
+        "cand_08_ratchathewi": 6.825,
+        "cand_09_pracha_uthit": 4.2,
+        "cand_10_din_daeng": 7.947
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_02_charoen_rat"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_terminal21_rama3",
+      "canonical_name": "Terminal21 Rama 3",
+      "aliases": [
+        "เทอร์มินอล 21 พระราม 3",
+        "Terminal 21 Rama 3"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Official current home page, shop-category directory, address, and access information.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.6889163,
+        "lon": 100.5053561,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Large multi-category shopping-center offer at 0.845 km from Bang Pakok, 1.484 km from Charoen Rat, and 2.403 km from Samre.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://www.terminal21.co.th/rama3/en/home-en/",
+          "publisher": "Terminal21 Rama 3",
+          "source_kind": "official_venue_site",
+          "supports": [
+            "operating_status",
+            "current_activity"
+          ]
+        },
+        {
+          "url": "https://www.terminal21.co.th/rama3/en/shop-categories-en/home-en2/",
+          "publisher": "Terminal21 Rama 3",
+          "source_kind": "official_directory",
+          "supports": [
+            "tenant_mix"
+          ]
+        },
+        {
+          "url": "https://www.terminal21.co.th/rama3/en/how-to-go-en/",
+          "publisher": "Terminal21 Rama 3",
+          "source_kind": "official_access_page",
+          "supports": [
+            "address",
+            "access"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 4.197,
+        "cand_02_charoen_rat": 1.484,
+        "cand_03_samre": 2.403,
+        "cand_04_ban_khaek": 5.179,
+        "cand_05_talat_phlu_south": 4.369,
+        "cand_06_bang_pakok": 0.845,
+        "cand_07_wang_lang": 7.607,
+        "cand_08_ratchathewi": 7.716,
+        "cand_09_pracha_uthit": 2.949,
+        "cand_10_din_daeng": 9.341
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_02_charoen_rat",
+        "cand_03_samre",
+        "cand_06_bang_pakok"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_central_rama3",
+      "canonical_name": "Central Rama 3",
+      "aliases": [
+        "เซ็นทรัล พระราม 3",
+        "Central Plaza Rama 3"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Current operator property and branch pages.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.6977371,
+        "lon": 100.5377797,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Operator-reported 48,328 sqm leasable area and 2.272 km from Charoen Rat.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [
+        {
+          "metric_name": "total_project_gfa",
+          "value": 188000,
+          "unit": "sqm",
+          "definition": "Total project gross floor area in Central Pattana's retail-properties asset table.",
+          "metric_as_of": "2024-12-31",
+          "metric_type": "operator_reported_asset_metric",
+          "source_url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties"
+        },
+        {
+          "metric_name": "leasable_area",
+          "value": 48328,
+          "unit": "sqm",
+          "definition": "Leasable area in Central Pattana's retail-properties asset table.",
+          "metric_as_of": "2024-12-31",
+          "metric_type": "operator_reported_asset_metric",
+          "source_url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties"
+        }
+      ],
+      "source_urls": [
+        {
+          "url": "https://www.centralpattana.co.th/en/our-business/shopping-center/8/central-rama-3",
+          "publisher": "Central Pattana",
+          "source_kind": "official_property_page",
+          "supports": [
+            "operating_status",
+            "property_identity"
+          ]
+        },
+        {
+          "url": "https://shoppingcenter.centralpattana.co.th/branch/central-rama-3/branch-information/",
+          "publisher": "Central Pattana",
+          "source_kind": "official_branch_page",
+          "supports": [
+            "operating_status",
+            "branch_information"
+          ]
+        },
+        {
+          "url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties",
+          "publisher": "Central Pattana",
+          "source_kind": "operator_asset_table",
+          "supports": [
+            "total_project_gfa",
+            "leasable_area",
+            "metric_date"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 5.516,
+        "cand_02_charoen_rat": 2.272,
+        "cand_03_samre": 5.116,
+        "cand_04_ban_khaek": 6.388,
+        "cand_05_talat_phlu_south": 6.869,
+        "cand_06_bang_pakok": 4.248,
+        "cand_07_wang_lang": 8.43,
+        "cand_08_ratchathewi": 6.182,
+        "cand_09_pracha_uthit": 5.436,
+        "cand_10_din_daeng": 6.988
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_02_charoen_rat"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_riverside_plaza_bangkok",
+      "canonical_name": "Riverside Plaza Bangkok",
+      "aliases": [
+        "ริเวอร์ไซด์ พลาซ่า กรุงเทพ",
+        "Riverside Plaza"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Current official venue site, directory, opening hours, and address.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7052211,
+        "lon": 100.4909755,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "The venue point is only 0.034 km from the Release 1.5 Samre analytical center, indicating direct overlap or a candidate-center artifact.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://www.riverside-plaza.com/",
+          "publisher": "Riverside Plaza Bangkok",
+          "source_kind": "official_venue_site",
+          "supports": [
+            "operating_status",
+            "current_activity"
+          ]
+        },
+        {
+          "url": "https://www.riverside-plaza.com/directory/",
+          "publisher": "Riverside Plaza Bangkok",
+          "source_kind": "official_directory",
+          "supports": [
+            "tenant_mix",
+            "opening_hours",
+            "address"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 2.294,
+        "cand_02_charoen_rat": 2.961,
+        "cand_03_samre": 0.034,
+        "cand_04_ban_khaek": 3.145,
+        "cand_05_talat_phlu_south": 1.988,
+        "cand_06_bang_pakok": 2.829,
+        "cand_07_wang_lang": 5.535,
+        "cand_08_ratchathewi": 6.962,
+        "cand_09_pracha_uthit": 4.922,
+        "cand_10_din_daeng": 8.999
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_01_wongwian_yai_east",
+        "cand_03_samre",
+        "cand_05_talat_phlu_south",
+        "cand_06_bang_pakok"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_the_old_siam_plaza",
+      "canonical_name": "The Old Siam Plaza",
+      "aliases": [
+        "ดิโอลด์สยาม พลาซ่า",
+        "Old Siam Plaza"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Official venue site and official news posted 18 July 2026.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.745874,
+        "lon": 100.500214,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "medium",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "medium_high",
+        "basis": "Operating specialty-oriented shopping center inside Wongwian Yai East, Ban Khaek, and Wang Lang fixed-radius catchments; network access may differ because of river crossings.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://theoldsiam.co.th/en/",
+          "publisher": "The Old Siam Plaza",
+          "source_kind": "official_venue_site",
+          "supports": [
+            "operating_status",
+            "venue_identity"
+          ]
+        },
+        {
+          "url": "https://theoldsiam.co.th/en/news",
+          "publisher": "The Old Siam Plaza",
+          "source_kind": "official_news",
+          "supports": [
+            "current_activity",
+            "operating_status"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 2.335,
+        "cand_02_charoen_rat": 5.796,
+        "cand_03_samre": 4.596,
+        "cand_04_ban_khaek": 1.667,
+        "cand_05_talat_phlu_south": 4.006,
+        "cand_06_bang_pakok": 7.094,
+        "cand_07_wang_lang": 1.792,
+        "cand_08_ratchathewi": 3.579,
+        "cand_09_pracha_uthit": 9.275,
+        "cand_10_din_daeng": 5.929
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_01_wongwian_yai_east",
+        "cand_04_ban_khaek",
+        "cand_07_wang_lang"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_tha_maharaj",
+      "canonical_name": "Tha Maharaj",
+      "aliases": [
+        "ท่ามหาราช",
+        "Tha Maharaj Mall"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "medium_high",
+        "verification_basis": "Official social presence plus an authoritative current venue guide dated November 2025.",
+        "status_note": "Status confidence is below operator-website level because no current first-party directory was captured."
+      },
+      "location": {
+        "lat": 13.754733,
+        "lon": 100.488722,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "medium",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "medium",
+        "basis": "Only 0.251 km straight-line from Wang Lang but on the opposite riverbank; straight-line distance is not accessibility-equivalent.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://www.facebook.com/ThaMaharaj/about/",
+          "publisher": "Tha Maharaj",
+          "source_kind": "official_social",
+          "supports": [
+            "venue_identity",
+            "operating_presence"
+          ]
+        },
+        {
+          "url": "https://www.timeout.com/bangkok/shopping/tha-maharaj",
+          "publisher": "Time Out Bangkok",
+          "source_kind": "external_current_guide",
+          "supports": [
+            "operating_status",
+            "venue_type"
+          ]
+        },
+        {
+          "url": "https://www.hotels.com/go/thailand/tha-maharaj-mall",
+          "publisher": "Hotels.com",
+          "source_kind": "current_venue_guide",
+          "supports": [
+            "opening_hours",
+            "address"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 3.34,
+        "cand_02_charoen_rat": 7.17,
+        "cand_03_samre": 5.48,
+        "cand_04_ban_khaek": 2.38,
+        "cand_05_talat_phlu_south": 4.325,
+        "cand_06_bang_pakok": 8.201,
+        "cand_07_wang_lang": 0.251,
+        "cand_08_ratchathewi": 4.732,
+        "cand_09_pracha_uthit": 10.37,
+        "cand_10_din_daeng": 7.01
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_04_ban_khaek",
+        "cand_07_wang_lang"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_central_pinklao",
+      "canonical_name": "Central Pinklao",
+      "aliases": [
+        "เซ็นทรัล ปิ่นเกล้า",
+        "Central Plaza Pinklao"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Current operator property page and operator reporting on the 2025 transformation.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7773229,
+        "lon": 100.4757519,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Operator-reported 64,917 sqm leasable area and 2.756 km from Wang Lang, at the edge of the fixed catchment.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [
+        {
+          "metric_name": "total_project_gfa",
+          "value": 370000,
+          "unit": "sqm",
+          "definition": "Total project gross floor area in Central Pattana's retail-properties asset table.",
+          "metric_as_of": "2024-12-31",
+          "metric_type": "operator_reported_asset_metric",
+          "source_url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties"
+        },
+        {
+          "metric_name": "leasable_area",
+          "value": 64917,
+          "unit": "sqm",
+          "definition": "Leasable area in Central Pattana's retail-properties asset table.",
+          "metric_as_of": "2024-12-31",
+          "metric_type": "operator_reported_asset_metric",
+          "source_url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties"
+        }
+      ],
+      "source_urls": [
+        {
+          "url": "https://www.centralpattana.co.th/en/our-business/shopping-center/7/central-pinklao",
+          "publisher": "Central Pattana",
+          "source_kind": "official_property_page",
+          "supports": [
+            "operating_status",
+            "property_identity"
+          ]
+        },
+        {
+          "url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties",
+          "publisher": "Central Pattana",
+          "source_kind": "operator_asset_table",
+          "supports": [
+            "total_project_gfa",
+            "leasable_area",
+            "metric_date"
+          ]
+        },
+        {
+          "url": "https://www.centralpattana.co.th/en/shopping/shopping-update/lifestyle-activities/1570/central-pattana-sets-new-highs-for-three-consecutive-years-2025-marks-record-growth-in-revenue-net-profit-dividends-and-traffic-reflecting-the-strength-of-retail-led-mixed-use-model",
+          "publisher": "Central Pattana",
+          "source_kind": "official_corporate_update",
+          "supports": [
+            "2025_transformation",
+            "current_operating_context"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 6.151,
+        "cand_02_charoen_rat": 10.041,
+        "cand_03_samre": 8.157,
+        "cand_04_ban_khaek": 5.161,
+        "cand_05_talat_phlu_south": 6.666,
+        "cand_06_bang_pakok": 10.959,
+        "cand_07_wang_lang": 2.756,
+        "cand_08_ratchathewi": 6.695,
+        "cand_09_pracha_uthit": 13.1,
+        "cand_10_din_daeng": 8.648
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_07_wang_lang"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_market_place_pracha_uthit",
+      "canonical_name": "Market Place Pracha Uthit",
+      "aliases": [
+        "มาร์เก็ต เพลส ประชาอุทิศ",
+        "Marketplace Pracha Uthit"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "community_mall",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Central Pattana operator announcement dated 29 November 2025 plus official 2026 social activity.",
+        "status_note": "The exact first-opening/relaunch chronology requires reconciliation; operating status itself is confirmed."
+      },
+      "location": {
+        "lat": 13.6398842,
+        "lon": 100.4986571,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_tenant_proxy_point_from_in_mall_tops_record",
+        "confidence": "medium",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Direct family, daily-convenience, and neighborhood-format overlap at 2.556 km from Pracha Uthit.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [
+        {
+          "metric_name": "total_project_area",
+          "value": 8600,
+          "unit": "sqm",
+          "definition": "Total project area stated by Central Pattana; not represented as GLA.",
+          "metric_as_of": "2025-11-29",
+          "metric_type": "operator_reported_project_metric",
+          "source_url": "https://www.centralpattana.co.th/en/shopping/shopping-update/lifestyle-activities/1530/central-pattana-unveils-market-place-pracha-uthit-anchoring-a-high-potential-location-with-a-neighborhood-centric-strategy-to-create-the-best-community-mall-in-the-area"
+        },
+        {
+          "metric_name": "brand_count_minimum",
+          "value": 40,
+          "qualifier": "more_than",
+          "unit": "brands",
+          "definition": "Operator states more than 40 brands; not an occupied-tenant audit.",
+          "metric_as_of": "2025-11-29",
+          "metric_type": "operator_reported_project_metric",
+          "source_url": "https://www.centralpattana.co.th/en/shopping/shopping-update/lifestyle-activities/1530/central-pattana-unveils-market-place-pracha-uthit-anchoring-a-high-potential-location-with-a-neighborhood-centric-strategy-to-create-the-best-community-mall-in-the-area"
+        },
+        {
+          "metric_name": "building_storeys",
+          "value": 3,
+          "unit": "storeys",
+          "definition": "Building storeys stated by the operator.",
+          "metric_as_of": "2025-11-29",
+          "metric_type": "operator_reported_project_metric",
+          "source_url": "https://www.centralpattana.co.th/en/shopping/shopping-update/lifestyle-activities/1530/central-pattana-unveils-market-place-pracha-uthit-anchoring-a-high-potential-location-with-a-neighborhood-centric-strategy-to-create-the-best-community-mall-in-the-area"
+        },
+        {
+          "metric_name": "parking_capacity",
+          "value": 126,
+          "unit": "cars",
+          "definition": "Parking capacity stated by the operator.",
+          "metric_as_of": "2025-11-29",
+          "metric_type": "operator_reported_project_metric",
+          "source_url": "https://www.centralpattana.co.th/en/shopping/shopping-update/lifestyle-activities/1530/central-pattana-unveils-market-place-pracha-uthit-anchoring-a-high-potential-location-with-a-neighborhood-centric-strategy-to-create-the-best-community-mall-in-the-area"
+        },
+        {
+          "metric_name": "expected_daily_customer_traffic",
+          "value": 5000,
+          "unit": "people_per_day",
+          "definition": "Operator forecast of expected daily customer traffic; explicitly not observed footfall.",
+          "metric_as_of": "2025-11-29",
+          "metric_type": "operator_forecast",
+          "source_url": "https://www.centralpattana.co.th/en/shopping/shopping-update/lifestyle-activities/1530/central-pattana-unveils-market-place-pracha-uthit-anchoring-a-high-potential-location-with-a-neighborhood-centric-strategy-to-create-the-best-community-mall-in-the-area"
+        }
+      ],
+      "source_urls": [
+        {
+          "url": "https://www.centralpattana.co.th/en/shopping/shopping-update/lifestyle-activities/1530/central-pattana-unveils-market-place-pracha-uthit-anchoring-a-high-potential-location-with-a-neighborhood-centric-strategy-to-create-the-best-community-mall-in-the-area",
+          "publisher": "Central Pattana",
+          "source_kind": "official_operator_announcement",
+          "supports": [
+            "operating_status",
+            "venue_type",
+            "project_metrics",
+            "target_mission",
+            "opening_context"
+          ]
+        },
+        {
+          "url": "https://www.facebook.com/marketplaceprachauthit/",
+          "publisher": "Market Place Pracha Uthit",
+          "source_kind": "official_social",
+          "supports": [
+            "current_2026_activity",
+            "operating_status"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 9.515,
+        "cand_02_charoen_rat": 6.572,
+        "cand_03_samre": 7.342,
+        "cand_04_ban_khaek": 10.438,
+        "cand_05_talat_phlu_south": 8.917,
+        "cand_06_bang_pakok": 4.707,
+        "cand_07_wang_lang": 12.846,
+        "cand_08_ratchathewi": 13.109,
+        "cand_09_pracha_uthit": 2.556,
+        "cand_10_din_daeng": 14.479
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_09_pracha_uthit"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_siam_discovery",
+      "canonical_name": "Siam Discovery",
+      "aliases": [
+        "สยามดิสคัฟเวอรี่",
+        "Siam Discovery The Exploratorium"
+      ],
+      "parent_cluster_id": "cluster_bkk_siam_piwat_siam",
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Official venue site, daily opening hours, and promotions running in June–September 2026.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7466557,
+        "lon": 100.5315099,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Major central retail destination 0.725 km from Ratchathewi and 2.727 km from Din Daeng; cluster-deduplicate with Siam Center and Siam Paragon.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://www.siamdiscovery.co.th/",
+          "publisher": "Siam Discovery",
+          "source_kind": "official_venue_site",
+          "supports": [
+            "operating_status",
+            "opening_hours",
+            "venue_positioning"
+          ]
+        },
+        {
+          "url": "https://www.siamdiscovery.co.th/en/promotion/fashion-bigbang-jun26",
+          "publisher": "Siam Discovery",
+          "source_kind": "official_2026_promotion",
+          "supports": [
+            "current_activity",
+            "operating_status"
+          ]
+        },
+        {
+          "url": "https://www.siampiwat.com/en/our-business-siamdiscovery.php",
+          "publisher": "Siam Piwat",
+          "source_kind": "official_operator_profile",
+          "supports": [
+            "ownership",
+            "venue_identity"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 4.561,
+        "cand_02_charoen_rat": 5.82,
+        "cand_03_samre": 6.324,
+        "cand_04_ban_khaek": 4.562,
+        "cand_05_talat_phlu_south": 6.68,
+        "cand_06_bang_pakok": 7.859,
+        "cand_07_wang_lang": 4.956,
+        "cand_08_ratchathewi": 0.725,
+        "cand_09_pracha_uthit": 9.855,
+        "cand_10_din_daeng": 2.727
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_08_ratchathewi",
+        "cand_10_din_daeng"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_siam_center",
+      "canonical_name": "Siam Center",
+      "aliases": [
+        "สยามเซ็นเตอร์",
+        "Siam Centre"
+      ],
+      "parent_cluster_id": "cluster_bkk_siam_piwat_siam",
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Official venue site, directory, daily opening hours, and events in 2026.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7462718,
+        "lon": 100.5328368,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Major central retail destination 0.760 km from Ratchathewi and 2.625 km from Din Daeng; cluster-deduplicate with Siam Discovery and Siam Paragon.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://www.siamcenter.co.th/",
+          "publisher": "Siam Center",
+          "source_kind": "official_venue_site",
+          "supports": [
+            "operating_status",
+            "opening_hours"
+          ]
+        },
+        {
+          "url": "https://www.siamcenter.co.th/directory",
+          "publisher": "Siam Center",
+          "source_kind": "official_directory",
+          "supports": [
+            "tenant_mix",
+            "operating_hours"
+          ]
+        },
+        {
+          "url": "https://www.siamcenter.co.th/en/event",
+          "publisher": "Siam Center",
+          "source_kind": "official_2026_event_listing",
+          "supports": [
+            "current_activity",
+            "operating_status"
+          ]
+        },
+        {
+          "url": "https://www.siampiwat.com/en/our-business-siamcenter.php",
+          "publisher": "Siam Piwat",
+          "source_kind": "official_operator_profile",
+          "supports": [
+            "ownership",
+            "venue_identity"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 4.662,
+        "cand_02_charoen_rat": 5.82,
+        "cand_03_samre": 6.394,
+        "cand_04_ban_khaek": 4.685,
+        "cand_05_talat_phlu_south": 6.785,
+        "cand_06_bang_pakok": 7.879,
+        "cand_07_wang_lang": 5.104,
+        "cand_08_ratchathewi": 0.76,
+        "cand_09_pracha_uthit": 9.86,
+        "cand_10_din_daeng": 2.625
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_08_ratchathewi",
+        "cand_10_din_daeng"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_siam_paragon",
+      "canonical_name": "Siam Paragon",
+      "aliases": [
+        "สยามพารากอน",
+        "Paragon"
+      ],
+      "parent_cluster_id": "cluster_bkk_siam_piwat_siam",
+      "venue_type": "destination_shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Official current directory and promotions valid in July–August 2026.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7465615,
+        "lon": 100.5347125,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Destination center 0.765 km from Ratchathewi and 2.437 km from Din Daeng; cluster-deduplicate with Siam Center and Siam Discovery.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [
+        {
+          "metric_name": "brand_count_minimum",
+          "value": 300,
+          "qualifier": "more_than",
+          "unit": "brands",
+          "definition": "Official directory advertises more than 300 brands.",
+          "metric_as_of": "2026-07-28",
+          "metric_as_of_basis": "Page checked on the registry cut-off date.",
+          "metric_type": "operator_reported_directory_metric",
+          "source_url": "https://www.siamparagon.co.th/directory"
+        }
+      ],
+      "source_urls": [
+        {
+          "url": "https://www.siamparagon.co.th/directory",
+          "publisher": "Siam Paragon",
+          "source_kind": "official_directory",
+          "supports": [
+            "operating_status",
+            "brand_count_minimum",
+            "tenant_mix"
+          ]
+        },
+        {
+          "url": "https://www.siamparagon.co.th/promotions",
+          "publisher": "Siam Paragon",
+          "source_kind": "official_promotions",
+          "supports": [
+            "current_2026_activity",
+            "operating_status"
+          ]
+        },
+        {
+          "url": "https://www.siampiwat.com/en/our-business-siamparagon.php",
+          "publisher": "Siam Piwat",
+          "source_kind": "official_operator_profile",
+          "supports": [
+            "ownership",
+            "venue_identity",
+            "venue_scale_context"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 4.855,
+        "cand_02_charoen_rat": 5.914,
+        "cand_03_samre": 6.561,
+        "cand_04_ban_khaek": 4.888,
+        "cand_05_talat_phlu_south": 6.979,
+        "cand_06_bang_pakok": 7.996,
+        "cand_07_wang_lang": 5.298,
+        "cand_08_ratchathewi": 0.765,
+        "cand_09_pracha_uthit": 9.959,
+        "cand_10_din_daeng": 2.437
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_08_ratchathewi",
+        "cand_10_din_daeng"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_platinum_fashion_mall",
+      "canonical_name": "Platinum Fashion Mall",
+      "aliases": [
+        "เดอะ แพลทินัม แฟชั่น มอลล์",
+        "The Platinum Fashion Mall"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "specialty_shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Official current directory and a 2026 event page.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7498991,
+        "lon": 100.5400622,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": "specialized",
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Dense specialized fashion offer 0.891 km from Ratchathewi and 1.750 km from Din Daeng; mission overlap is specialized rather than fully generalist.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://platinumfashionmall.com/directory/",
+          "publisher": "Platinum Fashion Mall",
+          "source_kind": "official_directory",
+          "supports": [
+            "operating_status",
+            "tenant_mix",
+            "specialty_positioning"
+          ]
+        },
+        {
+          "url": "https://platinumfashionmall.com/muay-thai-spirit-2026/",
+          "publisher": "Platinum Fashion Mall",
+          "source_kind": "official_2026_event",
+          "supports": [
+            "current_activity",
+            "operating_status"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 5.54,
+        "cand_02_charoen_rat": 6.468,
+        "cand_03_samre": 7.235,
+        "cand_04_ban_khaek": 5.553,
+        "cand_05_talat_phlu_south": 7.663,
+        "cand_06_bang_pakok": 8.592,
+        "cand_07_wang_lang": 5.821,
+        "cand_08_ratchathewi": 0.891,
+        "cand_09_pracha_uthit": 10.515,
+        "cand_10_din_daeng": 1.75
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_08_ratchathewi",
+        "cand_10_din_daeng"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_centralworld",
+      "canonical_name": "centralWorld",
+      "aliases": [
+        "เซ็นทรัลเวิลด์",
+        "CentralWorld"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "destination_shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Current operator property page and 2026 operator updates.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7470012,
+        "lon": 100.5388752,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Operator-reported 180,386 sqm leasable area; 0.966 km from Ratchathewi and 2.046 km from Din Daeng.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [
+        {
+          "metric_name": "total_project_gfa",
+          "value": 830000,
+          "unit": "sqm",
+          "definition": "Total project gross floor area in Central Pattana's retail-properties asset table.",
+          "metric_as_of": "2024-12-31",
+          "metric_type": "operator_reported_asset_metric",
+          "source_url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties"
+        },
+        {
+          "metric_name": "leasable_area",
+          "value": 180386,
+          "unit": "sqm",
+          "definition": "Leasable area in Central Pattana's retail-properties asset table.",
+          "metric_as_of": "2024-12-31",
+          "metric_type": "operator_reported_asset_metric",
+          "source_url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties"
+        }
+      ],
+      "source_urls": [
+        {
+          "url": "https://www.centralpattana.co.th/en/our-business/shopping-center/9/centralworld",
+          "publisher": "Central Pattana",
+          "source_kind": "official_property_page",
+          "supports": [
+            "operating_status",
+            "property_identity"
+          ]
+        },
+        {
+          "url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties",
+          "publisher": "Central Pattana",
+          "source_kind": "operator_asset_table",
+          "supports": [
+            "total_project_gfa",
+            "leasable_area",
+            "metric_date"
+          ]
+        },
+        {
+          "url": "https://www.centralpattana.co.th/en/shopping/shopping-update/lifestyle-activities/1554/groove-centralworld-reinvents-itself-as-bangkoks-all-day-urban-courtyard-emerging-as-a-new-downtown-hangout-that-reflects-a-global-urban-lifestyle",
+          "publisher": "Central Pattana",
+          "source_kind": "official_2026_update",
+          "supports": [
+            "current_activity",
+            "operating_status",
+            "current_positioning"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 5.275,
+        "cand_02_charoen_rat": 6.121,
+        "cand_03_samre": 6.923,
+        "cand_04_ban_khaek": 5.333,
+        "cand_05_talat_phlu_south": 7.402,
+        "cand_06_bang_pakok": 8.248,
+        "cand_07_wang_lang": 5.734,
+        "cand_08_ratchathewi": 0.966,
+        "cand_09_pracha_uthit": 10.168,
+        "cand_10_din_daeng": 2.046
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_08_ratchathewi",
+        "cand_10_din_daeng"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_mbk_center",
+      "canonical_name": "MBK Center",
+      "aliases": [
+        "เอ็ม บี เค เซ็นเตอร์",
+        "Mahboonkrong Center"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Official current venue site, directory, and opening hours.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.744611,
+        "lon": 100.5298414,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Large multi-category and tourism-oriented center 0.987 km from Ratchathewi; current authoritative GLA was not captured.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://www.mbk-center.co.th/en/",
+          "publisher": "MBK Center",
+          "source_kind": "official_venue_site",
+          "supports": [
+            "operating_status",
+            "opening_hours",
+            "directory",
+            "venue_zones"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 4.29,
+        "cand_02_charoen_rat": 5.554,
+        "cand_03_samre": 6.035,
+        "cand_04_ban_khaek": 4.322,
+        "cand_05_talat_phlu_south": 6.413,
+        "cand_06_bang_pakok": 7.578,
+        "cand_07_wang_lang": 4.827,
+        "cand_08_ratchathewi": 0.987,
+        "cand_09_pracha_uthit": 9.583,
+        "cand_10_din_daeng": 2.997
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_08_ratchathewi"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_fortune_town",
+      "canonical_name": "Fortune Town",
+      "aliases": [
+        "ฟอร์จูนทาวน์",
+        "Fortune IT Mall"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "specialty_shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Official current contact page, opening hours, address, and shop directory.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7592479,
+        "lon": 100.5652256,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": "specialized",
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Strong specialized IT and service offer 1.268 km from Din Daeng; no current authoritative GLA was captured.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://fortunetown.co.th/en/contact-us/",
+          "publisher": "Fortune Town",
+          "source_kind": "official_contact_page",
+          "supports": [
+            "operating_status",
+            "opening_hours",
+            "address"
+          ]
+        },
+        {
+          "url": "https://fortunetown.co.th/shops/",
+          "publisher": "Fortune Town",
+          "source_kind": "official_directory",
+          "supports": [
+            "tenant_mix",
+            "specialty_positioning"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 8.429,
+        "cand_02_charoen_rat": 8.738,
+        "cand_03_samre": 9.991,
+        "cand_04_ban_khaek": 8.462,
+        "cand_05_talat_phlu_south": 10.556,
+        "cand_06_bang_pakok": 10.972,
+        "cand_07_wang_lang": 8.528,
+        "cand_08_ratchathewi": 3.6,
+        "cand_09_pracha_uthit": 12.691,
+        "cand_10_din_daeng": 1.268
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_10_din_daeng"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_central_rama9",
+      "canonical_name": "Central Rama 9",
+      "aliases": [
+        "เซ็นทรัล พระราม 9",
+        "Central Plaza Grand Rama 9"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Current operator branch page and operator asset reporting.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.758595,
+        "lon": 100.566177,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Operator-reported 58,826 sqm leasable area and 1.369 km from Din Daeng.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [
+        {
+          "metric_name": "total_project_gfa",
+          "value": 214000,
+          "unit": "sqm",
+          "definition": "Total project gross floor area in Central Pattana's retail-properties asset table.",
+          "metric_as_of": "2024-12-31",
+          "metric_type": "operator_reported_asset_metric",
+          "source_url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties"
+        },
+        {
+          "metric_name": "leasable_area",
+          "value": 58826,
+          "unit": "sqm",
+          "definition": "Leasable area in Central Pattana's retail-properties asset table.",
+          "metric_as_of": "2024-12-31",
+          "metric_type": "operator_reported_asset_metric",
+          "source_url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties"
+        }
+      ],
+      "source_urls": [
+        {
+          "url": "https://shoppingcenter.centralpattana.co.th/branch/central-rama-9/branch-information/",
+          "publisher": "Central Pattana",
+          "source_kind": "official_branch_page",
+          "supports": [
+            "operating_status",
+            "branch_information"
+          ]
+        },
+        {
+          "url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties",
+          "publisher": "Central Pattana",
+          "source_kind": "operator_asset_table",
+          "supports": [
+            "total_project_gfa",
+            "leasable_area",
+            "metric_date"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 8.489,
+        "cand_02_charoen_rat": 8.742,
+        "cand_03_samre": 10.031,
+        "cand_04_ban_khaek": 8.535,
+        "cand_05_talat_phlu_south": 10.617,
+        "cand_06_bang_pakok": 10.98,
+        "cand_07_wang_lang": 8.627,
+        "cand_08_ratchathewi": 3.688,
+        "cand_09_pracha_uthit": 12.685,
+        "cand_10_din_daeng": 1.369
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_10_din_daeng"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_esplanade_ratchada",
+      "canonical_name": "Esplanade Ratchada",
+      "aliases": [
+        "เอสพลานาด รัชดาภิเษก",
+        "Esplanade Ratchadaphisek"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Central Pattana asset reporting and inclusion in the operator's 2026 Grand Grand Sale.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7663807,
+        "lon": 100.568873,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "tenant_branch_proxy_point_from_in_mall_tops_record",
+        "confidence": "medium",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "high",
+        "basis": "Operator-reported 42,401 sqm leasable area and 1.867 km from Din Daeng; exact host centroid remains unresolved.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [
+        {
+          "metric_name": "total_project_gfa",
+          "value": 100000,
+          "unit": "sqm",
+          "definition": "Total project gross floor area in Central Pattana's retail-properties asset table.",
+          "metric_as_of": "2024-12-31",
+          "metric_type": "operator_reported_asset_metric",
+          "source_url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties"
+        },
+        {
+          "metric_name": "leasable_area",
+          "value": 42401,
+          "unit": "sqm",
+          "definition": "Leasable area in Central Pattana's retail-properties asset table.",
+          "metric_as_of": "2024-12-31",
+          "metric_type": "operator_reported_asset_metric",
+          "source_url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties"
+        }
+      ],
+      "source_urls": [
+        {
+          "url": "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties",
+          "publisher": "Central Pattana",
+          "source_kind": "operator_asset_table",
+          "supports": [
+            "operating_status",
+            "total_project_gfa",
+            "leasable_area",
+            "metric_date"
+          ]
+        },
+        {
+          "url": "https://www.centralpattana.co.th/en/shopping/shopping-update/event/1577/grand-grand-sale-2026",
+          "publisher": "Central Pattana",
+          "source_kind": "official_2026_event",
+          "supports": [
+            "current_activity",
+            "operating_status"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 9.151,
+        "cand_02_charoen_rat": 9.611,
+        "cand_03_samre": 10.789,
+        "cand_04_ban_khaek": 9.122,
+        "cand_05_talat_phlu_south": 11.272,
+        "cand_06_bang_pakok": 11.839,
+        "cand_07_wang_lang": 9,
+        "cand_08_ratchathewi": 4.197,
+        "cand_09_pracha_uthit": 13.573,
+        "cand_10_din_daeng": 1.867
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_10_din_daeng"
+      ]
+    },
+    {
+      "competitor_id": "comp_bkk_the_street_ratchada",
+      "canonical_name": "The Street Ratchada",
+      "aliases": [
+        "เดอะ สตรีท รัชดา",
+        "The Street Ratchadaphisek"
+      ],
+      "parent_cluster_id": null,
+      "venue_type": "shopping_center",
+      "operating_status": {
+        "status": "operating",
+        "as_of": "2026-07-28",
+        "confidence": "high",
+        "verification_basis": "Official social activity in June–July 2026 plus an authoritative April 2026 business report.",
+        "status_note": null
+      },
+      "location": {
+        "lat": 13.7706008,
+        "lon": 100.5723288,
+        "coordinate_source": {
+          "source_id": "venue-locale-fundamental-shopping-centers-v0.1",
+          "title": "Venue Locale Fundamental shopping-center registry"
+        },
+        "coordinate_basis": "host_venue_record",
+        "confidence": "high",
+        "precision_note": "Coordinates are carried from the venue registry and are not represented as surveyed parcel centroids."
+      },
+      "impact": {
+        "class": "medium_high",
+        "qualifier": null,
+        "fact_status": "analytical_classification",
+        "confidence": "medium_high",
+        "basis": "Active Ratchada shopping and dining center 2.426 km from Din Daeng, with material daypart overlap but no authoritative current GLA captured.",
+        "prohibition": "This class is not an operator-reported GLA, tenant count, occupancy, footfall, or performance metric."
+      },
+      "operator_metrics": [],
+      "source_urls": [
+        {
+          "url": "https://www.facebook.com/TheStreetRatchada/",
+          "publisher": "The Street Ratchada",
+          "source_kind": "official_social",
+          "supports": [
+            "current_2026_activity",
+            "operating_status"
+          ]
+        },
+        {
+          "url": "https://www.instagram.com/thestreetratchada/",
+          "publisher": "The Street Ratchada",
+          "source_kind": "official_social",
+          "supports": [
+            "current_2026_activity",
+            "operating_status"
+          ]
+        },
+        {
+          "url": "https://mgronline.com/business/detail/9690000040511",
+          "publisher": "MGR Online",
+          "source_kind": "external_current_business_report",
+          "supports": [
+            "operating_status",
+            "current_business_context"
+          ]
+        }
+      ],
+      "distance_method": {
+        "method": "haversine",
+        "earth_radius_km": 6371.0088,
+        "result_unit": "km",
+        "rounded_to_decimal_places": 3,
+        "warning": "Straight-line distance does not model road access, bridges, ferry crossings, congestion, or pedestrian barriers."
+      },
+      "distance_km_by_candidate": {
+        "cand_01_wongwian_yai_east": 9.711,
+        "cand_02_charoen_rat": 10.21,
+        "cand_03_samre": 11.375,
+        "cand_04_ban_khaek": 9.656,
+        "cand_05_talat_phlu_south": 11.828,
+        "cand_06_bang_pakok": 12.439,
+        "cand_07_wang_lang": 9.445,
+        "cand_08_ratchathewi": 4.721,
+        "cand_09_pracha_uthit": 14.168,
+        "cand_10_din_daeng": 2.426
+      },
+      "within_release_1_5_catchment_candidate_ids": [
+        "cand_10_din_daeng"
+      ]
+    }
+  ],
+  "strategic_gap_hypotheses": [
+    {
+      "candidate_id": "cand_01_wongwian_yai_east",
+      "fact_status": "hypothesis",
+      "hypothesis": "A smaller, calmer, routine-led offer may differentiate from destination centers and larger incumbent formats.",
+      "evidence_basis": "Verified proximity to Platform, ICONSIAM–ICS, SENA Fest, The Mall Tha Phra, Riverside Plaza, and The Old Siam Plaza.",
+      "validation_required": [
+        "field observation",
+        "tenant-overlap analysis",
+        "daypart demand study",
+        "network catchment analysis"
+      ]
+    },
+    {
+      "candidate_id": "cand_02_charoen_rat",
+      "fact_status": "hypothesis",
+      "hypothesis": "No clean strategic gap is established because KINGSQUARE directly overlaps the curated community, family, and routine mission.",
+      "evidence_basis": "KINGSQUARE is 1.231 km away and positions itself as a community mall; Terminal21 Rama 3 and Central Rama 3 add broader supply.",
+      "validation_required": [
+        "tenant-overlap analysis",
+        "field observation",
+        "consumer mission study"
+      ]
+    },
+    {
+      "candidate_id": "cand_03_samre",
+      "fact_status": "hypothesis",
+      "hypothesis": "The Release 1.5 candidate center may be anchored on an incumbent venue rather than representing an independent development opportunity.",
+      "evidence_basis": "Riverside Plaza is 0.034 km from the analytical center.",
+      "validation_required": [
+        "parcel definition",
+        "candidate recentering",
+        "source-polygon confirmation"
+      ]
+    },
+    {
+      "candidate_id": "cand_04_ban_khaek",
+      "fact_status": "hypothesis",
+      "hypothesis": "A routine-led local offer could remain viable only if network access and river-crossing impedance materially separate demand from the destination cluster.",
+      "evidence_basis": "The fixed circle includes Platform, The Old Siam Plaza, ICONSIAM–ICS, SENA Fest, Tha Maharaj, and The Mall Tha Phra.",
+      "validation_required": [
+        "bridge and ferry travel-time model",
+        "tenant-overlap analysis"
+      ]
+    },
+    {
+      "candidate_id": "cand_05_talat_phlu_south",
+      "fact_status": "hypothesis",
+      "hypothesis": "A compact and sharply differentiated format may be more defensible than a full-format offer.",
+      "evidence_basis": "The Mall Lifestore Tha Phra is 0.508 km away.",
+      "validation_required": [
+        "tenant-overlap analysis",
+        "format sizing",
+        "field observation"
+      ]
+    },
+    {
+      "candidate_id": "cand_06_bang_pakok",
+      "fact_status": "hypothesis",
+      "hypothesis": "Verified supply is less dense than at several other candidates, but a white-space conclusion is not yet supported.",
+      "evidence_basis": "Terminal21 Rama 3 is 0.845 km away and Riverside Plaza is at the catchment edge.",
+      "validation_required": [
+        "full registry completion",
+        "network catchment analysis"
+      ]
+    },
+    {
+      "candidate_id": "cand_07_wang_lang",
+      "fact_status": "hypothesis",
+      "hypothesis": "Straight-line competitive overlap may be overstated because the nearest verified competitor is across the Chao Phraya River.",
+      "evidence_basis": "Tha Maharaj is 0.251 km straight-line from the candidate.",
+      "validation_required": [
+        "ferry and bridge travel times",
+        "pedestrian accessibility audit"
+      ]
+    },
+    {
+      "candidate_id": "cand_08_ratchathewi",
+      "fact_status": "hypothesis",
+      "hypothesis": "The candidate should receive a material competitive-pressure penalty unless the development is micro-format or clearly differentiated.",
+      "evidence_basis": "The verified minimum set includes the Siam Piwat cluster, centralWorld, Platinum Fashion Mall, and MBK within roughly one kilometer.",
+      "validation_required": [
+        "complete venue census",
+        "cluster-deduplicated scoring policy",
+        "mission-overlap analysis"
+      ]
+    },
+    {
+      "candidate_id": "cand_09_pracha_uthit",
+      "fact_status": "hypothesis",
+      "hypothesis": "Market Place Pracha Uthit materially reduces attractiveness for a family and daily-convenience PARC-like concept.",
+      "evidence_basis": "The operator explicitly targets families, daily convenience, neighborhood use, and 40+ brands at 2.556 km.",
+      "validation_required": [
+        "exact host centroid",
+        "network catchment analysis",
+        "tenant-overlap analysis"
+      ]
+    },
+    {
+      "candidate_id": "cand_10_din_daeng",
+      "fact_status": "hypothesis",
+      "hypothesis": "The candidate should receive a strong competitive-pressure penalty because both Rama 9–Ratchada and western downtown retail clusters fall within the fixed-radius circle.",
+      "evidence_basis": "Fortune Town, Central Rama 9, Esplanade Ratchada, The Street Ratchada, Siam Paragon, Siam Center, Siam Discovery, Platinum Fashion Mall, and centralWorld are within 2.89421 km.",
+      "validation_required": [
+        "complete venue census",
+        "network and corridor catchment analysis",
+        "cluster-deduplicated scoring policy"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "exclusion_id": "excl_non_center_retail_records",
+      "exclusion_type": "scope_rule",
+      "entities": [
+        "individual supermarkets",
+        "convenience stores",
+        "standalone retailers"
+      ],
+      "reason": "Not shopping centers under the declared competitor definition."
+    },
+    {
+      "exclusion_id": "excl_markets",
+      "exclusion_type": "scope_rule",
+      "entities": [
+        "traditional markets",
+        "street markets",
+        "night markets"
+      ],
+      "reason": "Excluded from this shopping-center-only registry; may be analyzed separately as retail substitutes."
+    },
+    {
+      "exclusion_id": "excl_planned_or_unverified_projects",
+      "exclusion_type": "status_rule",
+      "entities": [
+        "proposed centers",
+        "under-construction centers without operating evidence"
+      ],
+      "reason": "The registry is restricted to operating supply."
+    },
+    {
+      "exclusion_id": "excl_tenant_in_mall_duplicates",
+      "exclusion_type": "entity_resolution_rule",
+      "entities": [
+        "tenant records located inside an already-registered host center"
+      ],
+      "reason": "Tenant-in-mall records are not independent competitors. Two such records are retained only as coordinate proxies for unresolved host centroids."
+    },
+    {
+      "exclusion_id": "excl_king_power_rang_nam",
+      "exclusion_type": "scope_decision",
+      "entities": [
+        "King Power Rang Nam"
+      ],
+      "reason": "Primarily a duty-free retail destination; omitted from the general shopping-center competitor set pending an explicit substitute-format policy."
+    }
+  ],
+  "unresolved": [
+    {
+      "unresolved_id": "unresolved_market_place_coordinate",
+      "entity": "Market Place Pracha Uthit",
+      "issue": "Coordinate is a host-tenant proxy point from an in-mall Tops record, not a verified host centroid.",
+      "required_action": "Verify the host centroid from an official map or authoritative geocoder before map release."
+    },
+    {
+      "unresolved_id": "unresolved_esplanade_coordinate",
+      "entity": "Esplanade Ratchada",
+      "issue": "Coordinate is a tenant-branch proxy point from an in-mall Tops record.",
+      "required_action": "Verify the host centroid before map release."
+    },
+    {
+      "unresolved_id": "unresolved_market_place_opening_chronology",
+      "entity": "Market Place Pracha Uthit",
+      "issue": "Operator article dated 29 November 2025 and 2026 official social material confirm operation, but exact first-opening versus relaunch chronology was not reconciled.",
+      "required_action": "Reconcile chronology only if the report states an exact opening date."
+    },
+    {
+      "unresolved_id": "unresolved_samre_candidate_center",
+      "entity": "Release 1.5 Samre candidate",
+      "issue": "Candidate analytical center is 0.034 km from Riverside Plaza.",
+      "required_action": "Confirm parcel/source polygon and recenter before final opportunity scoring."
+    },
+    {
+      "unresolved_id": "unresolved_river_impedance",
+      "entity": "Wang Lang and Ban Khaek catchments",
+      "issue": "Fixed-radius circles cross the Chao Phraya River and do not model bridges, ferries, or pedestrian access.",
+      "required_action": "Add network or travel-time catchments before final competitive-pressure scoring."
+    },
+    {
+      "unresolved_id": "unresolved_ratchathewi_completeness",
+      "entity": "Ratchathewi competitor census",
+      "issue": "The verified registry is a minimum set and does not yet certify complete enumeration of Siam–Ratchaprasong centers.",
+      "examples_to_verify": [
+        "Siam Square One",
+        "Gaysorn Village",
+        "Central Embassy",
+        "Central Chidlom"
+      ],
+      "required_action": "Complete entity resolution and operating-status verification before rescoring."
+    },
+    {
+      "unresolved_id": "unresolved_din_daeng_completeness",
+      "entity": "Din Daeng competitor census",
+      "issue": "The fixed circle spans Rama 9–Ratchada and part of the downtown cluster; completeness has not been certified.",
+      "examples_to_verify": [
+        "SHOW DC",
+        "other active retail complexes inside the exact circle"
+      ],
+      "required_action": "Complete enumeration and apply corridor/network relevance rules."
+    },
+    {
+      "unresolved_id": "unresolved_other_venue_candidates",
+      "entity": "Potential venue records not promoted to verified competitors",
+      "issue": "Current identity/status or duplicate resolution was insufficient in this pass.",
+      "examples_to_verify": [
+        "Thai Chuai Thai Plaza",
+        "Wang Lang Plaza",
+        "The Up Rama 3",
+        "Century The Movie Plaza",
+        "SHOW DC"
+      ],
+      "required_action": "Resolve with current operator or authoritative evidence; do not map or score until verified."
+    },
+    {
+      "unresolved_id": "unresolved_competitor_weakness_evidence",
+      "entity": "All verified competitors",
+      "issue": "No credible evidence currently supports claims of low occupancy, vacancy, poor service, weak tenant mix, low traffic, or underperformance.",
+      "required_action": "Use a defined field audit, occupancy evidence, tenant-roster comparison, or review-sampling method before making weakness claims."
+    }
+  ],
+  "publication_note": "Workspace connector identifiers were removed. Public facts, source URLs, coordinates, confidence notes, and analytical classifications are unchanged."
+}

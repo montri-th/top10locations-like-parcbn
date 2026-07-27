@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.0",
+  "locale_release_id": "venue-locale-insight-v2.3.1",
+  "catchment_rule_id": "fixed-area-26.3154km2-medoid-v1",
+  "candidates": [
+    {
+      "candidate_id": "wongwian-yai-east",
+      "name": "วงเวียนใหญ่–ตะวันออก",
+      "catchment": {
+        "geometry_id": "wongwian-yai-east-analysis-unit",
+        "area_km2": 26.3154
+      },
+      "metrics": {
+        "release_1_5_opportunity_score": 52.71,
+        "competitive_room_score": 7.5,
+        "evidence_readiness_score": 85.0,
+        "land_pressure_percentile": 81
+      },
+      "center_wgs84": {
+        "latitude": 13.7254,
+        "longitude": 100.4954
+      },
+      "metric_provenance": {
+        "release_1_5_opportunity_score": "published Release 1.5 baseline",
+        "competitive_room_score": "derived by competitor-score-breakdown.json; analytical scenario only",
+        "evidence_readiness_score": "derived from disclosed registry limitations",
+        "land_pressure_percentile": "Release 1.5 readiness proxy; not observed land price"
+      }
+    },
+    {
+      "candidate_id": "charoen-rat",
+      "name": "เจริญราษฎร์",
+      "catchment": {
+        "geometry_id": "charoen-rat-analysis-unit",
+        "area_km2": 26.3154
+      },
+      "metrics": {
+        "release_1_5_opportunity_score": 52.61,
+        "competitive_room_score": 21.58,
+        "evidence_readiness_score": 85.0,
+        "land_pressure_percentile": 83
+      },
+      "center_wgs84": {
+        "latitude": 13.6963,
+        "longitude": 100.5168
+      },
+      "metric_provenance": {
+        "release_1_5_opportunity_score": "published Release 1.5 baseline",
+        "competitive_room_score": "derived by competitor-score-breakdown.json; analytical scenario only",
+        "evidence_readiness_score": "derived from disclosed registry limitations",
+        "land_pressure_percentile": "Release 1.5 readiness proxy; not observed land price"
+      }
+    },
+    {
+      "candidate_id": "samre",
+      "name": "สำเหร่",
+      "catchment": {
+        "geometry_id": "samre-analysis-unit",
+        "area_km2": 26.3154
+      },
+      "metrics": {
+        "release_1_5_opportunity_score": 52.31,
+        "competitive_room_score": 6.0,
+        "evidence_readiness_score": 65.0,
+        "land_pressure_percentile": 67
+      },
+      "center_wgs84": {
+        "latitude": 13.7055,
+        "longitude": 100.4911
+      },
+      "metric_provenance": {
+        "release_1_5_opportunity_score": "published Release 1.5 baseline",
+        "competitive_room_score": "derived by competitor-score-breakdown.json; analytical scenario only",
+        "evidence_readiness_score": "derived from disclosed registry limitations",
+        "land_pressure_percentile": "Release 1.5 readiness proxy; not observed land price"
+      }
+    },
+    {
+      "candidate_id": "ban-khaek",
+      "name": "แยกบ้านแขก",
+      "catchment": {
+        "geometry_id": "ban-khaek-analysis-unit",
+        "area_km2": 26.3154
+      },
+      "metrics": {
+        "release_1_5_opportunity_score": 51.46,
+        "competitive_room_score": 10.5,
+        "evidence_readiness_score": 65.0,
+        "land_pressure_percentile": 63
+      },
+      "center_wgs84": {
+        "latitude": 13.7335,
+        "longitude": 100.4915
+      },
+      "metric_provenance": {
+        "release_1_5_opportunity_score": "published Release 1.5 baseline",
+        "competitive_room_score": "derived by competitor-score-breakdown.json; analytical scenario only",
+        "evidence_readiness_score": "derived from disclosed registry limitations",
+        "land_pressure_percentile": "Release 1.5 readiness proxy; not observed land price"
+      }
+    },
+    {
+      "candidate_id": "talat-phlu-south",
+      "name": "ตลาดพลู–ใต้",
+      "catchment": {
+        "geometry_id": "talat-phlu-south-analysis-unit",
+        "area_km2": 26.3154
+      },
+      "metrics": {
+        "release_1_5_opportunity_score": 48.44,
+        "competitive_room_score": 24.35,
+        "evidence_readiness_score": 85.0,
+        "land_pressure_percentile": 57
+      },
+      "center_wgs84": {
+        "latitude": 13.7174,
+        "longitude": 100.4775
+      },
+      "metric_provenance": {
+        "release_1_5_opportunity_score": "published Release 1.5 baseline",
+        "competitive_room_score": "derived by competitor-score-breakdown.json; analytical scenario only",
+        "evidence_readiness_score": "derived from disclosed registry limitations",
+        "land_pressure_percentile": "Release 1.5 readiness proxy; not observed land price"
+      }
+    },
+    {
+      "candidate_id": "bang-pakok",
+      "name": "บางปะกอก",
+      "catchment": {
+        "geometry_id": "bang-pakok-analysis-unit",
+        "area_km2": 26.3154
+      },
+      "metrics": {
+        "release_1_5_opportunity_score": 47.02,
+        "competitive_room_score": 47.04,
+        "evidence_readiness_score": 85.0,
+        "land_pressure_percentile": 57
+      },
+      "center_wgs84": {
+        "latitude": 13.6821,
+        "longitude": 100.5019
+      },
+      "metric_provenance": {
+        "release_1_5_opportunity_score": "published Release 1.5 baseline",
+        "competitive_room_score": "derived by competitor-score-breakdown.json; analytical scenario only",
+        "evidence_readiness_score": "derived from disclosed registry limitations",
+        "land_pressure_percentile": "Release 1.5 readiness proxy; not observed land price"
+      }
+    },
+    {
+      "candidate_id": "wang-lang",
+      "name": "วังหลัง",
+      "catchment": {
+        "geometry_id": "wang-lang-analysis-unit",
+        "area_km2": 26.3154
+      },
+      "metrics": {
+        "release_1_5_opportunity_score": 45.74,
+        "competitive_room_score": 54.99,
+        "evidence_readiness_score": 65.0,
+        "land_pressure_percentile": 76
+      },
+      "center_wgs84": {
+        "latitude": 13.7548,
+        "longitude": 100.4864
+      },
+      "metric_provenance": {
+        "release_1_5_opportunity_score": "published Release 1.5 baseline",
+        "competitive_room_score": "derived by competitor-score-breakdown.json; analytical scenario only",
+        "evidence_readiness_score": "derived from disclosed registry limitations",
+        "land_pressure_percentile": "Release 1.5 readiness proxy; not observed land price"
+      }
+    },
+    {
+      "candidate_id": "ratchathewi",
+      "name": "ราชเทวี",
+      "catchment": {
+        "geometry_id": "ratchathewi-analysis-unit",
+        "area_km2": 26.3154
+      },
+      "metrics": {
+        "release_1_5_opportunity_score": 44.14,
+        "competitive_room_score": 16.5,
+        "evidence_readiness_score": 70.0,
+        "land_pressure_percentile": 85
+      },
+      "center_wgs84": {
+        "latitude": 13.7531,
+        "longitude": 100.5325
+      },
+      "metric_provenance": {
+        "release_1_5_opportunity_score": "published Release 1.5 baseline",
+        "competitive_room_score": "derived by competitor-score-breakdown.json; analytical scenario only",
+        "evidence_readiness_score": "derived from disclosed registry limitations",
+        "land_pressure_percentile": "Release 1.5 readiness proxy; not observed land price"
+      }
+    },
+    {
+      "candidate_id": "pracha-uthit",
+      "name": "ประชาอุทิศ",
+      "catchment": {
+        "geometry_id": "pracha-uthit-analysis-unit",
+        "area_km2": 26.3154
+      },
+      "metrics": {
+        "release_1_5_opportunity_score": 43.78,
+        "competitive_room_score": 68.92,
+        "evidence_readiness_score": 65.0,
+        "land_pressure_percentile": 45
+      },
+      "center_wgs84": {
+        "latitude": 13.6625,
+        "longitude": 100.5029
+      },
+      "metric_provenance": {
+        "release_1_5_opportunity_score": "published Release 1.5 baseline",
+        "competitive_room_score": "derived by competitor-score-breakdown.json; analytical scenario only",
+        "evidence_readiness_score": "derived from disclosed registry limitations",
+        "land_pressure_percentile": "Release 1.5 readiness proxy; not observed land price"
+      }
+    },
+    {
+      "candidate_id": "din-daeng",
+      "name": "ดินแดง",
+      "catchment": {
+        "geometry_id": "din-daeng-analysis-unit",
+        "area_km2": 26.3154
+      },
+      "metrics": {
+        "release_1_5_opportunity_score": 43.57,
+        "competitive_room_score": 13.5,
+        "evidence_readiness_score": 70.0,
+        "land_pressure_percentile": 78
+      },
+      "center_wgs84": {
+        "latitude": 13.7587,
+        "longitude": 100.5535
+      },
+      "metric_provenance": {
+        "release_1_5_opportunity_score": "published Release 1.5 baseline",
+        "competitive_room_score": "derived by competitor-score-breakdown.json; analytical scenario only",
+        "evidence_readiness_score": "derived from disclosed registry limitations",
+        "land_pressure_percentile": "Release 1.5 readiness proxy; not observed land price"
+      }
+    }
+  ]
+}

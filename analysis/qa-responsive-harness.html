@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="utf-8">
@@ -26,7 +26,7 @@
       frame.addEventListener("load", () => {
         const doc = frame.contentDocument;
         doc.documentElement.dataset.theme = frame.dataset.theme;
-        const disclosure = doc.querySelector("#location-01 details");
+        const disclosure = doc.querySelector("#candidate-wongwian-yai-east details");
         if (disclosure) disclosure.open = true;
       });
       frame.src = `${report}?qa-width=${frame.dataset.width}`;

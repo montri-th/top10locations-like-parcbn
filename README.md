@@ -1,96 +1,93 @@
 # Top 10 Locations Like PARC Bangna
 
-Interactive single-page executive report for screening Bangkok areas that may support a food-led neighborhood center like PARC Bangna.
-
-## Open the report
-
-Open [`index.html`](index.html). The static page includes embedded Thai fonts, CSS, JavaScript, executive maps, comparison charts, filters, evidence disclosures, light/dark themes, and print styles. The header uses the approved PARC Bangna logo.
+Release 1.6 is a static executive report for screening Bangkok locations that may support a concept inspired by PARC Bangna. It keeps the comparable-catchment ranking from Release 1.5 and adds an evidence-bounded view of operating shopping-center supply.
 
 Production: <https://montri-th.github.io/top10locations-like-parcbn/>
 
-## Scope
+## Release 1.6
 
-This release supersedes the previous ranking. Candidate scores and conclusions are recalculated from source evidence.
+- Preserves the canonical Top 10 and scores from Release 1.5.
+- Adds a separate competition diagnostic: verified operating venues, cluster-deduplicated supply pressure, competitive room, evidence readiness, and action tier.
+- Keeps the illustrative `80% baseline + 20% competitive room` scenario visibly noncanonical.
+- Uses 23 venues in a preliminary minimum-verified registry. It is not a completeness-certified competitor census.
+- Renders 45 candidate–competitor marker instances with high-confidence venue coordinates.
+- Retains Market Place Pracha Uthit and Esplanade Ratchada in the evidence tables but withholds their markers because the available coordinates are tenant proxies.
 
-The calculation uses:
+The current field-work priority is **Bang Pakok / บางปะกอก (Tier A)**. This is not a final investment winner: parcel, access, network travel, legal, financial, and field evidence remain open.
 
-- `Project brief - PARC Bangna(1).md` to define the intended shops and PARC experience
-- a versioned location-evidence dataset, release `v2.3.1`, for area-level demand evidence
-- the `P A R C Project Pack` for release metadata, the reference catchment size, and the 22 active areas excluded from the alternative-location search
-- `J Lifestyle Center Design System v0.3` for the web presentation
+## Canonical result
 
-It does not use prior corridor rankings, PARC operating performance, POS, parking utilization, or customer-origin evidence.
+| Rank | Location | Baseline score |
+|---:|---|---:|
+| 1 | วงเวียนใหญ่–ตะวันออก | 52.71 |
+| 2 | เจริญราษฎร์ | 52.61 |
+| 3 | สำเหร่ | 52.31 |
+| 4 | แยกบ้านแขก | 51.46 |
+| 5 | ตลาดพลู–ใต้ | 48.44 |
+| 6 | บางปะกอก | 47.02 |
+| 7 | วังหลัง | 45.74 |
+| 8 | ราชเทวี | 44.14 |
+| 9 | ประชาอุทิศ | 43.78 |
+| 10 | ดินแดง | 43.57 |
 
-## Scoring
+Every baseline candidate uses Venue Locale Insight release `v2.3.1` and the same fixed-area analytical catchment: `26.3154 km²`, radius `2.89421 km`.
 
-- Every candidate uses an equal-area screening catchment of `26.3154 km²` (radius `2.894 km`), comparable with the PARC Bangna reference.
-- All coordinate-qualified surrounding records inside that catchment contribute to the demand indices. Nearby records receive more weight than distant records.
-- `Catchment demand = 0.50 nearby residents + 0.30 people coming from outside + 0.20 daytime reasons to visit`
-- `PARC fit = shop fit^0.60 × experience fit^0.40`
-- `Overall score = catchment demand × PARC fit / 100`
+## Public artifacts
 
-The model uses weighted averages rather than adding population, reviews, students, patients, or workers across overlapping source areas. The daytime index comes from office, school, hospital, and factory anchors; it is not an observed traveller count. Restaurant-market evidence is used as an analogue for a food-led center, not as measured shopping-center visits or sales.
+- [`index.html`](index.html) — static interactive report
+- [`PARC_Bangna_Bangkok_Top_10_Release_1_6_Competitive_Report_2026-07-28.html`](PARC_Bangna_Bangkok_Top_10_Release_1_6_Competitive_Report_2026-07-28.html) — named HTML copy of the approved release
+- [`analysis/PARC_Bangna_Bangkok_Top_10_Release_1_6_Competition_Analysis_and_UXUI_2026-07-28.md`](analysis/PARC_Bangna_Bangkok_Top_10_Release_1_6_Competition_Analysis_and_UXUI_2026-07-28.md) — full analysis and UX/UI specification
+- [`analysis/location-payload.json`](analysis/location-payload.json) — source-to-render report contract
+- [`analysis/map-manifest.json`](analysis/map-manifest.json) — geometry, layer, omission, and accessibility contract
+- [`analysis/competitor-registry.public.json`](analysis/competitor-registry.public.json) — sanitized public evidence registry
+- [`analysis/competitor-score-breakdown.json`](analysis/competitor-score-breakdown.json) — competition calculations
 
-## Result
+The internal registry containing connector locators is intentionally gitignored and is not a public artifact.
 
-1. วงเวียนใหญ่-ตะวันออก
-2. เจริญราษฎร์
-3. สำเหร่
-4. แยกบ้านแขก
-5. ตลาดพลู-ใต้
-6. บางปะกอก
-7. วังหลัง
-8. ราชเทวี
-9. ประชาอุทิศ
-10. ดินแดง
+## Map integrity
 
-The leading group remains within the Top 4 across all five tested catchment/weighting cases. ตลาดพลู-ใต้ remains rank 5 in all five. ราชเทวี, ประชาอุทิศ, and ดินแดง are more sensitive to model assumptions and require stronger field evidence.
+The overview and ten detail maps use one consistent kilometre projection. Detail maps show only:
 
-## Evidence drill-down
+- the standardized analytical circle;
+- the Release 1.5 analytical center, explicitly not a parcel;
+- competitor points with high coordinate confidence;
+- north and a scale bar.
 
-Each Top 10 location can be opened from a visible evidence action in the comparison chart or its ranking card. The disclosure shows:
+Roads, rail lines, stations, inferred polygons, sampled restaurant dots, and decorative POIs are omitted because this release does not carry sufficient feature-level lineage to render them credibly. Marker size uses an operator-reported metric when available; otherwise it uses a disclosed analytical impact class. The marker population is therefore not one common GLA scale.
 
-- a simplified context map with a clearly labelled fallback extent, selected major roads, and active rail/BRT lines and stations where present
-- the exact bridge from catchment demand × PARC fit to the overall score
-- indices for nearby residents, people coming from outside, and daytime reasons to visit
-- evidence for the intended shops and the PARC experience
-- the six surrounding records contributing most to the catchment result
-- ranks under all five catchment/weighting cases
-- the offer to test, what could change the decision, and the next field action
+## UX/UI
 
-## Map context and boundary
+The page follows J Lifestyle Center Design System v0.3:
 
-The overview map locates all Top 10 areas across the full Bangkok administrative extent and links to each evidence disclosure. It intentionally omits roads, transit lines, and screening-catchment circles.
+- self-hosted Anuphan 300 and IBM Plex Sans Thai Looped 400/500 WOFF2 assets;
+- canonical Canvas, Card, Garden, Ink, and approved dark tokens;
+- opaque sticky header, readable Thai typography, visible control boundaries, and 44 px minimum targets;
+- transparent positive and reverse PARC logo derivatives selected by rendered surface;
+- one clean, quiet theme control.
 
-Each local map currently uses a clearly labelled fallback extent: a convex hull around the available coordinate-qualified evidence points for that location. The source outputs confirm that a strict upstream polygon exists and provide its area, but the public release files do not contain the coordinate rings needed to draw it faithfully. The fallback is therefore dashed and subdued rather than presented as the supplied location boundary.
+Theme starts at **System** on a fresh visit. Each press cycles:
 
-The map fits to that fallback with modest context padding, then adds at most two locally useful major roads and active rail/BRT context from the static OpenStreetMap snapshot. It does not show the individual sampled venue points, secondary street networks, lanes, or landmarks.
+`System → explicit theme opposite the current OS theme → the other explicit theme → System`
 
-The evidence polygon is not the equal-area catchment used by the scoring model. It is also not a land-plot boundary, an administrative boundary, a drive-time isochrone, or a confirmed trade area. The scores continue to use the comparable `26.3154 km²` catchment described above.
+The icon, accessible label, logo derivative, and browser theme colour follow the active state. System mode continues to respond to an OS theme change.
 
-Bangkok subdistrict geometry is adapted from [`pcrete/gsvloader-demo`](https://github.com/pcrete/gsvloader-demo) under the MIT License, copyright © 2018 Poom Wettayakorn. The full permission notice is preserved in `index.html`.
+## Build and verification
 
-Roads, rail/BRT context, and active stations are from [OpenStreetMap](https://www.openstreetmap.org/copyright), © OpenStreetMap contributors, under the Open Database License. The map snapshot is dated 27 July 2026.
+```bash
+python3 scripts/build_public_registry.py
+python3 scripts/build_analysis.py
+python3 scripts/build_contracts.py
+python3 scripts/build_site.py
+python3 scripts/validate_contracts.py
+python3 scripts/qa_static.py
+```
+
+The installed location-payload and location-report validators are also run during release QA. Rendered and post-publish evidence is recorded in [`qa/release-1.6-qa.md`](qa/release-1.6-qa.md).
 
 ## Decision boundary
 
-The ranking prioritizes where to search for plots and gather evidence. It does not approve a plot, land purchase, lease, development, or investment.
+Competition pressure and strategic gaps are diagnostic, not direct observations of sales, traffic, occupancy, vacancy, service quality, or tenant weakness. The registry is a minimum verified set and straight-line distance ignores bridges, boats, road travel, congestion, and pedestrian barriers.
 
-Parking, frontage, ingress/egress, visibility, U-turn access, plot size, zoning, flood exposure, shops needed at different times of day, competition, and real-estate economics must still be checked.
+Before any parcel or investment decision, complete the competitor census, validate the two held centroids, rerun network catchments where rivers or dense clusters matter, and inspect candidate parcels, access, zoning, flood exposure, economics, and real operating evidence.
 
-## Verification
-
-- 173 format-gated location records; 173 unique IDs
-- 776 coordinate-qualified records contribute to the catchment calculation
-- Base-score reconciliation within 0.05 points
-- Top 10 and five catchment/weighting cases validated in a sequential Python run
-- Responsive browser checks at 320, 390, 720, 768, 1024, and 1440 CSS pixels
-- 2 responsive full-Bangkok overview projections, 10 local maps, 10 clearly labelled fallback extents, and 20 overview markers verified in the rendered page
-- zero overview roads, rail lines, stations, landmarks, or catchment circles
-- zero local-map sampled venue dots, catchment circles, landmarks, uncurated secondary street networks, or road labels beginning with `ซอย`
-- 10 evidence actions in the comparison chart and 10 full-width disclosure actions with icons, visible labels, and open-state chevrons
-- Overview-map selection opens the corresponding evidence disclosure
-- Embedded Thai font checks for Anuphan 200 and IBM Plex Sans Thai Looped 400/500
-- Device-theme default, light/dark controls, comparison-to-disclosure navigation, filter, disclosure, print, reduced-motion, and keyboard-focus checks
-
-Release 1.5 · Clear evidence actions, reduced text, and cleaner local maps · 27 July 2026
+Font assets are distributed under their bundled Open Font License files in [`assets/fonts`](assets/fonts).

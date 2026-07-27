@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-07-27T20:39:36.514Z",
+  "chromium": "149.0.7827.0",
+  "viewports": {
+    "320": {
+      "reportRoots": 1,
+      "candidateCards": 10,
+      "overviewMaps": 1,
+      "detailMaps": 10,
+      "competitorMarkers": 45,
+      "mapFallbacks": 10,
+      "heldDetails": 2,
+      "overflow": 0,
+      "targetFailures": [],
+      "markerFailures": 0,
+      "bodyFontSize": "18px",
+      "bodyFontFamily": "\"IBM Plex Sans Thai Looped\", \"Noto Sans Thai\", Tahoma, sans-serif",
+      "filterFontFamily": "\"IBM Plex Sans Thai Looped\", \"Noto Sans Thai\", Tahoma, sans-serif",
+      "headingFontFamily": "Anuphan, \"Noto Sans Thai\", Tahoma, sans-serif",
+      "headingTracking": "normal",
+      "headerBackground": "rgb(247, 242, 233)",
+      "headerBackdrop": "none",
+      "fonts": {
+        "anuphan": true,
+        "plex400": true,
+        "plex500": true
+      },
+      "logoLoaded": true,
+      "mapAlternatives": true,
+      "numberedMarkers": true
+    },
+    "375": {
+      "reportRoots": 1,
+      "candidateCards": 10,
+      "overviewMaps": 1,
+      "detailMaps": 10,
+      "competitorMarkers": 45,
+      "mapFallbacks": 10,
+      "heldDetails": 2,
+      "overflow": 0,
+      "targetFailures": [],
+      "markerFailures": 0,
+      "bodyFontSize": "18px",
+      "bodyFontFamily": "\"IBM Plex Sans Thai Looped\", \"Noto Sans Thai\", Tahoma, sans-serif",
+      "filterFontFamily": "\"IBM Plex Sans Thai Looped\", \"Noto Sans Thai\", Tahoma, sans-serif",
+      "headingFontFamily": "Anuphan, \"Noto Sans Thai\", Tahoma, sans-serif",
+      "headingTracking": "normal",
+      "headerBackground": "rgb(247, 242, 233)",
+      "headerBackdrop": "none",
+      "fonts": {
+        "anuphan": true,
+        "plex400": true,
+        "plex500": true
+      },
+      "logoLoaded": true,
+      "mapAlternatives": true,
+      "numberedMarkers": true
+    },
+    "768": {
+      "reportRoots": 1,
+      "candidateCards": 10,
+      "overviewMaps": 1,
+      "detailMaps": 10,
+      "competitorMarkers": 45,
+      "mapFallbacks": 10,
+      "heldDetails": 2,
+      "overflow": 0,
+      "targetFailures": [],
+      "markerFailures": 0,
+      "bodyFontSize": "18px",
+      "bodyFontFamily": "\"IBM Plex Sans Thai Looped\", \"Noto Sans Thai\", Tahoma, sans-serif",
+      "filterFontFamily": "\"IBM Plex Sans Thai Looped\", \"Noto Sans Thai\", Tahoma, sans-serif",
+      "headingFontFamily": "Anuphan, \"Noto Sans Thai\", Tahoma, sans-serif",
+      "headingTracking": "normal",
+      "headerBackground": "rgb(247, 242, 233)",
+      "headerBackdrop": "none",
+      "fonts": {
+        "anuphan": true,
+        "plex400": true,
+        "plex500": true
+      },
+      "logoLoaded": true,
+      "mapAlternatives": true,
+      "numberedMarkers": true
+    },
+    "1024": {
+      "reportRoots": 1,
+      "candidateCards": 10,
+      "overviewMaps": 1,
+      "detailMaps": 10,
+      "competitorMarkers": 45,
+      "mapFallbacks": 10,
+      "heldDetails": 2,
+      "overflow": 0,
+      "targetFailures": [],
+      "markerFailures": 0,
+      "bodyFontSize": "18px",
+      "bodyFontFamily": "\"IBM Plex Sans Thai Looped\", \"Noto Sans Thai\", Tahoma, sans-serif",
+      "filterFontFamily": "\"IBM Plex Sans Thai Looped\", \"Noto Sans Thai\", Tahoma, sans-serif",
+      "headingFontFamily": "Anuphan, \"Noto Sans Thai\", Tahoma, sans-serif",
+      "headingTracking": "normal",
+      "headerBackground": "rgb(247, 242, 233)",
+      "headerBackdrop": "none",
+      "fonts": {
+        "anuphan": true,
+        "plex400": true,
+        "plex500": true
+      },
+      "logoLoaded": true,
+      "mapAlternatives": true,
+      "numberedMarkers": true
+    },
+    "1440": {
+      "reportRoots": 1,
+      "candidateCards": 10,
+      "overviewMaps": 1,
+      "detailMaps": 10,
+      "competitorMarkers": 45,
+      "mapFallbacks": 10,
+      "heldDetails": 2,
+      "overflow": 0,
+      "targetFailures": [],
+      "markerFailures": 0,
+      "bodyFontSize": "18px",
+      "bodyFontFamily": "\"IBM Plex Sans Thai Looped\", \"Noto Sans Thai\", Tahoma, sans-serif",
+      "filterFontFamily": "\"IBM Plex Sans Thai Looped\", \"Noto Sans Thai\", Tahoma, sans-serif",
+      "headingFontFamily": "Anuphan, \"Noto Sans Thai\", Tahoma, sans-serif",
+      "headingTracking": "normal",
+      "headerBackground": "rgb(247, 242, 233)",
+      "headerBackdrop": "none",
+      "fonts": {
+        "anuphan": true,
+        "plex400": true,
+        "plex500": true
+      },
+      "logoLoaded": true,
+      "mapAlternatives": true,
+      "numberedMarkers": true
+    }
+  },
+  "theme_cycles": {
+    "os_light": [
+      {
+        "mode": "system",
+        "resolved": "light"
+      },
+      {
+        "mode": "dark",
+        "resolved": "dark"
+      },
+      {
+        "mode": "light",
+        "resolved": "light"
+      },
+      {
+        "mode": "system",
+        "resolved": "light"
+      }
+    ],
+    "os_dark": [
+      {
+        "mode": "system",
+        "resolved": "dark"
+      },
+      {
+        "mode": "light",
+        "resolved": "light"
+      },
+      {
+        "mode": "dark",
+        "resolved": "dark"
+      },
+      {
+        "mode": "system",
+        "resolved": "dark"
+      }
+    ]
+  },
+  "checks": [
+    "source-to-render structure",
+    "responsive overflow and 44px targets",
+    "bundled fonts and opaque header",
+    "single-button theme cycle and OS-follow",
+    "transparent logo derivative switching",
+    "filter, marker, focus, Escape, and disclosure interaction",
+    "screen-reader map summaries and table fallbacks",
+    "non-colour marker labels",
+    "reduced motion and 200% text zoom",
+    "print expansion and positive logo",
+    "no-JavaScript core reading"
+  ]
+}

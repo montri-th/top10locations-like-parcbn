@@ -1,0 +1,703 @@
+{
+  "analysis_basis": {
+    "area_tolerance_pct": 0.01,
+    "catchment_rule_id": "fixed-area-26.3154km2-medoid-v1",
+    "catchment_type": "fixed_area",
+    "locale_release_id": "venue-locale-insight-v2.3.1",
+    "overlap_policy": "deduplicated",
+    "same_rule_for_all": true
+  },
+  "candidates": [
+    {
+      "candidate_id": "pracha-uthit",
+      "catchment": {
+        "area_km2": 26.3154,
+        "geometry_id": "pracha-uthit-analysis-unit"
+      },
+      "indicators": {
+        "competitive_room_score": {
+          "dimension_contribution": 68.92,
+          "normalized_score": 68.92,
+          "raw_value": 68.92
+        },
+        "evidence_readiness_score": {
+          "dimension_contribution": 65.0,
+          "normalized_score": 65.0,
+          "raw_value": 65.0
+        },
+        "land_pressure_percentile": {
+          "dimension_contribution": 55.0,
+          "normalized_score": 55.0,
+          "raw_value": 45.0
+        },
+        "release_1_5_opportunity_score": {
+          "dimension_contribution": 43.78,
+          "normalized_score": 43.78,
+          "raw_value": 43.78
+        }
+      },
+      "name": "ประชาอุทิศ",
+      "overall_score": 48.81,
+      "primary_dimension_scores": {
+        "baseline_opportunity": 43.78,
+        "competitive_room": 68.92
+      },
+      "rank": 1,
+      "readiness_diagnostics": {
+        "development_readiness": 55.0,
+        "evidence_readiness": 65.0
+      }
+    },
+    {
+      "candidate_id": "wang-lang",
+      "catchment": {
+        "area_km2": 26.3154,
+        "geometry_id": "wang-lang-analysis-unit"
+      },
+      "indicators": {
+        "competitive_room_score": {
+          "dimension_contribution": 54.99,
+          "normalized_score": 54.99,
+          "raw_value": 54.99
+        },
+        "evidence_readiness_score": {
+          "dimension_contribution": 65.0,
+          "normalized_score": 65.0,
+          "raw_value": 65.0
+        },
+        "land_pressure_percentile": {
+          "dimension_contribution": 24.0,
+          "normalized_score": 24.0,
+          "raw_value": 76.0
+        },
+        "release_1_5_opportunity_score": {
+          "dimension_contribution": 45.74,
+          "normalized_score": 45.74,
+          "raw_value": 45.74
+        }
+      },
+      "name": "วังหลัง",
+      "overall_score": 47.59,
+      "primary_dimension_scores": {
+        "baseline_opportunity": 45.74,
+        "competitive_room": 54.99
+      },
+      "rank": 2,
+      "readiness_diagnostics": {
+        "development_readiness": 24.0,
+        "evidence_readiness": 65.0
+      }
+    },
+    {
+      "candidate_id": "bang-pakok",
+      "catchment": {
+        "area_km2": 26.3154,
+        "geometry_id": "bang-pakok-analysis-unit"
+      },
+      "indicators": {
+        "competitive_room_score": {
+          "dimension_contribution": 47.04,
+          "normalized_score": 47.04,
+          "raw_value": 47.04
+        },
+        "evidence_readiness_score": {
+          "dimension_contribution": 85.0,
+          "normalized_score": 85.0,
+          "raw_value": 85.0
+        },
+        "land_pressure_percentile": {
+          "dimension_contribution": 43.0,
+          "normalized_score": 43.0,
+          "raw_value": 57.0
+        },
+        "release_1_5_opportunity_score": {
+          "dimension_contribution": 47.02,
+          "normalized_score": 47.02,
+          "raw_value": 47.02
+        }
+      },
+      "name": "บางปะกอก",
+      "overall_score": 47.02,
+      "primary_dimension_scores": {
+        "baseline_opportunity": 47.02,
+        "competitive_room": 47.04
+      },
+      "rank": 3,
+      "readiness_diagnostics": {
+        "development_readiness": 43.0,
+        "evidence_readiness": 85.0
+      }
+    },
+    {
+      "candidate_id": "charoen-rat",
+      "catchment": {
+        "area_km2": 26.3154,
+        "geometry_id": "charoen-rat-analysis-unit"
+      },
+      "indicators": {
+        "competitive_room_score": {
+          "dimension_contribution": 21.58,
+          "normalized_score": 21.58,
+          "raw_value": 21.58
+        },
+        "evidence_readiness_score": {
+          "dimension_contribution": 85.0,
+          "normalized_score": 85.0,
+          "raw_value": 85.0
+        },
+        "land_pressure_percentile": {
+          "dimension_contribution": 17.0,
+          "normalized_score": 17.0,
+          "raw_value": 83.0
+        },
+        "release_1_5_opportunity_score": {
+          "dimension_contribution": 52.61,
+          "normalized_score": 52.61,
+          "raw_value": 52.61
+        }
+      },
+      "name": "เจริญราษฎร์",
+      "overall_score": 46.4,
+      "primary_dimension_scores": {
+        "baseline_opportunity": 52.61,
+        "competitive_room": 21.58
+      },
+      "rank": 4,
+      "readiness_diagnostics": {
+        "development_readiness": 17.0,
+        "evidence_readiness": 85.0
+      }
+    },
+    {
+      "candidate_id": "wongwian-yai-east",
+      "catchment": {
+        "area_km2": 26.3154,
+        "geometry_id": "wongwian-yai-east-analysis-unit"
+      },
+      "indicators": {
+        "competitive_room_score": {
+          "dimension_contribution": 7.5,
+          "normalized_score": 7.5,
+          "raw_value": 7.5
+        },
+        "evidence_readiness_score": {
+          "dimension_contribution": 85.0,
+          "normalized_score": 85.0,
+          "raw_value": 85.0
+        },
+        "land_pressure_percentile": {
+          "dimension_contribution": 19.0,
+          "normalized_score": 19.0,
+          "raw_value": 81.0
+        },
+        "release_1_5_opportunity_score": {
+          "dimension_contribution": 52.71,
+          "normalized_score": 52.71,
+          "raw_value": 52.71
+        }
+      },
+      "name": "วงเวียนใหญ่–ตะวันออก",
+      "overall_score": 43.67,
+      "primary_dimension_scores": {
+        "baseline_opportunity": 52.71,
+        "competitive_room": 7.5
+      },
+      "rank": 5,
+      "readiness_diagnostics": {
+        "development_readiness": 19.0,
+        "evidence_readiness": 85.0
+      }
+    },
+    {
+      "candidate_id": "talat-phlu-south",
+      "catchment": {
+        "area_km2": 26.3154,
+        "geometry_id": "talat-phlu-south-analysis-unit"
+      },
+      "indicators": {
+        "competitive_room_score": {
+          "dimension_contribution": 24.35,
+          "normalized_score": 24.35,
+          "raw_value": 24.35
+        },
+        "evidence_readiness_score": {
+          "dimension_contribution": 85.0,
+          "normalized_score": 85.0,
+          "raw_value": 85.0
+        },
+        "land_pressure_percentile": {
+          "dimension_contribution": 43.0,
+          "normalized_score": 43.0,
+          "raw_value": 57.0
+        },
+        "release_1_5_opportunity_score": {
+          "dimension_contribution": 48.44,
+          "normalized_score": 48.44,
+          "raw_value": 48.44
+        }
+      },
+      "name": "ตลาดพลู–ใต้",
+      "overall_score": 43.62,
+      "primary_dimension_scores": {
+        "baseline_opportunity": 48.44,
+        "competitive_room": 24.35
+      },
+      "rank": 6,
+      "readiness_diagnostics": {
+        "development_readiness": 43.0,
+        "evidence_readiness": 85.0
+      }
+    },
+    {
+      "candidate_id": "ban-khaek",
+      "catchment": {
+        "area_km2": 26.3154,
+        "geometry_id": "ban-khaek-analysis-unit"
+      },
+      "indicators": {
+        "competitive_room_score": {
+          "dimension_contribution": 10.5,
+          "normalized_score": 10.5,
+          "raw_value": 10.5
+        },
+        "evidence_readiness_score": {
+          "dimension_contribution": 65.0,
+          "normalized_score": 65.0,
+          "raw_value": 65.0
+        },
+        "land_pressure_percentile": {
+          "dimension_contribution": 37.0,
+          "normalized_score": 37.0,
+          "raw_value": 63.0
+        },
+        "release_1_5_opportunity_score": {
+          "dimension_contribution": 51.46,
+          "normalized_score": 51.46,
+          "raw_value": 51.46
+        }
+      },
+      "name": "แยกบ้านแขก",
+      "overall_score": 43.27,
+      "primary_dimension_scores": {
+        "baseline_opportunity": 51.46,
+        "competitive_room": 10.5
+      },
+      "rank": 7,
+      "readiness_diagnostics": {
+        "development_readiness": 37.0,
+        "evidence_readiness": 65.0
+      }
+    },
+    {
+      "candidate_id": "samre",
+      "catchment": {
+        "area_km2": 26.3154,
+        "geometry_id": "samre-analysis-unit"
+      },
+      "indicators": {
+        "competitive_room_score": {
+          "dimension_contribution": 6.0,
+          "normalized_score": 6.0,
+          "raw_value": 6.0
+        },
+        "evidence_readiness_score": {
+          "dimension_contribution": 65.0,
+          "normalized_score": 65.0,
+          "raw_value": 65.0
+        },
+        "land_pressure_percentile": {
+          "dimension_contribution": 33.0,
+          "normalized_score": 33.0,
+          "raw_value": 67.0
+        },
+        "release_1_5_opportunity_score": {
+          "dimension_contribution": 52.31,
+          "normalized_score": 52.31,
+          "raw_value": 52.31
+        }
+      },
+      "name": "สำเหร่",
+      "overall_score": 43.05,
+      "primary_dimension_scores": {
+        "baseline_opportunity": 52.31,
+        "competitive_room": 6.0
+      },
+      "rank": 8,
+      "readiness_diagnostics": {
+        "development_readiness": 33.0,
+        "evidence_readiness": 65.0
+      }
+    },
+    {
+      "candidate_id": "ratchathewi",
+      "catchment": {
+        "area_km2": 26.3154,
+        "geometry_id": "ratchathewi-analysis-unit"
+      },
+      "indicators": {
+        "competitive_room_score": {
+          "dimension_contribution": 16.5,
+          "normalized_score": 16.5,
+          "raw_value": 16.5
+        },
+        "evidence_readiness_score": {
+          "dimension_contribution": 70.0,
+          "normalized_score": 70.0,
+          "raw_value": 70.0
+        },
+        "land_pressure_percentile": {
+          "dimension_contribution": 15.0,
+          "normalized_score": 15.0,
+          "raw_value": 85.0
+        },
+        "release_1_5_opportunity_score": {
+          "dimension_contribution": 44.14,
+          "normalized_score": 44.14,
+          "raw_value": 44.14
+        }
+      },
+      "name": "ราชเทวี",
+      "overall_score": 38.61,
+      "primary_dimension_scores": {
+        "baseline_opportunity": 44.14,
+        "competitive_room": 16.5
+      },
+      "rank": 9,
+      "readiness_diagnostics": {
+        "development_readiness": 15.0,
+        "evidence_readiness": 70.0
+      }
+    },
+    {
+      "candidate_id": "din-daeng",
+      "catchment": {
+        "area_km2": 26.3154,
+        "geometry_id": "din-daeng-analysis-unit"
+      },
+      "indicators": {
+        "competitive_room_score": {
+          "dimension_contribution": 13.5,
+          "normalized_score": 13.5,
+          "raw_value": 13.5
+        },
+        "evidence_readiness_score": {
+          "dimension_contribution": 70.0,
+          "normalized_score": 70.0,
+          "raw_value": 70.0
+        },
+        "land_pressure_percentile": {
+          "dimension_contribution": 22.0,
+          "normalized_score": 22.0,
+          "raw_value": 78.0
+        },
+        "release_1_5_opportunity_score": {
+          "dimension_contribution": 43.57,
+          "normalized_score": 43.57,
+          "raw_value": 43.57
+        }
+      },
+      "name": "ดินแดง",
+      "overall_score": 37.56,
+      "primary_dimension_scores": {
+        "baseline_opportunity": 43.57,
+        "competitive_room": 13.5
+      },
+      "rank": 10,
+      "readiness_diagnostics": {
+        "development_readiness": 22.0,
+        "evidence_readiness": 70.0
+      }
+    }
+  ],
+  "effective_primary_weights": {
+    "baseline_opportunity": 0.8,
+    "competitive_room": 0.2
+  },
+  "exclusions": [],
+  "model_id": "parc-bangna-competition-overlay-scenario-80-20-v1.6",
+  "normalization": "fixed_range",
+  "sensitivity": {
+    "candidate_stability": [
+      {
+        "baseline_rank": 1,
+        "best_rank": 1,
+        "candidate_id": "pracha-uthit",
+        "rank_span": 6,
+        "top_rank_frequency": 0.6,
+        "worst_rank": 7
+      },
+      {
+        "baseline_rank": 2,
+        "best_rank": 2,
+        "candidate_id": "wang-lang",
+        "rank_span": 4,
+        "top_rank_frequency": 0.0,
+        "worst_rank": 6
+      },
+      {
+        "baseline_rank": 3,
+        "best_rank": 3,
+        "candidate_id": "bang-pakok",
+        "rank_span": 2,
+        "top_rank_frequency": 0.0,
+        "worst_rank": 5
+      },
+      {
+        "baseline_rank": 4,
+        "best_rank": 1,
+        "candidate_id": "charoen-rat",
+        "rank_span": 3,
+        "top_rank_frequency": 0.4,
+        "worst_rank": 4
+      },
+      {
+        "baseline_rank": 5,
+        "best_rank": 2,
+        "candidate_id": "wongwian-yai-east",
+        "rank_span": 5,
+        "top_rank_frequency": 0.0,
+        "worst_rank": 7
+      },
+      {
+        "baseline_rank": 6,
+        "best_rank": 5,
+        "candidate_id": "talat-phlu-south",
+        "rank_span": 3,
+        "top_rank_frequency": 0.0,
+        "worst_rank": 8
+      },
+      {
+        "baseline_rank": 7,
+        "best_rank": 4,
+        "candidate_id": "ban-khaek",
+        "rank_span": 3,
+        "top_rank_frequency": 0.0,
+        "worst_rank": 7
+      },
+      {
+        "baseline_rank": 8,
+        "best_rank": 3,
+        "candidate_id": "samre",
+        "rank_span": 5,
+        "top_rank_frequency": 0.0,
+        "worst_rank": 8
+      },
+      {
+        "baseline_rank": 9,
+        "best_rank": 9,
+        "candidate_id": "ratchathewi",
+        "rank_span": 0,
+        "top_rank_frequency": 0.0,
+        "worst_rank": 9
+      },
+      {
+        "baseline_rank": 10,
+        "best_rank": 10,
+        "candidate_id": "din-daeng",
+        "rank_span": 0,
+        "top_rank_frequency": 0.0,
+        "worst_rank": 10
+      }
+    ],
+    "delta": 0.1,
+    "scenarios": [
+      {
+        "primary_dimension_weights": {
+          "baseline_opportunity": 0.7,
+          "competitive_room": 0.3
+        },
+        "ranking": [
+          {
+            "candidate_id": "pracha-uthit",
+            "rank": 1
+          },
+          {
+            "candidate_id": "wang-lang",
+            "rank": 2
+          },
+          {
+            "candidate_id": "bang-pakok",
+            "rank": 3
+          },
+          {
+            "candidate_id": "charoen-rat",
+            "rank": 4
+          },
+          {
+            "candidate_id": "talat-phlu-south",
+            "rank": 5
+          },
+          {
+            "candidate_id": "ban-khaek",
+            "rank": 6
+          },
+          {
+            "candidate_id": "wongwian-yai-east",
+            "rank": 7
+          },
+          {
+            "candidate_id": "samre",
+            "rank": 8
+          },
+          {
+            "candidate_id": "ratchathewi",
+            "rank": 9
+          },
+          {
+            "candidate_id": "din-daeng",
+            "rank": 10
+          }
+        ],
+        "scenario_id": "baseline_opportunity_down"
+      },
+      {
+        "primary_dimension_weights": {
+          "baseline_opportunity": 0.9,
+          "competitive_room": 0.1
+        },
+        "ranking": [
+          {
+            "candidate_id": "charoen-rat",
+            "rank": 1
+          },
+          {
+            "candidate_id": "wongwian-yai-east",
+            "rank": 2
+          },
+          {
+            "candidate_id": "samre",
+            "rank": 3
+          },
+          {
+            "candidate_id": "ban-khaek",
+            "rank": 4
+          },
+          {
+            "candidate_id": "bang-pakok",
+            "rank": 5
+          },
+          {
+            "candidate_id": "wang-lang",
+            "rank": 6
+          },
+          {
+            "candidate_id": "pracha-uthit",
+            "rank": 7
+          },
+          {
+            "candidate_id": "talat-phlu-south",
+            "rank": 8
+          },
+          {
+            "candidate_id": "ratchathewi",
+            "rank": 9
+          },
+          {
+            "candidate_id": "din-daeng",
+            "rank": 10
+          }
+        ],
+        "scenario_id": "baseline_opportunity_up"
+      },
+      {
+        "primary_dimension_weights": {
+          "baseline_opportunity": 0.9,
+          "competitive_room": 0.1
+        },
+        "ranking": [
+          {
+            "candidate_id": "charoen-rat",
+            "rank": 1
+          },
+          {
+            "candidate_id": "wongwian-yai-east",
+            "rank": 2
+          },
+          {
+            "candidate_id": "samre",
+            "rank": 3
+          },
+          {
+            "candidate_id": "ban-khaek",
+            "rank": 4
+          },
+          {
+            "candidate_id": "bang-pakok",
+            "rank": 5
+          },
+          {
+            "candidate_id": "wang-lang",
+            "rank": 6
+          },
+          {
+            "candidate_id": "pracha-uthit",
+            "rank": 7
+          },
+          {
+            "candidate_id": "talat-phlu-south",
+            "rank": 8
+          },
+          {
+            "candidate_id": "ratchathewi",
+            "rank": 9
+          },
+          {
+            "candidate_id": "din-daeng",
+            "rank": 10
+          }
+        ],
+        "scenario_id": "competitive_room_down"
+      },
+      {
+        "primary_dimension_weights": {
+          "baseline_opportunity": 0.7,
+          "competitive_room": 0.3
+        },
+        "ranking": [
+          {
+            "candidate_id": "pracha-uthit",
+            "rank": 1
+          },
+          {
+            "candidate_id": "wang-lang",
+            "rank": 2
+          },
+          {
+            "candidate_id": "bang-pakok",
+            "rank": 3
+          },
+          {
+            "candidate_id": "charoen-rat",
+            "rank": 4
+          },
+          {
+            "candidate_id": "talat-phlu-south",
+            "rank": 5
+          },
+          {
+            "candidate_id": "ban-khaek",
+            "rank": 6
+          },
+          {
+            "candidate_id": "wongwian-yai-east",
+            "rank": 7
+          },
+          {
+            "candidate_id": "samre",
+            "rank": 8
+          },
+          {
+            "candidate_id": "ratchathewi",
+            "rank": 9
+          },
+          {
+            "candidate_id": "din-daeng",
+            "rank": 10
+          }
+        ],
+        "scenario_id": "competitive_room_up"
+      }
+    ]
+  },
+  "warnings": []
+}
