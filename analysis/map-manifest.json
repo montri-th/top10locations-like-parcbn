@@ -2886,7 +2886,7 @@
   "qa": {
     "status": "pre_publish_pass",
     "evidence": "qa/rendered-qa-results.json",
-    "checked_at": "2026-07-27T20:39:36.514Z",
+    "checked_at": "2026-07-27T20:54:10.899Z",
     "orphan_dot_count": 0,
     "keyboard_access": true,
     "visible_focus": true,

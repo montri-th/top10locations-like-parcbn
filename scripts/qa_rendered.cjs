@@ -8,6 +8,8 @@ const { chromium } = require("playwright");
 const ROOT = path.resolve(__dirname, "..");
 const QA_DIR = path.join(ROOT, "qa");
 const EXECUTABLE = process.env.PARC_CHROMIUM_EXECUTABLE;
+const EXTERNAL_BASE_URL = process.env.PARC_QA_BASE_URL;
+const PROXY_SERVER = process.env.HTTPS_PROXY || process.env.https_proxy;
 const VIEWPORTS = [320, 375, 768, 1024, 1440];
 const SCREENSHOT_ROOT = process.env.PARC_QA_SCREENSHOT_DIR || "/tmp";
 
@@ -79,10 +81,12 @@ function attachDiagnostics(page) {
   });
   page.on("pageerror", (error) => diagnostics.push(`pageerror: ${error.message}`));
   page.on("requestfailed", (request) => {
-    diagnostics.push(`requestfailed: ${request.url()} · ${request.failure()?.errorText || "unknown"}`);
+    const errorText = request.failure()?.errorText || "unknown";
+    if (errorText === "net::ERR_ABORTED") return;
+    diagnostics.push(`requestfailed: ${request.url()} · ${errorText}`);
   });
   page.on("response", (response) => {
-    if (response.url().startsWith("http://127.0.0.1") && response.status() >= 400) {
+    if (response.status() >= 400) {
       diagnostics.push(`http ${response.status()}: ${response.url()}`);
     }
   });
@@ -95,10 +99,14 @@ async function openPage(browser, baseURL, options = {}) {
     colorScheme: options.colorScheme || "light",
     reducedMotion: options.reducedMotion || "no-preference",
     javaScriptEnabled: options.javaScriptEnabled !== false,
+    ignoreHTTPSErrors: Boolean(EXTERNAL_BASE_URL),
   });
   const page = await context.newPage();
   const diagnostics = attachDiagnostics(page);
-  await page.goto(baseURL, { waitUntil: "networkidle" });
+  await page.goto(baseURL, {
+    waitUntil: EXTERNAL_BASE_URL ? "domcontentloaded" : "networkidle",
+    timeout: EXTERNAL_BASE_URL ? 60000 : 30000,
+  });
   if (options.javaScriptEnabled !== false) {
     await page.evaluate(() => document.fonts.ready);
   }
@@ -392,15 +400,25 @@ async function manifestChecks(page) {
 async function main() {
   assert(EXECUTABLE && fs.existsSync(EXECUTABLE), "Set PARC_CHROMIUM_EXECUTABLE to a Chromium executable");
   fs.mkdirSync(QA_DIR, { recursive: true });
-  const { server, baseURL } = await startServer();
+  let server = null;
+  let baseURL = EXTERNAL_BASE_URL;
+  if (!baseURL) {
+    ({ server, baseURL } = await startServer());
+  }
   const browser = await chromium.launch({
     executablePath: EXECUTABLE,
     headless: true,
-    args: ["--no-sandbox", "--disable-dev-shm-usage"],
+    args: [
+      "--no-sandbox",
+      "--disable-dev-shm-usage",
+      ...(EXTERNAL_BASE_URL && PROXY_SERVER ? [`--proxy-server=${PROXY_SERVER}`] : []),
+    ],
   });
   const results = {
     status: "PASS",
     checked_at: new Date().toISOString(),
+    target: EXTERNAL_BASE_URL ? "production" : "local",
+    base_url: baseURL,
     chromium: await browser.version(),
     viewports: {},
     theme_cycles: {},
@@ -471,7 +489,7 @@ async function main() {
     })}`);
   } finally {
     await browser.close();
-    await new Promise((resolve) => server.close(resolve));
+    if (server) await new Promise((resolve) => server.close(resolve));
   }
 }
 

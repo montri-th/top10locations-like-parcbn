@@ -1,9 +1,10 @@
 # PARC Bangna Top 10 — Release 1.6 QA
 
 **Pre-publish status:** PASS
-**Post-publish status:** PENDING
-**Rendered check:** 28 July 2026, 03:39 ICT
+**Post-publish status:** PASS
+**Production rendered check:** 28 July 2026, 03:54 ICT
 **Browser:** Chromium 149.0.7827.0
+**Production URL:** <https://montri-th.github.io/top10locations-like-parcbn/>
 
 ## Release scope checked
 
@@ -83,27 +84,27 @@ System mode followed a simulated OS preference change without a reload. At every
 
 Visual inspection covered mobile navigation and filters, one full candidate card and map, the desktop hero in Light, and the desktop hero in Dark. The rendered result retains the J Lifestyle Center v0.3 quiet warm-canvas hierarchy.
 
-## Pre-publish artifact hashes
+## Final release artifact hashes
 
 | Artifact | SHA-256 |
 |---|---|
 | `index.html` | `b5d3444cdb42f5058e22e43d8b7a429ec3594b54b17ac8546577e5f033bc3f4f` |
 | named Release 1.6 HTML | `b5d3444cdb42f5058e22e43d8b7a429ec3594b54b17ac8546577e5f033bc3f4f` |
 | `analysis/location-payload.json` | `29717e2503af1a09cab53c2b4b1cbb75096f8ffc6dcd9c2e49f27cbbefa27a14` |
-| `analysis/map-manifest.json` | `1faee7bc6fd3f0232be02ae83b6bd9d61278393ebd5606e2be901f0ca380df61` |
+| `analysis/map-manifest.json` | `b13b1c8fb4be89cfa2eb2a57a1c62fb09e74c2858f9d05c1bccd9a74e24afa3c` |
 | `analysis/competitor-registry.public.json` | `6cd94958f72183815f76bd7748253b32676e8acc69e855f264d3fce5eb4f9336` |
 | positive logo | `ab843d885426c8365afb3958b137e15f3e4a4d7f23abbe5b1a572e850688e755` |
 | reverse logo | `dab33a928acb08db8d4317dffb903eccd5be53c89efe50365df6a9c44593990c` |
 
-These hashes must be refreshed if any release artifact changes after this record.
+The production content deployment served `index.html` and the named HTML with the exact hashes above. The final status deployment refreshes the manifest and QA evidence without changing either HTML artifact.
 
 ## Post-publish gates
 
-- [ ] Production serves the approved commit.
-- [ ] Production `index.html` hash matches the final local artifact.
-- [ ] Logo, font, JSON, payload, manifest, and report assets return successfully.
-- [ ] Production interaction smoke test passes.
-- [ ] Canonical rank, noncanonical 80/20 label, marker count, and held-point disclosure match source.
-- [ ] Public source links remain present.
+- [x] Production serves the approved content commit `6e372f7`.
+- [x] Production `index.html` hash matches the final local artifact.
+- [x] Logo, font, JSON, payload, manifest, and report assets return successfully.
+- [x] Production interaction smoke test passes.
+- [x] Canonical rank, noncanonical 80/20 label, marker count, and held-point disclosure match source.
+- [x] Public source links remain present.
 
-Release status remains pending until these post-publish gates pass.
+Release 1.6 status: **PASS**.

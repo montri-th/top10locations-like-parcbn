@@ -1,6 +1,8 @@
 {
   "status": "PASS",
-  "checked_at": "2026-07-27T20:39:36.514Z",
+  "checked_at": "2026-07-27T20:54:10.899Z",
+  "target": "production",
+  "base_url": "https://montri-th.github.io/top10locations-like-parcbn/",
   "chromium": "149.0.7827.0",
   "viewports": {
     "320": {

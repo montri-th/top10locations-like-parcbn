@@ -6,7 +6,7 @@
 **ฐานอันดับหลัก:** Release 1.5
 **Locale Insight release:** `venue-locale-insight-v2.3.1`
 **หน่วยวิเคราะห์:** catchment พื้นที่เท่ากัน 26.3154 ตร.กม. รอบ candidate center รัศมี 2.89421 กม.
-**สถานะรายงาน:** ผลวิเคราะห์, data contracts, HTML และ pre-publish rendered QA ของ Release 1.6 ผ่านแล้ว; รอเผยแพร่และ post-publish QA ก่อนประกาศ release status `PASS`
+**สถานะรายงาน:** ผลวิเคราะห์, data contracts, HTML, pre-publish QA และ post-publish rendered QA บน Production ของ Release 1.6 ผ่านแล้ว; release status `PASS`
 
 > เอกสารนี้คงอันดับหลักและคะแนน Release 1.5 เพื่อรักษา comparable baseline แล้วเพิ่มชั้นวิเคราะห์ “แรงกดดันจากคู่แข่ง” และ “ช่องว่างเชิงกลยุทธ์” เป็น diagnostic สำหรับเปลี่ยนลำดับการลงมือ ไม่ใช้รายชื่อคู่แข่งเบื้องต้นไปสร้างอันดับใหม่อย่างมั่นใจเกินหลักฐาน
 
@@ -993,14 +993,14 @@ controls ที่มี behavior คล้ายกันใช้ pattern เ�
 
 ### 13.4 Post-publish QA
 
-- [ ] Production เสิร์ฟ revision ที่อนุมัติ
-- [ ] HTML byte/hash ตรงกับ release artifact
-- [ ] assets/logo/JSON/map manifest โหลดครบ
-- [ ] interaction smoke test บน Production
-- [ ] canonical rank, 80/20 label และ data disclosure ตรงกับ source
-- [ ] public source links เปิดได้
+- [x] Production เสิร์ฟ revision ที่อนุมัติ
+- [x] HTML byte/hash ตรงกับ release artifact
+- [x] assets/logo/JSON/map manifest โหลดครบ
+- [x] interaction smoke test บน Production
+- [x] canonical rank, 80/20 label และ data disclosure ตรงกับ source
+- [x] public source links เปิดได้
 
-**Release rule:** ยังไม่ประกาศ `PASS` จนกว่าจะตรวจหน้า rendered จริงก่อนและหลังเผยแพร่
+**Release rule:** ผ่านแล้ว—ตรวจหน้า rendered จริงทั้งก่อนและหลังเผยแพร่ พร้อมยืนยัน asset hashes บน Production
 
 ---
 
