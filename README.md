@@ -48,9 +48,9 @@ The leading group remains within the Top 4 across all five tested catchment/weig
 
 ## Evidence drill-down
 
-Each Top 10 location can be opened from the comparison chart or its ranking card. The disclosure shows:
+Each Top 10 location can be opened from a visible evidence action in the comparison chart or its ranking card. The disclosure shows:
 
-- a simplified context map with the evidence extent available for that location, selected major roads, and active rail/BRT lines and stations where present
+- a simplified context map with a clearly labelled fallback extent, selected major roads, and active rail/BRT lines and stations where present
 - the exact bridge from catchment demand × PARC fit to the overall score
 - indices for nearby residents, people coming from outside, and daytime reasons to visit
 - evidence for the intended shops and the PARC experience
@@ -62,7 +62,9 @@ Each Top 10 location can be opened from the comparison chart or its ranking card
 
 The overview map locates all Top 10 areas across the full Bangkok administrative extent and links to each evidence disclosure. It intentionally omits roads, transit lines, and screening-catchment circles.
 
-Each local map restores the earlier derived evidence extent: a convex hull around the available coordinate-qualified evidence points for that location. The map fits to that polygon with modest context padding, then adds at most two locally useful major roads and active rail/BRT context from the static OpenStreetMap snapshot. It does not show secondary street networks, lanes, or landmarks.
+Each local map currently uses a clearly labelled fallback extent: a convex hull around the available coordinate-qualified evidence points for that location. The source outputs confirm that a strict upstream polygon exists and provide its area, but the public release files do not contain the coordinate rings needed to draw it faithfully. The fallback is therefore dashed and subdued rather than presented as the supplied location boundary.
+
+The map fits to that fallback with modest context padding, then adds at most two locally useful major roads and active rail/BRT context from the static OpenStreetMap snapshot. It does not show the individual sampled venue points, secondary street networks, lanes, or landmarks.
 
 The evidence polygon is not the equal-area catchment used by the scoring model. It is also not a land-plot boundary, an administrative boundary, a drive-time isochrone, or a confirmed trade area. The scores continue to use the comparable `26.3154 km²` catchment described above.
 
@@ -83,11 +85,12 @@ Parking, frontage, ingress/egress, visibility, U-turn access, plot size, zoning,
 - Base-score reconciliation within 0.05 points
 - Top 10 and five catchment/weighting cases validated in a sequential Python run
 - Responsive browser checks at 320, 390, 720, 768, 1024, and 1440 CSS pixels
-- 2 responsive full-Bangkok overview projections, 10 local maps, 10 evidence polygons, and 20 overview markers verified in the rendered page
+- 2 responsive full-Bangkok overview projections, 10 local maps, 10 clearly labelled fallback extents, and 20 overview markers verified in the rendered page
 - zero overview roads, rail lines, stations, landmarks, or catchment circles
-- zero local-map catchment circles, landmarks, uncurated secondary street networks, or road labels beginning with `ซอย`
+- zero local-map sampled venue dots, catchment circles, landmarks, uncurated secondary street networks, or road labels beginning with `ซอย`
+- 10 evidence actions in the comparison chart and 10 full-width disclosure actions with icons, visible labels, and open-state chevrons
 - Overview-map selection opens the corresponding evidence disclosure
 - Embedded Thai font checks for Anuphan 200 and IBM Plex Sans Thai Looped 400/500
 - Device-theme default, light/dark controls, comparison-to-disclosure navigation, filter, disclosure, print, reduced-motion, and keyboard-focus checks
 
-Release 1.4 · Full-Bangkok overview and restored evidence extents · 27 July 2026
+Release 1.5 · Clear evidence actions, reduced text, and cleaner local maps · 27 July 2026
