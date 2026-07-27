@@ -44,6 +44,22 @@
   "cluster_rule": "maximum member load plus 25% of each additional member load",
   "pressure_formula": "min(100, deduplicated_pressure_load / 12 × 100)",
   "competitive_room_formula": "0.70 × (100 − pressure) + 0.30 × strategic_gap_potential",
+  "stress_tests": [
+    {
+      "id": "bang-pakok-plus-one-direct-high-impact",
+      "status": "noncanonical_sensitivity_scenario",
+      "candidate_id": "bang-pakok",
+      "assumption": "The completed census finds one additional independent high-impact direct-routine community mall at 1.0 km.",
+      "additional_pressure_load": 5.0,
+      "modeled_pressure_load": 11.25,
+      "modeled_supply_pressure": 93.75,
+      "modeled_strategic_gap_potential": 35.0,
+      "modeled_competitive_room_score": 14.88,
+      "modeled_evidence_readiness_score": 85.0,
+      "modeled_action_tier": "D",
+      "interpretation": "Bang Pakok is a provisional field-validation priority, not a robust investment winner. Complete the competitor census before treating Tier A as stable."
+    }
+  ],
   "candidates": [
     {
       "candidate_id": "wongwian-yai-east",

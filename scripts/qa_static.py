@@ -22,6 +22,10 @@ from PIL import Image
 
 RELEASE_ROOT = Path(__file__).resolve().parents[1]
 HTML_PATH = RELEASE_ROOT / "index.html"
+ARCHIVE_PATH = (
+    RELEASE_ROOT
+    / "PARC_Bangna_Bangkok_Top_10_Release_1_6_Competitive_Report_2026-07-28.html"
+)
 ANALYSIS_DIR = RELEASE_ROOT / "analysis"
 
 errors: list[str] = []
@@ -101,7 +105,11 @@ except Exception as exc:  # pragma: no cover - reported cleanly in CI
 
 screening = load_json(ANALYSIS_DIR / "screening-results.json")
 manifest = load_json(ANALYSIS_DIR / "map-manifest.json")
-private_registry = load_json(ANALYSIS_DIR / "competitor-registry.json")
+competition = load_json(ANALYSIS_DIR / "competitor-score-breakdown.json")
+private_registry_path = ANALYSIS_DIR / "competitor-registry.json"
+private_registry = (
+    load_json(private_registry_path) if private_registry_path.exists() else {}
+)
 
 expected_candidates = {
     item["candidate_id"]: {
@@ -149,6 +157,27 @@ check(
     set(card_by_id) == expected_candidate_ids,
     "candidate-card IDs do not match the canonical screening output",
 )
+
+stress_tests = competition.get("stress_tests", [])
+stress_nodes = document.xpath("//*[@data-competition-stress-test]")
+check(len(stress_tests) == 1, f"expected 1 competition stress test; found {len(stress_tests)}")
+check(len(stress_nodes) == 1, f"expected 1 rendered competition stress test; found {len(stress_nodes)}")
+if stress_tests and stress_nodes:
+    stress = stress_tests[0]
+    stress_node = stress_nodes[0]
+    check(
+        stress_node.get("data-competition-stress-test") == stress["id"],
+        "competition stress-test ID mismatch",
+    )
+    check(
+        stress_node.get("data-modeled-room")
+        == f'{stress["modeled_competitive_room_score"]:.2f}',
+        "competition stress-test room mismatch",
+    )
+    check(
+        stress_node.get("data-modeled-tier") == stress["modeled_action_tier"],
+        "competition stress-test action tier mismatch",
+    )
 
 detail_maps = [
     node
@@ -523,6 +552,26 @@ process.stdout.write(JSON.stringify({{light:run(false), dark:run(true)}}));
 
 element_ids = document.xpath("//*[@id]/@id")
 check(len(element_ids) == len(set(element_ids)), "HTML contains duplicate element IDs")
+check(ARCHIVE_PATH.is_file(), "named Release 1.6 HTML archive is missing")
+if ARCHIVE_PATH.is_file():
+    check(
+        ARCHIVE_PATH.read_bytes() == HTML_PATH.read_bytes(),
+        "named Release 1.6 HTML archive is not byte-identical to index.html",
+    )
+design_system_type_rules = {
+    r"nav a\s*\{[^}]*font-size:1rem;[^}]*font-weight:500": "navigation type role",
+    r"thead th\s*\{[^}]*font-size:1rem;[^}]*font-weight:500": "table-heading type role",
+    r"\.tier\s*\{[^}]*font-size:1rem;[^}]*font-weight:500": "action-tier label type role",
+    r"\.filter-bar button\s*\{[^}]*font-size:1rem;[^}]*font-weight:500": "filter type role",
+    r"\.candidate-metrics span\s*\{[^}]*font-size:1rem;[^}]*font-weight:500": "data-label type role",
+    r"\.competitor-marker text\s*\{[^}]*font:600 11px/1": "map marker label minimum",
+    r"\.north text,\.scale text\s*\{[^}]*font:500 11px/1": "map scale label minimum",
+}
+for pattern, label in design_system_type_rules.items():
+    check(
+        bool(re.search(pattern, source, flags=re.DOTALL)),
+        f"J Lifestyle Center v0.3 {label} is missing",
+    )
 for placeholder in ("TODO", "TBD", "lorem ipsum", "REPLACE_", "{{"):
     check(placeholder not in source, f"HTML contains placeholder token {placeholder!r}")
 

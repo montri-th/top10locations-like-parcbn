@@ -34,13 +34,13 @@
 - **วงเวียนใหญ่–ตะวันออก** ยังเป็น baseline อันดับ 1 แต่มี verified competitor 7 แห่ง, competitive supply pressure แตะเพดานโมเดล และ `competitive room = 7.50` จึงไม่ควรเดินหน้าจากคะแนนทำเลอย่างเดียว
 - **เจริญราษฎร์** ยังเป็น baseline อันดับ 2 แต่ KINGSQUARE Community Mall อยู่ 1.231 กม. และมี mission overlap โดยตรงกับ community/family/routine concept จึงต้องพิสูจน์จุดต่างก่อนคัดแปลง
 - **สำเหร่** ต้องหยุดและยืนยัน candidate center ก่อน เพราะจุดวิเคราะห์อยู่ห่าง Riverside Plaza เพียง 0.034 กม. ซึ่งอาจหมายถึง candidate-center artifact ไม่ใช่โอกาสพัฒนาอิสระ
-- **บางปะกอก** เป็นทำเลเดียวที่ได้ Action Tier A ใน overlay รอบนี้: baseline ยังแข่งขันได้ที่ 47.02, `competitive room = 47.04` และ `evidence readiness = 85` แต่ยังต้องตรวจ registry ให้ครบและพิสูจน์ leakage ไป Terminal21 Rama 3
+- **บางปะกอก** เป็นทำเลเดียวที่ได้ **Provisional Action Tier A** ใน overlay รอบนี้: baseline ยังแข่งขันได้ที่ 47.02, `competitive room = 47.04` และ `evidence readiness = 85` แต่ผลยังเปราะต่อความครบของ registry และต้องพิสูจน์ leakage ไป Terminal21 Rama 3
 - **วังหลัง** และ **ประชาอุทิศ** ดูมี competitive room สูง แต่หลักฐานยังไม่พร้อมพอให้เลื่อนเป็นอันดับหลัก: วังหลังยังไม่คิดผลของแม่น้ำ/เรือ/สะพาน ส่วนพิกัด Market Place Pracha Uthit ยังเป็น tenant-in-mall proxy
 - **ราชเทวี** และ **ดินแดง** อยู่ในกลุ่มการแข่งขันสูงมาก; ควรเดินหน้าต่อเฉพาะเมื่อมี parcel right, micro-format หรือจุดต่างที่พิสูจน์ได้
 
 ### 1.2 ลำดับงานที่แนะนำ
 
-1. **บางปะกอก — ตรวจเชิงรุก:** ทำ full competitor census, network catchment, evening stop-rate และ leakage study
+1. **บางปะกอก — ตรวจเชิงรุกแบบ provisional:** ทำ full competitor census เป็น gate แรก ตามด้วย network catchment, evening stop-rate และ leakage study
 2. **วงเวียนใหญ่–ตะวันออก + เจริญราษฎร์ — competition-first gate:** ตรวจ access, tenant overlap, routine overlap และ economics ก่อนเพิ่มค่าใช้จ่ายด้าน parcel
 3. **สำเหร่ — geometry gate:** ยืนยัน source polygon/parcel และ recenter ก่อนวิเคราะห์ต่อ
 4. **วังหลัง + ประชาอุทิศ — evidence gate:** ตรวจ river impedance หรือ host centroid ตามกรณีก่อนให้ competitive room มีผลต่ออันดับ
@@ -309,7 +309,7 @@ Action tier เป็น decision gate ไม่ใช่อันดับใ�
 | 3 | สำเหร่ | **52.31** | 5 | 100.00 | **6.00** | 65 | **D** |
 | 4 | แยกบ้านแขก | **51.46** | 7 | 100.00 | **10.50** | 65 | **D** |
 | 5 | ตลาดพลู–ใต้ | **48.44** | 3 | 80.21 | **24.35** | 85 | **C** |
-| 6 | บางปะกอก | **47.02** | 2 | 52.08 | **47.04** | 85 | **A** |
+| 6 | บางปะกอก | **47.02** | 2 | 52.08 | **47.04** | 85 | **A (provisional)** |
 | 7 | วังหลัง | **45.74** | 3 | 40.73 | **54.99** | 65 | **B** |
 | 8 | ราชเทวี | **44.14** | 6 | 100.00 | **16.50** | 70 | **D** |
 | 9 | ประชาอุทิศ | **43.78** | 1 | 20.83 | **68.92** | 65 | **B** |
@@ -540,7 +540,7 @@ compact format ที่ curated และเชื่อม family meal → caf
 ### 8.6 บางปะกอก
 
 **Baseline:** #6, 47.02
-**Diagnostic:** 2 verified competitors · pressure 52.08 · room 47.04 · readiness 85 · **Tier A**
+**Diagnostic:** 2 verified competitors · pressure 52.08 · room 47.04 · readiness 85 · **Provisional Tier A**
 
 | คู่แข่ง | ระยะเส้นตรง | Impact |
 |---|---:|---|
@@ -550,6 +550,10 @@ compact format ที่ curated และเชื่อม family meal → caf
 **คำวินิจฉัย**
 
 minimum verified supply หนาแน่นน้อยกว่าหลาย candidate และข้อมูลพิกัดพร้อมกว่าเคส river/centroid artifact แต่ Terminal21 อยู่ใกล้และมี multi-category offer จึงยังห้ามสรุปว่าเป็น white space
+
+**Competitor-census stress test (noncanonical)**
+
+หากการทำ census ฉบับเต็มพบ community mall คู่แข่งตรงระดับ high เพิ่มอีก 1 แห่งซึ่งเป็นคนละ cluster และอยู่ห่าง 1.0 กม. ภายใต้กติกาเดียวกัน pressure load จะเพิ่มจาก 6.25 เป็น 11.25, supply pressure เป็น 93.75 และ competitive room จะลดจาก **47.04 เหลือ 14.88** ทำให้ action tier เปลี่ยนเป็น **Tier D**. แบบทดสอบนี้ไม่ใช่ข้อกล่าวอ้างว่าคู่แข่งดังกล่าวมีอยู่ แต่แสดงว่า Tier A ยังไม่เสถียรจนกว่าจะปิด competitor census
 
 **Strategy hypothesis**
 
@@ -1079,7 +1083,7 @@ controls ที่มี behavior คล้ายกันใช้ pattern เ�
 Release 1.6 ควรรักษา **canonical Top 10 ของ Release 1.5** เพื่อให้ lineage และ comparable basis ไม่ขาด แต่เปลี่ยนวิธีใช้ผลดังนี้:
 
 1. อย่าใช้วงเวียนใหญ่–ตะวันออกหรือเจริญราษฎร์เป็น default Wave 1 โดยไม่ผ่าน competition gate
-2. ยกบางปะกอกเป็น field-priority case เพราะเป็นสมดุลที่ดีที่สุดในรอบนี้ระหว่าง baseline, competitive room และ evidence readiness
+2. ยกบางปะกอกเป็น **provisional field-priority case** เพราะเป็นสมดุลที่ดีที่สุดในรอบนี้ระหว่าง baseline, competitive room และ evidence readiness แต่ให้ competitor census เป็น gate ก่อนถือว่า Tier A มีเสถียรภาพ
 3. หยุดสำเหร่จนกว่าจะยืนยัน center/parcel
 4. อย่าเลื่อนวังหลังหรือประชาอุทิศจาก scenario 80/20 จนกว่าจะปิด river/centroid/completeness gaps
 5. ลด priority ราชเทวีและดินแดง เว้นแต่มี micro-format หรือ parcel advantage ที่เปลี่ยนโจทย์

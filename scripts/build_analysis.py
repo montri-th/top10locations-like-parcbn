@@ -14,7 +14,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REGISTRY_PATH = ROOT / "analysis" / "competitor-registry.json"
+REGISTRY_PATH = ROOT / "analysis" / "competitor-registry.public.json"
 METRICS_PATH = ROOT / "analysis" / "candidate-metrics.json"
 BREAKDOWN_PATH = ROOT / "analysis" / "competitor-score-breakdown.json"
 
@@ -288,6 +288,33 @@ def build() -> tuple[dict, dict]:
         "catchment_rule_id": "fixed-area-26.3154km2-medoid-v1",
         "candidates": metric_rows,
     }
+    # A deliberately adverse, noncanonical census sensitivity for the only
+    # Tier A candidate. It demonstrates how fragile the action tier is while
+    # the registry remains a minimum verified set.
+    bang_pakok = next(
+        row for row in breakdown_rows if row["candidate_id"] == "bang-pakok"
+    )
+    added_direct_load = (
+        IMPACT_WEIGHT["high"]
+        * TYPE_OVERLAP["community_mall"]
+        * proximity_weight(1.0)
+    )
+    stress_total_load = bang_pakok["raw_pressure_load"] + added_direct_load
+    stress_pressure = min(
+        100.0,
+        stress_total_load / PRESSURE_SATURATION_LOAD * 100.0,
+    )
+    stress_headroom = 100.0 - stress_pressure
+    stress_strategic_gap = 35.0
+    stress_room = (
+        0.70 * stress_headroom
+        + 0.30 * stress_strategic_gap
+    )
+    stress_action = classify_action(
+        stress_room,
+        bang_pakok["evidence_readiness_score"],
+    )
+
     breakdown = {
         "schema_version": "1.0",
         "model_id": "parc-bangna-competitive-overlay-v1.6",
@@ -306,6 +333,31 @@ def build() -> tuple[dict, dict]:
         "cluster_rule": "maximum member load plus 25% of each additional member load",
         "pressure_formula": "min(100, deduplicated_pressure_load / 12 × 100)",
         "competitive_room_formula": "0.70 × (100 − pressure) + 0.30 × strategic_gap_potential",
+        "stress_tests": [
+            {
+                "id": "bang-pakok-plus-one-direct-high-impact",
+                "status": "noncanonical_sensitivity_scenario",
+                "candidate_id": "bang-pakok",
+                "assumption": (
+                    "The completed census finds one additional independent "
+                    "high-impact direct-routine community mall at 1.0 km."
+                ),
+                "additional_pressure_load": round(added_direct_load, 4),
+                "modeled_pressure_load": round(stress_total_load, 4),
+                "modeled_supply_pressure": round(stress_pressure, 2),
+                "modeled_strategic_gap_potential": stress_strategic_gap,
+                "modeled_competitive_room_score": round(stress_room, 2),
+                "modeled_evidence_readiness_score": (
+                    bang_pakok["evidence_readiness_score"]
+                ),
+                "modeled_action_tier": stress_action["tier"],
+                "interpretation": (
+                    "Bang Pakok is a provisional field-validation priority, "
+                    "not a robust investment winner. Complete the competitor "
+                    "census before treating Tier A as stable."
+                ),
+            }
+        ],
         "candidates": breakdown_rows,
     }
     return metrics, breakdown

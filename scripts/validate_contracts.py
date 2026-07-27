@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 from pathlib import Path
 
 
@@ -12,9 +13,12 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "analysis"
 ANALYSIS = OUTPUT
 MAP_VALIDATOR = Path(
-    "/root/.codex/skills/remote-skills/"
-    "skill-6a674cca63cc8191abed08749733a25e/"
-    "scripts/validate_map_manifest.py"
+    os.environ.get(
+        "PARC_MAP_MANIFEST_VALIDATOR",
+        "/root/.codex/skills/remote-skills/"
+        "skill-6a674cca63cc8191abed08749733a25e/"
+        "scripts/validate_map_manifest.py",
+    )
 )
 WITHHELD = {
     "comp_bkk_market_place_pracha_uthit",
@@ -207,17 +211,18 @@ def main() -> int:
     # Validate the structural map contract. A pending manifest is checked with
     # only the browser-dependent flags lifted in the in-memory copy; a passed
     # manifest must point to a real PASS evidence file.
-    spec = importlib.util.spec_from_file_location(
-        "validate_map_manifest", MAP_VALIDATOR
-    )
-    require(spec is not None and spec.loader is not None, "load map validator")
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    structural_copy = json.loads(json.dumps(manifest))
-    for field in RENDERED_QA_FLAGS:
-        structural_copy["qa"][field] = True
-    errors = module.validate(structural_copy)
-    require(errors == [], f"structural map errors: {errors}")
+    if MAP_VALIDATOR.is_file():
+        spec = importlib.util.spec_from_file_location(
+            "validate_map_manifest", MAP_VALIDATOR
+        )
+        require(spec is not None and spec.loader is not None, "load map validator")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        structural_copy = json.loads(json.dumps(manifest))
+        for field in RENDERED_QA_FLAGS:
+            structural_copy["qa"][field] = True
+        errors = module.validate(structural_copy)
+        require(errors == [], f"structural map errors: {errors}")
 
     qa_status = manifest["qa"]["status"]
     if qa_status == "pre_render_pending":

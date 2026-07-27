@@ -13,7 +13,7 @@ Production: <https://montri-th.github.io/top10locations-like-parcbn/>
 - Renders 45 candidate–competitor marker instances with high-confidence venue coordinates.
 - Retains Market Place Pracha Uthit and Esplanade Ratchada in the evidence tables but withholds their markers because the available coordinates are tenant proxies.
 
-The current field-work priority is **Bang Pakok / บางปะกอก (Tier A)**. This is not a final investment winner: parcel, access, network travel, legal, financial, and field evidence remain open.
+The current field-work priority is **Bang Pakok / บางปะกอก (Provisional Tier A)**. This is not a final investment winner: parcel, access, network travel, legal, financial, and field evidence remain open. A disclosed noncanonical stress test shows that one additional independent high-impact direct competitor at 1 km would reduce its competitive-room score from `47.04` to `14.88` and its action tier to `D`; complete the competitor census before treating Tier A as stable.
 
 ## Canonical result
 
@@ -71,16 +71,32 @@ Theme starts at **System** on a fresh visit. Each press cycles:
 
 The icon, accessible label, logo derivative, and browser theme colour follow the active state. System mode continues to respond to an OS theme change.
 
-## Build and verification
+## Public deterministic rebuild
 
 ```bash
-python3 scripts/build_public_registry.py
 python3 scripts/build_analysis.py
 python3 scripts/build_contracts.py
 python3 scripts/build_site.py
 python3 scripts/validate_contracts.py
 python3 scripts/qa_static.py
 ```
+
+These commands use only files tracked in the public repository. `build_site.py`
+writes both `index.html` and the named Release 1.6 HTML artifact; static QA
+requires them to remain byte-identical. If the installed location-map validator
+is available, `validate_contracts.py` runs it automatically; another compatible
+validator may be supplied through `PARC_MAP_MANIFEST_VALIDATOR`.
+
+## Workspace-only registry sanitization
+
+```bash
+python3 scripts/build_public_registry.py
+```
+
+This optional upstream step requires the gitignored internal
+`analysis/competitor-registry.json`. It removes connector locators and writes
+the tracked `analysis/competitor-registry.public.json`; it is not part of the
+public rebuild.
 
 The installed location-payload and location-report validators are also run during release QA. Rendered and post-publish evidence is recorded in [`qa/release-1.6-qa.md`](qa/release-1.6-qa.md).
 

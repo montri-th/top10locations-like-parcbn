@@ -107,7 +107,7 @@
     .brand img { width:126px; height:auto; }
     .header-tools { display:flex; align-items:center; gap:18px; min-width:0; }
     nav { display:flex; gap:4px; overflow:auto; scrollbar-width:none; }
-    nav a { display:flex; min-height:44px; align-items:center; padding:6px 10px; color:var(--muted); text-decoration:none; font-size:.88rem; white-space:nowrap; }
+    nav a { display:flex; min-height:44px; align-items:center; padding:6px 10px; color:var(--muted); text-decoration:none; font-size:1rem; font-weight:500; white-space:nowrap; }
     nav a:hover { color:var(--ink); }
     .theme-cycle {
       width:48px; height:48px; flex:0 0 48px; border:1px solid var(--garden); border-radius:50%;
@@ -119,7 +119,7 @@
     section { padding:80px 0; }
     .hero { padding-top:86px; background:linear-gradient(135deg,var(--canvas),color-mix(in srgb,var(--garden) 12%,var(--canvas))); border-bottom:1px solid var(--line); }
     .hero-grid { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr); gap:clamp(40px,7vw,100px); align-items:end; }
-    .eyebrow,.label { margin:0 0 8px; color:var(--brand-strong); font-weight:500; font-size:.82rem; letter-spacing:0; text-transform:none; }
+    .eyebrow,.label { margin:0 0 8px; color:var(--brand-strong); font-weight:500; font-size:1rem; letter-spacing:0; text-transform:none; }
     .hero .lede { max-width:70ch; font-size:clamp(1.05rem,2vw,1.25rem); color:var(--muted); }
     .hero-facts { display:flex; flex-wrap:wrap; gap:10px 24px; color:var(--muted); font-size:.92rem; margin-top:28px; }
     .hero-score { border-left:1px solid var(--line); padding-left:34px; }
@@ -142,13 +142,13 @@
     table { width:100%; border-collapse:collapse; min-width:760px; font-variant-numeric:tabular-nums; }
     caption { text-align:left; padding:14px 16px; color:var(--muted); font-size:.88rem; }
     th,td { text-align:left; padding:13px 15px; border-top:1px solid var(--line); vertical-align:top; }
-    thead th { color:var(--muted); font-size:.89rem; text-transform:none; letter-spacing:0; background:var(--surface-2); border-top:0; }
+    thead th { color:var(--muted); font-size:1rem; font-weight:500; text-transform:none; letter-spacing:0; background:var(--surface-2); border-top:0; }
     tbody tr:hover { background:color-mix(in srgb,var(--garden) 8%,transparent); }
-    .tier { display:inline-flex; align-items:center; min-height:28px; padding:2px 9px; border:1px solid currentColor; border-radius:999px; font-size:.77rem; font-weight:500; white-space:nowrap; }
+    .tier { display:inline-flex; align-items:center; min-height:32px; padding:3px 10px; border:1px solid currentColor; border-radius:999px; font-size:1rem; font-weight:500; white-space:nowrap; }
     .tier-a,.tier-b { color:var(--brand-strong); } .tier-c { color:var(--warm-text); } .tier-d { color:var(--magenta); }
     .scenario-note { margin-top:14px; color:var(--muted); font-size:.92rem; }
     .filter-bar { display:flex; gap:8px; flex-wrap:wrap; margin:30px 0 14px; }
-    .filter-bar button { min-height:44px; padding:8px 15px; border:1px solid var(--garden); border-radius:8px; color:var(--ink); background:transparent; cursor:pointer; font-family:inherit; font-size:.9rem; font-weight:500; line-height:1.2; }
+    .filter-bar button { min-height:44px; padding:8px 15px; border:1px solid var(--garden); border-radius:8px; color:var(--ink); background:transparent; cursor:pointer; font-family:inherit; font-size:1rem; font-weight:500; line-height:1.2; }
     .filter-bar button:hover { background:var(--surface-2); }
     .filter-bar button[aria-pressed="true"] { color:var(--action-ink); background:var(--action-bg); border-color:var(--action-bg); }
     .filter-status { color:var(--muted); margin-bottom:30px; }
@@ -163,8 +163,9 @@
     .candidate-metrics > div { padding:18px 14px; border-right:1px solid var(--line); }
     .candidate-metrics > div:last-child { border-right:0; }
     .candidate-metrics strong { display:block; font:500 1.9rem/1 "IBM Plex Sans Thai Looped",sans-serif; color:var(--brand); font-variant-numeric:tabular-nums; }
-    .candidate-metrics span { color:var(--muted); font-size:.8rem; }
-    .metric-note { color:var(--muted); font-size:.83rem; margin:9px 0 0; }
+    .candidate-metrics span { color:var(--muted); font-size:1rem; font-weight:500; }
+    .metric-note { color:var(--muted); font-size:.875rem; margin:9px 0 0; }
+    .stress-test { margin:16px 0 0; padding:14px 16px; border-left:3px solid var(--magenta); background:var(--surface-2); color:var(--muted); }
     .decision-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin:28px 0; border:1px solid var(--line); }
     .decision-grid > div { padding:20px; border-right:1px solid var(--line); }
     .decision-grid > div:last-child { border-right:0; }
@@ -173,34 +174,34 @@
     .map-layout > *,.map-fallback { min-width:0; }
     .overview-map { margin:0 0 24px; border:1px solid var(--line); background:var(--canvas); border-radius:12px; overflow:hidden; }
     .overview-map svg { width:100%; max-height:460px; }
-    .overview-map figcaption { padding:13px 16px; color:var(--muted); font-size:.82rem; border-top:1px solid var(--line); }
+    .overview-map figcaption { padding:13px 16px; color:var(--muted); font-size:.875rem; border-top:1px solid var(--line); }
     .overview-axis { fill:none; stroke:var(--line); stroke-width:1; stroke-dasharray:3 5; }
     .overview-hit { fill:transparent; stroke:none; }
     .overview-dot { fill:var(--brand-strong); stroke:var(--surface); stroke-width:2.5; }
-    .overview-candidate text { fill:#fff; font:600 10px/1 sans-serif; text-anchor:middle; dominant-baseline:middle; pointer-events:none; }
+    .overview-candidate text { fill:#fff; font:600 11px/1 sans-serif; text-anchor:middle; dominant-baseline:middle; pointer-events:none; }
     html[data-theme="dark"] .overview-candidate text { fill:#1B2522; }
     @media (prefers-color-scheme:dark) { html:not([data-theme]) .overview-candidate text { fill:#1B2522; } }
     .map-policy { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin:-8px 0 28px; border:1px solid var(--line); background:var(--line); }
     .map-policy p { margin:0; padding:16px; background:var(--surface); color:var(--muted); font-size:.88rem; }
     .clean-map { margin:0; border:1px solid var(--line); background:var(--canvas); border-radius:12px; overflow:hidden; }
     .clean-map svg { width:100%; aspect-ratio:420/320; }
-    .clean-map figcaption { padding:14px 16px; color:var(--muted); font-size:.82rem; border-top:1px solid var(--line); }
+    .clean-map figcaption { padding:14px 16px; color:var(--muted); font-size:.875rem; border-top:1px solid var(--line); }
     .analysis-extent { fill:color-mix(in srgb,var(--garden) 9%,transparent); stroke:var(--garden); stroke-width:1.5; stroke-dasharray:4 5; }
     .candidate-center { fill:var(--brand-strong); stroke:var(--surface); stroke-width:2.5; }
     .marker-hit { fill:transparent; stroke:none; }
     .marker-shape { stroke:var(--surface); stroke-width:2.5; transition:transform .15s ease; transform-box:fill-box; transform-origin:center; }
     .competitor-marker:hover .marker-shape,.competitor-marker:focus .marker-shape { transform:scale(1.12); }
-    .competitor-marker text { fill:var(--marker-text); font:600 10px/1 sans-serif; text-anchor:middle; dominant-baseline:middle; pointer-events:none; }
+    .competitor-marker text { fill:var(--marker-text); font:600 11px/1 sans-serif; text-anchor:middle; dominant-baseline:middle; pointer-events:none; }
     .competitor-marker.impact-high text { fill:var(--marker-text-high); }
     .competitor-marker.impact-medium text { fill:var(--marker-text-garden); }
     .competitor-marker.impact-high .marker-shape { fill:var(--magenta); }
     .competitor-marker.impact-medium_high .marker-shape { fill:var(--warm); }
     .competitor-marker.impact-medium .marker-shape { fill:var(--garden); }
     .north path,.scale path { stroke:var(--muted); stroke-width:1.4; fill:none; }
-    .north text,.scale text { fill:var(--muted); font:500 10px/1 sans-serif; text-anchor:middle; }
+    .north text,.scale text { fill:var(--muted); font:500 11px/1 sans-serif; text-anchor:middle; }
     .scale text { text-anchor:start; }
     .map-fallback .table-scroll { max-height:360px; }
-    .map-fallback table { min-width:680px; font-size:.9rem; }
+    .map-fallback table { min-width:680px; font-size:1rem; }
     .map-fallback th,.map-fallback td { padding:10px 11px; }
     .map-key { display:grid; place-items:center; width:24px; height:24px; border-radius:50%; color:var(--marker-text); font-weight:600; }
     .map-key.impact-high { color:var(--marker-text-high); }
@@ -213,13 +214,13 @@
     summary small { display:block; color:var(--muted); margin-top:2px; }
     .chevron { width:9px; height:9px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform:rotate(45deg); transition:transform .15s ease; margin:0 8px 5px 16px; flex:0 0 auto; }
     details[open] > summary .chevron { transform:rotate(225deg); margin-bottom:-5px; }
-    .competitor-detail-body { padding:2px 12px 18px; font-size:.9rem; }
+    .competitor-detail-body { padding:2px 12px 18px; font-size:1rem; }
     .competitor-detail.withheld summary { color:var(--muted); }
     .guardrail { border-left:3px solid var(--magenta); padding-left:12px; color:var(--muted); }
     .source-links { padding-left:20px; margin:10px 0 0; }
     .source-links li { margin:6px 0; }
     .source-links a { overflow-wrap:anywhere; }
-    .source-links span { display:block; color:var(--muted); font-size:.8rem; }
+    .source-links span { display:block; color:var(--muted); font-size:.875rem; }
     .gap-hypothesis { margin:26px 0 18px; padding:18px 20px; background:var(--surface-2); border-left:3px solid var(--garden); }
     .gap-hypothesis small { color:var(--muted); }
     .evidence-disclosure { border:1px solid var(--line); border-radius:10px; overflow:hidden; }
@@ -231,9 +232,9 @@
     .evidence-body > div { padding-bottom:14px; border-bottom:1px solid var(--line); }
     .sources { columns:2; gap:36px; padding-left:20px; }
     .sources li { break-inside:avoid; margin:0 0 12px; overflow-wrap:anywhere; }
-    .sources span { display:block; color:var(--muted); font-size:.8rem; }
+    .sources span { display:block; color:var(--muted); font-size:.875rem; }
     .sources.release-sources { margin-top:28px; }
-    footer { border-top:1px solid var(--line); padding:34px 0 48px; color:var(--muted); font-size:.86rem; }
+    footer { border-top:1px solid var(--line); padding:34px 0 48px; color:var(--muted); font-size:.875rem; }
     .footer-inner { display:flex; justify-content:space-between; gap:24px; }
     @media (max-width:900px) {
       :root { --shell:min(100% - 28px,760px); }
@@ -259,7 +260,7 @@
       .candidate-metrics strong { font-size:1.55rem; }
       .evidence-body { grid-template-columns:1fr; padding:16px; }
       .sources { columns:1; } .footer-inner { display:block; }
-      .clean-map figcaption { font-size:.78rem; }
+      .clean-map figcaption { font-size:.875rem; }
     }
     @media (prefers-reduced-motion:reduce) {
       html { scroll-behavior:auto; } *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; animation:none!important; }
@@ -301,12 +302,12 @@
           <div>
             <p class="eyebrow">Venue Locale Insight · Release 1.6 · 28 ก.ค. 2026</p>
             <h1>อันดับฐานยังเดิม แต่คู่แข่งเปลี่ยนลำดับสิ่งที่ควรทำต่อ</h1>
-            <p class="lede">Release 1.6 รักษาคะแนน Top 10 ของ Release 1.5 แล้วเพิ่ม competitive-supply overlay แยกต่างหาก ผลเบื้องต้นชี้ว่า <strong>บางปะกอก</strong> เป็นทำเลเดียวที่ได้ Tier A สำหรับการตรวจเชิงรุก ขณะที่ผู้นำเดิมเผชิญ supply pressure สูง</p>
+            <p class="lede">Release 1.6 รักษาคะแนน Top 10 ของ Release 1.5 แล้วเพิ่ม competitive-supply overlay แยกต่างหาก ผลเบื้องต้นชี้ว่า <strong>บางปะกอก</strong> เป็นทำเลเดียวที่ได้ Provisional Tier A สำหรับการตรวจเชิงรุก ขณะที่ผู้นำเดิมเผชิญ supply pressure สูง</p>
             <div class="hero-facts"><span>10 analytical catchments</span><span>26.3154 km² เท่ากัน</span><span>23 operating venues ใน registry</span><span>ไม่มีถนน/รถไฟที่ lineage ไม่ครบ</span></div>
           </div>
           <div class="hero-score" data-recommendation-candidate="bang-pakok">
-            <strong>Tier A</strong><span>บางปะกอก · field-validation priority</span>
-            <p>ไม่ได้แปลว่าเป็น final investment winner แต่เป็นจุดเริ่มตรวจที่ competitive room และ evidence readiness สมดุลที่สุดใน overlay นี้</p>
+            <strong>Tier A</strong><span>บางปะกอก · provisional field-validation priority</span>
+            <p>ไม่ได้แปลว่าเป็น final investment winner และยังไม่เสถียรต่อ competitor census: แบบทดสอบคู่แข่งตรงระดับ high เพิ่ม 1 แห่งทำให้ action tier ลดเป็น Tier D</p>
           </div>
         </div>
         <div class="caveat" data-caveat-id="baseline-not-final-investment-rank" data-caveat-severity="decision-changing" data-caveat-visibility="inline">
@@ -417,6 +418,7 @@
             <div><strong>7</strong><span>คู่แข่งที่ยืนยัน</span></div>
           </div>
           <p class="metric-note">* ดัชนี 0–100 ที่ derive จาก minimum verified set เพื่อกำหนด action tier เท่านั้น ยังไม่แทนคะแนนฐานหรือเป็น final reranking</p>
+
           <div class="decision-grid">
             <div><p class="label">เหตุผลจาก Release 1.5</p><p>catchment ไม่พึ่งพื้นที่ย่อยเดียว และสัญญาณ resident/visitor แข็ง</p></div>
             <div><p class="label">สิ่งที่คู่แข่งเปลี่ยน</p><p>คู่แข่งตรงภายใน 300 ม. และศูนย์ขนาดใหญ่หลายแห่งทำให้สิทธิ์ไซต์หรือจุดต่างต้องชัดมาก</p></div>
@@ -492,6 +494,7 @@
             <div><strong>4</strong><span>คู่แข่งที่ยืนยัน</span></div>
           </div>
           <p class="metric-note">* ดัชนี 0–100 ที่ derive จาก minimum verified set เพื่อกำหนด action tier เท่านั้น ยังไม่แทนคะแนนฐานหรือเป็น final reranking</p>
+
           <div class="decision-grid">
             <div><p class="label">เหตุผลจาก Release 1.5</p><p>PMF สูงและ traffic balance ดี</p></div>
             <div><p class="label">สิ่งที่คู่แข่งเปลี่ยน</p><p>KINGSQUARE วางตัวเป็น community mall โดยตรง ขณะที่ Terminal21 Rama 3 และ Central Rama 3 เติม supply กว้าง</p></div>
@@ -567,6 +570,7 @@
             <div><strong>5</strong><span>คู่แข่งที่ยืนยัน</span></div>
           </div>
           <p class="metric-note">* ดัชนี 0–100 ที่ derive จาก minimum verified set เพื่อกำหนด action tier เท่านั้น ยังไม่แทนคะแนนฐานหรือเป็น final reranking</p>
+
           <div class="decision-grid">
             <div><p class="label">เหตุผลจาก Release 1.5</p><p>resident-led และ fit สมดุล</p></div>
             <div><p class="label">สิ่งที่คู่แข่งเปลี่ยน</p><p>จุดกลางเชิงวิเคราะห์เกือบซ้อน Riverside Plaza จึงอาจเป็น artifact ของ candidate center</p></div>
@@ -642,6 +646,7 @@
             <div><strong>7</strong><span>คู่แข่งที่ยืนยัน</span></div>
           </div>
           <p class="metric-note">* ดัชนี 0–100 ที่ derive จาก minimum verified set เพื่อกำหนด action tier เท่านั้น ยังไม่แทนคะแนนฐานหรือเป็น final reranking</p>
+
           <div class="decision-grid">
             <div><p class="label">เหตุผลจาก Release 1.5</p><p>traffic breadth และ experience fit ดี</p></div>
             <div><p class="label">สิ่งที่คู่แข่งเปลี่ยน</p><p>วงกลมครอบ supply หลายฝั่งแม่น้ำ แต่โมเดลยังไม่คิดสะพาน เรือ และเวลาเดินทางจริง</p></div>
@@ -717,6 +722,7 @@
             <div><strong>3</strong><span>คู่แข่งที่ยืนยัน</span></div>
           </div>
           <p class="metric-note">* ดัชนี 0–100 ที่ derive จาก minimum verified set เพื่อกำหนด action tier เท่านั้น ยังไม่แทนคะแนนฐานหรือเป็น final reranking</p>
+
           <div class="decision-grid">
             <div><p class="label">เหตุผลจาก Release 1.5</p><p>Offering PMF และ Experience Fit สูงสุด</p></div>
             <div><p class="label">สิ่งที่คู่แข่งเปลี่ยน</p><p>The Mall Lifestore Tha Phra อยู่ใกล้มาก และ Riverside Plaza อยู่ในวงเดียวกัน</p></div>
@@ -792,6 +798,7 @@
             <div><strong>2</strong><span>คู่แข่งที่ยืนยัน</span></div>
           </div>
           <p class="metric-note">* ดัชนี 0–100 ที่ derive จาก minimum verified set เพื่อกำหนด action tier เท่านั้น ยังไม่แทนคะแนนฐานหรือเป็น final reranking</p>
+          <p class="stress-test" data-competition-stress-test="bang-pakok-plus-one-direct-high-impact" data-modeled-room="14.88" data-modeled-tier="D"><strong>Provisional Tier A:</strong> แบบทดสอบที่ไม่ใช่อันดับหลักสมมติว่า census พบ community mall คู่แข่งตรงระดับ high เพิ่มอีก 1 แห่งในระยะ 1.0 กม. จะทำให้ competitive room ลดจาก 47.04 เหลือ 14.88 และ action tier เปลี่ยนเป็น Tier D. จึงต้องปิด competitor census ก่อนถือว่า Tier A มีเสถียรภาพ</p>
           <div class="decision-grid">
             <div><p class="label">เหตุผลจาก Release 1.5</p><p>routine/family fit ดี และอันดับฐานคงที่</p></div>
             <div><p class="label">สิ่งที่คู่แข่งเปลี่ยน</p><p>Terminal21 Rama 3 อยู่ใกล้ แต่ supply ที่ยืนยันในวงยังเบากว่ากลุ่มอื่น; registry ยังเป็น minimum verified set</p></div>
@@ -867,6 +874,7 @@
             <div><strong>3</strong><span>คู่แข่งที่ยืนยัน</span></div>
           </div>
           <p class="metric-note">* ดัชนี 0–100 ที่ derive จาก minimum verified set เพื่อกำหนด action tier เท่านั้น ยังไม่แทนคะแนนฐานหรือเป็น final reranking</p>
+
           <div class="decision-grid">
             <div><p class="label">เหตุผลจาก Release 1.5</p><p>visitor/connector signal รองรับ demand</p></div>
             <div><p class="label">สิ่งที่คู่แข่งเปลี่ยน</p><p>Tha Maharaj อยู่ใกล้ และแม่น้ำ/เรือ/สะพานทำให้ระยะเส้นตรงอาจแปลความผิด</p></div>
@@ -942,6 +950,7 @@
             <div><strong>6</strong><span>คู่แข่งที่ยืนยัน</span></div>
           </div>
           <p class="metric-note">* ดัชนี 0–100 ที่ derive จาก minimum verified set เพื่อกำหนด action tier เท่านั้น ยังไม่แทนคะแนนฐานหรือเป็น final reranking</p>
+
           <div class="decision-grid">
             <div><p class="label">เหตุผลจาก Release 1.5</p><p>visitor/daytime signal เด่น</p></div>
             <div><p class="label">สิ่งที่คู่แข่งเปลี่ยน</p><p>minimum verified set พบศูนย์ impact สูง 6 แห่งในระยะไม่ถึง 1 กม. และ parcel economics ตึง</p></div>
@@ -1017,6 +1026,7 @@
             <div><strong>1</strong><span>คู่แข่งที่ยืนยัน</span></div>
           </div>
           <p class="metric-note">* ดัชนี 0–100 ที่ derive จาก minimum verified set เพื่อกำหนด action tier เท่านั้น ยังไม่แทนคะแนนฐานหรือเป็น final reranking</p>
+
           <div class="decision-grid">
             <div><p class="label">เหตุผลจาก Release 1.5</p><p>traffic index ยังแข่งขันได้และ land pressure ต่ำ</p></div>
             <div><p class="label">สิ่งที่คู่แข่งเปลี่ยน</p><p>พบ Market Place Pracha Uthit ในวง แต่พิกัด host ยังมาจาก tenant proxy จึงไม่วาดบนแผนที่</p></div>
@@ -1092,6 +1102,7 @@
             <div><strong>9</strong><span>คู่แข่งที่ยืนยัน</span></div>
           </div>
           <p class="metric-note">* ดัชนี 0–100 ที่ derive จาก minimum verified set เพื่อกำหนด action tier เท่านั้น ยังไม่แทนคะแนนฐานหรือเป็น final reranking</p>
+
           <div class="decision-grid">
             <div><p class="label">เหตุผลจาก Release 1.5</p><p>visitor และ daytime proxy สูง</p></div>
             <div><p class="label">สิ่งที่คู่แข่งเปลี่ยน</p><p>supply หนาแน่นทั้ง Rama 9–Ratchada และ Siam edge; registry ยังเป็น minimum verified set</p></div>

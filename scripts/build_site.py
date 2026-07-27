@@ -16,6 +16,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ANALYSIS = ROOT / "analysis"
 OUT = ROOT / "index.html"
+ARCHIVE = (
+    ROOT
+    / "PARC_Bangna_Bangkok_Top_10_Release_1_6_Competitive_Report_2026-07-28.html"
+)
 
 
 def load(name: str):
@@ -35,6 +39,9 @@ candidate_metrics = load("candidate-metrics.json")
 canonical = {item["candidate_id"]: item for item in screening["candidates"]}
 scenario_by_id = {item["candidate_id"]: item for item in scenario["candidates"]}
 competition = {item["candidate_id"]: item for item in breakdown["candidates"]}
+stress_tests = {
+    item["candidate_id"]: item for item in breakdown.get("stress_tests", [])
+}
 competitors = {item["competitor_id"]: item for item in registry["competitors"]}
 centers = {
     item["candidate_id"]: item["center_wgs84"]
@@ -389,6 +396,22 @@ for candidate in screening["candidates"]:
         if cid == "samre"
         else ""
     )
+    stress_test = stress_tests.get(cid)
+    stress_note = ""
+    if stress_test:
+        stress_note = (
+            '<p class="stress-test" '
+            f'data-competition-stress-test="{esc(stress_test["id"])}" '
+            f'data-modeled-room="{stress_test["modeled_competitive_room_score"]:.2f}" '
+            f'data-modeled-tier="{esc(stress_test["modeled_action_tier"])}">'
+            '<strong>Provisional Tier A:</strong> '
+            "แบบทดสอบที่ไม่ใช่อันดับหลักสมมติว่า census พบ community mall "
+            "คู่แข่งตรงระดับ high เพิ่มอีก 1 แห่งในระยะ 1.0 กม. จะทำให้ "
+            f'competitive room ลดจาก {comp["competitive_room_score"]:.2f} '
+            f'เหลือ {stress_test["modeled_competitive_room_score"]:.2f} '
+            f'และ action tier เปลี่ยนเป็น Tier {esc(stress_test["modeled_action_tier"])}. '
+            "จึงต้องปิด competitor census ก่อนถือว่า Tier A มีเสถียรภาพ</p>"
+        )
 
     comparison_rows.append(
         f'<tr data-filter-candidate="{esc(cid)}" data-action-group="{group}">'
@@ -422,6 +445,7 @@ for candidate in screening["candidates"]:
             <div><strong>{comp["verified_competitor_count"]}</strong><span>คู่แข่งที่ยืนยัน</span></div>
           </div>
           <p class="metric-note">* ดัชนี 0–100 ที่ derive จาก minimum verified set เพื่อกำหนด action tier เท่านั้น ยังไม่แทนคะแนนฐานหรือเป็น final reranking</p>
+          {stress_note}
           <div class="decision-grid">
             <div><p class="label">เหตุผลจาก Release 1.5</p><p>{esc(context["baseline"])}</p></div>
             <div><p class="label">สิ่งที่คู่แข่งเปลี่ยน</p><p>{esc(context["gate"])}</p></div>
@@ -578,7 +602,7 @@ html_doc = f"""<!DOCTYPE html>
     .brand img {{ width:126px; height:auto; }}
     .header-tools {{ display:flex; align-items:center; gap:18px; min-width:0; }}
     nav {{ display:flex; gap:4px; overflow:auto; scrollbar-width:none; }}
-    nav a {{ display:flex; min-height:44px; align-items:center; padding:6px 10px; color:var(--muted); text-decoration:none; font-size:.88rem; white-space:nowrap; }}
+    nav a {{ display:flex; min-height:44px; align-items:center; padding:6px 10px; color:var(--muted); text-decoration:none; font-size:1rem; font-weight:500; white-space:nowrap; }}
     nav a:hover {{ color:var(--ink); }}
     .theme-cycle {{
       width:48px; height:48px; flex:0 0 48px; border:1px solid var(--garden); border-radius:50%;
@@ -590,7 +614,7 @@ html_doc = f"""<!DOCTYPE html>
     section {{ padding:80px 0; }}
     .hero {{ padding-top:86px; background:linear-gradient(135deg,var(--canvas),color-mix(in srgb,var(--garden) 12%,var(--canvas))); border-bottom:1px solid var(--line); }}
     .hero-grid {{ display:grid; grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr); gap:clamp(40px,7vw,100px); align-items:end; }}
-    .eyebrow,.label {{ margin:0 0 8px; color:var(--brand-strong); font-weight:500; font-size:.82rem; letter-spacing:0; text-transform:none; }}
+    .eyebrow,.label {{ margin:0 0 8px; color:var(--brand-strong); font-weight:500; font-size:1rem; letter-spacing:0; text-transform:none; }}
     .hero .lede {{ max-width:70ch; font-size:clamp(1.05rem,2vw,1.25rem); color:var(--muted); }}
     .hero-facts {{ display:flex; flex-wrap:wrap; gap:10px 24px; color:var(--muted); font-size:.92rem; margin-top:28px; }}
     .hero-score {{ border-left:1px solid var(--line); padding-left:34px; }}
@@ -613,13 +637,13 @@ html_doc = f"""<!DOCTYPE html>
     table {{ width:100%; border-collapse:collapse; min-width:760px; font-variant-numeric:tabular-nums; }}
     caption {{ text-align:left; padding:14px 16px; color:var(--muted); font-size:.88rem; }}
     th,td {{ text-align:left; padding:13px 15px; border-top:1px solid var(--line); vertical-align:top; }}
-    thead th {{ color:var(--muted); font-size:.89rem; text-transform:none; letter-spacing:0; background:var(--surface-2); border-top:0; }}
+    thead th {{ color:var(--muted); font-size:1rem; font-weight:500; text-transform:none; letter-spacing:0; background:var(--surface-2); border-top:0; }}
     tbody tr:hover {{ background:color-mix(in srgb,var(--garden) 8%,transparent); }}
-    .tier {{ display:inline-flex; align-items:center; min-height:28px; padding:2px 9px; border:1px solid currentColor; border-radius:999px; font-size:.77rem; font-weight:500; white-space:nowrap; }}
+    .tier {{ display:inline-flex; align-items:center; min-height:32px; padding:3px 10px; border:1px solid currentColor; border-radius:999px; font-size:1rem; font-weight:500; white-space:nowrap; }}
     .tier-a,.tier-b {{ color:var(--brand-strong); }} .tier-c {{ color:var(--warm-text); }} .tier-d {{ color:var(--magenta); }}
     .scenario-note {{ margin-top:14px; color:var(--muted); font-size:.92rem; }}
     .filter-bar {{ display:flex; gap:8px; flex-wrap:wrap; margin:30px 0 14px; }}
-    .filter-bar button {{ min-height:44px; padding:8px 15px; border:1px solid var(--garden); border-radius:8px; color:var(--ink); background:transparent; cursor:pointer; font-family:inherit; font-size:.9rem; font-weight:500; line-height:1.2; }}
+    .filter-bar button {{ min-height:44px; padding:8px 15px; border:1px solid var(--garden); border-radius:8px; color:var(--ink); background:transparent; cursor:pointer; font-family:inherit; font-size:1rem; font-weight:500; line-height:1.2; }}
     .filter-bar button:hover {{ background:var(--surface-2); }}
     .filter-bar button[aria-pressed="true"] {{ color:var(--action-ink); background:var(--action-bg); border-color:var(--action-bg); }}
     .filter-status {{ color:var(--muted); margin-bottom:30px; }}
@@ -634,8 +658,9 @@ html_doc = f"""<!DOCTYPE html>
     .candidate-metrics > div {{ padding:18px 14px; border-right:1px solid var(--line); }}
     .candidate-metrics > div:last-child {{ border-right:0; }}
     .candidate-metrics strong {{ display:block; font:500 1.9rem/1 "IBM Plex Sans Thai Looped",sans-serif; color:var(--brand); font-variant-numeric:tabular-nums; }}
-    .candidate-metrics span {{ color:var(--muted); font-size:.8rem; }}
-    .metric-note {{ color:var(--muted); font-size:.83rem; margin:9px 0 0; }}
+    .candidate-metrics span {{ color:var(--muted); font-size:1rem; font-weight:500; }}
+    .metric-note {{ color:var(--muted); font-size:.875rem; margin:9px 0 0; }}
+    .stress-test {{ margin:16px 0 0; padding:14px 16px; border-left:3px solid var(--magenta); background:var(--surface-2); color:var(--muted); }}
     .decision-grid {{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin:28px 0; border:1px solid var(--line); }}
     .decision-grid > div {{ padding:20px; border-right:1px solid var(--line); }}
     .decision-grid > div:last-child {{ border-right:0; }}
@@ -644,34 +669,34 @@ html_doc = f"""<!DOCTYPE html>
     .map-layout > *,.map-fallback {{ min-width:0; }}
     .overview-map {{ margin:0 0 24px; border:1px solid var(--line); background:var(--canvas); border-radius:12px; overflow:hidden; }}
     .overview-map svg {{ width:100%; max-height:460px; }}
-    .overview-map figcaption {{ padding:13px 16px; color:var(--muted); font-size:.82rem; border-top:1px solid var(--line); }}
+    .overview-map figcaption {{ padding:13px 16px; color:var(--muted); font-size:.875rem; border-top:1px solid var(--line); }}
     .overview-axis {{ fill:none; stroke:var(--line); stroke-width:1; stroke-dasharray:3 5; }}
     .overview-hit {{ fill:transparent; stroke:none; }}
     .overview-dot {{ fill:var(--brand-strong); stroke:var(--surface); stroke-width:2.5; }}
-    .overview-candidate text {{ fill:#fff; font:600 10px/1 sans-serif; text-anchor:middle; dominant-baseline:middle; pointer-events:none; }}
+    .overview-candidate text {{ fill:#fff; font:600 11px/1 sans-serif; text-anchor:middle; dominant-baseline:middle; pointer-events:none; }}
     html[data-theme="dark"] .overview-candidate text {{ fill:#1B2522; }}
     @media (prefers-color-scheme:dark) {{ html:not([data-theme]) .overview-candidate text {{ fill:#1B2522; }} }}
     .map-policy {{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin:-8px 0 28px; border:1px solid var(--line); background:var(--line); }}
     .map-policy p {{ margin:0; padding:16px; background:var(--surface); color:var(--muted); font-size:.88rem; }}
     .clean-map {{ margin:0; border:1px solid var(--line); background:var(--canvas); border-radius:12px; overflow:hidden; }}
     .clean-map svg {{ width:100%; aspect-ratio:420/320; }}
-    .clean-map figcaption {{ padding:14px 16px; color:var(--muted); font-size:.82rem; border-top:1px solid var(--line); }}
+    .clean-map figcaption {{ padding:14px 16px; color:var(--muted); font-size:.875rem; border-top:1px solid var(--line); }}
     .analysis-extent {{ fill:color-mix(in srgb,var(--garden) 9%,transparent); stroke:var(--garden); stroke-width:1.5; stroke-dasharray:4 5; }}
     .candidate-center {{ fill:var(--brand-strong); stroke:var(--surface); stroke-width:2.5; }}
     .marker-hit {{ fill:transparent; stroke:none; }}
     .marker-shape {{ stroke:var(--surface); stroke-width:2.5; transition:transform .15s ease; transform-box:fill-box; transform-origin:center; }}
     .competitor-marker:hover .marker-shape,.competitor-marker:focus .marker-shape {{ transform:scale(1.12); }}
-    .competitor-marker text {{ fill:var(--marker-text); font:600 10px/1 sans-serif; text-anchor:middle; dominant-baseline:middle; pointer-events:none; }}
+    .competitor-marker text {{ fill:var(--marker-text); font:600 11px/1 sans-serif; text-anchor:middle; dominant-baseline:middle; pointer-events:none; }}
     .competitor-marker.impact-high text {{ fill:var(--marker-text-high); }}
     .competitor-marker.impact-medium text {{ fill:var(--marker-text-garden); }}
     .competitor-marker.impact-high .marker-shape {{ fill:var(--magenta); }}
     .competitor-marker.impact-medium_high .marker-shape {{ fill:var(--warm); }}
     .competitor-marker.impact-medium .marker-shape {{ fill:var(--garden); }}
     .north path,.scale path {{ stroke:var(--muted); stroke-width:1.4; fill:none; }}
-    .north text,.scale text {{ fill:var(--muted); font:500 10px/1 sans-serif; text-anchor:middle; }}
+    .north text,.scale text {{ fill:var(--muted); font:500 11px/1 sans-serif; text-anchor:middle; }}
     .scale text {{ text-anchor:start; }}
     .map-fallback .table-scroll {{ max-height:360px; }}
-    .map-fallback table {{ min-width:680px; font-size:.9rem; }}
+    .map-fallback table {{ min-width:680px; font-size:1rem; }}
     .map-fallback th,.map-fallback td {{ padding:10px 11px; }}
     .map-key {{ display:grid; place-items:center; width:24px; height:24px; border-radius:50%; color:var(--marker-text); font-weight:600; }}
     .map-key.impact-high {{ color:var(--marker-text-high); }}
@@ -684,13 +709,13 @@ html_doc = f"""<!DOCTYPE html>
     summary small {{ display:block; color:var(--muted); margin-top:2px; }}
     .chevron {{ width:9px; height:9px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform:rotate(45deg); transition:transform .15s ease; margin:0 8px 5px 16px; flex:0 0 auto; }}
     details[open] > summary .chevron {{ transform:rotate(225deg); margin-bottom:-5px; }}
-    .competitor-detail-body {{ padding:2px 12px 18px; font-size:.9rem; }}
+    .competitor-detail-body {{ padding:2px 12px 18px; font-size:1rem; }}
     .competitor-detail.withheld summary {{ color:var(--muted); }}
     .guardrail {{ border-left:3px solid var(--magenta); padding-left:12px; color:var(--muted); }}
     .source-links {{ padding-left:20px; margin:10px 0 0; }}
     .source-links li {{ margin:6px 0; }}
     .source-links a {{ overflow-wrap:anywhere; }}
-    .source-links span {{ display:block; color:var(--muted); font-size:.8rem; }}
+    .source-links span {{ display:block; color:var(--muted); font-size:.875rem; }}
     .gap-hypothesis {{ margin:26px 0 18px; padding:18px 20px; background:var(--surface-2); border-left:3px solid var(--garden); }}
     .gap-hypothesis small {{ color:var(--muted); }}
     .evidence-disclosure {{ border:1px solid var(--line); border-radius:10px; overflow:hidden; }}
@@ -702,9 +727,9 @@ html_doc = f"""<!DOCTYPE html>
     .evidence-body > div {{ padding-bottom:14px; border-bottom:1px solid var(--line); }}
     .sources {{ columns:2; gap:36px; padding-left:20px; }}
     .sources li {{ break-inside:avoid; margin:0 0 12px; overflow-wrap:anywhere; }}
-    .sources span {{ display:block; color:var(--muted); font-size:.8rem; }}
+    .sources span {{ display:block; color:var(--muted); font-size:.875rem; }}
     .sources.release-sources {{ margin-top:28px; }}
-    footer {{ border-top:1px solid var(--line); padding:34px 0 48px; color:var(--muted); font-size:.86rem; }}
+    footer {{ border-top:1px solid var(--line); padding:34px 0 48px; color:var(--muted); font-size:.875rem; }}
     .footer-inner {{ display:flex; justify-content:space-between; gap:24px; }}
     @media (max-width:900px) {{
       :root {{ --shell:min(100% - 28px,760px); }}
@@ -730,7 +755,7 @@ html_doc = f"""<!DOCTYPE html>
       .candidate-metrics strong {{ font-size:1.55rem; }}
       .evidence-body {{ grid-template-columns:1fr; padding:16px; }}
       .sources {{ columns:1; }} .footer-inner {{ display:block; }}
-      .clean-map figcaption {{ font-size:.78rem; }}
+      .clean-map figcaption {{ font-size:.875rem; }}
     }}
     @media (prefers-reduced-motion:reduce) {{
       html {{ scroll-behavior:auto; }} *,*::before,*::after {{ scroll-behavior:auto!important; transition:none!important; animation:none!important; }}
@@ -772,12 +797,12 @@ html_doc = f"""<!DOCTYPE html>
           <div>
             <p class="eyebrow">Venue Locale Insight · Release 1.6 · 28 ก.ค. 2026</p>
             <h1>อันดับฐานยังเดิม แต่คู่แข่งเปลี่ยนลำดับสิ่งที่ควรทำต่อ</h1>
-            <p class="lede">Release 1.6 รักษาคะแนน Top 10 ของ Release 1.5 แล้วเพิ่ม competitive-supply overlay แยกต่างหาก ผลเบื้องต้นชี้ว่า <strong>บางปะกอก</strong> เป็นทำเลเดียวที่ได้ Tier A สำหรับการตรวจเชิงรุก ขณะที่ผู้นำเดิมเผชิญ supply pressure สูง</p>
+            <p class="lede">Release 1.6 รักษาคะแนน Top 10 ของ Release 1.5 แล้วเพิ่ม competitive-supply overlay แยกต่างหาก ผลเบื้องต้นชี้ว่า <strong>บางปะกอก</strong> เป็นทำเลเดียวที่ได้ Provisional Tier A สำหรับการตรวจเชิงรุก ขณะที่ผู้นำเดิมเผชิญ supply pressure สูง</p>
             <div class="hero-facts"><span>10 analytical catchments</span><span>26.3154 km² เท่ากัน</span><span>23 operating venues ใน registry</span><span>ไม่มีถนน/รถไฟที่ lineage ไม่ครบ</span></div>
           </div>
           <div class="hero-score" data-recommendation-candidate="bang-pakok">
-            <strong>Tier A</strong><span>บางปะกอก · field-validation priority</span>
-            <p>ไม่ได้แปลว่าเป็น final investment winner แต่เป็นจุดเริ่มตรวจที่ competitive room และ evidence readiness สมดุลที่สุดใน overlay นี้</p>
+            <strong>Tier A</strong><span>บางปะกอก · provisional field-validation priority</span>
+            <p>ไม่ได้แปลว่าเป็น final investment winner และยังไม่เสถียรต่อ competitor census: แบบทดสอบคู่แข่งตรงระดับ high เพิ่ม 1 แห่งทำให้ action tier ลดเป็น Tier D</p>
           </div>
         </div>
         <div class="caveat" data-caveat-id="baseline-not-final-investment-rank" data-caveat-severity="decision-changing" data-caveat-visibility="inline">
@@ -1008,4 +1033,6 @@ html_doc = f"""<!DOCTYPE html>
 
 clean_html = "\n".join(line.rstrip() for line in html_doc.splitlines()) + "\n"
 OUT.write_text(clean_html, encoding="utf-8")
+ARCHIVE.write_text(clean_html, encoding="utf-8")
 print(OUT)
+print(ARCHIVE)
