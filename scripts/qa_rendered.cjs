@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require("fs");
+const crypto = require("crypto");
 const http = require("http");
 const path = require("path");
 const { chromium } = require("playwright");
@@ -419,6 +420,10 @@ async function main() {
     checked_at: new Date().toISOString(),
     target: EXTERNAL_BASE_URL ? "production" : "local",
     base_url: baseURL,
+    release_index_sha256: crypto
+      .createHash("sha256")
+      .update(fs.readFileSync(path.join(ROOT, "index.html")))
+      .digest("hex"),
     chromium: await browser.version(),
     viewports: {},
     theme_cycles: {},
@@ -494,6 +499,10 @@ async function main() {
 }
 
 main().catch((error) => {
+  if (error.message.includes("Set PARC_CHROMIUM_EXECUTABLE")) {
+    console.error(`FAIL: ${error.stack || error.message}`);
+    process.exit(1);
+  }
   fs.mkdirSync(QA_DIR, { recursive: true });
   fs.writeFileSync(
     path.join(QA_DIR, "rendered-qa-results.json"),

@@ -2,9 +2,10 @@
 
 **Pre-publish status:** PASS
 **Post-publish status:** PASS
-**Production rendered check:** 28 July 2026, 03:54 ICT
+**Production rendered check:** 28 July 2026, 04:13 ICT
 **Browser:** Chromium 149.0.7827.0
 **Production URL:** <https://montri-th.github.io/top10locations-like-parcbn/>
+**Content commit:** `7025b5fdab3bc4f40fea66e3eec664d4190138e1`
 
 ## Release scope checked
 
@@ -17,6 +18,7 @@
 - one System / Light / Dark cycle control
 - transparent positive and reverse PARC logo derivatives
 - named HTML artifact byte-identical to `index.html`
+- one noncanonical Bang Pakok competitor-census stress test
 
 ## Contract and static checks
 
@@ -36,7 +38,7 @@
 
 ## Rendered matrix
 
-Rendered in Chromium at 320, 375, 768, 1024, and 1440 CSS pixels.
+The full release matrix—including reduced motion, 200% text zoom, print, and no-JavaScript checks—ran in Chromium at 320, 375, 768, 1024, and 1440 CSS pixels. After the final typography and stress-test hardening, Production responsive smoke ran at 320, 390, 768, 1024, and 1440 CSS pixels; filter, theme, marker-open, Escape, and focus-return interactions were repeated on the final Production hash.
 
 - no page-level horizontal overflow;
 - 44 px minimum targets for theme, filters, disclosures, and marker hit areas;
@@ -44,6 +46,8 @@ Rendered in Chromium at 320, 375, 768, 1024, and 1440 CSS pixels.
 - Anuphan 300 and IBM Plex Sans Thai Looped 400/500 loaded from local WOFF2 assets;
 - Thai headings use zero tracking;
 - 18 px body text;
+- 16 px functional navigation, filter, table-heading, tier, and data labels;
+- 11 px numbered map/scale labels, matching the map manifest;
 - screen-reader map titles/descriptions and table fallbacks resolve;
 - markers retain numbered non-colour encoding;
 - core reading content remains available with JavaScript disabled;
@@ -88,10 +92,12 @@ Visual inspection covered mobile navigation and filters, one full candidate card
 
 | Artifact | SHA-256 |
 |---|---|
-| `index.html` | `b5d3444cdb42f5058e22e43d8b7a429ec3594b54b17ac8546577e5f033bc3f4f` |
-| named Release 1.6 HTML | `b5d3444cdb42f5058e22e43d8b7a429ec3594b54b17ac8546577e5f033bc3f4f` |
+| `index.html` | `fb2e31fb1c0ed469757dec2b7a5202e4138e000e8212b8896271fbee5a86a572` |
+| named Release 1.6 HTML | `fb2e31fb1c0ed469757dec2b7a5202e4138e000e8212b8896271fbee5a86a572` |
+| full analysis and UX/UI Markdown | `73e672eafea04bddfeb8c939a3df5b241fcfb0735a0d44c98963f4a147887241` |
+| competition score breakdown | `a71a9ca2bd3477ed791e417e36ffcea32c9ffa5b768afd2855d8c8609a111922` |
 | `analysis/location-payload.json` | `29717e2503af1a09cab53c2b4b1cbb75096f8ffc6dcd9c2e49f27cbbefa27a14` |
-| `analysis/map-manifest.json` | `b13b1c8fb4be89cfa2eb2a57a1c62fb09e74c2858f9d05c1bccd9a74e24afa3c` |
+| `analysis/map-manifest.json` | `06eb16479af8842fbb55fdbedd1ec3f8c10a1a3157c72d2302ccb24360427cf7` |
 | `analysis/competitor-registry.public.json` | `6cd94958f72183815f76bd7748253b32676e8acc69e855f264d3fce5eb4f9336` |
 | positive logo | `ab843d885426c8365afb3958b137e15f3e4a4d7f23abbe5b1a572e850688e755` |
 | reverse logo | `dab33a928acb08db8d4317dffb903eccd5be53c89efe50365df6a9c44593990c` |
@@ -100,7 +106,7 @@ The production content deployment served `index.html` and the named HTML with th
 
 ## Post-publish gates
 
-- [x] Production serves the approved content commit `6e372f7`.
+- [x] Production serves the approved content commit `7025b5f`.
 - [x] Production `index.html` hash matches the final local artifact.
 - [x] Logo, font, JSON, payload, manifest, and report assets return successfully.
 - [x] Production interaction smoke test passes.

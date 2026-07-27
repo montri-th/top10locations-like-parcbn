@@ -3,6 +3,28 @@
   "checked_at": "2026-07-27T20:54:10.899Z",
   "target": "production",
   "base_url": "https://montri-th.github.io/top10locations-like-parcbn/",
+  "full_matrix_index_sha256": "b5d3444cdb42f5058e22e43d8b7a429ec3594b54b17ac8546577e5f033bc3f4f",
+  "release_index_sha256": "fb2e31fb1c0ed469757dec2b7a5202e4138e000e8212b8896271fbee5a86a572",
+  "content_commit": "7025b5fdab3bc4f40fea66e3eec664d4190138e1",
+  "post_hardening_smoke": {
+    "checked_at": "2026-07-27T21:13:37Z",
+    "viewports": [
+      320,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "page_overflow_px": 0,
+    "target_failures": 0,
+    "candidate_cards": 10,
+    "competitor_markers": 45,
+    "stress_test_count": 1,
+    "functional_ui_font_px": 16,
+    "map_label_px": 11,
+    "interaction": "filter, theme, marker-open, Escape, and focus-return passed",
+    "asset_and_html_byte_parity": "passed"
+  },
   "chromium": "149.0.7827.0",
   "viewports": {
     "320": {

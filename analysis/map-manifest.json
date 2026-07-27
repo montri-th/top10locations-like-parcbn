@@ -2884,9 +2884,9 @@
     }
   },
   "qa": {
-    "status": "pre_publish_pass",
+    "status": "post_publish_pass",
     "evidence": "qa/rendered-qa-results.json",
-    "checked_at": "2026-07-27T20:54:10.899Z",
+    "checked_at": "2026-07-27T21:13:37Z",
     "orphan_dot_count": 0,
     "keyboard_access": true,
     "visible_focus": true,
@@ -2899,7 +2899,7 @@
     "light_dark_checked": true,
     "responsive_widths": [
       320,
-      375,
+      390,
       768,
       1024,
       1440
@@ -2908,6 +2908,6 @@
     "min_touch_target_px": 44,
     "text_contrast_ratio": 4.5,
     "non_text_contrast_ratio": 3,
-    "note": "Rendered pre-publish QA passed; post-publish production QA remains required."
+    "note": "Rendered pre-publish and post-publish Production QA passed; the recorded Production index hash matches this release."
   }
 }

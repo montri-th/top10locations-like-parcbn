@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import importlib.util
 import json
 import os
@@ -235,14 +236,25 @@ def main() -> int:
             == RENDERED_QA_FLAGS,
             "pending manifest must leave all rendered flags false",
         )
-    elif qa_status == "pre_publish_pass":
+    elif qa_status in {"pre_publish_pass", "post_publish_pass"}:
         require(
             all(manifest["qa"][field] is True for field in RENDERED_QA_FLAGS),
             "passed manifest must set all rendered flags true",
         )
         evidence_path = ROOT / manifest["qa"]["evidence"]
         require(evidence_path.exists(), "rendered QA evidence file")
-        require(load(evidence_path).get("status") == "PASS", "rendered QA evidence status")
+        evidence = load(evidence_path)
+        require(evidence.get("status") == "PASS", "rendered QA evidence status")
+        if qa_status == "post_publish_pass":
+            require(
+                evidence.get("target") == "production",
+                "post-publish manifest requires Production QA evidence",
+            )
+            require(
+                evidence.get("release_index_sha256")
+                == hashlib.sha256((ROOT / "index.html").read_bytes()).hexdigest(),
+                "post-publish evidence/index hash mismatch",
+            )
     else:
         raise AssertionError(f"unsupported QA status: {qa_status}")
 

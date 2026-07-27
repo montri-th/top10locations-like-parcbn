@@ -8,6 +8,7 @@ is attached only as an explicitly non-canonical scenario.
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -97,6 +98,17 @@ def build() -> tuple[dict, dict]:
         else {}
     )
     rendered_qa_pass = rendered_qa.get("status") == "PASS"
+    index_path = ROOT / "index.html"
+    index_sha256 = (
+        hashlib.sha256(index_path.read_bytes()).hexdigest()
+        if index_path.exists()
+        else None
+    )
+    post_publish_pass = (
+        rendered_qa_pass
+        and rendered_qa.get("target") == "production"
+        and rendered_qa.get("release_index_sha256") == index_sha256
+    )
 
     metric_by_id = {item["candidate_id"]: item for item in metrics["candidates"]}
     canonical_by_id = {item["candidate_id"]: item for item in canonical["candidates"]}
@@ -451,12 +463,20 @@ def build() -> tuple[dict, dict]:
         },
         "qa": {
             "status": (
-                "pre_publish_pass" if rendered_qa_pass else "pre_render_pending"
+                "post_publish_pass"
+                if post_publish_pass
+                else "pre_publish_pass"
+                if rendered_qa_pass
+                else "pre_render_pending"
             ),
             "evidence": (
                 "qa/rendered-qa-results.json" if rendered_qa_pass else None
             ),
-            "checked_at": rendered_qa.get("checked_at"),
+            "checked_at": (
+                rendered_qa.get("post_hardening_smoke", {}).get("checked_at")
+                if post_publish_pass
+                else rendered_qa.get("checked_at")
+            ),
             "orphan_dot_count": 0,
             "keyboard_access": rendered_qa_pass,
             "visible_focus": rendered_qa_pass,
@@ -467,14 +487,24 @@ def build() -> tuple[dict, dict]:
             "overflow_free": rendered_qa_pass,
             "zoom_200_checked": rendered_qa_pass,
             "light_dark_checked": rendered_qa_pass,
-            "responsive_widths": [320, 375, 768, 1024, 1440],
+            "responsive_widths": (
+                rendered_qa.get("post_hardening_smoke", {}).get(
+                    "viewports",
+                    [320, 375, 768, 1024, 1440],
+                )
+                if post_publish_pass
+                else [320, 375, 768, 1024, 1440]
+            ),
             "min_label_px": 11,
             "min_touch_target_px": 44,
             "text_contrast_ratio": 4.5,
             "non_text_contrast_ratio": 3,
             "note": (
-                "Rendered pre-publish QA passed; post-publish production QA "
-                "remains required."
+                "Rendered pre-publish and post-publish Production QA passed; "
+                "the recorded Production index hash matches this release."
+                if post_publish_pass
+                else "Rendered pre-publish QA passed; post-publish production "
+                "QA remains required."
                 if rendered_qa_pass
                 else "The nine boolean checks remain false until rendered "
                 "HTML QA; all structural and lineage checks are complete."
