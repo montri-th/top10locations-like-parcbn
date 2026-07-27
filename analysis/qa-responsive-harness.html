@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Release 1.6 responsive QA harness</title>
+  <style>
+    body { margin: 0; padding: 24px; color: #163f3b; background: #e7efe9; font: 16px/1.5 system-ui, sans-serif; }
+    h1 { margin: 0 0 18px; }
+    section { margin: 0 0 28px; }
+    h2 { margin: 0 0 8px; font-size: 18px; }
+    .viewport { max-width: 100%; overflow: auto; padding: 8px; background: #c8d9d1; border: 1px solid #789990; }
+    iframe { display: block; height: 980px; border: 0; background: white; }
+  </style>
+</head>
+<body>
+  <h1>Release 1.6 responsive QA harness</h1>
+  <section><h2>320 px · light</h2><div class="viewport"><iframe data-width="320" data-theme="light" width="320" title="320 px light"></iframe></div></section>
+  <section><h2>390 px · dark</h2><div class="viewport"><iframe data-width="390" data-theme="dark" width="390" title="390 px dark"></iframe></div></section>
+  <section><h2>768 px · light</h2><div class="viewport"><iframe data-width="768" data-theme="light" width="768" title="768 px light"></iframe></div></section>
+  <section><h2>1024 px · dark</h2><div class="viewport"><iframe data-width="1024" data-theme="dark" width="1024" title="1024 px dark"></iframe></div></section>
+  <section><h2>1440 px · light</h2><div class="viewport"><iframe data-width="1440" data-theme="light" width="1440" title="1440 px light"></iframe></div></section>
+  <script>
+    const report = "../PARC_Bangna_Bangkok_Top_10_Release_1_6_Competitive_Report_2026-07-28.html";
+    document.querySelectorAll("iframe").forEach((frame) => {
+      frame.addEventListener("load", () => {
+        const doc = frame.contentDocument;
+        doc.documentElement.dataset.theme = frame.dataset.theme;
+        const disclosure = doc.querySelector("#location-01 details");
+        if (disclosure) disclosure.open = true;
+      });
+      frame.src = `${report}?qa-width=${frame.dataset.width}`;
+    });
+  </script>
+</body>
+</html>
