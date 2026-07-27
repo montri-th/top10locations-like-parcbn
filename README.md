@@ -4,7 +4,7 @@ Interactive single-page executive report for a clean-room screening of Bangkok a
 
 ## Open the report
 
-Open [`index.html`](index.html). It is a self-contained static page with embedded Thai fonts, CSS, JavaScript, comparison charts, filters, evidence disclosures, and print styles.
+Open [`index.html`](index.html). It is a self-contained static page with embedded Thai fonts, CSS, JavaScript, executive maps, comparison charts, filters, evidence disclosures, and print styles.
 
 Production: <https://montri-th.github.io/top10locations-like-parcbn/>
 
@@ -48,6 +48,7 @@ The first two locations remain ranks 1 and 2 across all five tested weighting sc
 
 Each Top 10 location can be opened from the comparison chart or its ranking card. The disclosure shows:
 
+- a local context map with the verified evidence extent, reference points, subdistrict context, center coordinates, and study-area size
 - the exact score bridge from Traffic × Offering PMF to Location PMF
 - Residents, Visitors, and Daytime-Origin Proxy values with ranks within the Top 10
 - Food, Routine/Errand, Family, Wellness, and Connector fit
@@ -55,6 +56,14 @@ Each Top 10 location can be opened from the comparison chart or its ranking card
 - ranks under all five sensitivity scenarios
 - visitor/daytime evidence coverage, restaurant/review percentiles, area population and size, QA status, and source ID
 - the offering to test, the gate that may change the verdict, and the next evidence-gathering action
+
+## Map evidence boundary
+
+The overview map locates all Top 10 areas and links directly to each evidence disclosure. Each local map shows a derived convex hull around reference points verified as being inside the study area.
+
+The derived extent is deliberately not presented as the original study polygon, a land-plot boundary, an administrative boundary, or a customer catchment. Exact source-polygon coordinates were not available in the release used to build the public page.
+
+Bangkok subdistrict geometry is adapted from [`pcrete/gsvloader-demo`](https://github.com/pcrete/gsvloader-demo) under the MIT License, copyright © 2018 Poom Wettayakorn. The full permission notice is preserved in `index.html`.
 
 ## Decision boundary
 
@@ -68,7 +77,9 @@ Parking, frontage, ingress/egress, visibility, U-turn access, parcel size, zonin
 - Base-score reconciliation within 0.05 points
 - Top 10 and five sensitivity scenarios validated in a sequential Python run
 - Responsive browser checks at 320, 390, 720, 768, 1024, and 1440 CSS pixels
+- 2 responsive overview-map projections, 10 local maps, 10 derived extents, and 20 overview markers verified in the rendered page
+- Overview-map selection opens the corresponding evidence disclosure
 - Embedded Thai font checks for Anuphan 200 and IBM Plex Sans Thai Looped 400/500
 - Comparison-to-disclosure navigation, filter, disclosure, print, reduced-motion, and keyboard-focus checks
 
-Clean-room Release 1.1 · Evidence drill-down · 27 July 2026
+Clean-room Release 1.2 · Executive location maps · 27 July 2026
