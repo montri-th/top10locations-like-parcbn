@@ -1,6 +1,6 @@
 # Top 10 Locations Like PARC Bangna
 
-Interactive single-page executive report for a clean-room screening of Bangkok locales that may support a food-led neighborhood center like PARC Bangna.
+Interactive single-page executive report for a clean-room screening of Bangkok areas that may support a food-led neighborhood center like PARC Bangna.
 
 ## Open the report
 
@@ -42,29 +42,29 @@ The Daytime-Origin Proxy is derived from office, school, hospital, and factory a
 9. บางซ่อน
 10. บางขุนนนท์-ใต้
 
-The first two locales remain ranks 1 and 2 across all five tested weighting scenarios. Ranks 3–10 require parcel and field validation.
+The first two locations remain ranks 1 and 2 across all five tested weighting scenarios. Ranks 3–10 require parcel and field validation.
 
 ## Evidence drill-down
 
-Each Top 10 locale can be opened from the comparison chart or its ranking card. The disclosure shows:
+Each Top 10 location can be opened from the comparison chart or its ranking card. The disclosure shows:
 
 - the exact score bridge from Traffic × Offering PMF to Location PMF
 - Residents, Visitors, and Daytime-Origin Proxy values with ranks within the Top 10
 - Food, Routine/Errand, Family, Wellness, and Connector fit
 - Multi-mission breadth, Daypart breadth, and PARC Experience Fit
 - ranks under all five sensitivity scenarios
-- visitor/daytime evidence coverage, restaurant/review percentiles, locale population and area, QA status, and source ID
+- visitor/daytime evidence coverage, restaurant/review percentiles, area population and size, QA status, and source ID
 - the offering to test, the gate that may change the verdict, and the next evidence-gathering action
 
 ## Decision boundary
 
-The ranking prioritizes locale-level parcel search and evidence gathering. It does not approve a plot, land purchase, lease, development, or investment.
+The ranking prioritizes area-level parcel search and evidence gathering. It does not approve a plot, land purchase, lease, development, or investment.
 
 Parking, frontage, ingress/egress, visibility, U-turn access, parcel size, zoning, flood exposure, tenant-by-daypart offering, competition, and real-estate economics remain hard validation gates.
 
 ## Verification
 
-- 173 format-gated locale records; 173 unique IDs
+- 173 format-gated location records; 173 unique IDs
 - Base-score reconciliation within 0.05 points
 - Top 10 and five sensitivity scenarios validated in a sequential Python run
 - Responsive browser checks at 320, 390, 720, 768, 1024, and 1440 CSS pixels
