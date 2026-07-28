@@ -273,10 +273,11 @@ __FONT_CSS__
         --warning:#FFD793;--warning-soft:#4B3A20;--risk:#FFB9A7;--risk-soft:#54342E;
         --shadow:0 1.2rem 3.5rem rgb(0 0 0 / 24%)
       }
+      html[data-theme="system"] .brand img{filter:brightness(0) invert(1)}
     }
     *,*::before,*::after{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:7rem}
-    body{margin:0;background:var(--canvas);color:var(--ink);font-family:"IBM Plex Sans Thai Looped",Tahoma,system-ui,sans-serif;font-size:clamp(1.125rem,1.08rem + .18vw,1.25rem);font-weight:400;line-height:1.72;text-rendering:optimizeLegibility}
+    html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:7rem}
+    body{overflow-x:clip;margin:0;background:var(--canvas);color:var(--ink);font-family:"IBM Plex Sans Thai Looped",Tahoma,system-ui,sans-serif;font-size:clamp(1.125rem,1.08rem + .18vw,1.25rem);font-weight:400;line-height:1.72;text-rendering:optimizeLegibility}
     body.modal-open{overflow:hidden}
     img,svg{display:block;max-width:100%}
     button,input,select,summary{font:inherit}
@@ -292,6 +293,7 @@ __FONT_CSS__
     .topbar{min-height:4.7rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
     .brand{display:flex;align-items:center;gap:.85rem;color:var(--ink);text-decoration:none;min-width:0}
     .brand img{width:7.25rem;height:auto}
+    html[data-theme="dark"] .brand img{filter:brightness(0) invert(1)}
     .brand small{display:none;color:var(--metadata);font-size:.82rem;line-height:1.35}
     .header-tools{display:flex;align-items:center;gap:.55rem}
     .report-meta{display:none;color:var(--metadata);font-size:.82rem;line-height:1.4;text-align:right}
@@ -551,7 +553,7 @@ __FONT_CSS__
     </nav>
   </div>
 
-  <main id="main" data-location-report data-report-id="__REPORT_ID__">
+  <main id="main" tabindex="-1" data-location-report data-report-id="__REPORT_ID__">
     <section class="hero" id="top">
       <svg class="motif" viewBox="0 0 480 360" aria-hidden="true">
         <path class="branch" d="M470 60C386 92 360 151 298 174C238 196 185 176 123 230C81 267 52 303 2 322"/>
