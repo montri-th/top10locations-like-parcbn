@@ -937,6 +937,13 @@ __FONT_CSS__
       });
     });
     document.getElementById("sort-select").addEventListener("change",function(e){currentSort=e.target.value;renderCards();});
+    function syncMapHitTargets(svg,viewBoxWidth){
+      if(!svg)return;
+      var renderedWidth=svg.getBoundingClientRect().width;
+      if(!renderedWidth)return;
+      var radius=Math.max(24,23*viewBoxWidth/renderedWidth);
+      svg.querySelectorAll(".candidate-map-hit,.poi-hit").forEach(function(hit){hit.setAttribute("r",radius.toFixed(2));});
+    }
     function renderOverview(){
       var svg=document.getElementById("overview-map"), W=760,H=440,pad=62;
       var minLon=Math.min.apply(null,candidates.map(function(c){return c.lon;}))-.015;
@@ -966,6 +973,7 @@ __FONT_CSS__
       });
       out.push('<g class="north-scale"><path d="M710 82V42M710 42l-7 11M710 42l7 11"/><text x="704" y="31">N</text><path d="M74 391h110M74 385v12M184 385v12"/><text x="74" y="414">ประมาณ 5 กม.</text></g>');
       svg.innerHTML=out.join("");
+      syncMapHitTargets(svg,W);
       svg.querySelectorAll("[data-overview-candidate]").forEach(function(node){
         var activate=function(){openLocale(node.dataset.overviewCandidate);};
         node.addEventListener("click",activate);
@@ -1005,6 +1013,7 @@ __FONT_CSS__
       });
       out.push('<g class="north-scale"><path d="M640 70V34M640 34l-6 10M640 34l6 10"/><text x="634" y="24">N</text><path d="M34 320h58M34 314v12M92 314v12"/><text x="34" y="342">1 กม.</text></g>');
       svg.innerHTML=out.join("");
+      syncMapHitTargets(svg,W);
       document.querySelectorAll(".locale-tab").forEach(function(btn){btn.setAttribute("aria-pressed",String(btn.dataset.localeTab===c.id));});
       svg.querySelectorAll(".poi-marker").forEach(function(node){
         var activate=function(){lastMarker=node;showCompetitor(c,compById.get(node.dataset.competitorId));};
@@ -1075,6 +1084,14 @@ __FONT_CSS__
       sections.forEach(function(s){observer.observe(s);});
     }
     renderCards();renderOverview();renderDetailMap();renderNlaTable();renderReviewed();
+    var hitTargetResizeTimer;
+    window.addEventListener("resize",function(){
+      clearTimeout(hitTargetResizeTimer);
+      hitTargetResizeTimer=setTimeout(function(){
+        syncMapHitTargets(document.getElementById("overview-map"),760);
+        syncMapHitTargets(document.getElementById("detail-map"),680);
+      },90);
+    });
     var decisionDock=document.querySelector(".decision-dock");
     var hero=document.querySelector(".hero");
     if("IntersectionObserver" in window&&decisionDock&&hero){
