@@ -330,7 +330,7 @@ __FONT_CSS__
     html[data-theme="light"] .button.primary{color:#fff}
     .button.secondary{background:transparent;color:var(--garden)}
     .button.full{width:100%}
-    .motif{position:absolute;z-index:-1;right:clamp(-9rem,-3vw,-3rem);top:clamp(2rem,7vw,5rem);width:min(41vw,31rem);color:var(--bougainvillea);pointer-events:none}
+    .motif{position:absolute;z-index:-1;right:clamp(.75rem,2vw,2rem);top:clamp(2rem,7vw,5rem);width:min(41vw,31rem);color:var(--bougainvillea);opacity:.58;pointer-events:none}
     .motif .branch{fill:none;stroke:currentColor;stroke-width:1.5}
     .motif .bract{fill:var(--petal);stroke:currentColor;stroke-width:1.2}
     .motif .bud{fill:var(--bougainvillea)}
@@ -463,7 +463,8 @@ __FONT_CSS__
     .approval-card{padding:1.3rem;border:1px solid color-mix(in srgb,currentColor 45%,transparent);border-radius:var(--r-md);background:color-mix(in srgb,var(--canvas) 10%,transparent)}
     .approval-card .button.primary{background:var(--canvas);border-color:var(--canvas);color:var(--garden)}
     .approval-card .button.secondary{border-color:var(--canvas);color:var(--canvas)}
-    .decision-dock{position:fixed;z-index:40;left:50%;bottom:.7rem;transform:translateX(-50%);width:min(calc(100% - 1rem),47rem);display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.65rem .7rem .65rem 1rem;border:1px solid var(--control);border-radius:999px;background:var(--raised);box-shadow:0 1rem 3rem rgb(0 0 0 / 18%)}
+    .decision-dock{position:fixed;z-index:40;left:50%;bottom:.7rem;transform:translate(-50%,1rem);width:min(calc(100% - 1rem),47rem);display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.65rem .7rem .65rem 1rem;border:1px solid var(--control);border-radius:999px;background:var(--raised);box-shadow:0 1rem 3rem rgb(0 0 0 / 18%);opacity:0;visibility:hidden;pointer-events:none;transition:opacity 160ms var(--ease),transform 160ms var(--ease),visibility 160ms linear}
+    .decision-dock.is-visible{transform:translate(-50%,0);opacity:1;visibility:visible;pointer-events:auto}
     .dock-copy{min-width:0;font-size:.85rem;line-height:1.35;color:var(--secondary)}
     .dock-copy strong{color:var(--ink)}
     .decision-dock .button{flex:0 0 auto;min-height:2.9rem;border-radius:999px}
@@ -1071,6 +1072,14 @@ __FONT_CSS__
       sections.forEach(function(s){observer.observe(s);});
     }
     renderCards();renderOverview();renderDetailMap();renderNlaTable();renderReviewed();
+    var decisionDock=document.querySelector(".decision-dock");
+    var hero=document.querySelector(".hero");
+    if("IntersectionObserver" in window&&decisionDock&&hero){
+      var dockObserver=new IntersectionObserver(function(entries){
+        decisionDock.classList.toggle("is-visible",!entries[0].isIntersecting);
+      },{threshold:.08});
+      dockObserver.observe(hero);
+    }
   })();
   </script>
 </body>
