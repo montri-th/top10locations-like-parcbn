@@ -1,0 +1,1684 @@
+{
+  "contract_version": "1.0",
+  "report_id": "parc-bangna-fresh-competition-aware-v2",
+  "as_of": "2026-07-28",
+  "scope": {
+    "mode": "comparison",
+    "site_ids": [
+      "talat-phlu-south",
+      "samre",
+      "wang-hin-south",
+      "charoen-rat",
+      "bang-son",
+      "wongwian-yai-east",
+      "bang-khun-non-south",
+      "ban-khaek",
+      "bang-pho-east",
+      "rama3-east"
+    ]
+  },
+  "candidate_ids": [
+    "talat-phlu-south",
+    "samre",
+    "wang-hin-south",
+    "charoen-rat",
+    "bang-son",
+    "wongwian-yai-east",
+    "bang-khun-non-south",
+    "ban-khaek",
+    "bang-pho-east",
+    "rama3-east"
+  ],
+  "coordinate_system": "WGS84 presentation coordinates; equirectangular kilometre projection in detail maps",
+  "screening_linkage": {
+    "status": "not_applicable",
+    "reason": "The Fresh release did not include approved analytical catchment geometry. This map preserves the published scores but does not portray their scoring extents.",
+    "analysis_units": []
+  },
+  "sources": [
+    {
+      "id": "fresh-v01",
+      "site_id": "shared",
+      "kind": "analysis_release",
+      "release": "PARC Bangna Fresh Locale Screen v0.1",
+      "snapshot_date": "2026-07-28",
+      "locator": "PARC_Bangna_Fresh_Locale_Screen_Analysis_and_UXUI_Brief_v0.1_2026-07-28.md"
+    },
+    {
+      "id": "venue-rc1",
+      "site_id": "shared",
+      "kind": "venue_registry",
+      "release": "Venue Locale Fundamental v0.2.0-rc1",
+      "snapshot_date": "2026-07-27",
+      "locator": "Google Sheet 1bbmsF0DrFdjthmKLp2Xye-N9pb8o1p3jYMgFPL3AoJs"
+    }
+  ],
+  "geometries": [
+    {
+      "id": "talat-phlu-south--reference-point",
+      "site_id": "talat-phlu-south",
+      "vocabulary": "center_point",
+      "source_id": "fresh-v01",
+      "source_feature_id": "talat-phlu-south",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Fresh SVG reference point calibrated to shared WGS84 audit points; not a parcel or locale polygon.",
+      "coordinates": [
+        100.4775,
+        13.7174
+      ]
+    },
+    {
+      "id": "samre--reference-point",
+      "site_id": "samre",
+      "vocabulary": "center_point",
+      "source_id": "fresh-v01",
+      "source_feature_id": "samre",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Fresh SVG reference point calibrated to shared WGS84 audit points; not a parcel or locale polygon.",
+      "coordinates": [
+        100.4911,
+        13.7055
+      ]
+    },
+    {
+      "id": "wang-hin-south--reference-point",
+      "site_id": "wang-hin-south",
+      "vocabulary": "center_point",
+      "source_id": "fresh-v01",
+      "source_feature_id": "wang-hin-south",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Derived from the Fresh SVG coordinate scale; not a parcel or locale polygon.",
+      "coordinates": [
+        100.596604,
+        13.806119
+      ]
+    },
+    {
+      "id": "charoen-rat--reference-point",
+      "site_id": "charoen-rat",
+      "vocabulary": "center_point",
+      "source_id": "fresh-v01",
+      "source_feature_id": "charoen-rat",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Fresh SVG reference point calibrated to shared WGS84 audit points; not a parcel or locale polygon.",
+      "coordinates": [
+        100.5168,
+        13.6963
+      ]
+    },
+    {
+      "id": "bang-son--reference-point",
+      "site_id": "bang-son",
+      "vocabulary": "center_point",
+      "source_id": "fresh-v01",
+      "source_feature_id": "bang-son",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Derived from the Fresh SVG coordinate scale; not a parcel or locale polygon.",
+      "coordinates": [
+        100.529285,
+        13.812405
+      ]
+    },
+    {
+      "id": "wongwian-yai-east--reference-point",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "center_point",
+      "source_id": "fresh-v01",
+      "source_feature_id": "wongwian-yai-east",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Fresh SVG reference point calibrated to shared WGS84 audit points; not a parcel or locale polygon.",
+      "coordinates": [
+        100.4954,
+        13.7254
+      ]
+    },
+    {
+      "id": "bang-khun-non-south--reference-point",
+      "site_id": "bang-khun-non-south",
+      "vocabulary": "center_point",
+      "source_id": "fresh-v01",
+      "source_feature_id": "bang-khun-non-south",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Derived from the Fresh SVG coordinate scale; not a parcel or locale polygon.",
+      "coordinates": [
+        100.470192,
+        13.760007
+      ]
+    },
+    {
+      "id": "ban-khaek--reference-point",
+      "site_id": "ban-khaek",
+      "vocabulary": "center_point",
+      "source_id": "fresh-v01",
+      "source_feature_id": "ban-khaek",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Fresh SVG reference point calibrated to shared WGS84 audit points; not a parcel or locale polygon.",
+      "coordinates": [
+        100.4915,
+        13.7335
+      ]
+    },
+    {
+      "id": "bang-pho-east--reference-point",
+      "site_id": "bang-pho-east",
+      "vocabulary": "center_point",
+      "source_id": "fresh-v01",
+      "source_feature_id": "bang-pho-east",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Derived from the Fresh SVG coordinate scale; not a parcel or locale polygon.",
+      "coordinates": [
+        100.524499,
+        13.8062
+      ]
+    },
+    {
+      "id": "rama3-east--reference-point",
+      "site_id": "rama3-east",
+      "vocabulary": "center_point",
+      "source_id": "fresh-v01",
+      "source_feature_id": "rama3-east",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Derived from the Fresh SVG coordinate scale; not a parcel or locale polygon.",
+      "coordinates": [
+        100.546921,
+        13.686144
+      ]
+    },
+    {
+      "id": "talat-phlu-south--mall-tha-phra--competitor-point",
+      "site_id": "talat-phlu-south",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "mall-tha-phra",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "mall-tha-phra",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.4801172,
+        13.7136096
+      ]
+    },
+    {
+      "id": "talat-phlu-south--riverside-plaza--competitor-point",
+      "site_id": "talat-phlu-south",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "riverside-plaza",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "riverside-plaza",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.4909755,
+        13.7052211
+      ]
+    },
+    {
+      "id": "talat-phlu-south--platform-wongwian-yai--competitor-point",
+      "site_id": "talat-phlu-south",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "platform-wongwian-yai",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "platform-wongwian-yai",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.4947674,
+        13.7271083
+      ]
+    },
+    {
+      "id": "talat-phlu-south--iconsiam--competitor-point",
+      "site_id": "talat-phlu-south",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "iconsiam",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "iconsiam",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.5107399,
+        13.7266738
+      ]
+    },
+    {
+      "id": "samre--riverside-plaza--competitor-point",
+      "site_id": "samre",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "riverside-plaza",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "riverside-plaza",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.4909755,
+        13.7052211
+      ]
+    },
+    {
+      "id": "samre--mall-tha-phra--competitor-point",
+      "site_id": "samre",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "mall-tha-phra",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "mall-tha-phra",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.4801172,
+        13.7136096
+      ]
+    },
+    {
+      "id": "samre--sena-fest--competitor-point",
+      "site_id": "samre",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "sena-fest",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "sena-fest",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": 8931,
+      "numeric_context_unit": "sqm_disclosed_leasable_area",
+      "coordinates": [
+        100.5078712,
+        13.7192823
+      ]
+    },
+    {
+      "id": "samre--platform-wongwian-yai--competitor-point",
+      "site_id": "samre",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "platform-wongwian-yai",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "platform-wongwian-yai",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.4947674,
+        13.7271083
+      ]
+    },
+    {
+      "id": "samre--terminal21-rama3--competitor-point",
+      "site_id": "samre",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "terminal21-rama3",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "terminal21-rama3",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.5053561,
+        13.6889163
+      ]
+    },
+    {
+      "id": "wang-hin-south--central-eastville--competitor-point",
+      "site_id": "wang-hin-south",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "central-eastville",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "central-eastville",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": 35732,
+      "numeric_context_unit": "sqm_disclosed_leasable_area",
+      "coordinates": [
+        100.6144733,
+        13.8039586
+      ]
+    },
+    {
+      "id": "wang-hin-south--the-crystal--competitor-point",
+      "site_id": "wang-hin-south",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "the-crystal",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "the-crystal",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": 30823,
+      "numeric_context_unit": "sqm_disclosed_leasable_area",
+      "coordinates": [
+        100.618568,
+        13.81144
+      ]
+    },
+    {
+      "id": "wang-hin-south--cdc--competitor-point",
+      "site_id": "wang-hin-south",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "cdc",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "cdc",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": 35957,
+      "numeric_context_unit": "sqm_disclosed_leasable_area",
+      "coordinates": [
+        100.6184184,
+        13.802794
+      ]
+    },
+    {
+      "id": "wang-hin-south--imperial-ladprao--competitor-point",
+      "site_id": "wang-hin-south",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "imperial-ladprao",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "imperial-ladprao",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.6126275,
+        13.786473
+      ]
+    },
+    {
+      "id": "wang-hin-south--the-walk--competitor-point",
+      "site_id": "wang-hin-south",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "the-walk",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "the-walk",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.628453,
+        13.828837
+      ]
+    },
+    {
+      "id": "charoen-rat--kingsquare--competitor-point",
+      "site_id": "charoen-rat",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "kingsquare",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "kingsquare",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.527267,
+        13.691932
+      ]
+    },
+    {
+      "id": "charoen-rat--terminal21-rama3--competitor-point",
+      "site_id": "charoen-rat",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "terminal21-rama3",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "terminal21-rama3",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.5053561,
+        13.6889163
+      ]
+    },
+    {
+      "id": "charoen-rat--central-rama3--competitor-point",
+      "site_id": "charoen-rat",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "central-rama3",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "central-rama3",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": 48328,
+      "numeric_context_unit": "sqm_disclosed_leasable_area",
+      "coordinates": [
+        100.5377797,
+        13.6977371
+      ]
+    },
+    {
+      "id": "charoen-rat--sena-fest--competitor-point",
+      "site_id": "charoen-rat",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "sena-fest",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "sena-fest",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": 8931,
+      "numeric_context_unit": "sqm_disclosed_leasable_area",
+      "coordinates": [
+        100.5078712,
+        13.7192823
+      ]
+    },
+    {
+      "id": "bang-son--gateway-bangsue--competitor-point",
+      "site_id": "bang-son",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "gateway-bangsue",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "gateway-bangsue",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.5238157,
+        13.8058555
+      ]
+    },
+    {
+      "id": "bang-son--lotus-prachachuen--competitor-point",
+      "site_id": "bang-son",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "lotus-prachachuen",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "lotus-prachachuen",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.534989,
+        13.805733
+      ]
+    },
+    {
+      "id": "bang-son--central-ladprao--competitor-point",
+      "site_id": "bang-son",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "central-ladprao",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "central-ladprao",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": 43410,
+      "numeric_context_unit": "sqm_disclosed_leasable_area",
+      "coordinates": [
+        100.5610948,
+        13.816652
+      ]
+    },
+    {
+      "id": "bang-son--union-mall--competitor-point",
+      "site_id": "bang-son",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "union-mall",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "union-mall",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.561861,
+        13.813364
+      ]
+    },
+    {
+      "id": "wongwian-yai-east--platform-wongwian-yai--competitor-point",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "platform-wongwian-yai",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "platform-wongwian-yai",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.4947674,
+        13.7271083
+      ]
+    },
+    {
+      "id": "wongwian-yai-east--ics--competitor-point",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "ics",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "ics",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.5084353,
+        13.7262214
+      ]
+    },
+    {
+      "id": "wongwian-yai-east--sena-fest--competitor-point",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "sena-fest",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "sena-fest",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": 8931,
+      "numeric_context_unit": "sqm_disclosed_leasable_area",
+      "coordinates": [
+        100.5078712,
+        13.7192823
+      ]
+    },
+    {
+      "id": "wongwian-yai-east--iconsiam--competitor-point",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "iconsiam",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "iconsiam",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.5107399,
+        13.7266738
+      ]
+    },
+    {
+      "id": "wongwian-yai-east--mall-tha-phra--competitor-point",
+      "site_id": "wongwian-yai-east",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "mall-tha-phra",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "mall-tha-phra",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.4801172,
+        13.7136096
+      ]
+    },
+    {
+      "id": "bang-khun-non-south--central-pinklao--competitor-point",
+      "site_id": "bang-khun-non-south",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "central-pinklao",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "central-pinklao",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": 64917,
+      "numeric_context_unit": "sqm_disclosed_leasable_area",
+      "coordinates": [
+        100.4757519,
+        13.7773229
+      ]
+    },
+    {
+      "id": "bang-khun-non-south--lotus-merry-king-pinklao--competitor-point",
+      "site_id": "bang-khun-non-south",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "lotus-merry-king-pinklao",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "lotus-merry-king-pinklao",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.478082,
+        13.7764389
+      ]
+    },
+    {
+      "id": "ban-khaek--platform-wongwian-yai--competitor-point",
+      "site_id": "ban-khaek",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "platform-wongwian-yai",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "platform-wongwian-yai",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.4947674,
+        13.7271083
+      ]
+    },
+    {
+      "id": "ban-khaek--old-siam--competitor-point",
+      "site_id": "ban-khaek",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "old-siam",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "old-siam",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.500214,
+        13.745874
+      ]
+    },
+    {
+      "id": "ban-khaek--ics--competitor-point",
+      "site_id": "ban-khaek",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "ics",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "ics",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.5084353,
+        13.7262214
+      ]
+    },
+    {
+      "id": "ban-khaek--iconsiam--competitor-point",
+      "site_id": "ban-khaek",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "iconsiam",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "iconsiam",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.5107399,
+        13.7266738
+      ]
+    },
+    {
+      "id": "ban-khaek--sena-fest--competitor-point",
+      "site_id": "ban-khaek",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "sena-fest",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "sena-fest",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": 8931,
+      "numeric_context_unit": "sqm_disclosed_leasable_area",
+      "coordinates": [
+        100.5078712,
+        13.7192823
+      ]
+    },
+    {
+      "id": "ban-khaek--mall-tha-phra--competitor-point",
+      "site_id": "ban-khaek",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "mall-tha-phra",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "mall-tha-phra",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.4801172,
+        13.7136096
+      ]
+    },
+    {
+      "id": "bang-pho-east--gateway-bangsue--competitor-point",
+      "site_id": "bang-pho-east",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "gateway-bangsue",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "gateway-bangsue",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.5238157,
+        13.8058555
+      ]
+    },
+    {
+      "id": "bang-pho-east--lotus-prachachuen--competitor-point",
+      "site_id": "bang-pho-east",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "lotus-prachachuen",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "lotus-prachachuen",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.534989,
+        13.805733
+      ]
+    },
+    {
+      "id": "bang-pho-east--meeting-mall--competitor-point",
+      "site_id": "bang-pho-east",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "meeting-mall",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "meeting-mall",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.5126333,
+        13.8022871
+      ]
+    },
+    {
+      "id": "bang-pho-east--central-ladprao--competitor-point",
+      "site_id": "bang-pho-east",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "central-ladprao",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "central-ladprao",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": 43410,
+      "numeric_context_unit": "sqm_disclosed_leasable_area",
+      "coordinates": [
+        100.5610948,
+        13.816652
+      ]
+    },
+    {
+      "id": "rama3-east--central-rama3--competitor-point",
+      "site_id": "rama3-east",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "central-rama3",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "central-rama3",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": 48328,
+      "numeric_context_unit": "sqm_disclosed_leasable_area",
+      "coordinates": [
+        100.5377797,
+        13.6977371
+      ]
+    },
+    {
+      "id": "rama3-east--bangkok-square--competitor-point",
+      "site_id": "rama3-east",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "bangkok-square",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "bangkok-square",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating_evidence_partial",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.5341544,
+        13.6727524
+      ]
+    },
+    {
+      "id": "rama3-east--kingsquare--competitor-point",
+      "site_id": "rama3-east",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "kingsquare",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "kingsquare",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.527267,
+        13.691932
+      ]
+    },
+    {
+      "id": "rama3-east--terminal21-rama3--competitor-point",
+      "site_id": "rama3-east",
+      "vocabulary": "poi_sample",
+      "source_id": "venue-rc1",
+      "source_feature_id": "terminal21-rama3",
+      "derivation": "none",
+      "derived_from": [],
+      "disclosure": "Presentation coordinate used for orientation; not a venue parcel or boundary.",
+      "competitor_id": "terminal21-rama3",
+      "impact_basis": "impact_class",
+      "impact_value": null,
+      "impact_unit": "categorical_class",
+      "evidence_status": "operating",
+      "numeric_context": null,
+      "numeric_context_unit": null,
+      "coordinates": [
+        100.5053561,
+        13.6889163
+      ]
+    }
+  ],
+  "osm_snapshot": null,
+  "maps": [
+    {
+      "id": "overview",
+      "role": "overview",
+      "site_ids": [
+        "talat-phlu-south",
+        "samre",
+        "wang-hin-south",
+        "charoen-rat",
+        "bang-son",
+        "wongwian-yai-east",
+        "bang-khun-non-south",
+        "ban-khaek",
+        "bang-pho-east",
+        "rama3-east"
+      ],
+      "layers": [
+        {
+          "id": "top-10-candidates",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "talat-phlu-south--reference-point",
+            "samre--reference-point",
+            "wang-hin-south--reference-point",
+            "charoen-rat--reference-point",
+            "bang-son--reference-point",
+            "wongwian-yai-east--reference-point",
+            "bang-khun-non-south--reference-point",
+            "ban-khaek--reference-point",
+            "bang-pho-east--reference-point",
+            "rama3-east--reference-point"
+          ],
+          "visible": true,
+          "marker": "numbered_square",
+          "legend_label": "Fresh Top 10 candidate reference point",
+          "direct_labels": false
+        }
+      ],
+      "context_fallback": {
+        "status": "geometry_unavailable",
+        "kind": "simplified_metric_basemap",
+        "visible": true,
+        "disclosure": "No approved khwaeng or locale GeoJSON/WKT was supplied. The visible kilometre grid, orientation labels, north arrow, and cluster annotations are context only; none is a legal boundary, candidate extent, or catchment."
+      },
+      "accessibility": {
+        "summary": "Overview of ten candidate reference points and three analytical market-overlap annotations. No administrative or candidate boundary is shown.",
+        "data_table_id": "shortlist-table"
+      }
+    },
+    {
+      "id": "talat-phlu-south-detail",
+      "role": "detail",
+      "site_ids": [
+        "talat-phlu-south"
+      ],
+      "layers": [
+        {
+          "id": "talat-phlu-south-candidate",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "talat-phlu-south--reference-point"
+          ],
+          "visible": true,
+          "marker": "numbered_square",
+          "legend_label": "Candidate reference point",
+          "direct_labels": false
+        },
+        {
+          "id": "talat-phlu-south-competitors",
+          "kind": "competitor_marker",
+          "geometry_ids": [
+            "talat-phlu-south--mall-tha-phra--competitor-point",
+            "talat-phlu-south--riverside-plaza--competitor-point",
+            "talat-phlu-south--platform-wongwian-yai--competitor-point",
+            "talat-phlu-south--iconsiam--competitor-point"
+          ],
+          "visible": true,
+          "marker": "indexed_impact_marker",
+          "legend_label": "Competitor impact class",
+          "direct_labels": false,
+          "size_basis": "impact_class",
+          "size_scale_id": "competition-impact-v1",
+          "unknown_rule": "Unknown GLA, NLA, or tenant count remains unknown and never becomes zero. Verified size appears only as disclosed numeric context, not on this categorical radius scale.",
+          "detail_panel_id": "competitor-panel"
+        }
+      ],
+      "context_fallback": {
+        "status": "geometry_unavailable",
+        "kind": "simplified_metric_basemap",
+        "visible": true,
+        "disclosure": "No approved khwaeng or locale GeoJSON/WKT was supplied. The visible kilometre grid, orientation labels, north arrow, and cluster annotations are context only; none is a legal boundary, candidate extent, or catchment."
+      },
+      "accessibility": {
+        "summary": "Candidate and competitor presentation points on a one-kilometre grid. No candidate extent or catchment is shown.",
+        "data_table_id": "competitor-table"
+      },
+      "withheld_competitor_ids": []
+    },
+    {
+      "id": "samre-detail",
+      "role": "detail",
+      "site_ids": [
+        "samre"
+      ],
+      "layers": [
+        {
+          "id": "samre-candidate",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "samre--reference-point"
+          ],
+          "visible": true,
+          "marker": "numbered_square",
+          "legend_label": "Candidate reference point",
+          "direct_labels": false
+        },
+        {
+          "id": "samre-competitors",
+          "kind": "competitor_marker",
+          "geometry_ids": [
+            "samre--riverside-plaza--competitor-point",
+            "samre--mall-tha-phra--competitor-point",
+            "samre--sena-fest--competitor-point",
+            "samre--platform-wongwian-yai--competitor-point",
+            "samre--terminal21-rama3--competitor-point"
+          ],
+          "visible": true,
+          "marker": "indexed_impact_marker",
+          "legend_label": "Competitor impact class",
+          "direct_labels": false,
+          "size_basis": "impact_class",
+          "size_scale_id": "competition-impact-v1",
+          "unknown_rule": "Unknown GLA, NLA, or tenant count remains unknown and never becomes zero. Verified size appears only as disclosed numeric context, not on this categorical radius scale.",
+          "detail_panel_id": "competitor-panel"
+        }
+      ],
+      "context_fallback": {
+        "status": "geometry_unavailable",
+        "kind": "simplified_metric_basemap",
+        "visible": true,
+        "disclosure": "No approved khwaeng or locale GeoJSON/WKT was supplied. The visible kilometre grid, orientation labels, north arrow, and cluster annotations are context only; none is a legal boundary, candidate extent, or catchment."
+      },
+      "accessibility": {
+        "summary": "Candidate and competitor presentation points on a one-kilometre grid. No candidate extent or catchment is shown.",
+        "data_table_id": "competitor-table"
+      },
+      "withheld_competitor_ids": []
+    },
+    {
+      "id": "wang-hin-south-detail",
+      "role": "detail",
+      "site_ids": [
+        "wang-hin-south"
+      ],
+      "layers": [
+        {
+          "id": "wang-hin-south-candidate",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "wang-hin-south--reference-point"
+          ],
+          "visible": true,
+          "marker": "numbered_square",
+          "legend_label": "Candidate reference point",
+          "direct_labels": false
+        },
+        {
+          "id": "wang-hin-south-competitors",
+          "kind": "competitor_marker",
+          "geometry_ids": [
+            "wang-hin-south--central-eastville--competitor-point",
+            "wang-hin-south--the-crystal--competitor-point",
+            "wang-hin-south--cdc--competitor-point",
+            "wang-hin-south--imperial-ladprao--competitor-point",
+            "wang-hin-south--the-walk--competitor-point"
+          ],
+          "visible": true,
+          "marker": "indexed_impact_marker",
+          "legend_label": "Competitor impact class",
+          "direct_labels": false,
+          "size_basis": "impact_class",
+          "size_scale_id": "competition-impact-v1",
+          "unknown_rule": "Unknown GLA, NLA, or tenant count remains unknown and never becomes zero. Verified size appears only as disclosed numeric context, not on this categorical radius scale.",
+          "detail_panel_id": "competitor-panel"
+        }
+      ],
+      "context_fallback": {
+        "status": "geometry_unavailable",
+        "kind": "simplified_metric_basemap",
+        "visible": true,
+        "disclosure": "No approved khwaeng or locale GeoJSON/WKT was supplied. The visible kilometre grid, orientation labels, north arrow, and cluster annotations are context only; none is a legal boundary, candidate extent, or catchment."
+      },
+      "accessibility": {
+        "summary": "Candidate and competitor presentation points on a one-kilometre grid. No candidate extent or catchment is shown.",
+        "data_table_id": "competitor-table"
+      },
+      "withheld_competitor_ids": []
+    },
+    {
+      "id": "charoen-rat-detail",
+      "role": "detail",
+      "site_ids": [
+        "charoen-rat"
+      ],
+      "layers": [
+        {
+          "id": "charoen-rat-candidate",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "charoen-rat--reference-point"
+          ],
+          "visible": true,
+          "marker": "numbered_square",
+          "legend_label": "Candidate reference point",
+          "direct_labels": false
+        },
+        {
+          "id": "charoen-rat-competitors",
+          "kind": "competitor_marker",
+          "geometry_ids": [
+            "charoen-rat--kingsquare--competitor-point",
+            "charoen-rat--terminal21-rama3--competitor-point",
+            "charoen-rat--central-rama3--competitor-point",
+            "charoen-rat--sena-fest--competitor-point"
+          ],
+          "visible": true,
+          "marker": "indexed_impact_marker",
+          "legend_label": "Competitor impact class",
+          "direct_labels": false,
+          "size_basis": "impact_class",
+          "size_scale_id": "competition-impact-v1",
+          "unknown_rule": "Unknown GLA, NLA, or tenant count remains unknown and never becomes zero. Verified size appears only as disclosed numeric context, not on this categorical radius scale.",
+          "detail_panel_id": "competitor-panel"
+        }
+      ],
+      "context_fallback": {
+        "status": "geometry_unavailable",
+        "kind": "simplified_metric_basemap",
+        "visible": true,
+        "disclosure": "No approved khwaeng or locale GeoJSON/WKT was supplied. The visible kilometre grid, orientation labels, north arrow, and cluster annotations are context only; none is a legal boundary, candidate extent, or catchment."
+      },
+      "accessibility": {
+        "summary": "Candidate and competitor presentation points on a one-kilometre grid. No candidate extent or catchment is shown.",
+        "data_table_id": "competitor-table"
+      },
+      "withheld_competitor_ids": [
+        "asiatique"
+      ]
+    },
+    {
+      "id": "bang-son-detail",
+      "role": "detail",
+      "site_ids": [
+        "bang-son"
+      ],
+      "layers": [
+        {
+          "id": "bang-son-candidate",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "bang-son--reference-point"
+          ],
+          "visible": true,
+          "marker": "numbered_square",
+          "legend_label": "Candidate reference point",
+          "direct_labels": false
+        },
+        {
+          "id": "bang-son-competitors",
+          "kind": "competitor_marker",
+          "geometry_ids": [
+            "bang-son--gateway-bangsue--competitor-point",
+            "bang-son--lotus-prachachuen--competitor-point",
+            "bang-son--central-ladprao--competitor-point",
+            "bang-son--union-mall--competitor-point"
+          ],
+          "visible": true,
+          "marker": "indexed_impact_marker",
+          "legend_label": "Competitor impact class",
+          "direct_labels": false,
+          "size_basis": "impact_class",
+          "size_scale_id": "competition-impact-v1",
+          "unknown_rule": "Unknown GLA, NLA, or tenant count remains unknown and never becomes zero. Verified size appears only as disclosed numeric context, not on this categorical radius scale.",
+          "detail_panel_id": "competitor-panel"
+        }
+      ],
+      "context_fallback": {
+        "status": "geometry_unavailable",
+        "kind": "simplified_metric_basemap",
+        "visible": true,
+        "disclosure": "No approved khwaeng or locale GeoJSON/WKT was supplied. The visible kilometre grid, orientation labels, north arrow, and cluster annotations are context only; none is a legal boundary, candidate extent, or catchment."
+      },
+      "accessibility": {
+        "summary": "Candidate and competitor presentation points on a one-kilometre grid. No candidate extent or catchment is shown.",
+        "data_table_id": "competitor-table"
+      },
+      "withheld_competitor_ids": []
+    },
+    {
+      "id": "wongwian-yai-east-detail",
+      "role": "detail",
+      "site_ids": [
+        "wongwian-yai-east"
+      ],
+      "layers": [
+        {
+          "id": "wongwian-yai-east-candidate",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "wongwian-yai-east--reference-point"
+          ],
+          "visible": true,
+          "marker": "numbered_square",
+          "legend_label": "Candidate reference point",
+          "direct_labels": false
+        },
+        {
+          "id": "wongwian-yai-east-competitors",
+          "kind": "competitor_marker",
+          "geometry_ids": [
+            "wongwian-yai-east--platform-wongwian-yai--competitor-point",
+            "wongwian-yai-east--ics--competitor-point",
+            "wongwian-yai-east--sena-fest--competitor-point",
+            "wongwian-yai-east--iconsiam--competitor-point",
+            "wongwian-yai-east--mall-tha-phra--competitor-point"
+          ],
+          "visible": true,
+          "marker": "indexed_impact_marker",
+          "legend_label": "Competitor impact class",
+          "direct_labels": false,
+          "size_basis": "impact_class",
+          "size_scale_id": "competition-impact-v1",
+          "unknown_rule": "Unknown GLA, NLA, or tenant count remains unknown and never becomes zero. Verified size appears only as disclosed numeric context, not on this categorical radius scale.",
+          "detail_panel_id": "competitor-panel"
+        }
+      ],
+      "context_fallback": {
+        "status": "geometry_unavailable",
+        "kind": "simplified_metric_basemap",
+        "visible": true,
+        "disclosure": "No approved khwaeng or locale GeoJSON/WKT was supplied. The visible kilometre grid, orientation labels, north arrow, and cluster annotations are context only; none is a legal boundary, candidate extent, or catchment."
+      },
+      "accessibility": {
+        "summary": "Candidate and competitor presentation points on a one-kilometre grid. No candidate extent or catchment is shown.",
+        "data_table_id": "competitor-table"
+      },
+      "withheld_competitor_ids": []
+    },
+    {
+      "id": "bang-khun-non-south-detail",
+      "role": "detail",
+      "site_ids": [
+        "bang-khun-non-south"
+      ],
+      "layers": [
+        {
+          "id": "bang-khun-non-south-candidate",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "bang-khun-non-south--reference-point"
+          ],
+          "visible": true,
+          "marker": "numbered_square",
+          "legend_label": "Candidate reference point",
+          "direct_labels": false
+        },
+        {
+          "id": "bang-khun-non-south-competitors",
+          "kind": "competitor_marker",
+          "geometry_ids": [
+            "bang-khun-non-south--central-pinklao--competitor-point",
+            "bang-khun-non-south--lotus-merry-king-pinklao--competitor-point"
+          ],
+          "visible": true,
+          "marker": "indexed_impact_marker",
+          "legend_label": "Competitor impact class",
+          "direct_labels": false,
+          "size_basis": "impact_class",
+          "size_scale_id": "competition-impact-v1",
+          "unknown_rule": "Unknown GLA, NLA, or tenant count remains unknown and never becomes zero. Verified size appears only as disclosed numeric context, not on this categorical radius scale.",
+          "detail_panel_id": "competitor-panel"
+        }
+      ],
+      "context_fallback": {
+        "status": "geometry_unavailable",
+        "kind": "simplified_metric_basemap",
+        "visible": true,
+        "disclosure": "No approved khwaeng or locale GeoJSON/WKT was supplied. The visible kilometre grid, orientation labels, north arrow, and cluster annotations are context only; none is a legal boundary, candidate extent, or catchment."
+      },
+      "accessibility": {
+        "summary": "Candidate and competitor presentation points on a one-kilometre grid. No candidate extent or catchment is shown.",
+        "data_table_id": "competitor-table"
+      },
+      "withheld_competitor_ids": [
+        "the-sense-pinklao"
+      ]
+    },
+    {
+      "id": "ban-khaek-detail",
+      "role": "detail",
+      "site_ids": [
+        "ban-khaek"
+      ],
+      "layers": [
+        {
+          "id": "ban-khaek-candidate",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "ban-khaek--reference-point"
+          ],
+          "visible": true,
+          "marker": "numbered_square",
+          "legend_label": "Candidate reference point",
+          "direct_labels": false
+        },
+        {
+          "id": "ban-khaek-competitors",
+          "kind": "competitor_marker",
+          "geometry_ids": [
+            "ban-khaek--platform-wongwian-yai--competitor-point",
+            "ban-khaek--old-siam--competitor-point",
+            "ban-khaek--ics--competitor-point",
+            "ban-khaek--iconsiam--competitor-point",
+            "ban-khaek--sena-fest--competitor-point",
+            "ban-khaek--mall-tha-phra--competitor-point"
+          ],
+          "visible": true,
+          "marker": "indexed_impact_marker",
+          "legend_label": "Competitor impact class",
+          "direct_labels": false,
+          "size_basis": "impact_class",
+          "size_scale_id": "competition-impact-v1",
+          "unknown_rule": "Unknown GLA, NLA, or tenant count remains unknown and never becomes zero. Verified size appears only as disclosed numeric context, not on this categorical radius scale.",
+          "detail_panel_id": "competitor-panel"
+        }
+      ],
+      "context_fallback": {
+        "status": "geometry_unavailable",
+        "kind": "simplified_metric_basemap",
+        "visible": true,
+        "disclosure": "No approved khwaeng or locale GeoJSON/WKT was supplied. The visible kilometre grid, orientation labels, north arrow, and cluster annotations are context only; none is a legal boundary, candidate extent, or catchment."
+      },
+      "accessibility": {
+        "summary": "Candidate and competitor presentation points on a one-kilometre grid. No candidate extent or catchment is shown.",
+        "data_table_id": "competitor-table"
+      },
+      "withheld_competitor_ids": []
+    },
+    {
+      "id": "bang-pho-east-detail",
+      "role": "detail",
+      "site_ids": [
+        "bang-pho-east"
+      ],
+      "layers": [
+        {
+          "id": "bang-pho-east-candidate",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "bang-pho-east--reference-point"
+          ],
+          "visible": true,
+          "marker": "numbered_square",
+          "legend_label": "Candidate reference point",
+          "direct_labels": false
+        },
+        {
+          "id": "bang-pho-east-competitors",
+          "kind": "competitor_marker",
+          "geometry_ids": [
+            "bang-pho-east--gateway-bangsue--competitor-point",
+            "bang-pho-east--lotus-prachachuen--competitor-point",
+            "bang-pho-east--meeting-mall--competitor-point",
+            "bang-pho-east--central-ladprao--competitor-point"
+          ],
+          "visible": true,
+          "marker": "indexed_impact_marker",
+          "legend_label": "Competitor impact class",
+          "direct_labels": false,
+          "size_basis": "impact_class",
+          "size_scale_id": "competition-impact-v1",
+          "unknown_rule": "Unknown GLA, NLA, or tenant count remains unknown and never becomes zero. Verified size appears only as disclosed numeric context, not on this categorical radius scale.",
+          "detail_panel_id": "competitor-panel"
+        }
+      ],
+      "context_fallback": {
+        "status": "geometry_unavailable",
+        "kind": "simplified_metric_basemap",
+        "visible": true,
+        "disclosure": "No approved khwaeng or locale GeoJSON/WKT was supplied. The visible kilometre grid, orientation labels, north arrow, and cluster annotations are context only; none is a legal boundary, candidate extent, or catchment."
+      },
+      "accessibility": {
+        "summary": "Candidate and competitor presentation points on a one-kilometre grid. No candidate extent or catchment is shown.",
+        "data_table_id": "competitor-table"
+      },
+      "withheld_competitor_ids": []
+    },
+    {
+      "id": "rama3-east-detail",
+      "role": "detail",
+      "site_ids": [
+        "rama3-east"
+      ],
+      "layers": [
+        {
+          "id": "rama3-east-candidate",
+          "kind": "candidate_marker",
+          "geometry_ids": [
+            "rama3-east--reference-point"
+          ],
+          "visible": true,
+          "marker": "numbered_square",
+          "legend_label": "Candidate reference point",
+          "direct_labels": false
+        },
+        {
+          "id": "rama3-east-competitors",
+          "kind": "competitor_marker",
+          "geometry_ids": [
+            "rama3-east--central-rama3--competitor-point",
+            "rama3-east--bangkok-square--competitor-point",
+            "rama3-east--kingsquare--competitor-point",
+            "rama3-east--terminal21-rama3--competitor-point"
+          ],
+          "visible": true,
+          "marker": "indexed_impact_marker",
+          "legend_label": "Competitor impact class",
+          "direct_labels": false,
+          "size_basis": "impact_class",
+          "size_scale_id": "competition-impact-v1",
+          "unknown_rule": "Unknown GLA, NLA, or tenant count remains unknown and never becomes zero. Verified size appears only as disclosed numeric context, not on this categorical radius scale.",
+          "detail_panel_id": "competitor-panel"
+        }
+      ],
+      "context_fallback": {
+        "status": "geometry_unavailable",
+        "kind": "simplified_metric_basemap",
+        "visible": true,
+        "disclosure": "No approved khwaeng or locale GeoJSON/WKT was supplied. The visible kilometre grid, orientation labels, north arrow, and cluster annotations are context only; none is a legal boundary, candidate extent, or catchment."
+      },
+      "accessibility": {
+        "summary": "Candidate and competitor presentation points on a one-kilometre grid. No candidate extent or catchment is shown.",
+        "data_table_id": "competitor-table"
+      },
+      "withheld_competitor_ids": []
+    }
+  ],
+  "render_contract": {
+    "map_root": "[data-location-map]",
+    "candidate_map": "[data-map-candidate-id]",
+    "competitor_marker_required_attributes": [
+      "data-competitor-id",
+      "data-map-candidate-id",
+      "data-impact-class",
+      "data-size-basis"
+    ],
+    "competitor_details": "[data-competitor-details]",
+    "fallback_table": "[data-map-fallback]",
+    "recommendation_candidate_ids": "[data-recommendation-candidate-ids]",
+    "cta_candidate_ids": "[data-cta-candidate-ids]"
+  },
+  "qa": {
+    "orphan_dot_count": 0,
+    "keyboard_access": true,
+    "visible_focus": true,
+    "screen_reader_summary": true,
+    "data_table_fallback": true,
+    "color_independent_encoding": true,
+    "reduced_motion": true,
+    "overflow_free": true,
+    "zoom_200_checked": true,
+    "light_dark_checked": true,
+    "responsive_widths": [
+      320,
+      768,
+      1440
+    ],
+    "min_label_px": 12,
+    "min_touch_target_px": 44,
+    "text_contrast_ratio": 4.5,
+    "non_text_contrast_ratio": 3
+  }
+}

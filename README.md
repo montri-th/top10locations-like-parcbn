@@ -2,39 +2,52 @@
 
 Production: <https://montri-th.github.io/top10locations-like-parcbn/>
 
-The current landing page is the **Fresh Locale Screen Board Explainer v1.0**, based on the independent **Analysis & Product Brief v0.1** dated 28 July 2026.
+The current landing page is the **Competition-aware Board Explainer v2.0**, dated 28 July 2026. It is designed for CEO, CFO, and Board review of the exact Fresh Top 10 shortlist.
 
-## What this release is
+## Decision requested
 
-This release starts again from the full Locale Insight registry rather than carrying forward the Top 10 from Release 1.5 or Release 1.6.
+Approve detailed study of all ten shortlisted locales. This is approval for the next evidence stage—not approval to choose a parcel, acquire land, or invest.
 
-- 806 locale records entered the fresh screen.
-- 745 locales passed the minimum data and coordinate gate and received baseline scores.
-- 574 locales entered the primary PARC-like concept-fit lane.
-- 171 locales remained in a challenger lane and were not deleted from the next network run.
-- 10 seed locales are presented for exploration. They are **not** a final Top 10 and are **not** parcel recommendations.
+The study must return with:
 
-The next decision requested from CEO, CFO, and the Board is approval for a network-based Fresh Screen and field validation. It is not approval to acquire land or invest in a project.
+- 10 locale dossiers;
+- 3 market-overlap decisions;
+- no more than 3–5 investment candidates;
+- stop reasons, preliminary economics, and downside scenarios.
 
-## Current public artifacts
+## Competition treatment
+
+The release preserves the published Fresh baseline ranking and adds an evidence-bounded competition diagnostic:
+
+- 23 mapped competitor records across 43 candidate–competitor relationships;
+- categorical impact markers on one disclosed scale;
+- verified leasable-area context only when a current primary source is available;
+- unknown GLA, NLA, tenant count, or lifecycle status never treated as zero;
+- no competition-adjusted rerank of all 745 locales until the registry, routing, crossing, and parent-complex rules are frozen consistently.
+
+High competitor supply is not an automatic rejection. Each candidate states the proposition or route advantage that must be true and the kill test that should stop further work.
+
+## Map integrity
+
+The overview and ten interactive detail views use calibrated WGS84 presentation points and a visible kilometre-grid fallback. No approved khwaeng or locale GeoJSON/WKT was supplied, so the release does not invent administrative boundaries, locale extents, parcels, or catchments.
+
+Competitor markers are keyboard accessible, open a detail panel with evidence links, and have table fallbacks. Marker radius uses one categorical impact-class scale; verified NLA or disclosed leasable area appears as separate numeric context.
+
+## Current artifacts
 
 - [`index.html`](index.html) — production landing page
-- [`PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v1.0.html`](PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v1.0.html) — named standalone HTML copy
-- [`analysis/PARC_Bangna_Fresh_Locale_Screen_Analysis_and_UXUI_Brief_v0.1_2026-07-28.md`](analysis/PARC_Bangna_Fresh_Locale_Screen_Analysis_and_UXUI_Brief_v0.1_2026-07-28.md) — full analysis and UX/UI brief
+- [`PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v2.0_Competition_Aware_2026-07-28.html`](PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v2.0_Competition_Aware_2026-07-28.html) — named HTML checkpoint
+- [`analysis/PARC_Bangna_Fresh_Locale_Screen_Competition_Aware_Board_Brief_v0.2_2026-07-28.md`](analysis/PARC_Bangna_Fresh_Locale_Screen_Competition_Aware_Board_Brief_v0.2_2026-07-28.md) — competition-aware analysis and UX/UI brief
+- [`analysis/fresh-competition-aware-payload-v2.json`](analysis/fresh-competition-aware-payload-v2.json) — source-to-render contract
+- [`analysis/fresh-map-manifest-v2.json`](analysis/fresh-map-manifest-v2.json) — geometry, layer, fallback, and accessibility contract
+- [`scripts/build_fresh_competition_v2.js`](scripts/build_fresh_competition_v2.js) — deterministic builder
+- [`scripts/qa_fresh_competition_v2.js`](scripts/qa_fresh_competition_v2.js) — deterministic parity and integrity QA
 
-## Decision boundary
+## Rebuild and structural QA
 
-The 10 displayed opportunities are a curated first-pass view from the fresh screen. Several may describe overlapping markets. Final ranking must be rerun across all 745 eligible locales using frozen travel-time networks, verified river and expressway crossing points, competitor supply on the same network, and market-overlap consolidation.
+```bash
+node scripts/build_fresh_competition_v2.js
+node scripts/qa_fresh_competition_v2.js
+```
 
-If the required routing, crossing, competitor, or parcel evidence is missing, the next stage must report the gap rather than fall back to straight-line distance.
-
-## File integrity
-
-| Artifact | SHA-256 |
-|---|---|
-| Board Explainer HTML | `4d2a0177bbc5cabfee93500207c74915de5ef190f26e96bfd1e11d3df5496979` |
-| Analysis & UX/UI Brief | `b0fec0f5ca623060e0bd6deb3df209640e05faf3b3056ff7a7be35ab5198572e` |
-
-## Earlier release
-
-Release 1.6 files remain in the repository as audit history. Its ranking, competition overlay, build scripts, and QA evidence describe that earlier release and do not define the current production landing page.
+The named HTML and `index.html` must remain byte-identical. Earlier releases remain in the repository as audit history and do not define the current landing page.

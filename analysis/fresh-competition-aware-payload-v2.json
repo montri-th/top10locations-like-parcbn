@@ -1,0 +1,1102 @@
+{
+  "report": {
+    "id": "parc-bangna-fresh-competition-aware-v2",
+    "title": "PARC Bangna — Fresh Locale Screen",
+    "subtitle": "Competition-aware Board Brief",
+    "version": "2.0",
+    "as_of": "2026-07-28",
+    "audience": "CEO, CFO, Board of Directors",
+    "canonical_rank_status": "Fresh baseline preserved; competition is an evidence-bounded diagnostic and study-sequencing layer.",
+    "decision": "Approve detailed study of the exact Top 10 shortlist. Do not approve investment, parcel acquisition, or a fabricated competition rerank of all 745 locales.",
+    "motif_quietness": "Q1"
+  },
+  "decision_scope": {
+    "mode": "shortlist",
+    "candidate_ids": [
+      "talat-phlu-south",
+      "samre",
+      "wang-hin-south",
+      "charoen-rat",
+      "bang-son",
+      "wongwian-yai-east",
+      "bang-khun-non-south",
+      "ban-khaek",
+      "bang-pho-east",
+      "rama3-east"
+    ],
+    "next_stage": "Route-based catchments, competitor census, unmet-job validation, market-overlap consolidation, candidate-parcel access, and preliminary economics.",
+    "prohibitions": [
+      "Not an approval to acquire land",
+      "Not an approval to invest",
+      "Not an approval to deep-study all 745 locales equally",
+      "Not a final Top 10 investment rank"
+    ]
+  },
+  "recommendation": {
+    "mode": "shortlist",
+    "candidate_ids": [
+      "talat-phlu-south",
+      "samre",
+      "wang-hin-south",
+      "charoen-rat",
+      "bang-son",
+      "wongwian-yai-east",
+      "bang-khun-non-south",
+      "ban-khaek",
+      "bang-pho-east",
+      "rama3-east"
+    ],
+    "headline_th": "อนุมัติ 10 investigations — ไม่ใช่ 10 investments",
+    "support_th": "ให้คู่แข่งเป็น kill test ให้เส้นทางจริงเป็นตัวตัดตลาด และให้แปลงกับ economics เป็นด่านสุดท้าย",
+    "summary": "อนุมัติ 10 investigations — ไม่ใช่ 10 investments",
+    "confidence": "directional shortlist; competition census and route evidence incomplete",
+    "evidence_ids": [
+      "fresh-v01",
+      "venue-rc1",
+      "operator-evidence"
+    ]
+  },
+  "cta": {
+    "scope": "top_10_detailed_study",
+    "candidate_ids": [
+      "talat-phlu-south",
+      "samre",
+      "wang-hin-south",
+      "charoen-rat",
+      "bang-son",
+      "wongwian-yai-east",
+      "bang-khun-non-south",
+      "ban-khaek",
+      "bang-pho-east",
+      "rama3-east"
+    ],
+    "label_th": "อนุมัติศึกษารายละเอียด Top 10",
+    "next_stage": "Return to the Board with 10 locale dossiers, 3 market-cluster decisions, a shortlist of no more than 3–5 investment candidates, stop reasons, and downside scenarios.",
+    "label": "อนุมัติศึกษารายละเอียด Top 10",
+    "action": "Approve detailed study of the exact Top 10 shortlist and return with no more than 3–5 investment candidates.",
+    "owner": "Board sponsor with Strategy, Research, Development and Finance",
+    "timing": "Next-stage study authorization; return at the investment-shortlist gate"
+  },
+  "method": {
+    "fresh_baseline_formula": "55% resident base + 25% routine breadth + 20% out-of-home evidence",
+    "fresh_universe": {
+      "registry_records": 806,
+      "usable_records": 796,
+      "eligible_locales": 745,
+      "primary_lane": 574,
+      "challenger_lane": 171
+    },
+    "competition_status": "minimum_verified_top10_overlay_not_complete_745_census",
+    "pressure_rule": {
+      "very_high": "At least one high-impact competitor within approximately 1 km context or at least three high/medium-high venues within approximately 3 km after preliminary cluster deduplication.",
+      "high": "At least one high-impact venue within approximately 3 km context or strong regional supply whose effect still depends on the route network.",
+      "medium_high_route_sensitive": "Plausible supply exists, but river, road, crossing, or fragmented-street-retail evidence prevents a direct-pressure conclusion from straight-line context."
+    },
+    "distance_use": "Haversine distance is shown for orientation only. It is not a catchment, route time, or competition score.",
+    "unknown_rule": "Unknown is never zero. Missing NLA, tenant count, or operating evidence remains explicitly unknown.",
+    "cluster_rule": "Related venues may render as separate markers but are deduplicated through parent_cluster_id for future pressure aggregation."
+  },
+  "candidates": [
+    {
+      "id": "talat-phlu-south",
+      "name_th": "ตลาดพลู-ใต้",
+      "name_en": "Talat Phlu South",
+      "fresh_rank": 1,
+      "fresh_score": 93.8,
+      "rank_range": "1–1",
+      "resident": 98.5,
+      "routine": 87.7,
+      "out_of_home": 88.9,
+      "study_order": 1,
+      "group": "prove",
+      "market_cluster": "thonburi-south",
+      "pressure": "high",
+      "pressure_th": "สูง",
+      "lat": 13.7174,
+      "lon": 100.4775,
+      "coordinate_basis": "Fresh SVG reference point calibrated to shared WGS84 audit points; not a parcel or locale polygon.",
+      "competitor_ids": [
+        "mall-tha-phra",
+        "riverside-plaza",
+        "platform-wongwian-yai",
+        "iconsiam"
+      ],
+      "headline_th": "ฐานตลาดแข็งที่สุด แต่ The Mall อยู่ใกล้เกินกว่าจะขายคำว่า family mall แบบกว้าง",
+      "strategy_th": "พิสูจน์ quick routine + open-air regular refuge ที่ regional mall ทำให้ยุ่งเกินไป",
+      "must_be_true_th": "ลูกค้าเข้าถึงง่ายกว่า ใช้เวลาสั้นกว่า และเห็น job ที่ต่างจาก The Mall อย่างชัดเจน",
+      "kill_test_th": "หยุดหากไม่มี route advantage หรือผู้ใช้ไม่เห็นเหตุผลเปลี่ยนพฤติกรรม",
+      "name": "ตลาดพลู-ใต้",
+      "status": "detailed-study candidate; not an approved investment",
+      "rank": 1,
+      "score": 93.8,
+      "evidence_ids": [
+        "fresh-v01",
+        "venue-rc1",
+        "operator-evidence"
+      ]
+    },
+    {
+      "id": "samre",
+      "name_th": "สำเหร่",
+      "name_en": "Samre",
+      "fresh_rank": 2,
+      "fresh_score": 91.2,
+      "rank_range": "2–3",
+      "resident": 94.3,
+      "routine": 85.8,
+      "out_of_home": 89.5,
+      "study_order": 7,
+      "group": "cluster",
+      "market_cluster": "thonburi-south",
+      "pressure": "high_route_sensitive",
+      "pressure_th": "สูง / route-sensitive",
+      "lat": 13.7055,
+      "lon": 100.4911,
+      "coordinate_basis": "Fresh SVG reference point calibrated to shared WGS84 audit points; not a parcel or locale polygon.",
+      "competitor_ids": [
+        "riverside-plaza",
+        "mall-tha-phra",
+        "sena-fest",
+        "platform-wongwian-yai",
+        "terminal21-rama3"
+      ],
+      "headline_th": "คะแนนสมดุล แต่จุดอ้างอิงอยู่ชิด Riverside Plaza และตลาดอาจทับตลาดพลู",
+      "strategy_th": "หา micro-catchment ที่ barrier แยกจริง และ routine job ที่ศูนย์เดิมไม่ตอบ",
+      "must_be_true_th": "network overlap กับตลาดพลูต่ำพอและ candidate parcel ไม่ถูกศูนย์เดิมครอบ",
+      "kill_test_th": "หากใช้ demand pool เดียวกับตลาดพลู ให้เก็บเป็น backup",
+      "name": "สำเหร่",
+      "status": "detailed-study candidate; not an approved investment",
+      "rank": 2,
+      "score": 91.2,
+      "evidence_ids": [
+        "fresh-v01",
+        "venue-rc1",
+        "operator-evidence"
+      ]
+    },
+    {
+      "id": "wang-hin-south",
+      "name_th": "วังหิน-ใต้",
+      "name_en": "Wang Hin South",
+      "fresh_rank": 3,
+      "fresh_score": 90.7,
+      "rank_range": "2–3",
+      "resident": 87.5,
+      "routine": 90.9,
+      "out_of_home": 99.3,
+      "study_order": 4,
+      "group": "hurdle",
+      "market_cluster": "wang-hin",
+      "pressure": "very_high",
+      "pressure_th": "สูงมาก",
+      "lat": 13.806119,
+      "lon": 100.596604,
+      "coordinate_basis": "Derived from the Fresh SVG coordinate scale; not a parcel or locale polygon.",
+      "competitor_ids": [
+        "central-eastville",
+        "the-crystal",
+        "cdc",
+        "imperial-ladprao",
+        "the-walk"
+      ],
+      "headline_th": "Concept collision สูงสุด—nature, pet, wellness และ food มีเจ้าของพื้นที่อยู่แล้ว",
+      "strategy_th": "ชนะด้วย micro-location, daily convenience, recognition และ 60–90 minute regular refuge",
+      "must_be_true_th": "พบ unmet job ที่ EastVille / Crystal / CDC ยังไม่ครอง",
+      "kill_test_th": "หยุดหาก consumer research ได้เพียงคำว่า green, calm, pet-friendly",
+      "name": "วังหิน-ใต้",
+      "status": "detailed-study candidate; not an approved investment",
+      "rank": 3,
+      "score": 90.7,
+      "evidence_ids": [
+        "fresh-v01",
+        "venue-rc1",
+        "operator-evidence"
+      ]
+    },
+    {
+      "id": "charoen-rat",
+      "name_th": "เจริญราษฎร์",
+      "name_en": "Charoen Rat",
+      "fresh_rank": 4,
+      "fresh_score": 88.7,
+      "rank_range": "4–5",
+      "resident": 88.6,
+      "routine": 86.1,
+      "out_of_home": 92.2,
+      "study_order": 5,
+      "group": "cluster",
+      "market_cluster": "charoen-rama3",
+      "pressure": "very_high",
+      "pressure_th": "สูงมาก",
+      "lat": 13.6963,
+      "lon": 100.5168,
+      "coordinate_basis": "Fresh SVG reference point calibrated to shared WGS84 audit points; not a parcel or locale polygon.",
+      "competitor_ids": [
+        "kingsquare",
+        "terminal21-rama3",
+        "central-rama3",
+        "sena-fest"
+      ],
+      "unmapped_competitor_ids": [
+        "asiatique"
+      ],
+      "headline_th": "กิจกรรมนอกบ้านแข็ง แต่สนามเดิมมีทั้ง community, regional และ destination supply",
+      "strategy_th": "แยก everyday same-side mission ออกจาก destination/evening demand",
+      "must_be_true_th": "เป็นตลาดคนละก้อนกับพระราม 3-ตะวันออกหลังใช้ route matrix",
+      "kill_test_th": "หาก demand cells ทับพระราม 3 สูง ให้เลือกตัวแทนจาก access + economics",
+      "name": "เจริญราษฎร์",
+      "status": "detailed-study candidate; not an approved investment",
+      "rank": 4,
+      "score": 88.7,
+      "evidence_ids": [
+        "fresh-v01",
+        "venue-rc1",
+        "operator-evidence"
+      ]
+    },
+    {
+      "id": "bang-son",
+      "name_th": "บางซ่อน",
+      "name_en": "Bang Son",
+      "fresh_rank": 5,
+      "fresh_score": 86.7,
+      "rank_range": "4–8",
+      "resident": 96.7,
+      "routine": 67.1,
+      "out_of_home": 83.6,
+      "study_order": 6,
+      "group": "cluster",
+      "market_cluster": "bang-sue",
+      "pressure": "high",
+      "pressure_th": "สูง",
+      "lat": 13.812405,
+      "lon": 100.529285,
+      "coordinate_basis": "Derived from the Fresh SVG coordinate scale; not a parcel or locale polygon.",
+      "competitor_ids": [
+        "gateway-bangsue",
+        "lotus-prachachuen",
+        "central-ladprao",
+        "union-mall"
+      ],
+      "pipeline_ids": [
+        "central-phaholyothin"
+      ],
+      "headline_th": "ฐานคนสูง แต่ Gateway ทับ family/community offer โดยตรง",
+      "strategy_th": "หา route-insulated low-friction neighbourhood routine",
+      "must_be_true_th": "ถนนหรือรางสร้าง catchment pocket ที่ Gateway ไม่ได้ครอง",
+      "kill_test_th": "หาก overlap กับ Gateway และบางโพสูง ให้เหลือตัวแทนเดียว",
+      "name": "บางซ่อน",
+      "status": "detailed-study candidate; not an approved investment",
+      "rank": 5,
+      "score": 86.7,
+      "evidence_ids": [
+        "fresh-v01",
+        "venue-rc1",
+        "operator-evidence"
+      ]
+    },
+    {
+      "id": "wongwian-yai-east",
+      "name_th": "วงเวียนใหญ่-ตะวันออก",
+      "name_en": "Wongwian Yai East",
+      "fresh_rank": 6,
+      "fresh_score": 86.1,
+      "rank_range": "5–6",
+      "resident": 88.2,
+      "routine": 81.1,
+      "out_of_home": 86.7,
+      "study_order": 8,
+      "group": "cluster",
+      "market_cluster": "thonburi-south",
+      "pressure": "high",
+      "pressure_th": "สูง",
+      "lat": 13.7254,
+      "lon": 100.4954,
+      "coordinate_basis": "Fresh SVG reference point calibrated to shared WGS84 audit points; not a parcel or locale polygon.",
+      "competitor_ids": [
+        "platform-wongwian-yai",
+        "ics",
+        "sena-fest",
+        "iconsiam",
+        "mall-tha-phra"
+      ],
+      "headline_th": "Platform อยู่ใกล้มาก และ destination cluster อยู่รอบตลาดเดียวกัน",
+      "strategy_th": "เดินหน้าต่อเมื่อ candidate parcel มี access/visibility เหนือกว่า",
+      "must_be_true_th": "มี daily routine ที่ destination cluster ไม่ตอบ",
+      "kill_test_th": "หากแปลงไม่มี friction advantage ให้ลดลำดับ",
+      "name": "วงเวียนใหญ่-ตะวันออก",
+      "status": "detailed-study candidate; not an approved investment",
+      "rank": 6,
+      "score": 86.1,
+      "evidence_ids": [
+        "fresh-v01",
+        "venue-rc1",
+        "operator-evidence"
+      ]
+    },
+    {
+      "id": "bang-khun-non-south",
+      "name_th": "บางขุนนนท์-ใต้",
+      "name_en": "Bang Khun Non South",
+      "fresh_rank": 7,
+      "fresh_score": 84.7,
+      "rank_range": "7–11",
+      "resident": 92.4,
+      "routine": 75.9,
+      "out_of_home": 74.6,
+      "study_order": 2,
+      "group": "prove",
+      "market_cluster": "bang-khun-non",
+      "pressure": "very_high_regional",
+      "pressure_th": "สูงมากระดับภูมิภาค",
+      "lat": 13.760007,
+      "lon": 100.470192,
+      "coordinate_basis": "Derived from the Fresh SVG coordinate scale; not a parcel or locale polygon.",
+      "competitor_ids": [
+        "central-pinklao",
+        "lotus-merry-king-pinklao"
+      ],
+      "unmapped_competitor_ids": [
+        "the-sense-pinklao"
+      ],
+      "headline_th": "ไม่ใช่ regional white space แต่ยังมีสมมติฐานเรื่อง short-trip neighbourhood friction",
+      "strategy_th": "compact daily job ที่ Central Pinklao ทำให้ช้าและใหญ่เกินไป",
+      "must_be_true_th": "ทางเข้า–ออกและเวลาใช้งานเหนือกว่าศูนย์ภูมิภาคอย่างชัดเจน",
+      "kill_test_th": "หยุดหากคลอง ราง กลับรถ หรือ parcel access ทำให้เส้นทางจริงแย่กว่า",
+      "name": "บางขุนนนท์-ใต้",
+      "status": "detailed-study candidate; not an approved investment",
+      "rank": 7,
+      "score": 84.7,
+      "evidence_ids": [
+        "fresh-v01",
+        "venue-rc1",
+        "operator-evidence"
+      ]
+    },
+    {
+      "id": "ban-khaek",
+      "name_th": "แยกบ้านแขก",
+      "name_en": "Ban Khaek",
+      "fresh_rank": 8,
+      "fresh_score": 84.0,
+      "rank_range": "6–31",
+      "resident": 91.0,
+      "routine": 94.2,
+      "out_of_home": 52.0,
+      "study_order": 10,
+      "group": "cluster",
+      "market_cluster": "thonburi-south",
+      "pressure": "medium_high_route_sensitive",
+      "pressure_th": "กลาง–สูง / route-sensitive",
+      "lat": 13.7335,
+      "lon": 100.4915,
+      "coordinate_basis": "Fresh SVG reference point calibrated to shared WGS84 audit points; not a parcel or locale polygon.",
+      "competitor_ids": [
+        "platform-wongwian-yai",
+        "old-siam",
+        "ics",
+        "iconsiam",
+        "sena-fest",
+        "mall-tha-phra"
+      ],
+      "headline_th": "Routine สูง แต่อันดับแกว่งและ fragmented street retail ยังไม่ถูก census",
+      "strategy_th": "พิสูจน์ stop-and-stay demand และเลือกกับกลุ่มฝั่งธนฯ ไม่เดินหน้าซ้ำ",
+      "must_be_true_th": "กิจวัตรที่เห็นต้องกลายเป็น visit intent ไม่ใช่คนผ่าน",
+      "kill_test_th": "หากอันดับยังแกว่งหลังใช้ network หรือ overlap สูง ให้ตัดก่อนหาแปลง",
+      "name": "แยกบ้านแขก",
+      "status": "detailed-study candidate; not an approved investment",
+      "rank": 8,
+      "score": 84,
+      "evidence_ids": [
+        "fresh-v01",
+        "venue-rc1",
+        "operator-evidence"
+      ]
+    },
+    {
+      "id": "bang-pho-east",
+      "name_th": "บางโพ-ตะวันออก",
+      "name_en": "Bang Pho East",
+      "fresh_rank": 9,
+      "fresh_score": 83.1,
+      "rank_range": "9–18",
+      "resident": 94.8,
+      "routine": 66.1,
+      "out_of_home": 72.2,
+      "study_order": 9,
+      "group": "cluster",
+      "market_cluster": "bang-sue",
+      "pressure": "high",
+      "pressure_th": "สูง",
+      "lat": 13.8062,
+      "lon": 100.524499,
+      "coordinate_basis": "Derived from the Fresh SVG coordinate scale; not a parcel or locale polygon.",
+      "competitor_ids": [
+        "gateway-bangsue",
+        "lotus-prachachuen",
+        "meeting-mall",
+        "central-ladprao"
+      ],
+      "pipeline_ids": [
+        "central-phaholyothin"
+      ],
+      "headline_th": "reference point อยู่ชิด Gateway—อาจเป็น demand signal รอบศูนย์เดิมมากกว่า white space",
+      "strategy_th": "ค้น site pocket ที่พ้น direct Gateway catchment และเทียบบางซ่อน",
+      "must_be_true_th": "มี parcel/catchment ที่เป็นโอกาสอิสระจริง",
+      "kill_test_th": "หากไม่มี site pocket ให้เก็บเป็น evidence ของตลาด ไม่ใช่ development opportunity",
+      "name": "บางโพ-ตะวันออก",
+      "status": "detailed-study candidate; not an approved investment",
+      "rank": 9,
+      "score": 83.1,
+      "evidence_ids": [
+        "fresh-v01",
+        "venue-rc1",
+        "operator-evidence"
+      ]
+    },
+    {
+      "id": "rama3-east",
+      "name_th": "พระราม 3-ตะวันออก",
+      "name_en": "Rama 3 East",
+      "fresh_rank": 10,
+      "fresh_score": 82.9,
+      "rank_range": "7–15",
+      "resident": 75.0,
+      "routine": 88.8,
+      "out_of_home": 97.3,
+      "study_order": 3,
+      "group": "prove",
+      "market_cluster": "charoen-rama3",
+      "pressure": "very_high",
+      "pressure_th": "สูงมาก",
+      "lat": 13.686144,
+      "lon": 100.546921,
+      "coordinate_basis": "Derived from the Fresh SVG coordinate scale; not a parcel or locale polygon.",
+      "competitor_ids": [
+        "central-rama3",
+        "bangkok-square",
+        "kingsquare",
+        "terminal21-rama3"
+      ],
+      "headline_th": "กิจกรรมนอกบ้านสูงมาก แต่ regional และ community supply แข็งแรง",
+      "strategy_th": "low-rise, fast access, repeat routine และ curated choice",
+      "must_be_true_th": "ลูกค้ามี friction หรือ unmet job ที่ศูนย์เดิมไม่ตอบ",
+      "kill_test_th": "หยุดหาก proposition ยังเป็น family-food-entertainment แบบกว้าง",
+      "name": "พระราม 3-ตะวันออก",
+      "status": "detailed-study candidate; not an approved investment",
+      "rank": 10,
+      "score": 82.9,
+      "evidence_ids": [
+        "fresh-v01",
+        "venue-rc1",
+        "operator-evidence"
+      ]
+    }
+  ],
+  "competitors": [
+    {
+      "id": "mall-tha-phra",
+      "name": "The Mall Lifestore Tha Phra",
+      "venue_type": "department-store-led shopping centre",
+      "lat": 13.7136096,
+      "lon": 100.4801172,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "current GLA/NLA unknown",
+      "strength_th": "ครบ grocery, food, fashion, beauty, sport, electronics, kids และ entertainment",
+      "gap_th": "ทดสอบความต้องการ short visit, open-air และ regular refuge ที่ตัดสินใจง่ายกว่า",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://themalllifestore.com/branch/thapra"
+      ]
+    },
+    {
+      "id": "riverside-plaza",
+      "name": "Riverside Plaza Bangkok",
+      "venue_type": "lifestyle shopping centre",
+      "lat": 13.7052211,
+      "lon": 100.4909755,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "current GLA/NLA unknown",
+      "strength_th": "lifestyle/community offer อยู่ในพื้นที่สำเหร่โดยตรง",
+      "gap_th": "ต้องตรวจ field performance และ mission overlap ก่อนสรุปช่องว่าง",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.riverside-plaza.com/"
+      ]
+    },
+    {
+      "id": "platform-wongwian-yai",
+      "name": "Platform Wongwian Yai",
+      "venue_type": "shopping centre",
+      "lat": 13.7271083,
+      "lon": 100.4947674,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "current GLA/NLA unknown",
+      "strength_th": "direct local shopping supply ใกล้วงเวียนใหญ่",
+      "gap_th": "candidate parcel ต้องชนะ access และ repeat routine อย่างชัดเจน",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.facebook.com/platform.wongwianyai/?locale=th_TH"
+      ]
+    },
+    {
+      "id": "iconsiam",
+      "name": "ICONSIAM",
+      "venue_type": "destination shopping centre",
+      "parent_cluster_id": "iconsiam-ics",
+      "lat": 13.7266738,
+      "lon": 100.5107399,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "operator project-area metrics exist; current Retail NLA not used",
+      "strength_th": "destination, dining, culture และ broad tenant mix",
+      "gap_th": "ไม่ใช่ everyday substitute โดยอัตโนมัติ; crossing/route เป็นตัวตัด",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.iconsiam.com/en/directory"
+      ]
+    },
+    {
+      "id": "ics",
+      "name": "ICS Lifestyle Complex",
+      "venue_type": "shopping centre",
+      "parent_cluster_id": "iconsiam-ics",
+      "lat": 13.7262214,
+      "lon": 100.5084353,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "current GLA/NLA unknown",
+      "strength_th": "part of ICONSIAM destination cluster",
+      "gap_th": "นับรวม cluster ใน pressure aggregation",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://ics.iconsiam.com/"
+      ]
+    },
+    {
+      "id": "sena-fest",
+      "name": "SENA Fest",
+      "venue_type": "open-air lifestyle mall",
+      "lat": 13.7192823,
+      "lon": 100.5078712,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "medium",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": 8931,
+      "size_status": "rental/leasable area at end-2025; definition disclosed separately",
+      "strength_th": "open-air lifestyle/community format",
+      "gap_th": "field audit current tenant mix and repeat-daypart performance",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.senafest.com/en/about",
+        "https://www.sena.co.th/content/files/56-1-report/2026/Apr/1004/SENA-e-one-Report-2568_090469_EN_compressed.pdf"
+      ]
+    },
+    {
+      "id": "terminal21-rama3",
+      "name": "Terminal 21 Rama 3",
+      "venue_type": "shopping centre",
+      "lat": 13.6889163,
+      "lon": 100.5053561,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "historic 42,000 sqm retail area exists; not current as-built Retail NLA",
+      "strength_th": "7 retail floors, broad categories and destination format",
+      "gap_th": "food court near break-even is a format-economics signal, not evidence of a failing mall",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.terminal21.co.th/rama3/en/staticblocks/floor-home-en/",
+        "https://investor.lh.co.th/storage/downloads/shareholders-meeting/agm2026/20260522-lh-agm2026-minutes-en.pdf"
+      ]
+    },
+    {
+      "id": "central-eastville",
+      "name": "Central EastVille",
+      "venue_type": "regional shopping centre",
+      "lat": 13.8039586,
+      "lon": 100.6144733,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "retail_nla",
+      "retail_nla_sqm": 35732,
+      "size_status": "verified operator Retail NLA",
+      "strength_th": "nature/outdoor, pet park, rooftop jogging, food hall, wellness และ fitness",
+      "gap_th": "generic green/pet/wellness proposition ไม่มีช่องว่าง",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties",
+        "https://shoppingcenter.centralpattana.co.th/branch/central-eastville/branch-information"
+      ]
+    },
+    {
+      "id": "the-crystal",
+      "name": "The Crystal Ekamai-Ramindra",
+      "venue_type": "lifestyle shopping centre",
+      "parent_cluster_id": "crystal-cdc",
+      "lat": 13.81144,
+      "lon": 100.618568,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "retail_nla",
+      "retail_nla_sqm": 30823,
+      "occupancy_pct": 96.9,
+      "metric_as_of": "1Q26",
+      "size_status": "verified REIT NLA",
+      "strength_th": "food hall, fashion, cinema, fitness และ lifestyle cluster",
+      "gap_th": "ต้องหางานประจำวันเฉพาะพื้นที่ ไม่ชน destination cluster",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.allyreit.com/en/portfolio/29/the-crystal-ekamai-ramindra"
+      ]
+    },
+    {
+      "id": "cdc",
+      "name": "Crystal Design Center",
+      "venue_type": "design and lifestyle centre",
+      "parent_cluster_id": "crystal-cdc",
+      "lat": 13.802794,
+      "lon": 100.6184184,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "retail_nla",
+      "retail_nla_sqm": 35957,
+      "occupancy_pct": 91.4,
+      "metric_as_of": "1Q26",
+      "size_status": "verified REIT NLA",
+      "strength_th": "home/design destination เสริม fitness, food และ grocery",
+      "gap_th": "ไม่ใช่ direct everyday substitute ทุก mission แต่เพิ่ม cluster power",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.allyreit.com/en/portfolio/20/crystal-design-center"
+      ]
+    },
+    {
+      "id": "imperial-ladprao",
+      "name": "Imperial World Ladprao",
+      "venue_type": "shopping centre",
+      "lat": 13.786473,
+      "lon": 100.6126275,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "medium",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "current GLA/NLA unknown",
+      "strength_th": "established local shopping supply",
+      "gap_th": "field audit operating strength and current offer",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.facebook.com/ImperialWorldLadprao/"
+      ]
+    },
+    {
+      "id": "the-walk",
+      "name": "The Walk Kaset-Nawamin",
+      "venue_type": "home and lifestyle centre",
+      "lat": 13.828837,
+      "lon": 100.628453,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "medium_high",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "whole-centre GLA/NLA unknown",
+      "strength_th": "home/lifestyle cluster with major anchor",
+      "gap_th": "Index anchor area is not whole-mall GLA",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://investor.indexlivingmall.com/th/newsroom/press-releases/2410580/index-living-mall-completes-makeover-of-kaset-nawamin-branch-most-comprehensive-renovation-in-9-years"
+      ]
+    },
+    {
+      "id": "kingsquare",
+      "name": "KINGSQUARE Community Mall",
+      "venue_type": "community mall",
+      "lat": 13.691932,
+      "lon": 100.527267,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "current GLA/NLA unknown",
+      "strength_th": "direct family and routine overlap",
+      "gap_th": "test micro-location and short-trip friction",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://kingsquaremall.com/"
+      ]
+    },
+    {
+      "id": "central-rama3",
+      "name": "Central Rama 3",
+      "venue_type": "regional shopping centre",
+      "lat": 13.6977371,
+      "lon": 100.5377797,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "retail_nla",
+      "retail_nla_sqm": 48328,
+      "size_status": "verified operator Retail NLA",
+      "strength_th": "urban/nature, food, coworking, kids, education และ fitness",
+      "gap_th": "PARK concept ต้องต่างด้วย journey และ frequency ไม่ใช่หมวดสินค้า",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties",
+        "https://shoppingcenter.centralpattana.co.th/branch/central-rama-3/branch-information/"
+      ]
+    },
+    {
+      "id": "gateway-bangsue",
+      "name": "Gateway at Bangsue",
+      "venue_type": "family community shopping centre",
+      "lat": 13.8058555,
+      "lon": 100.5238157,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "total_area_sqm": 95000,
+      "size_status": "owner verifies total area >95,000 sqm; 39,000 sqm rental proxy is partial supplier evidence and not used as verified NLA",
+      "strength_th": "dining, health/beauty, education, cinema, fitness, kids, sky garden และ MRT skywalk",
+      "gap_th": "generic family/community offer ถูกครองแล้ว",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.assetworldcorp-th.com/en/portfolio/retails-and-wholesales/79/gateway-at-bangsue"
+      ]
+    },
+    {
+      "id": "lotus-prachachuen",
+      "name": "Lotus’s Prachachuen",
+      "venue_type": "hypermarket-led retail",
+      "lat": 13.805733,
+      "lon": 100.534989,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "medium_high",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "current GLA/NLA unknown",
+      "strength_th": "routine grocery/value anchor",
+      "gap_th": "test whether experience and short-stay jobs can switch behaviour",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://my.lotuss.com/branch/5030/en"
+      ]
+    },
+    {
+      "id": "central-ladprao",
+      "name": "Central Ladprao",
+      "venue_type": "regional shopping centre",
+      "lat": 13.816652,
+      "lon": 100.5610948,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "retail_nla",
+      "retail_nla_sqm": 43410,
+      "size_status": "verified operator Retail NLA",
+      "strength_th": "regional destination with broad offer",
+      "gap_th": "route-dependent; do not count from distance alone",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties"
+      ]
+    },
+    {
+      "id": "union-mall",
+      "name": "Union Mall",
+      "venue_type": "fashion and youth shopping centre",
+      "lat": 13.813364,
+      "lon": 100.561861,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "medium_high",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "current GLA/NLA unknown",
+      "strength_th": "fashion/youth destination",
+      "gap_th": "mission overlap differs from neighbourhood family routine",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.unionmall.co.th/"
+      ]
+    },
+    {
+      "id": "central-pinklao",
+      "name": "Central Pinklao",
+      "venue_type": "regional shopping centre",
+      "lat": 13.7773229,
+      "lon": 100.4757519,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "high",
+      "impact_basis": "retail_nla",
+      "retail_nla_sqm": 64917,
+      "size_status": "verified operator Retail NLA",
+      "strength_th": "regional breadth; recent renovation expands food, fashion, sport and new formats",
+      "gap_th": "white space can only be a compact neighbourhood job, not a regional mall gap",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.centralpattana.co.th/en/investor-relations/assets-under-central-pattana/retail-properties"
+      ]
+    },
+    {
+      "id": "lotus-merry-king-pinklao",
+      "name": "Lotus’s Merry King Pinklao",
+      "venue_type": "hypermarket-led retail",
+      "lat": 13.7764389,
+      "lon": 100.478082,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "medium_high",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "current GLA/NLA unknown",
+      "strength_th": "family/routine pressure next to the Pinklao cluster",
+      "gap_th": "field-audit mission and parcel access",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://my.lotuss.com/branch/5068/en"
+      ]
+    },
+    {
+      "id": "old-siam",
+      "name": "The Old Siam Plaza",
+      "venue_type": "heritage and traditional retail centre",
+      "lat": 13.745874,
+      "lon": 100.500214,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "medium",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "119 directory listings are not occupied tenant count",
+      "strength_th": "heritage, craft and traditional-food niche",
+      "gap_th": "niche benchmark; route overlap required before penalty",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://theoldsiam.co.th/en/"
+      ]
+    },
+    {
+      "id": "meeting-mall",
+      "name": "Meeting Mall @ Bang-aor Station",
+      "venue_type": "halal lifestyle mall",
+      "lat": 13.8022871,
+      "lon": 100.5126333,
+      "status": "operating",
+      "status_as_of": "2026-07-28",
+      "impact_class": "medium",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "current GLA/NLA unknown",
+      "strength_th": "Halal lifestyle, parking, prayer room and accessibility",
+      "gap_th": "Bang O location; direct overlap is route-sensitive",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://meetingmall94.com/"
+      ]
+    },
+    {
+      "id": "bangkok-square",
+      "name": "Bangkok Square Rama 3",
+      "venue_type": "F&B/community complex",
+      "lat": 13.6727524,
+      "lon": 100.5341544,
+      "status": "operating_evidence_partial",
+      "status_as_of": "2026-07-28",
+      "impact_class": "medium",
+      "impact_basis": "verified_impact_class",
+      "retail_nla_sqm": null,
+      "size_status": "current GLA/NLA and full-centre operating census unknown",
+      "strength_th": "operating F&B cluster",
+      "gap_th": "do not classify as a full-format shopping centre without field verification",
+      "coordinate_source": "Venue Locale Fundamental v0.2.0-rc1",
+      "sources": [
+        "https://www.jobbkk.com/company/212062"
+      ]
+    }
+  ],
+  "unmapped_competitors": [
+    {
+      "id": "asiatique",
+      "name": "Asiatique The Riverfront",
+      "reason": "Official current and pipeline evidence exists, but approved reusable coordinate lineage was not included in this release.",
+      "sources": [
+        "https://www.assetworldcorp-th.com/en/newsroom/news-activities/1108/awc-partners-with-emm-williams-productions-for-the-southeast-asian-debut-of-avatar-guardians-of-eywa-at-asiatique-the-riverfront-destination-in-2027"
+      ]
+    },
+    {
+      "id": "the-sense-pinklao",
+      "name": "The Sense Pinklao",
+      "reason": "Current operating evidence exists; current GLA conflicts and approved coordinate lineage is not included. Keep in the list, not the map.",
+      "sources": [
+        "https://www.thesensebkk.com/"
+      ]
+    }
+  ],
+  "pipeline": [
+    {
+      "id": "central-phaholyothin",
+      "name": "The Central Phaholyothin",
+      "status": "pipeline",
+      "expected_opening": "Q1 2027",
+      "approx_retail_nla_sqm": 100000,
+      "rule": "Scenario risk only; not operating supply.",
+      "sources": [
+        "https://investor.centralpattana.co.th/storage/document/shareholder-meetings/agm2026/cpn-agm2026-minutes-en.pdf"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "fresh-v01",
+      "label": "PARC Bangna Fresh Locale Screen v0.1",
+      "kind": "analysis_release",
+      "as_of": "2026-07-28"
+    },
+    {
+      "id": "locale-registry-v231",
+      "label": "ijji Locale Intelligence Registry v2.3.1",
+      "kind": "locale_registry",
+      "as_of": "2026-07-28"
+    },
+    {
+      "id": "venue-rc1",
+      "label": "Venue Locale Fundamental v0.2.0-rc1",
+      "kind": "venue_registry",
+      "as_of": "2026-07-27"
+    },
+    {
+      "id": "operator-evidence",
+      "label": "Official operator, REIT and issuer evidence cited per venue",
+      "kind": "external_primary_evidence",
+      "as_of": "2026-07-28"
+    }
+  ],
+  "source_context": {
+    "fresh_brief": "PARC_Bangna_Fresh_Locale_Screen_Analysis_and_UXUI_Brief_v0.1_2026-07-28",
+    "locale_registry": "ijji Locale Intelligence Registry v2.3.1",
+    "venue_registry": "Venue Locale Fundamental v0.2.0-rc1 — 2026-07-27",
+    "venue_registry_status": "release_candidate_discovery_layer",
+    "venue_registry_limit": "Lifecycle remains unverified at registry level; operating status is separately confirmed from cited sources.",
+    "coordinate_disclosure": "Competitor coordinates are registry presentation coordinates. Candidate coordinates are reference points derived from the Fresh SVG scale. Neither creates a parcel or locale polygon."
+  },
+  "score": {
+    "min": 0,
+    "max": 100,
+    "higher_is_better": true
+  },
+  "map": {
+    "status": "included",
+    "manifest": "analysis/fresh-map-manifest-v2.json",
+    "fallback": "Top 10 and competitor evidence tables",
+    "candidate_ids": [
+      "talat-phlu-south",
+      "samre",
+      "wang-hin-south",
+      "charoen-rat",
+      "bang-son",
+      "wongwian-yai-east",
+      "bang-khun-non-south",
+      "ban-khaek",
+      "bang-pho-east",
+      "rama3-east"
+    ]
+  },
+  "caveats": [
+    {
+      "id": "competition-census-incomplete",
+      "text": "Competitor coverage is decision-useful for the Top 10 but is not yet a frozen, equally complete census across all 745 locales; no numeric competition rerank is published.",
+      "severity": "decision-changing",
+      "visibility": "inline",
+      "candidate_ids": [
+        "talat-phlu-south",
+        "samre",
+        "wang-hin-south",
+        "charoen-rat",
+        "bang-son",
+        "wongwian-yai-east",
+        "bang-khun-non-south",
+        "ban-khaek",
+        "bang-pho-east",
+        "rama3-east"
+      ],
+      "evidence_ids": [
+        "venue-rc1",
+        "operator-evidence"
+      ]
+    },
+    {
+      "id": "boundary-geometry-unavailable",
+      "text": "No approved khwaeng or locale GeoJSON/WKT was supplied; candidate maps use reference points and a disclosed kilometre-grid fallback, not invented boundaries or catchments.",
+      "severity": "material",
+      "visibility": "inline",
+      "candidate_ids": [
+        "talat-phlu-south",
+        "samre",
+        "wang-hin-south",
+        "charoen-rat",
+        "bang-son",
+        "wongwian-yai-east",
+        "bang-khun-non-south",
+        "ban-khaek",
+        "bang-pho-east",
+        "rama3-east"
+      ],
+      "evidence_ids": [
+        "fresh-v01",
+        "locale-registry-v231"
+      ]
+    },
+    {
+      "id": "fresh-score-not-investment-rank",
+      "text": "Fresh scores preserve the published baseline and do not include parcel access, complete competition, CAPEX, rents or investment economics.",
+      "severity": "material",
+      "visibility": "evidence",
+      "candidate_ids": [
+        "talat-phlu-south",
+        "samre",
+        "wang-hin-south",
+        "charoen-rat",
+        "bang-son",
+        "wongwian-yai-east",
+        "bang-khun-non-south",
+        "ban-khaek",
+        "bang-pho-east",
+        "rama3-east"
+      ],
+      "evidence_ids": [
+        "fresh-v01"
+      ]
+    }
+  ]
+}
