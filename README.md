@@ -2,54 +2,58 @@
 
 Production: <https://montri-th.github.io/top10locations-like-parcbn/>
 
-The current landing page is the **Competition-aware Board Explainer v2.0**, dated 28 July 2026. It is designed for CEO, CFO, and Board review of the exact Fresh Top 10 shortlist.
+The current landing page is the **Multi-lens Top 10 Opportunity Portfolio v3.0**, dated 28 July 2026. It is an executive explainer for CEO, CFO, and Board review of ten curated location hypotheses selected from 745 eligible Bangkok locales.
 
 ## Decision requested
 
-Approve detailed study of all ten shortlisted locales. This is approval for the next evidence stage—not approval to choose a parcel, acquire land, or invest.
+Approve detailed study of all ten opportunity hypotheses. This is approval for the next evidence stage—not approval to select a parcel, acquire land, or invest.
 
-The study must return with:
+The study must return with route-based catchments, crossing and ramp logic, verified competitive supply, parcel feasibility, preliminary economics, downside scenarios, and explicit stop reasons.
 
-- 10 locale dossiers;
-- 3 market-overlap decisions;
-- no more than 3–5 investment candidates;
-- stop reasons, preliminary economics, and downside scenarios.
+## Multi-lens selection
 
-## Competition treatment
+The portfolio is not the Top 10 from one all-variable score. It combines nine ranked lenses:
 
-The release preserves the published Fresh baseline ranking and adds an evidence-bounded competition diagnostic:
+- Fresh baseline;
+- resident depth;
+- accessible routine;
+- activity;
+- white-space builder;
+- observed-supply challenger;
+- demand plus routine;
+- barrier-resilient demand;
+- balanced full model.
 
-- 23 mapped competitor records across 43 candidate–competitor relationships;
-- categorical impact markers on one disclosed scale;
-- verified leasable-area context only when a current primary source is available;
-- unknown GLA, NLA, tenant count, or lifecycle status never treated as zero;
-- no competition-adjusted rerank of all 745 locales until the registry, routing, crossing, and parent-complex rules are frozen consistently.
+The candidate pool takes the Top 20 from every lens, then applies portfolio quotas: three anchors, three white-space builders, three observed-supply challengers, and one barrier experiment. References A–J identify study hypotheses; they are not ranks.
 
-High competitor supply is not an automatic rejection. Each candidate states the proposition or route advantage that must be true and the kill test that should stop further work.
+## Competition and barriers
+
+Venue Locale Insight is used across the full eligible universe. Existing retail supply has two valid readings:
+
+- **pressure**: incumbent supply may reduce available headroom;
+- **market-validation hypothesis**: observed supply may indicate established retail behaviour, while still requiring verification of competitor quality, overlap, and strategic gaps.
+
+The release does not claim that competitor presence proves demand or performance. Unknown venue size is imputed by subtype median for screening and remains visibly uncertain.
+
+River and expressway awareness is calculated as a geometric separation proxy. The central screen discounts separated demand by 55% for the Chao Phraya River and 20% for motorways; optimistic and conservative assumptions are included in 13 one-at-a-time sensitivity scenarios. Detailed study must replace the proxy with a frozen route graph and approved crossing/ramp registry.
 
 ## Map integrity
 
-The overview and ten interactive detail views use calibrated WGS84 presentation points and a visible kilometre-grid fallback. No approved khwaeng or locale GeoJSON/WKT was supplied, so the release does not invent administrative boundaries, locale extents, parcels, or catchments.
-
-Competitor markers are keyboard accessible, open a detail panel with evidence links, and have table fallbacks. Marker radius uses one categorical impact-class scale; verified NLA or disclosed leasable area appears as separate numeric context.
+- The overview uses 169 simplified Bangkok khwaeng polygons from the 2018 `pcrete/gsvloader-demo` snapshot as historical orientation context, not current legal boundaries.
+- River and motorway overlays come from dated OpenStreetMap extracts and are pinned in the source manifest.
+- One reusable MapLibre detail map uses local Positron and Dark style snapshots, with a nonblank static fallback and accessible competitor tables.
+- Basemap context is not scoring evidence and no parcel, locale extent, or drive-time catchment is invented.
 
 ## Current artifacts
 
 - [`index.html`](index.html) — production landing page
-- [`PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v2.0_Competition_Aware_2026-07-28.html`](PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v2.0_Competition_Aware_2026-07-28.html) — named HTML checkpoint
-- [`analysis/PARC_Bangna_Fresh_Locale_Screen_Competition_Aware_Board_Brief_v0.2_2026-07-28.md`](analysis/PARC_Bangna_Fresh_Locale_Screen_Competition_Aware_Board_Brief_v0.2_2026-07-28.md) — competition-aware analysis and UX/UI brief
-- [`analysis/fresh-competition-aware-payload-v2.json`](analysis/fresh-competition-aware-payload-v2.json) — source-to-render contract
-- [`analysis/fresh-map-manifest-v2.json`](analysis/fresh-map-manifest-v2.json) — geometry, layer, fallback, and accessibility contract
-- [`scripts/build_fresh_competition_v2.js`](scripts/build_fresh_competition_v2.js) — deterministic builder
-- [`scripts/qa_fresh_competition_v2.js`](scripts/qa_fresh_competition_v2.js) — deterministic parity and integrity QA
-- [`qa/viewport-harness.html`](qa/viewport-harness.html) — same-origin 390 px and 320 px rendered QA harness
-- [`qa/release-v2-qa.md`](qa/release-v2-qa.md) — final rendered-production and exact-byte QA record
+- [`PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v3.0_Multi_Lens_2026-07-28.html`](PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v3.0_Multi_Lens_2026-07-28.html) — named HTML checkpoint
+- [`analysis/PARC_Bangna_Fresh_Locale_Screen_Multi_Lens_Board_Brief_v0.4_2026-07-28.md`](analysis/PARC_Bangna_Fresh_Locale_Screen_Multi_Lens_Board_Brief_v0.4_2026-07-28.md) — analysis and Board brief
+- [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) — third-party data and software notices
 
-## Rebuild and structural QA
-
-```bash
-node scripts/build_fresh_competition_v2.js
-node scripts/qa_fresh_competition_v2.js
-```
+The named HTML is a self-contained decision artifact. It embeds the canonical
+source-to-render payload, the 169-khwaeng overview, dated river and motorway
+overlays, local MapLibre runtime, light/dark style snapshots, static fallback,
+and the source/runtime integrity hashes used by release QA.
 
 The named HTML and `index.html` must remain byte-identical. Earlier releases remain in the repository as audit history and do not define the current landing page.
