@@ -43,6 +43,7 @@ Competitor markers are keyboard accessible, open a detail panel with evidence li
 - [`scripts/build_fresh_competition_v2.js`](scripts/build_fresh_competition_v2.js) — deterministic builder
 - [`scripts/qa_fresh_competition_v2.js`](scripts/qa_fresh_competition_v2.js) — deterministic parity and integrity QA
 - [`qa/viewport-harness.html`](qa/viewport-harness.html) — same-origin 390 px and 320 px rendered QA harness
+- [`qa/release-v2-qa.md`](qa/release-v2-qa.md) — final rendered-production and exact-byte QA record
 
 ## Rebuild and structural QA
 
