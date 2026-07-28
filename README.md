@@ -1,109 +1,40 @@
-# Top 10 Locations Like PARC Bangna
-
-Release 1.6 is a static executive report for screening Bangkok locations that may support a concept inspired by PARC Bangna. It keeps the comparable-catchment ranking from Release 1.5 and adds an evidence-bounded view of operating shopping-center supply.
+# PARC Bangna — Fresh Locale Screen
 
 Production: <https://montri-th.github.io/top10locations-like-parcbn/>
 
-## Release 1.6
+The current landing page is the **Fresh Locale Screen Board Explainer v1.0**, based on the independent **Analysis & Product Brief v0.1** dated 28 July 2026.
 
-- Preserves the canonical Top 10 and scores from Release 1.5.
-- Adds a separate competition diagnostic: verified operating venues, cluster-deduplicated supply pressure, competitive room, evidence readiness, and action tier.
-- Keeps the illustrative `80% baseline + 20% competitive room` scenario visibly noncanonical.
-- Uses 23 venues in a preliminary minimum-verified registry. It is not a completeness-certified competitor census.
-- Renders 45 candidate–competitor marker instances with high-confidence venue coordinates.
-- Retains Market Place Pracha Uthit and Esplanade Ratchada in the evidence tables but withholds their markers because the available coordinates are tenant proxies.
+## What this release is
 
-The current field-work priority is **Bang Pakok / บางปะกอก (Provisional Tier A)**. This is not a final investment winner: parcel, access, network travel, legal, financial, and field evidence remain open. A disclosed noncanonical stress test shows that one additional independent high-impact direct competitor at 1 km would reduce its competitive-room score from `47.04` to `14.88` and its action tier to `D`; complete the competitor census before treating Tier A as stable.
+This release starts again from the full Locale Insight registry rather than carrying forward the Top 10 from Release 1.5 or Release 1.6.
 
-## Canonical result
+- 806 locale records entered the fresh screen.
+- 745 locales passed the minimum data and coordinate gate and received baseline scores.
+- 574 locales entered the primary PARC-like concept-fit lane.
+- 171 locales remained in a challenger lane and were not deleted from the next network run.
+- 10 seed locales are presented for exploration. They are **not** a final Top 10 and are **not** parcel recommendations.
 
-| Rank | Location | Baseline score |
-|---:|---|---:|
-| 1 | วงเวียนใหญ่–ตะวันออก | 52.71 |
-| 2 | เจริญราษฎร์ | 52.61 |
-| 3 | สำเหร่ | 52.31 |
-| 4 | แยกบ้านแขก | 51.46 |
-| 5 | ตลาดพลู–ใต้ | 48.44 |
-| 6 | บางปะกอก | 47.02 |
-| 7 | วังหลัง | 45.74 |
-| 8 | ราชเทวี | 44.14 |
-| 9 | ประชาอุทิศ | 43.78 |
-| 10 | ดินแดง | 43.57 |
+The next decision requested from CEO, CFO, and the Board is approval for a network-based Fresh Screen and field validation. It is not approval to acquire land or invest in a project.
 
-Every baseline candidate uses Venue Locale Insight release `v2.3.1` and the same fixed-area analytical catchment: `26.3154 km²`, radius `2.89421 km`.
+## Current public artifacts
 
-## Public artifacts
-
-- [`index.html`](index.html) — static interactive report
-- [`PARC_Bangna_Bangkok_Top_10_Release_1_6_Competitive_Report_2026-07-28.html`](PARC_Bangna_Bangkok_Top_10_Release_1_6_Competitive_Report_2026-07-28.html) — named HTML copy of the approved release
-- [`analysis/PARC_Bangna_Bangkok_Top_10_Release_1_6_Competition_Analysis_and_UXUI_2026-07-28.md`](analysis/PARC_Bangna_Bangkok_Top_10_Release_1_6_Competition_Analysis_and_UXUI_2026-07-28.md) — full analysis and UX/UI specification
-- [`analysis/location-payload.json`](analysis/location-payload.json) — source-to-render report contract
-- [`analysis/map-manifest.json`](analysis/map-manifest.json) — geometry, layer, omission, and accessibility contract
-- [`analysis/competitor-registry.public.json`](analysis/competitor-registry.public.json) — sanitized public evidence registry
-- [`analysis/competitor-score-breakdown.json`](analysis/competitor-score-breakdown.json) — competition calculations
-
-The internal registry containing connector locators is intentionally gitignored and is not a public artifact.
-
-## Map integrity
-
-The overview and ten detail maps use one consistent kilometre projection. Detail maps show only:
-
-- the standardized analytical circle;
-- the Release 1.5 analytical center, explicitly not a parcel;
-- competitor points with high coordinate confidence;
-- north and a scale bar.
-
-Roads, rail lines, stations, inferred polygons, sampled restaurant dots, and decorative POIs are omitted because this release does not carry sufficient feature-level lineage to render them credibly. Marker size uses an operator-reported metric when available; otherwise it uses a disclosed analytical impact class. The marker population is therefore not one common GLA scale.
-
-## UX/UI
-
-The page follows J Lifestyle Center Design System v0.3:
-
-- self-hosted Anuphan 300 and IBM Plex Sans Thai Looped 400/500 WOFF2 assets;
-- canonical Canvas, Card, Garden, Ink, and approved dark tokens;
-- opaque sticky header, readable Thai typography, visible control boundaries, and 44 px minimum targets;
-- transparent positive and reverse PARC logo derivatives selected by rendered surface;
-- one clean, quiet theme control.
-
-Theme starts at **System** on a fresh visit. Each press cycles:
-
-`System → explicit theme opposite the current OS theme → the other explicit theme → System`
-
-The icon, accessible label, logo derivative, and browser theme colour follow the active state. System mode continues to respond to an OS theme change.
-
-## Public deterministic rebuild
-
-```bash
-python3 scripts/build_analysis.py
-python3 scripts/build_contracts.py
-python3 scripts/build_site.py
-python3 scripts/validate_contracts.py
-python3 scripts/qa_static.py
-```
-
-These commands use only files tracked in the public repository. `build_site.py`
-writes both `index.html` and the named Release 1.6 HTML artifact; static QA
-requires them to remain byte-identical. If the installed location-map validator
-is available, `validate_contracts.py` runs it automatically; another compatible
-validator may be supplied through `PARC_MAP_MANIFEST_VALIDATOR`.
-
-## Workspace-only registry sanitization
-
-```bash
-python3 scripts/build_public_registry.py
-```
-
-This optional upstream step requires the gitignored internal
-`analysis/competitor-registry.json`. It removes connector locators and writes
-the tracked `analysis/competitor-registry.public.json`; it is not part of the
-public rebuild.
-
-The installed location-payload and location-report validators are also run during release QA. Rendered and post-publish evidence is recorded in [`qa/release-1.6-qa.md`](qa/release-1.6-qa.md).
+- [`index.html`](index.html) — production landing page
+- [`PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v1.0.html`](PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v1.0.html) — named standalone HTML copy
+- [`analysis/PARC_Bangna_Fresh_Locale_Screen_Analysis_and_UXUI_Brief_v0.1_2026-07-28.md`](analysis/PARC_Bangna_Fresh_Locale_Screen_Analysis_and_UXUI_Brief_v0.1_2026-07-28.md) — full analysis and UX/UI brief
 
 ## Decision boundary
 
-Competition pressure and strategic gaps are diagnostic, not direct observations of sales, traffic, occupancy, vacancy, service quality, or tenant weakness. The registry is a minimum verified set and straight-line distance ignores bridges, boats, road travel, congestion, and pedestrian barriers.
+The 10 displayed opportunities are a curated first-pass view from the fresh screen. Several may describe overlapping markets. Final ranking must be rerun across all 745 eligible locales using frozen travel-time networks, verified river and expressway crossing points, competitor supply on the same network, and market-overlap consolidation.
 
-Before any parcel or investment decision, complete the competitor census, validate the two held centroids, rerun network catchments where rivers or dense clusters matter, and inspect candidate parcels, access, zoning, flood exposure, economics, and real operating evidence.
+If the required routing, crossing, competitor, or parcel evidence is missing, the next stage must report the gap rather than fall back to straight-line distance.
 
-Font assets are distributed under their bundled Open Font License files in [`assets/fonts`](assets/fonts).
+## File integrity
+
+| Artifact | SHA-256 |
+|---|---|
+| Board Explainer HTML | `4d2a0177bbc5cabfee93500207c74915de5ef190f26e96bfd1e11d3df5496979` |
+| Analysis & UX/UI Brief | `b0fec0f5ca623060e0bd6deb3df209640e05faf3b3056ff7a7be35ab5198572e` |
+
+## Earlier release
+
+Release 1.6 files remain in the repository as audit history. Its ranking, competition overlay, build scripts, and QA evidence describe that earlier release and do not define the current production landing page.
