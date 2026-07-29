@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>PARC Fresh v3.2.1 — Responsive QA Harness</title>
+  <title>PARC Fresh v3.2.2 — Responsive QA Harness</title>
   <style>
     *{box-sizing:border-box}
     body{margin:0;padding:24px;background:#111816;color:#f7f2e9;font:15px/1.4 system-ui,sans-serif}
@@ -27,19 +27,19 @@
   <div class="frames">
     <figure>
       <figcaption>390 × 844 · page</figcaption>
-      <iframe class="w390" title="390 px production viewport" src="../index.html?qa=modal-fix-v3-2-1"></iframe>
+      <iframe class="w390" title="390 px production viewport" src="../index.html?qa=selector-hardening-v3-2-2"></iframe>
     </figure>
     <figure>
       <figcaption>320 × 700 · page</figcaption>
-      <iframe class="w320" title="320 px production viewport" src="../index.html?qa=modal-fix-v3-2-1"></iframe>
+      <iframe class="w320" title="320 px production viewport" src="../index.html?qa=selector-hardening-v3-2-2"></iframe>
     </figure>
     <figure>
       <figcaption>390 × 844 · detail modal <span class="status">checking</span></figcaption>
-      <iframe class="w390" data-state="detail" title="390 px competitor detail modal" src="../index.html?qa=modal-detail-v3-2-1"></iframe>
+      <iframe class="w390" data-state="detail" title="390 px competitor detail modal" src="../index.html?qa=modal-detail-v3-2-2"></iframe>
     </figure>
     <figure>
       <figcaption>320 × 700 · research modal <span class="status">checking</span></figcaption>
-      <iframe class="w320" data-state="research" title="320 px competitor research modal" src="../index.html?qa=modal-research-v3-2-1"></iframe>
+      <iframe class="w320" data-state="research" title="320 px competitor research modal" src="../index.html?qa=modal-research-v3-2-2"></iframe>
     </figure>
   </div>
   <script>
@@ -61,12 +61,23 @@
           const headingBox = heading?.getBoundingClientRect();
           const closeBox = close?.getBoundingClientRect();
           const expectedBack = frame.dataset.state === "research";
+          const selectedIntent = doc.querySelector('.intent-button[aria-pressed="true"]');
+          const selectedStrong = selectedIntent?.querySelector("strong");
+          const selectedDescription = selectedIntent?.querySelector("span span");
+          const selectedStateOk = frame.dataset.state !== "research" || Boolean(
+            selectedIntent && selectedStrong && selectedDescription &&
+            frame.contentWindow.getComputedStyle(selectedStrong).color ===
+              frame.contentWindow.getComputedStyle(selectedIntent).color &&
+            frame.contentWindow.getComputedStyle(selectedStrong).color !==
+              frame.contentWindow.getComputedStyle(selectedDescription).color
+          );
           const passed = Boolean(
             headingBox && closeBox &&
             headingBox.width >= 120 &&
             closeBox.left > headingBox.left &&
             frame.contentWindow.getComputedStyle(title).outlineStyle === "none" &&
-            Boolean(!back.hidden) === expectedBack
+            Boolean(!back.hidden) === expectedBack &&
+            selectedStateOk
           );
           const status = frame.previousElementSibling.querySelector(".status");
           status.dataset.result = passed ? "pass" : "fail";
