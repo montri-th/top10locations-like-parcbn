@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>PARC Fresh v3.2.2 — Responsive QA Harness</title>
+  <title>PARC Fresh v3.2.3 — Responsive QA Harness</title>
   <style>
     *{box-sizing:border-box}
     body{margin:0;padding:24px;background:#111816;color:#f7f2e9;font:15px/1.4 system-ui,sans-serif}
@@ -27,11 +27,11 @@
   <div class="frames">
     <figure>
       <figcaption>390 × 844 · page</figcaption>
-      <iframe class="w390" title="390 px production viewport" src="../index.html?qa=selector-hardening-v3-2-2"></iframe>
+      <iframe class="w390" title="390 px production viewport" src="../index.html?qa=mobile-dialog-v3-2-3"></iframe>
     </figure>
     <figure>
       <figcaption>320 × 700 · page</figcaption>
-      <iframe class="w320" title="320 px production viewport" src="../index.html?qa=selector-hardening-v3-2-2"></iframe>
+      <iframe class="w320" title="320 px production viewport" src="../index.html?qa=mobile-dialog-v3-2-3"></iframe>
     </figure>
     <figure>
       <figcaption>390 × 844 · detail modal <span class="status">checking</span></figcaption>
@@ -44,27 +44,52 @@
   </div>
   <script>
     document.querySelectorAll("iframe[data-state]").forEach((frame) => {
+      let attempts = 0;
+      const status = frame.previousElementSibling.querySelector(".status");
+      const retry = () => {
+        if (attempts < 60) window.setTimeout(inspectState, 100);
+        else {
+          status.dataset.result = "fail";
+          status.textContent = "fail";
+        }
+      };
       const inspectState = () => {
+        attempts += 1;
         const doc = frame.contentDocument;
+        if (!doc?.body?.dataset?.interfaceRelease) {
+          retry();
+          return;
+        }
         const detailButton = doc.querySelector('[data-competitor-button][data-candidate-ref="A"][data-competitor-index="2"]');
-        const details = detailButton?.closest("details");
-        if (details) details.open = true;
-        detailButton?.click();
-        if (frame.dataset.state === "research") {
+        if (!detailButton) {
+          retry();
+          return;
+        }
+        const dialog = doc.querySelector("dialog");
+        if (!dialog?.open) {
+          const details = detailButton.closest("details");
+          if (details) details.open = true;
+          detailButton.click();
+          retry();
+          return;
+        }
+        const expectedBack = frame.dataset.state === "research";
+        const back = doc.querySelector("[data-research-back]");
+        if (expectedBack && back?.hidden) {
           doc.querySelector("[data-open-research]")?.click();
+          retry();
+          return;
         }
         requestAnimationFrame(() => requestAnimationFrame(() => {
           const heading = doc.querySelector(".dialog-heading");
           const title = doc.querySelector("[data-dialog-title]");
           const close = doc.querySelector("[data-dialog-close]");
-          const back = doc.querySelector("[data-research-back]");
           const headingBox = heading?.getBoundingClientRect();
           const closeBox = close?.getBoundingClientRect();
-          const expectedBack = frame.dataset.state === "research";
           const selectedIntent = doc.querySelector('.intent-button[aria-pressed="true"]');
           const selectedStrong = selectedIntent?.querySelector("strong");
           const selectedDescription = selectedIntent?.querySelector("span span");
-          const selectedStateOk = frame.dataset.state !== "research" || Boolean(
+          const selectedStateOk = !expectedBack || Boolean(
             selectedIntent && selectedStrong && selectedDescription &&
             frame.contentWindow.getComputedStyle(selectedStrong).color ===
               frame.contentWindow.getComputedStyle(selectedIntent).color &&
@@ -79,7 +104,10 @@
             Boolean(!back.hidden) === expectedBack &&
             selectedStateOk
           );
-          const status = frame.previousElementSibling.querySelector(".status");
+          if (!passed && attempts < 60) {
+            retry();
+            return;
+          }
           status.dataset.result = passed ? "pass" : "fail";
           status.textContent = passed ? "pass" : "fail";
         }));
