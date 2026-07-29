@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>PARC Fresh v3.2 — Responsive QA Harness</title>
+  <title>PARC Fresh v3.2.1 — Responsive QA Harness</title>
   <style>
     *{box-sizing:border-box}
     body{margin:0;padding:24px;background:#111816;color:#f7f2e9;font:15px/1.4 system-ui,sans-serif}
@@ -16,6 +16,9 @@
     iframe{display:block;border:1px solid #6f7d77;border-radius:10px;background:#f7f2e9}
     .w390{width:390px;height:844px}
     .w320{width:320px;height:700px}
+    .status{display:inline-block;margin-left:8px;padding:2px 7px;border-radius:999px;background:#293a34;color:#cbd4cf;font-size:12px}
+    .status[data-result="pass"]{background:#365e55;color:#fff}
+    .status[data-result="fail"]{background:#792b50;color:#fff}
   </style>
 </head>
 <body>
@@ -23,13 +26,56 @@
   <p>Same-origin frames load the current <code>index.html</code>; this page is not part of the executive report.</p>
   <div class="frames">
     <figure>
-      <figcaption>390 × 844</figcaption>
-      <iframe class="w390" title="390 px production viewport" src="../index.html?qa=display-fix-v3-2"></iframe>
+      <figcaption>390 × 844 · page</figcaption>
+      <iframe class="w390" title="390 px production viewport" src="../index.html?qa=modal-fix-v3-2-1"></iframe>
     </figure>
     <figure>
-      <figcaption>320 × 700</figcaption>
-      <iframe class="w320" title="320 px production viewport" src="../index.html?qa=display-fix-v3-2"></iframe>
+      <figcaption>320 × 700 · page</figcaption>
+      <iframe class="w320" title="320 px production viewport" src="../index.html?qa=modal-fix-v3-2-1"></iframe>
+    </figure>
+    <figure>
+      <figcaption>390 × 844 · detail modal <span class="status">checking</span></figcaption>
+      <iframe class="w390" data-state="detail" title="390 px competitor detail modal" src="../index.html?qa=modal-detail-v3-2-1"></iframe>
+    </figure>
+    <figure>
+      <figcaption>320 × 700 · research modal <span class="status">checking</span></figcaption>
+      <iframe class="w320" data-state="research" title="320 px competitor research modal" src="../index.html?qa=modal-research-v3-2-1"></iframe>
     </figure>
   </div>
+  <script>
+    document.querySelectorAll("iframe[data-state]").forEach((frame) => {
+      const inspectState = () => {
+        const doc = frame.contentDocument;
+        const detailButton = doc.querySelector('[data-competitor-button][data-candidate-ref="A"][data-competitor-index="2"]');
+        const details = detailButton?.closest("details");
+        if (details) details.open = true;
+        detailButton?.click();
+        if (frame.dataset.state === "research") {
+          doc.querySelector("[data-open-research]")?.click();
+        }
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          const heading = doc.querySelector(".dialog-heading");
+          const title = doc.querySelector("[data-dialog-title]");
+          const close = doc.querySelector("[data-dialog-close]");
+          const back = doc.querySelector("[data-research-back]");
+          const headingBox = heading?.getBoundingClientRect();
+          const closeBox = close?.getBoundingClientRect();
+          const expectedBack = frame.dataset.state === "research";
+          const passed = Boolean(
+            headingBox && closeBox &&
+            headingBox.width >= 120 &&
+            closeBox.left > headingBox.left &&
+            frame.contentWindow.getComputedStyle(title).outlineStyle === "none" &&
+            Boolean(!back.hidden) === expectedBack
+          );
+          const status = frame.previousElementSibling.querySelector(".status");
+          status.dataset.result = passed ? "pass" : "fail";
+          status.textContent = passed ? "pass" : "fail";
+        }));
+      };
+      if (frame.contentDocument?.readyState === "complete") inspectState();
+      else frame.addEventListener("load", inspectState, { once: true });
+    });
+  </script>
 </body>
 </html>
