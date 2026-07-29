@@ -2,7 +2,7 @@
 
 Production: <https://montri-th.github.io/top10locations-like-parcbn/>
 
-The current landing page is the **Multi-lens Top 10 Opportunity Portfolio v3.0**, dated 28 July 2026. It is an executive explainer for CEO, CFO, and Board review of ten curated location hypotheses selected from 745 eligible Bangkok locales.
+The current landing page is the **Humanized Multi-lens Opportunity Portfolio v3.1**, dated 29 July 2026. It is an executive explainer for CEO, CFO, and Board review of ten curated location hypotheses selected from 745 eligible Bangkok locales.
 
 ## Decision requested
 
@@ -44,10 +44,18 @@ River and expressway awareness is calculated as a geometric separation proxy. Th
 - One reusable MapLibre detail map uses local Positron and Dark style snapshots, with a nonblank static fallback and accessible competitor tables.
 - Basemap context is not scoring evidence and no parcel, locale extent, or drive-time catchment is invented.
 
+## Humanized interface and live research
+
+- Thai copy follows a practitioner flow: what is visible, what it may mean, and what must be checked next.
+- Rounded-outline icons carry repeated concepts so the page does not rely on dense labels alone.
+- Every rendered competitor row offers a research action with four user intents: latest moves, market perception, tenant mix, or access/parking.
+- The interface previews the exact Thai query before opening Google in a new tab. Live search results remain supplemental context and never modify the frozen release score or evidence payload.
+- The supplied butterfly and bougainvillea stock references are not embedded; the release uses its original cleared line/bract motif.
+
 ## Current artifacts
 
 - [`index.html`](index.html) — production landing page
-- [`PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v3.0_Multi_Lens_2026-07-28.html`](PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v3.0_Multi_Lens_2026-07-28.html) — named HTML checkpoint
+- [`PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v3.1_Humanized_2026-07-29.html`](PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v3.1_Humanized_2026-07-29.html) — named HTML checkpoint
 - [`analysis/PARC_Bangna_Fresh_Locale_Screen_Multi_Lens_Board_Brief_v0.4_2026-07-28.md`](analysis/PARC_Bangna_Fresh_Locale_Screen_Multi_Lens_Board_Brief_v0.4_2026-07-28.md) — analysis and Board brief
 - [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) — third-party data and software notices
 
