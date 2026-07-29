@@ -2,7 +2,7 @@
 
 Production: <https://montri-th.github.io/top10locations-like-parcbn/>
 
-The current landing page is the **Humanized Multi-lens Opportunity Portfolio v3.1**, dated 29 July 2026. It is an executive explainer for CEO, CFO, and Board review of ten curated location hypotheses selected from 745 eligible Bangkok locales.
+The current landing page is the **Multi-lens Opportunity Portfolio v3.2 display fix**, dated 29 July 2026. It is an executive explainer for CEO, CFO, and Board review of ten curated location hypotheses selected from 745 eligible Bangkok locales.
 
 ## Decision requested
 
@@ -42,6 +42,7 @@ River and expressway awareness is calculated as a geometric separation proxy. Th
 - The overview uses 169 simplified Bangkok khwaeng polygons from the 2018 `pcrete/gsvloader-demo` snapshot as historical orientation context, not current legal boundaries.
 - River and motorway overlays come from dated OpenStreetMap extracts and are pinned in the source manifest.
 - One reusable MapLibre detail map uses local Positron and Dark style snapshots, with a nonblank static fallback and accessible competitor tables.
+- Overview and fallback SVGs use bounded, centered contain rendering so map evidence and labels are not cropped on desktop or mobile.
 - Basemap context is not scoring evidence and no parcel, locale extent, or drive-time catchment is invented.
 
 ## Humanized interface and live research
@@ -55,7 +56,7 @@ River and expressway awareness is calculated as a geometric separation proxy. Th
 ## Current artifacts
 
 - [`index.html`](index.html) — production landing page
-- [`PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v3.1_Humanized_2026-07-29.html`](PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v3.1_Humanized_2026-07-29.html) — named HTML checkpoint
+- [`PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v3.2_Display_Fix_2026-07-29.html`](PARC_Bangna_Fresh_Locale_Screen_Board_Explainer_v3.2_Display_Fix_2026-07-29.html) — named HTML checkpoint
 - [`analysis/PARC_Bangna_Fresh_Locale_Screen_Multi_Lens_Board_Brief_v0.4_2026-07-28.md`](analysis/PARC_Bangna_Fresh_Locale_Screen_Multi_Lens_Board_Brief_v0.4_2026-07-28.md) — analysis and Board brief
 - [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) — third-party data and software notices
 
