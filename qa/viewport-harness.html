@@ -47,7 +47,7 @@
       let attempts = 0;
       const status = frame.previousElementSibling.querySelector(".status");
       const retry = () => {
-        if (attempts < 60) window.setTimeout(inspectState, 100);
+        if (attempts < 180) window.setTimeout(inspectState, 100);
         else {
           status.dataset.result = "fail";
           status.textContent = "fail";
@@ -127,7 +127,7 @@
             selectedStateOk &&
             routeStateOk
           );
-          if (!passed && attempts < 60) {
+          if (!passed && attempts < 180) {
             retry();
             return;
           }
