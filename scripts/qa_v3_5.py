@@ -164,6 +164,10 @@ assert 'id="parc-fit"' in output
 assert "ไม่ใช่คะแนนตัวศูนย์" in output
 assert "ยังไม่มี exact PARC benchmark" in output
 assert "Proxy ไม่เข้าร่วม slider" in output
+assert "คะแนนจัดคิว" in output
+assert "ขอบเขตที่ยังไม่ใช่ PARC benchmark" in output
+assert ".proxy-section{scroll-margin-top:0;" in output
+assert 'html[data-theme="dark"] .proxy-reference .status-pill{background:#7a2048;color:#fff}' in output
 assert "อันดับฐาน /745" not in output
 assert "อันดับเทียบ 745" not in output
 assert "อันดับฐาน /574" in output

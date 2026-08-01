@@ -76,7 +76,7 @@ fit_rows = "".join(
 )
 
 queue = [
-    ("เอกมัย-ใต้", "Central leader", "Decision 86.3 · land p91.2"),
+    ("เอกมัย-ใต้", "Central leader", "Core-fit 86.3 · land p91.2"),
     ("วังหิน-ใต้", "Opportunity-led", "Opportunity 90.7 · land p53.8"),
     ("สัมมากร", "ใกล้ proxy ที่สุด", "Similarity 98.6 · land p46.6"),
     ("พระราม 3-ตะวันออก", "อันดับนิ่ง", "ช่วง #4–6 · ต้องพิสูจน์ economics"),
@@ -120,7 +120,7 @@ proxy_section = f'''    <section class="section alt proxy-section" id="parc-fit"
         <div class="table-wrap fit-table-wrap">
           <table class="fit-table" data-core-fit-table>
             <caption>Top 10 PARC core-fit ก่อน route, site, competition และ economics gates</caption>
-            <thead><tr><th>อันดับ</th><th>Locale</th><th>Similarity</th><th>Opportunity</th><th>Decision</th><th>ช่วงอันดับ</th><th>Land diagnostic</th></tr></thead>
+            <thead><tr><th>อันดับ</th><th>Locale</th><th>Similarity</th><th>Opportunity</th><th>คะแนนจัดคิว</th><th>ช่วงอันดับ</th><th>Land diagnostic</th></tr></thead>
             <tbody>{fit_rows}</tbody>
             <tfoot><tr class="benchmark-row"><th scope="row" colspan="2">ศรีเอี่ยม · host-locale proxy</th><td data-number>100.0</td><td data-number>{scores["fresh_core_opportunity"]:.1f}</td><td colspan="3">Reference เท่านั้น · ไม่จัดอันดับ</td></tr></tfoot>
           </table>
@@ -132,7 +132,7 @@ proxy_section = f'''    <section class="section alt proxy-section" id="parc-fit"
         </div>
         <div class="fit-queue">{queue_cards}</div>
         <p class="fit-caption">คิวนี้ตั้งใจครอบคลุม central leader, opportunity-led, closest analog และ stable high-land case ไม่ใช่ score band; ตลาดพลู-ใต้และราชเทวีอยู่ใน sensitivity union ส่วนคลองจั่นต้องปิดช่องว่าง land evidence</p>
-        <aside class="fit-warning"><strong>Exact PARC benchmark ยังไม่เสร็จ:</strong> working catchment PARC 26.3 ตร.กม. คนละหน่วยกับศรีเอี่ยม 1.81 ตร.กม. ต้อง regenerate ด้วย geometry rule เดียวกันก่อนใช้อนุมัติลงทุน</aside>
+        <aside class="fit-warning"><strong>ขอบเขตที่ยังไม่ใช่ PARC benchmark:</strong> working catchment PARC 26.3 ตร.กม. คนละหน่วยกับศรีเอี่ยม 1.81 ตร.กม. ต้อง regenerate ด้วย geometry rule เดียวกันก่อนใช้อนุมัติลงทุน</aside>
       </div>
     </section>
 
@@ -206,7 +206,7 @@ source = replace_once(
 )
 
 css = r'''
-.proxy-section{scroll-margin-top:5.5rem}
+.proxy-section{scroll-margin-top:0;padding-top:clamp(3.25rem,5vw,4.75rem)}
 .proxy-section .section-head{max-width:62rem}
 .proxy-grid{display:grid;grid-template-columns:minmax(18rem,.82fr) minmax(0,1.18fr);gap:1rem;margin-bottom:1.2rem}
 .proxy-reference,.proxy-method{padding:1.25rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
@@ -214,7 +214,7 @@ css = r'''
 .proxy-reference .status-pill{display:inline-flex;background:var(--petal-deep);color:#fff}
 .proxy-reference h3,.proxy-method h3{margin:.65rem 0 .3rem}
 .proxy-reference>p,.proxy-method>p{color:var(--muted);font-size:.86rem}
-.proxy-score-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;margin:1rem 0}
+.proxy-score-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin:1rem 0}
 .proxy-score-grid>div{padding:.8rem;border:1px solid var(--line);border-radius:.65rem;background:var(--canvas)}
 .proxy-score-grid span{display:block;color:var(--muted);font-size:.72rem}.proxy-score-grid strong{font-family:var(--display);font-size:1.55rem;color:var(--garden-deep)}
 .proxy-limit{padding-top:.8rem;border-top:1px dashed var(--line)}
@@ -227,6 +227,7 @@ css = r'''
 .fit-diagnostic{display:inline-flex;align-items:center;min-height:1.7rem;padding:.15rem .5rem;border-radius:999px;font-size:.72rem;font-weight:500}
 .fit-diagnostic.lower{background:var(--garden-soft);color:var(--garden-deep)}.fit-diagnostic.watch{background:#f5e9cf;color:#714710}.fit-diagnostic.high{background:var(--petal-soft);color:#7a2048}.fit-diagnostic.missing{background:var(--canvas);color:var(--muted);border:1px solid var(--line)}
 html[data-theme="dark"] .fit-diagnostic.watch{background:#493a20;color:#f1ce87}html[data-theme="dark"] .fit-diagnostic.high{background:#4b2636;color:#f4bdd5}
+html[data-theme="dark"] .proxy-reference .status-pill{background:#7a2048;color:#fff}
 .fit-caption{margin:.65rem 0 1.5rem;color:var(--muted);font-size:.76rem}.section-head.compact{margin-top:1.5rem}.section-head.compact h2{font-size:clamp(1.45rem,2.4vw,2rem)}
 .fit-queue{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem}.fit-queue article{position:relative;padding:1rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
 .fit-queue article>span{position:absolute;right:.8rem;top:.65rem;color:var(--petal-deep);font-family:var(--display);font-size:1.2rem}.fit-queue h3{margin:0 2rem .4rem 0}.fit-queue strong{font-size:.8rem;color:var(--garden-deep)}.fit-queue p{margin:.35rem 0 0;color:var(--muted);font-size:.78rem}

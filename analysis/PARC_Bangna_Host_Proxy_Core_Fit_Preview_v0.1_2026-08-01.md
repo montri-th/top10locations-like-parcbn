@@ -83,7 +83,7 @@ Opportunity=.55R+.25B+.20A
 
 ## Top 10 core-fit ก่อน route, site และ economics gates
 
-| อันดับ | Locale | Similarity | Opportunity | Decision | ช่วงอันดับ 40/50/60 | Land pctl. | อ่านอย่างไร |
+| อันดับ | Locale | Similarity | Opportunity | คะแนนจัดคิว | ช่วงอันดับ 40/50/60 | Land pctl. | อ่านอย่างไร |
 |---:|---|---:|---:|---:|---:|---:|---|
 | 1 | เอกมัย-ใต้ | 94.23 | 79.57 | 86.28 | 1–4 | 91.18 | central leader แต่ land pressure สูง |
 | 2 | วังหิน-ใต้ | 80.88 | 90.70 | 85.51 | 1–7 | 53.77 | opportunity-led และ land diagnostic ปานกลาง |
