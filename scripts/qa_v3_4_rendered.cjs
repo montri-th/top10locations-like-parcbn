@@ -7,7 +7,7 @@ const path = require("path");
 const { chromium } = require("playwright");
 
 const root = path.resolve(__dirname, "..");
-const screenshots = path.join("/tmp", "parc-v3.4-qa");
+const screenshots = path.join("/tmp", "parc-v3.5-qa");
 fs.mkdirSync(screenshots, { recursive: true });
 
 const types = {
@@ -77,8 +77,10 @@ async function contrast(page, selector) {
     assert(await page.locator('input[type="range"][data-weight]').count() === 4, "rendered slider count is not four");
     assert(await page.locator("[data-live-rank-body] tr").count() === 10, "live table does not contain ten candidates");
     assert((await page.locator("[data-live-rank-body] tr").first().innerText()).includes("A · ตลาดพลู-ใต้"), "base A-J leader is not A");
-    assert(await page.locator('[data-benchmark-status="unscored"]').isVisible(), "benchmark gap is not visible");
-    assert((await page.locator(".benchmark-row").innerText()).includes("—"), "PARC reference row implies a numeric score");
+    assert(await page.locator('[data-benchmark-status="proxy-partial"]').isVisible(), "partial proxy status is not visible");
+    assert(await page.locator("[data-core-fit-table] tbody tr").count() === 10, "core-fit table does not contain ten locales");
+    assert((await page.locator(".proxy-reference").innerText()).includes("ศรีเอี่ยม"), "host-locale proxy is not visible");
+    assert((await page.locator("[data-live-ranking] .benchmark-row").innerText()).includes("Proxy ไม่เข้าร่วม slider"), "proxy incorrectly participates in the A-J slider");
 
     await page.locator('.overview-visual-markers .candidate-dot').first().click({ force: true });
     await page.waitForTimeout(150);
@@ -88,16 +90,20 @@ async function contrast(page, selector) {
 
     const lightContrast = await contrast(page, ".decision-bar .button.primary");
     const lightPillContrast = await contrast(page, ".benchmark-gap .status-pill");
+    const lightProxyPillContrast = await contrast(page, ".proxy-reference .status-pill");
     const lightBenchmarkContrast = await contrast(page, ".benchmark-slot span");
     assert(lightContrast >= 4.5, `light CTA contrast ${lightContrast.toFixed(2)} is below 4.5`);
     assert(lightPillContrast >= 4.5, `light benchmark pill contrast ${lightPillContrast.toFixed(2)} is below 4.5`);
+    assert(lightProxyPillContrast >= 4.5, `light proxy pill contrast ${lightProxyPillContrast.toFixed(2)} is below 4.5`);
     assert(lightBenchmarkContrast >= 4.5, `light benchmark slot contrast ${lightBenchmarkContrast.toFixed(2)} is below 4.5`);
     await page.locator("[data-theme-toggle]").click();
     const darkContrast = await contrast(page, ".decision-bar .button.primary");
     const darkPillContrast = await contrast(page, ".benchmark-gap .status-pill");
+    const darkProxyPillContrast = await contrast(page, ".proxy-reference .status-pill");
     const darkBenchmarkContrast = await contrast(page, ".benchmark-slot span");
     assert(darkContrast >= 4.5, `dark CTA contrast ${darkContrast.toFixed(2)} is below 4.5`);
     assert(darkPillContrast >= 4.5, `dark benchmark pill contrast ${darkPillContrast.toFixed(2)} is below 4.5`);
+    assert(darkProxyPillContrast >= 4.5, `dark proxy pill contrast ${darkProxyPillContrast.toFixed(2)} is below 4.5`);
     assert(darkBenchmarkContrast >= 4.5, `dark benchmark slot contrast ${darkBenchmarkContrast.toFixed(2)} is below 4.5`);
     await page.locator("[data-theme-toggle]").click();
 
@@ -174,6 +180,8 @@ async function contrast(page, selector) {
     }));
     assert(new Set(cardBoxes.map((box) => box.left)).size === 1, "834px decision cards leave empty half-rows");
     await page.screenshot({ path: path.join(screenshots, "desktop-top.png"), fullPage: false });
+    await page.locator("#parc-fit").scrollIntoViewIfNeeded();
+    await page.screenshot({ path: path.join(screenshots, "desktop-parc-fit.png"), fullPage: false });
     await page.locator("#sensitivity").scrollIntoViewIfNeeded();
     await page.screenshot({ path: path.join(screenshots, "desktop-tool.png"), fullPage: false });
 
@@ -184,6 +192,7 @@ async function contrast(page, selector) {
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
       assert(overflow <= 1, `${viewport.width}px viewport overflows horizontally by ${overflow}px`);
       assert(await page.locator("[data-live-ranking]").isVisible(), `${viewport.width}px live ranking is not visible`);
+      assert(await page.locator("[data-core-fit-table]").count() === 1, `${viewport.width}px core-fit table is missing`);
       if (viewport.width === 390) {
         await page.locator('[data-live-detail="B"]').click();
         assert(await page.locator("#detail-B .back-to-tool").isVisible(), "mobile detail has no return-to-tool action");
@@ -195,7 +204,7 @@ async function contrast(page, selector) {
     }
 
     assert(errors.length === 0, `page errors: ${errors.join(" | ")}`);
-    console.log(`PASS — rendered 1920/1366×768/834/390/320 · CTA ${lightContrast.toFixed(2)}:1 light / ${darkContrast.toFixed(2)}:1 dark · spacing ${Math.round(spacing)}px`);
+    console.log(`PASS v3.5 — rendered 1920/1366×768/834/390/320 · CTA ${lightContrast.toFixed(2)}:1 light / ${darkContrast.toFixed(2)}:1 dark · spacing ${Math.round(spacing)}px`);
     console.log(`Screenshots: ${screenshots}`);
   } finally {
     await browser.close();

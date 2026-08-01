@@ -2,9 +2,9 @@
 
 Production: <https://montri-th.github.io/top10locations-like-parcbn/>
 
-The current landing page is the **Board Decision Tool v3.4 release**, dated 31 July 2026. It is an interactive working tool for CEO, CFO, and Board review of ten curated location hypotheses selected from 745 eligible Bangkok locales.
+The current landing page is the **Board Decision Tool v3.5 release**, dated 1 August 2026. It is an interactive working tool for CEO, CFO, and Board review of ten curated location hypotheses, plus a separate PARC host-locale core-fit preview.
 
-Release provenance is split deliberately: **v3.3 is the frozen analytical/data release**, while **v3.4 is the interface release**. The v3.4 builder preserves the embedded v3.3 analytical payload byte-for-byte and changes only the reading structure, interaction, metadata, and presentation.
+Release provenance is split deliberately: **v3.3 is the frozen analytical/data release**, **v3.4 is the prior interface release**, and **v3.5 is the interface plus proxy-preview release**. The v3.5 builder preserves the embedded v3.3 analytical payload byte-for-byte and adds a separately versioned preview calculated from the v2.3.1 Registry snapshot.
 
 ## Decision requested
 
@@ -16,7 +16,7 @@ The study must return with route-based catchments, crossing and ramp logic, veri
 
 The reading structure reduces nine analytical lenses to five Board questions: resident base, accessible routine, barrier-aware access, market position, and answer stability. The original nine formulas remain available in a collapsed audit trail.
 
-The live simulator lets the reader change the four validated Balanced-model weights, barrier assumption, unknown-supply assumption, and market interpretation. It recalculates and reorders the A–J portfolio in the browser. It does **not** claim to recalculate a new rank across all 745 locales because the public payload contains only the ten portfolio rows and six reserves.
+The live simulator lets the reader change the four validated Balanced-model weights, barrier assumption, unknown-supply assumption, and market interpretation. It recalculates and reorders the A–J portfolio in the browser. It does **not** claim to recalculate a new rank across all 574 comparable locales because the public payload contains only the ten portfolio rows and six reserves. Component percentiles use the frozen 745-locale base; published candidate ranks are within the 574-locale comparable lane.
 
 The portfolio is not the Top 10 from one all-variable score. Its candidate pool combines nine ranked lenses:
 
@@ -32,11 +32,13 @@ The portfolio is not the Top 10 from one all-variable score. Its candidate pool 
 
 The candidate pool takes the Top 20 from every lens, then applies portfolio quotas: three anchors, three white-space builders, three observed-supply challengers, and one barrier experiment. References A–J identify study hypotheses; they are not ranks.
 
-## PARC Bangna benchmark gap
+## PARC host-locale proxy and benchmark boundary
 
-The interface reserves a visible reference row for PARC Bangna but does not invent a score. This exposes—rather than solves—the requested benchmark gap. PARC operating references were excluded from the 745 eligible locales to avoid selecting an existing project, and the PARC Locale Insight v2.3 source does not contain an approved percentile capsule for the same nine-lens release.
+PARC Bangna does not have a locale row in the 806-record Registry. The 22 excluded records are 12 active primary context locales and ten controlled corridors—not PARC plus 21 branches. They remain outside candidate ranking because they are reference contexts, overlap one another, and are not customer-origin observations.
 
-A defensible benchmark requires the approved PARC reference geometry and the same raw input fields, empirical distributions, venue release, and barrier assumptions used for v2.3.1. PARC must then be scored out-of-sample against the frozen 745-locale distribution and shown as an unranked reference. Operating performance evidence remains a separate benchmark and must not be blended into the locale opportunity score.
+The v3.5 preview uses **ศรีเอี่ยม** as a working host-locale proxy because its sampled point is the nearest primary context to PARC Bangna (0.30 km). It is scored out-of-sample against the frozen 745-locale empirical distributions and shown as an unranked reference. A separate three-axis core-fit screen compares all 574 comparable locales on Resident, Routine breadth, and Activity, then separates profile Similarity from core Opportunity before producing a sensitivity-tested validation queue.
+
+This is not an exact PARC venue or trade-area benchmark. That requires an approved PARC reference geometry and raw inputs aggregated with the same observation unit, venue release, and barrier assumptions. Operating receipts, tenants, traffic, parking, and customer behaviour remain validation evidence and are never candidate features.
 
 ## Competition and barriers
 
@@ -71,16 +73,20 @@ River and expressway awareness is calculated as a geometric separation proxy. Th
 ## Current artifacts
 
 - [`index.html`](index.html) — production landing page
+- [`PARC_Bangna_Fresh_Locale_Screen_Board_Decision_Tool_v3.5_PARC_Core_Fit_Preview_2026-08-01.html`](PARC_Bangna_Fresh_Locale_Screen_Board_Decision_Tool_v3.5_PARC_Core_Fit_Preview_2026-08-01.html) — named v3.5 HTML checkpoint
 - [`PARC_Bangna_Fresh_Locale_Screen_Board_Decision_Tool_v3.4_2026-07-31.html`](PARC_Bangna_Fresh_Locale_Screen_Board_Decision_Tool_v3.4_2026-07-31.html) — named HTML checkpoint
+- [`analysis/PARC_Bangna_Host_Proxy_Core_Fit_Preview_v0.1_2026-08-01.md`](analysis/PARC_Bangna_Host_Proxy_Core_Fit_Preview_v0.1_2026-08-01.md) — calculation, validation, limits, and decision readout
+- [`analysis/parc-host-proxy-core-fit-preview-v0.1.json`](analysis/parc-host-proxy-core-fit-preview-v0.1.json) — machine-readable preview release
 - [`analysis/PARC_Bangna_Fresh_Locale_Screen_Multi_Lens_Board_Brief_v0.4_2026-07-28.md`](analysis/PARC_Bangna_Fresh_Locale_Screen_Multi_Lens_Board_Brief_v0.4_2026-07-28.md) — analysis and Board brief
 - [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) — third-party data and software notices
 
 Build and release gates:
 
 ```bash
-python3 scripts/build_v3_4_decision_tool.py
-python3 scripts/qa_v3_4.py
-PARC_CHROMIUM_EXECUTABLE=/path/to/chromium node scripts/qa_v3_4_rendered.cjs
+python3 scripts/build_v3_5_parc_core_fit_preview.py
+python3 scripts/qa_v3_5.py
+python3 scripts/recompute_parc_core_fit_preview.py /path/to/v2.3.1-registry.xlsx
+PARC_CHROMIUM_EXECUTABLE=/path/to/chromium node scripts/qa_v3_5_rendered.cjs
 ```
 
 The named HTML is a self-contained decision artifact. It embeds the canonical
