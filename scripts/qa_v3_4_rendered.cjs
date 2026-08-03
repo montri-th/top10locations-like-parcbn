@@ -7,7 +7,7 @@ const path = require("path");
 const { chromium } = require("playwright");
 
 const root = path.resolve(__dirname, "..");
-const screenshots = path.join("/tmp", "parc-v3.5-qa");
+const screenshots = path.join("/tmp", "parc-v3.6-qa");
 fs.mkdirSync(screenshots, { recursive: true });
 
 const types = {
@@ -73,6 +73,10 @@ async function contrast(page, selector) {
     await page.goto(`http://127.0.0.1:${port}/`, { waitUntil: "load" });
     await page.waitForTimeout(300);
 
+    assert(
+      await page.locator("body").getAttribute("data-interface-release") === "v3.6-executive-story",
+      "rendered interface is not v3.6"
+    );
     assert(await page.locator("[data-decision-view]").count() === 5, "rendered decision view count is not five");
     assert(await page.locator('input[type="range"][data-weight]').count() === 4, "rendered slider count is not four");
     assert(await page.locator("[data-live-rank-body] tr").count() === 10, "live table does not contain ten candidates");
@@ -80,7 +84,7 @@ async function contrast(page, selector) {
     assert(await page.locator('[data-benchmark-status="proxy-partial"]').isVisible(), "partial proxy status is not visible");
     assert(await page.locator("[data-core-fit-table] tbody tr").count() === 10, "core-fit table does not contain ten locales");
     assert((await page.locator(".proxy-reference").innerText()).includes("ศรีเอี่ยม"), "host-locale proxy is not visible");
-    assert((await page.locator("[data-live-ranking] .benchmark-row").innerText()).includes("Proxy ไม่เข้าร่วม slider"), "proxy incorrectly participates in the A-J slider");
+    assert((await page.locator("[data-live-ranking] .benchmark-row").innerText()).includes("ศรีเอี่ยมไม่เข้าร่วม"), "Sri Iam incorrectly participates in the A-J slider");
 
     await page.locator('.overview-visual-markers .candidate-dot').first().click({ force: true });
     await page.waitForTimeout(150);
@@ -164,7 +168,7 @@ async function contrast(page, selector) {
     await page.goto(`http://127.0.0.1:${port}/`, { waitUntil: "load" });
     const spacing = await page.evaluate(() => {
       const steps = document.querySelector(".decision-steps").getBoundingClientRect();
-      const heading = document.querySelector("#lenses .section-head").getBoundingClientRect();
+      const heading = document.querySelector("#parc-fit .section-head").getBoundingClientRect();
       return heading.top - steps.bottom;
     });
     assert(spacing < 130, `dead spacing below decision strip remains ${Math.round(spacing)}px`);
@@ -194,17 +198,54 @@ async function contrast(page, selector) {
       assert(await page.locator("[data-live-ranking]").isVisible(), `${viewport.width}px live ranking is not visible`);
       assert(await page.locator("[data-core-fit-table]").count() === 1, `${viewport.width}px core-fit table is missing`);
       if (viewport.width === 390) {
+        assert(new URL(page.url()).hash === "#sensitivity", "mobile flow did not start at #sensitivity");
         await page.locator('[data-live-detail="B"]').click();
+        await page.waitForURL(/#detail-B$/, { timeout: 2000 });
+        assert(new URL(page.url()).hash === "#detail-B", "mobile detail link did not set #detail-B");
+        assert(await page.locator("#detail-B").isVisible(), "mobile detail B is not visible");
         assert(await page.locator("#detail-B .back-to-tool").isVisible(), "mobile detail has no return-to-tool action");
+
+        await page.goBack();
+        await page.waitForURL(/#sensitivity$/, { timeout: 2000 });
+        assert(new URL(page.url()).hash === "#sensitivity", "browser Back does not restore #sensitivity");
+
+        await page.locator('[data-live-detail="B"]').click();
+        await page.waitForURL(/#detail-B$/, { timeout: 2000 });
         await page.locator("#detail-B .back-to-tool").click();
+        await page.waitForURL(/#sensitivity$/, { timeout: 2000 });
+        await page.waitForFunction(() => {
+          const header = document.querySelector(".site-header");
+          const heading = document.querySelector("#sensitivity .section-head");
+          if (!header || !heading) return false;
+          const headerBottom = header.getBoundingClientRect().bottom;
+          const headingTop = heading.getBoundingClientRect().top;
+          return headingTop >= headerBottom - 1 && headingTop < window.innerHeight;
+        }, undefined, { timeout: 2500 });
         assert(new URL(page.url()).hash === "#sensitivity", "mobile return action does not restore the tool URL");
         assert(await page.locator("[data-live-ranking]").isVisible(), "mobile return action does not restore the live tool");
+
+        const sensitivityPosition = await page.evaluate(() => ({
+          header: document.querySelector(".site-header").getBoundingClientRect().bottom,
+          heading: document.querySelector("#sensitivity .section-head").getBoundingClientRect().top
+        }));
+        assert(
+          sensitivityPosition.heading >= sensitivityPosition.header - 1,
+          "mobile return target is hidden under the sticky header"
+        );
+
+        await page.goto(`http://127.0.0.1:${port}/#detail-J`, { waitUntil: "load" });
+        await page.waitForTimeout(250);
+        assert(await page.locator("#detail-J").isVisible(), "mobile direct #detail-J does not reveal J");
+        assert(!(await page.locator("#detail-A").isVisible()), "mobile direct #detail-J leaves A visible");
+        await page.goBack();
+        await page.waitForURL(/#sensitivity$/, { timeout: 2000 });
+        assert(new URL(page.url()).hash === "#sensitivity", "Back from direct #detail-J does not restore #sensitivity");
       }
       await page.screenshot({ path: path.join(screenshots, `mobile-${viewport.width}.png`), fullPage: false });
     }
 
     assert(errors.length === 0, `page errors: ${errors.join(" | ")}`);
-    console.log(`PASS v3.5 — rendered 1920/1366×768/834/390/320 · CTA ${lightContrast.toFixed(2)}:1 light / ${darkContrast.toFixed(2)}:1 dark · spacing ${Math.round(spacing)}px`);
+    console.log(`PASS v3.6 — rendered 1920/1366×768/834/390/320 · CTA ${lightContrast.toFixed(2)}:1 light / ${darkContrast.toFixed(2)}:1 dark · spacing ${Math.round(spacing)}px`);
     console.log(`Screenshots: ${screenshots}`);
   } finally {
     await browser.close();
