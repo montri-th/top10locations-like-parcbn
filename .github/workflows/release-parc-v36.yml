@@ -1,0 +1,34 @@
+name: Release PARC v3.6
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".release/v36.tar.gz.part-*"
+      - ".github/workflows/release-parc-v36.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Rebuild validated release
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .release/v36.tar.gz.part-* > /tmp/v36.tar.gz
+          echo "a90ca19f8e1f8e457e77f5a24d659d7475b59c03d8d5b673681e1962ec0def35  /tmp/v36.tar.gz" | sha256sum -c -
+          tar -xzf /tmp/v36.tar.gz
+          test "$(git hash-object index.html)" = "46ef8db79e4ab3fa5bb1e792c79277a79124886d"
+          test "$(git hash-object PARC_Bangna_Fresh_Locale_Screen_Board_Decision_Tool_v3.6_Executive_Story_2026-08-03.html)" = "46ef8db79e4ab3fa5bb1e792c79277a79124886d"
+          python3 scripts/qa_v3_6.py
+          git rm -r .release .github/workflows/release-parc-v36.yml
+          git add README.md index.html qa/viewport-harness.html scripts/build_v3_6_board_story.py scripts/qa_v3_4_rendered.cjs scripts/qa_v3_6.py scripts/qa_v3_6_rendered.cjs PARC_Bangna_Fresh_Locale_Screen_Board_Decision_Tool_v3.6_Executive_Story_2026-08-03.html
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Make PARC location screen executive-first"
+          git push origin HEAD:main
